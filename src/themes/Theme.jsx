@@ -3,6 +3,7 @@ const theme = {
     // Primary
     dark: "#0C1114",
     purple: "#7151B6",
+    lightColor: "#8AFAEC",
     borderColor: "#1F2224",
   },
   fontSizes: {

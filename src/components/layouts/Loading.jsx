@@ -2,11 +2,41 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import LoadBox from "./assets/loadBox.svg"
 
-const pulse = keyframes`
+const slide = keyframes`
+0%{
+    transform-origin: left;
+    transform: scalex(0.3);
+  }
+ 
+  25%{
+    transform-origin: left;
+    transform: scalex(1);
+  }
+  26%{
+    transform-origin: right;
+    transform: scalex(1);
+  }
+  50%{
+    transform-origin: right;
+    transform: scalex(0.3);
+  }
+  
+  75%{
+    transform-origin: right;
+    transform: scalex(1);
+  }
+  76%{
+    transform-origin: left;
+    transform: scalex(1);
+  }
+  100%{
+    transform-origin: left;
+    transform: scalex(0.3);
+  }
 
 `
 const LoadSection = styled.div`
-  border: 2px solid red;
+  // border: 2px solid red;
   background-color: ${({ theme }) => theme.colors.dark};
   height: 100vh;
   display: flex;
@@ -14,7 +44,6 @@ const LoadSection = styled.div`
   align-items: center;
 
   .loadBoxContainer {
-    border: 2px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,17 +63,18 @@ const LoadSection = styled.div`
     position: absolute;
   }
   .line {
-    border: 2px solid green;
     width: 80vw;
     margin-top: 3.5rem;
-    height: 3px;
+    height: 4px;
     background-color: ${({ theme }) => theme.colors.borderColor};
+    border-radius: 3px;
   }
   .inner {
+    border-radius: 3px;
     width: 100%;
     height: inherit;
-    // background: #0077b5;
-    // animation: slide 2s ease-in-out infinite;
+    background: ${({ theme }) => theme.colors.lightColor};
+    animation: ${slide} 2s ease-in-out infinite;
   }
 `
 
@@ -57,7 +87,7 @@ const Loading = () => {
           <img src={LoadBox} alt="Loading..." className="loadingImg" />
         </div>
         <div className="line">
-          <div className="inner">hgdhgdhd</div>
+          <div className="inner"></div>
         </div>
       </section>
     </LoadSection>
