@@ -11,11 +11,11 @@ html{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Rubik', sans-serif;
+  // font-family: 'Rubik', sans-serif;
 }
 body{
-  background: hsl(228, 33%, 97%);
-  padding-bottom: 35px;
+  // background: hsl(228, 33%, 97%);
+  // padding-bottom: 35px;
 
 }
 `
