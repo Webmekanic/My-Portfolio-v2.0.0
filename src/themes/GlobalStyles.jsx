@@ -16,6 +16,7 @@ html{
 body{
   // background: hsl(228, 33%, 97%);
   // padding-bottom: 35px;
+  color: white;
 
 }
 `
