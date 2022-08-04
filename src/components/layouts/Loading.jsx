@@ -57,8 +57,9 @@ const LoadSection = styled.div`
     width: 130px;
     height: 115px;
     margin: auto;
-    border: 2px solid red;
+    // border: 2px solid red;
     position: relative;
+    // transform: scale(0.5);
   }
 
   .loadingImg {
@@ -66,7 +67,6 @@ const LoadSection = styled.div`
     height: 100%;
     width: 100%;
     position: relative;
-    // animation: ${pulse} 2s linear infinite;
   }
 
   .vector-left {
@@ -77,7 +77,7 @@ const LoadSection = styled.div`
     border-right: none;
     border-top: none;
     position: absolute;
-    left: 0;
+    left: 20%;
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
   }
@@ -88,7 +88,7 @@ const LoadSection = styled.div`
     border-bottom: none;
     border-right: none;
     position: absolute;
-    top: -5px;
+    top: calc(-4.5px + 20%);
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
   }
@@ -97,7 +97,7 @@ const LoadSection = styled.div`
     width: 40px;
     height: 40px;
     position: absolute;
-    right: 0;
+    right: 20%;
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
     border-left: none;
@@ -111,7 +111,7 @@ const LoadSection = styled.div`
     border-top: none;
     border-left: none;
     position: absolute;
-    bottom: -5px;
+    bottom: calc(-4.5px + 20%);
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
   }
@@ -119,6 +119,8 @@ const LoadSection = styled.div`
   .nameInitial {
     color: ${({ theme }) => theme.colors.purple};
     position: absolute;
+    // border: 2px solid red;
+    font-size: 40px;
   }
   .line {
     width: 75vw;
