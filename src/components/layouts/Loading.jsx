@@ -1,12 +1,37 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 
-const pulse = keyframes`
+const pulseTop = keyframes`
 0% {
-  transform: scale(1);
+  top: -5px;
     }
 100% {
-  transform: scale(0.7);
+  top: calc(-4.7px + 20%);
+    }
+`
+const pulseBottom = keyframes`
+0% {
+  bottom: -5px;
+    }
+100% {
+  bottom: calc(-4.7px + 20%);
+    }
+`
+
+const pulseLeft = keyframes`
+0% {
+  left: 0;
+    }
+100% {
+  left: 20%;
+    }
+`
+const pulseRight = keyframes`
+0% {
+  right: 0;
+    }
+100% {
+  right: 20%;
     }
 `
 
@@ -41,8 +66,19 @@ const slide = keyframes`
     transform-origin: left;
     transform: scalex(0.3);
   }
+`
+
+const pulseAlphaD = keyframes`
+0%{
+  transform: scale(1);
+}
+
+100%{
+  transform: scale(1.5)
+}
 
 `
+
 const LoadSection = styled.div`
   background-color: ${({ theme }) => theme.colors.dark};
   height: 100vh;
@@ -57,13 +93,10 @@ const LoadSection = styled.div`
     width: 130px;
     height: 115px;
     margin: auto;
-    // border: 2px solid red;
     position: relative;
-    // transform: scale(0.5);
   }
 
   .loadingImg {
-    // border: 2px solid yellow;
     height: 100%;
     width: 100%;
     position: relative;
@@ -77,9 +110,11 @@ const LoadSection = styled.div`
     border-right: none;
     border-top: none;
     position: absolute;
-    left: 20%;
+    left: 0;
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
+    animation: ${pulseLeft} 2s ease-in-out infinite;
+    animation-fill-mode: both;
   }
   .vector-top {
     border: 3px solid ${({ theme }) => theme.colors.purple};
@@ -88,39 +123,48 @@ const LoadSection = styled.div`
     border-bottom: none;
     border-right: none;
     position: absolute;
-    top: calc(-4.5px + 20%);
+    top: -5px;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
+    animation: ${pulseTop} 2s ease-in-out infinite;
+    animation-fill-mode: both;
   }
   .vector-right {
     border: 3px solid ${({ theme }) => theme.colors.purple};
     width: 40px;
     height: 40px;
     position: absolute;
-    right: 20%;
+    right: 0;
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
     border-left: none;
     border-bottom: none;
+    animation: ${pulseRight} 2s ease-in-out infinite;
+    animation-fill-mode: both;
   }
   .vector-bottom {
     border: 3px solid ${({ theme }) => theme.colors.purple};
     width: 40px;
     height: 40px;
-    // transform: rotate(45deg);
     border-top: none;
     border-left: none;
     position: absolute;
-    bottom: calc(-4.5px + 20%);
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
+    animation: ${pulseBottom} 2s ease-in-out infinite;
+    animation-fill-mode: both;
   }
 
   .nameInitial {
     color: ${({ theme }) => theme.colors.purple};
     position: absolute;
-    // border: 2px solid red;
-    font-size: 40px;
+    font-size: 1.8rem;
+    // Font family: Work Sans;
+    Font style: Medium;
+    font-family: sans-serif;
+    animation: ${pulseAlphaD} 2s ease-in-out infinite;
+    animation-fill-mode: both;
   }
   .line {
     width: 75vw;
@@ -139,7 +183,9 @@ const LoadSection = styled.div`
       rgba(113, 81, 182, 1) 35%,
       rgba(138, 250, 236, 1) 100%
     );
-    // animation: ${slide} 2s ease-in-out infinite;
+    // animation: ${slide} 
+    // 2s ease-in-out infinite;
+    animation-fill-mode: both;
   }
 `
 
