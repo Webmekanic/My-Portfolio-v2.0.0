@@ -6,7 +6,7 @@ const pulseTop = keyframes`
   top: -5px;
     }
 100% {
-  top: calc(-4.529px + 20%);
+top: calc(-4.4px + 19.95%);
     }
 `
 const pulseBottom = keyframes`
@@ -14,7 +14,7 @@ const pulseBottom = keyframes`
   bottom: -5px;
     }
 100% {
-  bottom: calc(-4.529px + 20%);
+  bottom:  calc(-5px + 19.95%);
     }
 `
 
@@ -31,7 +31,7 @@ const pulseRight = keyframes`
   right: 0;
     }
 100% {
-  right: 20%;
+  right:  20%;
     }
 `
 
@@ -90,7 +90,7 @@ const LoadSection = styled.div`
     border-bottom: none;
     border-right: none;
     position: absolute;
-    top: -5px;
+    top: -4.3px;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
     animation: ${pulseTop} 1.7s ease-in-out infinite;
@@ -116,7 +116,7 @@ const LoadSection = styled.div`
     border-top: none;
     border-left: none;
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
     animation: ${pulseBottom} 1.7s ease-in-out infinite;
