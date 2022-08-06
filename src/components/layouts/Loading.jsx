@@ -6,7 +6,7 @@ const pulseTop = keyframes`
   top: -5px;
     }
 100% {
-  top: calc(-4.7px + 20%);
+  top: calc(-4.529px + 20%);
     }
 `
 const pulseBottom = keyframes`
@@ -14,7 +14,7 @@ const pulseBottom = keyframes`
   bottom: -5px;
     }
 100% {
-  bottom: calc(-4.7px + 20%);
+  bottom: calc(-4.529px + 20%);
     }
 `
 
@@ -33,39 +33,6 @@ const pulseRight = keyframes`
 100% {
   right: 20%;
     }
-`
-
-const slide = keyframes`
-0%{
-    transform-origin: left;
-    transform: scalex(0.3);
-  }
- 
-  25%{
-    transform-origin: left;
-    transform: scalex(1);
-  }
-  26%{
-    transform-origin: right;
-    transform: scalex(1);
-  }
-  50%{
-    transform-origin: right;
-    transform: scalex(0.3);
-  }
-  
-  75%{
-    transform-origin: right;
-    transform: scalex(1);
-  }
-  76%{
-    transform-origin: left;
-    transform: scalex(1);
-  }
-  100%{
-    transform-origin: left;
-    transform: scalex(0.3);
-  }
 `
 
 const pulseAlphaD = keyframes`
@@ -113,7 +80,7 @@ const LoadSection = styled.div`
     left: 0;
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
-    animation: ${pulseLeft} 2s ease-in-out infinite;
+    animation: ${pulseLeft} 1.7s ease-in-out infinite;
     animation-fill-mode: both;
   }
   .vector-top {
@@ -126,7 +93,7 @@ const LoadSection = styled.div`
     top: -5px;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
-    animation: ${pulseTop} 2s ease-in-out infinite;
+    animation: ${pulseTop} 1.7s ease-in-out infinite;
     animation-fill-mode: both;
   }
   .vector-right {
@@ -139,7 +106,7 @@ const LoadSection = styled.div`
     transform: translateY(-50%) rotate(45deg);
     border-left: none;
     border-bottom: none;
-    animation: ${pulseRight} 2s ease-in-out infinite;
+    animation: ${pulseRight} 1.7s ease-in-out infinite;
     animation-fill-mode: both;
   }
   .vector-bottom {
@@ -152,22 +119,22 @@ const LoadSection = styled.div`
     bottom: -5px;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
-    animation: ${pulseBottom} 2s ease-in-out infinite;
+    animation: ${pulseBottom} 1.7s ease-in-out infinite;
     animation-fill-mode: both;
   }
 
   .nameInitial {
     color: ${({ theme }) => theme.colors.purple};
     position: absolute;
-    font-size: 1.8rem;
+    font-size: 2rem;
     // Font family: Work Sans;
     Font style: Medium;
     font-family: sans-serif;
-    animation: ${pulseAlphaD} 2s ease-in-out infinite;
+    animation: ${pulseAlphaD} 1.7s ease-in-out infinite;
     animation-fill-mode: both;
   }
   .line {
-    width: 75vw;
+    width: 70vw;
     margin-top: 3.5rem;
     height: 4px;
     background-color: ${({ theme }) => theme.colors.borderColor};
@@ -183,9 +150,6 @@ const LoadSection = styled.div`
       rgba(113, 81, 182, 1) 35%,
       rgba(138, 250, 236, 1) 100%
     );
-    // animation: ${slide} 
-    // 2s ease-in-out infinite;
-    animation-fill-mode: both;
   }
 `
 
