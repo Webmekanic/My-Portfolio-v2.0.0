@@ -6,7 +6,7 @@ const pulseTop = keyframes`
   top: -5px;
     }
 100% {
-top: calc(-4.4px + 19.95%);
+top: calc(-5px + 20%);
     }
 `
 const pulseBottom = keyframes`
@@ -14,7 +14,7 @@ const pulseBottom = keyframes`
   bottom: -5px;
     }
 100% {
-  bottom:  calc(-5px + 19.95%);
+  bottom:  calc(-5px + 20%);
     }
 `
 
@@ -71,7 +71,7 @@ const LoadSection = styled.div`
 
   .vector-left {
     color: ${({ theme }) => theme.colors.purple};
-    border: 3px solid ${({ theme }) => theme.colors.purple};
+    border: 3.5px solid ${({ theme }) => theme.colors.purple};
     width: 40px;
     height: 40px;
     border-right: none;
@@ -84,20 +84,20 @@ const LoadSection = styled.div`
     animation-fill-mode: both;
   }
   .vector-top {
-    border: 3px solid ${({ theme }) => theme.colors.purple};
+    border: 3.5px solid ${({ theme }) => theme.colors.purple};
     width: 40px;
     height: 40px;
     border-bottom: none;
     border-right: none;
     position: absolute;
-    top: -4.3px;
+    top: -5spx;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
     animation: ${pulseTop} 1.7s ease-in-out infinite;
     animation-fill-mode: both;
   }
   .vector-right {
-    border: 3px solid ${({ theme }) => theme.colors.purple};
+    border: 3.5px solid ${({ theme }) => theme.colors.purple};
     width: 40px;
     height: 40px;
     position: absolute;
@@ -110,13 +110,13 @@ const LoadSection = styled.div`
     animation-fill-mode: both;
   }
   .vector-bottom {
-    border: 3px solid ${({ theme }) => theme.colors.purple};
+    border: 3.5px solid ${({ theme }) => theme.colors.purple};
     width: 40px;
     height: 40px;
     border-top: none;
     border-left: none;
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
     animation: ${pulseBottom} 1.7s ease-in-out infinite;
@@ -127,7 +127,6 @@ const LoadSection = styled.div`
     color: ${({ theme }) => theme.colors.purple};
     position: absolute;
     font-size: 2rem;
-    // Font family: Work Sans;
     Font style: Medium;
     font-family: sans-serif;
     animation: ${pulseAlphaD} 1.7s ease-in-out infinite;

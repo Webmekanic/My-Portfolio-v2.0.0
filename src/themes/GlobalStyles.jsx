@@ -13,6 +13,7 @@ html{
 }
 body{
   color: white;
+  font-family: 'Work Sans', sans-serif;
 
 }
 `

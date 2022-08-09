@@ -5,13 +5,15 @@ const theme = {
     purple: "#7151B6",
     lightColor: "#8AFAEC",
     borderColor: "#1F2224",
+    textColor: "#C8C5B9",
+    lineColor: "#E5E5E5",
   },
   fontSizes: {
-    // large:
-    // medium
+    large: "3rem",
+    medium: "2rem",
   },
   mediaQueries: {
-    "below-768": `only screen and (max-width: 768px)`,
+    below768: `only screen and (max-width: 768px)`,
   },
 }
 export default theme

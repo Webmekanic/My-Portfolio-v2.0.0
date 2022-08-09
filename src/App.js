@@ -1,10 +1,10 @@
 import "./App.css"
-import Loading from "./components/layouts/Loading"
+import Footer from "./components/layouts/Footer"
 
 function App() {
   return (
     <div className="App">
-      <Loading />
+      <Footer />
     </div>
   )
 }
