@@ -1,6 +1,22 @@
 import React from "react"
 import styled from "styled-components"
 
+const ButtonText = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: skew(-62deg) translateX(-130%);
+  transition: 0.3s ease-out;
+  background-color: ${({ theme }) => theme.colors.lightColor};
+`
+
+const Btn = styled.p`
+  position: relative;
+  z-index: 99;
+`
+
 const PageButton = styled.button`
   border: 2px solid red;
   display: inline-block;
@@ -20,26 +36,27 @@ const PageButton = styled.button`
   position: relative;
   margin-left: 5rem;
   overflow: hidden;
+  z-index: 99;
 
-  .buttonText {
-    position: absolute;
-    border: 2px solid red;
-    top: 0;
-    left: -50px;
-    right: 40px;
-    bottom: 0;
-    transform: skew(-62deg);
-    overflow: hidden;
-    transition: 0.3s ease-out;
-    background-color: ${({ theme }) => theme.colors.lightColor};
+  &:hover {
+  }
+
+  &:hover ${ButtonText} {
+    transform: translateX(0%);
+    color: ${({ theme }) => theme.colors.purple};
+  }
+
+  &:hover ${Btn} {
+    transform: translateX(0%);
+    color: ${({ theme }) => theme.colors.purple};
   }
 `
 
 function Button({ text }) {
   return (
     <PageButton>
-      {text}
-      <div className="buttonText"></div>
+      <Btn>{text}</Btn>
+      <ButtonText></ButtonText>
     </PageButton>
   )
 }
