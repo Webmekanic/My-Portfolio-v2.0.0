@@ -1,10 +1,10 @@
 import "./App.css"
-import Footer from "./components/layouts/Footer"
+import Button from "./components/shared/Button"
 
 function App() {
   return (
     <div className="App">
-      <Footer />
+      <Button />
     </div>
   )
 }
