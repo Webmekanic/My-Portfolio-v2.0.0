@@ -3,7 +3,8 @@ import styled from "styled-components"
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 
 const FooterSection = styled.footer`
-  background-color: ${({ theme }) => theme.colors.dark};
+  // background-color: ${({ theme }) => theme.colors.dark};
+  background-color: transparent;
   border: 1px solid transparent;
   padding-bottom: 1.875rem;
   position: relative;
@@ -41,6 +42,7 @@ const FooterSection = styled.footer`
   .myEmail {
     color: ${({ theme }) => theme.colors.textColor};
     text-decoration: none;
+    cursor: pointer;
   }
   .socialIcons {
     display: flex;
@@ -49,7 +51,14 @@ const FooterSection = styled.footer`
   }
   .socialLink {
     color: ${({ theme }) => theme.colors.textColor};
+    cursor: pointer;
   }
+
+  .socialLink:hover {
+    color: ${({ theme }) => theme.colors.lightColor};
+  }
+
+  // Media Query
   @media ${({ theme }) => theme.mediaQueries.below768} {
     position: relative;
     .socialIcons {
@@ -57,7 +66,7 @@ const FooterSection = styled.footer`
       position: absolute;
       top: 0;
     }
-  } ;
+  }
 `
 
 const Footer = () => {
