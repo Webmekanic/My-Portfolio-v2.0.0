@@ -34,7 +34,6 @@ const PageButton = styled.button`
   margin: 30px auto;
   color: ${({ theme }) => theme.colors.lightColor};
   position: relative;
-  margin-left: 5rem;
   overflow: hidden;
   z-index: 99;
 
