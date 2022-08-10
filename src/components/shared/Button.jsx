@@ -39,6 +39,7 @@ const PageButton = styled.button`
   z-index: 99;
 
   &:hover {
+    // color: ${({ theme }) => theme.colors.purple};
   }
 
   &:hover ${ButtonText} {
