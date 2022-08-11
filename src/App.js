@@ -6,18 +6,25 @@ import Works from "./pages/Works"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import NotFound from "./pages/NotFound"
+import Layouts from "./components/layouts/Layouts"
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/">
+        <Route path="/" element={<Layouts />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="works" element={<Works />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="/about" element={<Layouts />}>
+          <Route index element={<About />} />
+        </Route>
+        <Route path="/works" element={<Layouts />}>
+          <Route index element={<Works />} />
+        </Route>
+        <Route path="/contact" element={<Layouts />}>
+          <Route index element={<Contact />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )

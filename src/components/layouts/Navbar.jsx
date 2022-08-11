@@ -1,29 +1,27 @@
 import React from "react"
-import styled from "styled-components"
+import { Link } from "react-router-dom"
+import {
+  NavbarContainer,
+  NavbarLinkContainer,
+  NavbarLink,
+} from "../../styles/NavStyle"
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 
-const MyNav = styled.nav`
-  background-color: transparent;
-  border: 2px solid red;
-  display: flex;
-  justify-content: space-between;
-`
-
-function Navbar() {
+const Navbar = () => {
   return (
-    <MyNav>
-      <h1 className="myInitals">da</h1>
-      <ul>
-        <li>About</li>
-        <li>Works</li>
-        <li>Contact</li>
-      </ul>
-      <div>
-        <FiGithub />
-        <FiLinkedin />
-        {/* <FiTwitter /> */}
-      </div>
-    </MyNav>
+    <NavbarContainer>
+      <NavbarLinkContainer>
+        <NavbarLink className="nav-link" to="/about">
+          About
+        </NavbarLink>
+        <NavbarLink className="nav-link" to="/works">
+          Works
+        </NavbarLink>
+        <NavbarLink className="nav-link" to="/contact">
+          Contact
+        </NavbarLink>
+      </NavbarLinkContainer>
+    </NavbarContainer>
   )
 }
 
