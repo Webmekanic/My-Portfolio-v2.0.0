@@ -7,6 +7,7 @@ const theme = {
     borderColor: "#1F2224",
     textColor: "#C8C5B9",
     lineColor: "#E5E5E5",
+    neutral: "#F8F6EF",
   },
   fontSizes: {
     large: "3rem",

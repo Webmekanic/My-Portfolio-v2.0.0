@@ -1,27 +1,44 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import {
-  NavbarContainer,
-  NavbarLinkContainer,
-  NavbarLink,
-} from "../../styles/NavStyle"
+import { MyLink, Nav } from "../../styles/NavStyle"
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
+import { CgSortAz } from "react-icons/cg"
 
 const Navbar = () => {
   return (
-    <NavbarContainer>
-      <NavbarLinkContainer>
-        <NavbarLink className="nav-link" to="/about">
-          About
-        </NavbarLink>
-        <NavbarLink className="nav-link" to="/works">
-          Works
-        </NavbarLink>
-        <NavbarLink className="nav-link" to="/contact">
-          Contact
-        </NavbarLink>
-      </NavbarLinkContainer>
-    </NavbarContainer>
+    <Nav>
+      <h1 className="myIntials">DA</h1>
+      <ul className="navLinkList">
+        <li className="navLinkItem">
+          <MyLink to="/about">About</MyLink>
+        </li>
+        <li className="navLinkItem">
+          <MyLink to="/works">Works</MyLink>
+        </li>
+        <li className="navLinkItem">
+          <MyLink to="/contact">Contact</MyLink>
+        </li>
+      </ul>
+      {/* nabvar icons */}
+      <div className="socialIcons">
+        <a
+          className="socialLink"
+          href="https://github.com/Webmekanic"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FiGithub />
+        </a>
+        <a
+          href="https://github.com/Webmekanic"
+          target="_blank"
+          rel="noreferrer"
+          className="socialLink"
+        >
+          <FiLinkedin />
+        </a>
+      </div>
+      <CgSortAz size={"40"} className="sortIcon" />
+    </Nav>
   )
 }
 

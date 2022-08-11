@@ -47,7 +47,7 @@ const FooterSection = styled.footer`
   .socialIcons {
     display: flex;
     grid-gap: 1rem;
-    font-size: clamp(1.5rem, 2vw, 1.6rem);
+    font-size: 1.3rem;
   }
   .socialLink {
     color: ${({ theme }) => theme.colors.textColor};
