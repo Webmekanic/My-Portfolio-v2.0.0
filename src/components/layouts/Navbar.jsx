@@ -37,7 +37,7 @@ const Navbar = () => {
           <FiLinkedin />
         </a>
       </div>
-      <CgSortAz size={"40"} className="sortIcon" />
+      <CgSortAz className="sortIcon" />
     </Nav>
   )
 }

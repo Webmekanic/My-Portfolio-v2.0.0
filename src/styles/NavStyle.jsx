@@ -2,13 +2,12 @@ import styled from "styled-components"
 import Link from "../components/shared/NavLink"
 
 export const Nav = styled.nav`
-  border: 2px solid orange;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  padding: 0.625rem clamp(0.6rem, 3vw, 2.5rem);
+  padding: clamp(0.5rem, 1.3vw, 3rem) clamp(0.6rem, 3vw, 2.8rem);
   color: ${({ theme }) => theme.colors.textColor};
 
   .myIntials {
@@ -20,11 +19,9 @@ export const Nav = styled.nav`
     color: ${({ theme }) => theme.colors.neutral};
   }
   .navLinkList {
-    // border: 2px solid yellow;
     display: flex;
   }
   .navLinkItem {
-    // border: 2px solid purple;
     list-style-type: none;
     display: flex;
     padding: 0 2rem;
@@ -48,14 +45,22 @@ export const Nav = styled.nav`
 
   // Media Query
   @media ${({ theme }) => theme.mediaQueries.below768} {
+    border: 2px solid red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
     .navLinkList,
     .socialIcons {
       display: none;
     }
 
     .sortIcon {
-      border: 2px solid blue;
       display: block;
+      font-size: 2.6rem;
+      cursor: pointer;
     }
   }
 `
