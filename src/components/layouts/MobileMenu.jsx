@@ -1,12 +1,10 @@
 import React from "react"
-import { MyLink, Nav } from "../../styles/NavStyle"
-import { FiGithub, FiLinkedin } from "react-icons/fi"
-import { CgSortAz } from "react-icons/cg"
+import { MyLink } from "../../styles/NavStyle"
+import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 
-const Navbar = () => {
+function MobileMenu() {
   return (
-    <Nav>
-      <h1 className="myIntials">DA</h1>
+    <div>
       <ul className="navLinkList">
         <li className="navLinkItem">
           <MyLink to="/about">About</MyLink>
@@ -18,7 +16,7 @@ const Navbar = () => {
           <MyLink to="/contact">Contact</MyLink>
         </li>
       </ul>
-      {/* nabvar icons */}
+      <button></button>
       <div className="socialIcons">
         <a
           className="socialLink"
@@ -34,12 +32,19 @@ const Navbar = () => {
           rel="noreferrer"
           className="socialLink"
         >
-          <FiLinkedin />
+          <FiLinkedin className="" />
+        </a>
+        <a
+          href="https://github.com/Webmekanic"
+          target="_blank"
+          rel="noreferrer"
+          className="socialLink"
+        >
+          <FiTwitter />
         </a>
       </div>
-      <CgSortAz className="sortIcon" />
-    </Nav>
+    </div>
   )
 }
 
-export default Navbar
+export default MobileMenu
