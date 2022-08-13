@@ -72,11 +72,37 @@ export const MyLink = styled(Link)`
   line-height: 1rem;
   line-height: 100%;
 
-  // &:active {
-  //   color: ${({ theme }) => theme.colors.purple};
-  // }
-
-  &.is-active {
+  &.is-active,
+  &:hover,
+  &:focus {
     color: ${({ theme }) => theme.colors.lightColor};
   }
+`
+
+export const Hamburger = styled.div`
+  // border: 2px solid red;
+  height: 100vh;
+  text-align: center;
+
+  .MobileNavLink {
+    margin-top: 6rem;
+    // border: 2px solid red;
+  }
+
+  .socialIcons {
+    // border: 2px solid red;
+    grid-gap: 1rem;
+    font-size: 1.3rem;
+    margin-top: 8.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  .socialLink {
+    color: ${({ theme }) => theme.colors.textColor};
+    cursor: pointer;
+  }
+
+  .socialLink:hover {
+    color: ${({ theme }) => theme.colors.lightColor};
+  }s
 `

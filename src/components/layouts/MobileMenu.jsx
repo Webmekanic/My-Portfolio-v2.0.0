@@ -1,19 +1,32 @@
 import React from "react"
-import { MyLink } from "../../styles/NavStyle"
+import { MyLink, Hamburger } from "../../styles/NavStyle"
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
+import styled from "styled-components"
+
+const MenuLink = styled(MyLink)`
+  font-family: Chivo;
+  font-style: Black;
+  font-size: 48px;
+  line-height: 6.25rem;
+
+  &:active,
+  &:hover {
+    color: ${({ theme }) => theme.colors.lightColor};
+  }
+`
 
 function MobileMenu() {
   return (
-    <div>
-      <ul className="navLinkList">
-        <li className="navLinkItem">
-          <MyLink to="/about">About</MyLink>
+    <Hamburger>
+      <ul className="MobileNavLink">
+        <li className="MobileNavLinkItem">
+          <MenuLink to="/about">About</MenuLink>
         </li>
-        <li className="navLinkItem">
-          <MyLink to="/works">Works</MyLink>
+        <li className="MobileNavLinkItem">
+          <MenuLink to="/works">Works</MenuLink>
         </li>
-        <li className="navLinkItem">
-          <MyLink to="/contact">Contact</MyLink>
+        <li className="MobileNavLinkItem">
+          <MenuLink to="/contact">Contact</MenuLink>
         </li>
       </ul>
       <button></button>
@@ -43,7 +56,7 @@ function MobileMenu() {
           <FiTwitter />
         </a>
       </div>
-    </div>
+    </Hamburger>
   )
 }
 

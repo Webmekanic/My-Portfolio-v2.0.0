@@ -7,6 +7,8 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 import NotFound from "./pages/NotFound"
 import Layouts from "./components/layouts/Layouts"
+import MobileMenu from "./components/layouts/MobileMenu"
+import Skills from "./components/layouts/Skills"
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
         <Route path="/contact" element={<Layouts />}>
           <Route index element={<Contact />} />
         </Route>
+        <Route path="/menu" element={<MobileMenu />} />
+        <Route path="/skills" element={<Skills />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
