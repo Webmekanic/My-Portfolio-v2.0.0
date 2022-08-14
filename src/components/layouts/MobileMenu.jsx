@@ -6,9 +6,8 @@ import { AiOutlineClose } from "react-icons/ai"
 import styled from "styled-components"
 
 const MenuLink = styled(MyLink)`
-  // font-family: ;
   font-style: Black;
-  font-size: 45px;
+  font-size: 2.6875rem;
   line-height: 6.25rem;
   font-family: chivo;
   font-style: Black;
