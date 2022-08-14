@@ -68,9 +68,10 @@ export const Nav = styled.nav`
 export const MyLink = styled(Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.textColor};
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1rem;
   line-height: 100%;
+  font-family: work sans-serif;
 
   &.is-active,
   &:hover,
@@ -80,12 +81,13 @@ export const MyLink = styled(Link)`
 `
 
 export const Hamburger = styled.div`
-  // border: 2px solid red;
+  border: 2px solid transparent;
   height: 100vh;
   text-align: center;
+  padding-bottom: 2rem;
 
   .MobileNavLink {
-    margin-top: 6rem;
+    margin-top: 4rem;
     // border: 2px solid red;
   }
 
@@ -93,9 +95,10 @@ export const Hamburger = styled.div`
     // border: 2px solid red;
     grid-gap: 1rem;
     font-size: 1.3rem;
-    margin-top: 8.5rem;
+    margin-top: 7rem;
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
   }
   .socialLink {
     color: ${({ theme }) => theme.colors.textColor};
@@ -104,5 +107,16 @@ export const Hamburger = styled.div`
 
   .socialLink:hover {
     color: ${({ theme }) => theme.colors.lightColor};
-  }s
+  }
+  .closeMenu {
+    border: 1px solid ${({ theme }) => theme.colors.textColor};
+    color: ${({ theme }) => theme.colors.textColor};
+    font-size: 35px;
+    font-weight: lighter;
+    font-family: 300;
+    margin-top: 2.5rem;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+  }
 `

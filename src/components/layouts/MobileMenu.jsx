@@ -1,13 +1,18 @@
 import React from "react"
 import { MyLink, Hamburger } from "../../styles/NavStyle"
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
+import { AiOutlineClose } from "react-icons/ai"
+
 import styled from "styled-components"
 
 const MenuLink = styled(MyLink)`
-  font-family: Chivo;
+  // font-family: ;
   font-style: Black;
-  font-size: 48px;
+  font-size: 45px;
   line-height: 6.25rem;
+  font-family: chivo;
+  font-style: Black;
+  font-weight: 900;
 
   &:active,
   &:hover {
@@ -29,7 +34,8 @@ function MobileMenu() {
           <MenuLink to="/contact">Contact</MenuLink>
         </li>
       </ul>
-      <button></button>
+      {/* <button></button> */}
+      <AiOutlineClose className="closeMenu" />
       <div className="socialIcons">
         <a
           className="socialLink"
