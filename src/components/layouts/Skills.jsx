@@ -4,7 +4,13 @@ import Aniebo from "./assets/Aniebo.svg"
 const Skills = () => {
   return (
     <div>
-      <img src={Aniebo} alt="" />
+      <div className="skillsBorder1">
+        <div className="skillsBorder2">
+          <div className="skillsBorder3">
+            <img src={Aniebo} alt="" />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

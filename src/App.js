@@ -1,6 +1,5 @@
 import "./App.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-// import Button from "./components/shared/Button"
 import Home from "./pages/Home"
 import Works from "./pages/Works"
 import About from "./pages/About"
@@ -28,7 +27,6 @@ function App() {
         </Route>
         <Route path="/menu" element={<MobileMenu />} />
         <Route path="/skills" element={<Skills />} />
-
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
