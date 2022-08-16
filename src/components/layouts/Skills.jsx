@@ -1,17 +1,31 @@
 import React from "react"
 import Aniebo from "./assets/Aniebo.svg"
+import JsLogo from "./assets/jsLogo.svg"
+import ReactJs from "./assets/reactjs.svg"
+import HtmlIcon from "./assets/htmlIcon.svg"
+import CssLogo from "./assets/cssLogo.svg"
+import { MySkills } from "../../styles/SkillStyle"
+// import { FaHtml5, FaReact } from "react-icons/fa"
+// import {FaHtml5}
 
 const Skills = () => {
   return (
-    <div>
+    <MySkills>
       <div className="skillsBorder1">
         <div className="skillsBorder2">
           <div className="skillsBorder3">
-            <img src={Aniebo} alt="" />
+            <div className="aniIcon">
+              <img className="imgIcon" src={Aniebo} alt="" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      {/* skills Icon */}
+      <img className="jsLogo" src={JsLogo} alt="JS" />
+      <img className="cssLogo" src={CssLogo} alt="CSS" />
+      <img className="HtmlIcon" src={HtmlIcon} alt="HTML" />
+      <img className="ReactJs" src={ReactJs} alt="React" />
+    </MySkills>
   )
 }
 

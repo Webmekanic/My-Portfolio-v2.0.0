@@ -1,9 +1,8 @@
 import React from "react"
+import styled from "styled-components"
 import { MyLink, Hamburger } from "../../styles/NavStyle"
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 import { AiOutlineClose } from "react-icons/ai"
-
-import styled from "styled-components"
 
 const MenuLink = styled(MyLink)`
   font-style: Black;
