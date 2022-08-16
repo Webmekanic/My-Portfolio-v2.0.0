@@ -9,6 +9,7 @@ const FooterSection = styled.footer`
   padding-bottom: 1.875rem;
   position: relative;
   white-space: nowrap;
+  padding: 0 clamp(0.6rem, 3vw, 2.8rem);
 
   .horizontalLine {
     border-top: 2px solid ${({ theme }) => theme.colors.lineColor};

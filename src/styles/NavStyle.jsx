@@ -20,7 +20,10 @@ export const Nav = styled.nav`
   }
   .navLinkList {
     display: flex;
+    font-family: work sans;
+    font-style: regular;
   }
+
   .navLinkItem {
     list-style-type: none;
     display: flex;
@@ -45,7 +48,7 @@ export const Nav = styled.nav`
 
   // Media Query
   @media ${({ theme }) => theme.mediaQueries.below768} {
-    border: 2px solid red;
+    border: 2px solid white;
     position: fixed;
     top: 0;
     left: 0;
@@ -71,7 +74,7 @@ export const MyLink = styled(Link)`
   font-size: 1.2rem;
   line-height: 1rem;
   line-height: 100%;
-  font-family: work sans-serif;
+  font-family: work sans;
 
   &.is-active,
   &:hover,
