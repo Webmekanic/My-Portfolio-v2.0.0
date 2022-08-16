@@ -66,6 +66,13 @@ const FooterSection = styled.footer`
       position: absolute;
       top: 0;
     }
+    .myRole {
+      border: none;
+    }
+
+    .myEmail {
+      display: none;
+    }
   }
 `
 
