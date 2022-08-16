@@ -14,7 +14,7 @@ export const ContactMe = styled.div`
     background-position: 50% 50%;
     background-size: 100% 100%;
     position: relative;
-    height: 40rem;
+    // height: 40rem;
   }
 
   svg {
