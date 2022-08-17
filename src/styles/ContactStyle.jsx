@@ -1,20 +1,35 @@
 import styled from "styled-components"
-import BckGD1 from "../components/layouts/assets/bckCon1.svg"
-// import kkkk from "../components/layouts/assets/kkkk"
 
 export const ContactMe = styled.div`
   // border: 2px solid red;
   background-color: transparent;
   position: relative;
+  height: 100vh;
+  width: 100%;
 
   .pattern1 {
-    border: 2px solid yellow;
-    background-image: url(${BckGD1});
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 100% 100%;
-    position: relative;
-    // height: 40rem;
+    // border: 2px solid yellow;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  .BckGD1 {
+    height: auto;
+    width: 100%;
+  }
+
+  .pattern2 {
+    // border: 1px solid red;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 450px;
   }
 
   svg {
