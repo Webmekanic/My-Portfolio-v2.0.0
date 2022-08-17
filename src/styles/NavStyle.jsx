@@ -9,6 +9,11 @@ export const Nav = styled.nav`
   background: transparent;
   padding: clamp(0.5rem, 1.3vw, 3rem) clamp(0.6rem, 3vw, 2.8rem);
   color: ${({ theme }) => theme.colors.textColor};
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
 
   .myIntials {
     font-family: Wingdings 3;

@@ -1,35 +1,74 @@
 import styled from "styled-components"
+import Footer from "../components/layouts/Footer"
+
+export const ContactFooter = styled(Footer)`
+  border: 2px solid pink;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+`
 
 export const ContactMe = styled.div`
-  // border: 2px solid red;
+  border: 2px solid purple;
   background-color: transparent;
   position: relative;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
+  z-index: 5;
 
   .pattern1 {
     // border: 2px solid yellow;
+    background: #090d0f;
     position: absolute;
-    width: 100%;
-    height: auto;
-    top: -10px;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 30px;
+    width: 1440px;
+    height: 175px;
+    z-index: 10;
+    transform: rotate(-10deg);
+    top: 165px;
+    left: -30px;
+    right: 20px;
     z-index: 10;
   }
 
-  .BckGD1 {
-    height: auto;
-    width: 100%;
-  }
+  // .BckGD1 {
+  //   height: auto;
+  //   width: 100%;
+  // }
 
   .pattern2 {
     // border: 1px solid red;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 450px;
+    background: #090d0f;
+    position: absolute;
+    top: 30px;
+    width: 1440px;
+    height: 175px;
+    z-index: 10;
+    z-index: 10;
+    transform: rotate(-10deg);
+    top: 410px;
+    left: -30px;
+    right: 20px;
+  }
+
+  .pattern3 {
+    // border: 2px solid yellow;
+    // border: 1px solid red;
+    position: absolute;
+    background: #090d0f;
+    position: absolute;
+    top: 30px;
+    width: 1440px;
+    height: 175px;
+    z-index: 10;
+    z-index: 10;
+    transform: rotate(10deg);
+    top: 410px;
+    left: -30px;
+    right: 20px;
   }
 
   svg {
