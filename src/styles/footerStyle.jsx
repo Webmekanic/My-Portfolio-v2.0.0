@@ -2,12 +2,14 @@ import styled from "styled-components"
 
 export const FooterSection = styled.footer`
   background-color: transparent;
-  // border: 1px solid red;
-  padding-bottom: 1.875rem;
+  // border: 4px solid red;
+  // padding-bottom: 1rem;
   position: relative;
   white-space: nowrap;
-  padding: 0 clamp(0.6rem, 3vw, 2.8rem);
+  // padding: 0 clamp(0.6rem, 3vw, 2.8rem);
   z-index: 99;
+  width: 95%;
+  margin: auto;
 
   .horizontalLine {
     border-top: 2px solid ${({ theme }) => theme.colors.lineColor};
@@ -16,10 +18,12 @@ export const FooterSection = styled.footer`
   }
 
   .contactAddresses {
+    // border: 2px solid ${({ theme }) => theme.colors.purple}
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    // height: 20px;
   }
 
   .copyRight {
@@ -44,9 +48,13 @@ export const FooterSection = styled.footer`
     cursor: pointer;
   }
   .socialIcons {
+    // border: 2px solid yellow;
     display: flex;
     grid-gap: 1rem;
     font-size: 1.3rem;
+    position: absolute;
+    right: 0;
+    margin-bottom: 10px;
   }
   .socialLink {
     color: ${({ theme }) => theme.colors.textColor};
@@ -64,6 +72,7 @@ export const FooterSection = styled.footer`
       // border: 2px solid red;
       position: absolute;
       top: 0;
+      right: unset;
     }
     .myRole {
       border: none;

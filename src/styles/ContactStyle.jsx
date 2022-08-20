@@ -13,15 +13,13 @@ export const ContactMe = styled.div`
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  z-index: 5;
+  z-index: 10;
 
-  .contact-footer {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
+  .footerLayout {
+    // border: 2px solid blue;
+    position: fixed;
     width: 100%;
-    right: 0;
-    height: auto;
+    z-index: 99;
   }
 
   .pattern1 {
@@ -48,7 +46,6 @@ export const ContactMe = styled.div`
     width: 1440px;
     height: 170px;
     z-index: 10;
-    z-index: 10;
     transform: rotate(-10deg);
     top: 410px;
     left: -30px;
@@ -71,23 +68,23 @@ export const ContactMe = styled.div`
     right: 20px;
   }
 
-  svg {
+  .svg {
     position: absolute;
     top: 0;
     z-index: 88;
     margin-top: -6%;
     margin-left: 500px;
   }
-  svg text {
+  .svg text {
     // border: 2px solid yellow;
-    font-size: 16vw;
+    font-size: 14vw;
     // font-weight: 900;
     font-family: chivo;
     stroke-width: 1px;
     fill: transparent;
     stroke: #7151b6;
     letter-spacing: 4px;
-    animation: effect 6s infinite alternate;
+    // animation: effect 6s infinite alternate;
     z-index: 20;
     opacity: 0.4;
   }
@@ -102,9 +99,8 @@ export const ContactMe = styled.div`
   }
 
   .contactTitle {
-    font-family: "Chivo";
+    font-family: Chivo;
     font-style: normal;
-    // font-weight: 900;
     font-size: 40px;
     text-transform: capitalize;
     color: ${({ theme }) => theme.colors.neutral};
@@ -131,6 +127,18 @@ export const ContactMe = styled.div`
 
   .contactMeIcons {
     border: 2px solid red;
+  }
+
+  .contact-footer {
+    position: absolute;
+    // top: 30px;
+    left: 0;
+    // width: %;
+    right: 0;
+    height: auto;
+    z-index: 99;
+    bottom: 10px;
+    // border: 2px solid orange;
   }
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
