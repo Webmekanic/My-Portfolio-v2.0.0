@@ -1,4 +1,5 @@
 import React from "react"
+import Footer from "../components/layouts/Footer"
 import { AboutMe } from "../styles/AboutStyle"
 
 const About = () => {
@@ -7,7 +8,12 @@ const About = () => {
       <div className="pattern1"></div>
       <div className="pattern2"></div>
       <div className="pattern3"></div>
-      <section>
+      <svg className="svg" width="100%" height="100vh">
+        <text x="20%" y="55%">
+          About
+        </text>
+      </svg>
+      {/* <section>
         <h1 className="aboutTitle">A bit about me</h1>
         <div>
           <p>
@@ -24,7 +30,8 @@ const About = () => {
             which presents fun challenges with provision for constant growth.
           </p>
         </div>
-      </section>
+      </section> */}
+      <Footer classname="aboutFooter" />
     </AboutMe>
   )
 }

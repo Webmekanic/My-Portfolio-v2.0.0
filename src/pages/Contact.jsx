@@ -29,7 +29,8 @@ const Contact = () => {
               <br />
               <input type="email" id="emailInput" placeholder="Email address" />
               <br />
-              <input type="text" id="MessageInput" placeholder="Message..." />
+              <textarea id="MessageInput" placeholder="Message..."></textarea>
+              {/* <input type="text" placeholder="Message..." /> */}
             </form>
             <div className="contactLocations">{/* <FiGithub /> */}</div>
           </div>

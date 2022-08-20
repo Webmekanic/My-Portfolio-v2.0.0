@@ -104,7 +104,7 @@ export const ContactMe = styled.div`
   }
 
   .formSection {
-    border: 2px solid red;
+    // border: 2px solid red;
     position: absolute;
     z-index: 99;
     top: 80px;
@@ -146,6 +146,7 @@ export const ContactMe = styled.div`
       color: ${({ theme }) => theme.colors.textColor};
       outline: none;
       border: none;
+      resize: none;
     }
 
     .contactBtn {
@@ -154,25 +155,20 @@ export const ContactMe = styled.div`
   }
 
   .contactMeIcons {
-    border: 2px solid red;
+    // border: 2px solid red;
   }
 
   .contact-footer {
     position: absolute;
-    // top: 30px;
     left: 0;
-    // width: %;
     right: 0;
     height: auto;
     z-index: 99;
     bottom: 10px;
-    // border: 2px solid orange;
   }
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
-    // border: 2px solid red;
     .pattern1 {
-      // border: 2px solid yellow;
       top: 0;
       top: 20px;
       transform: rotate(-18deg);
