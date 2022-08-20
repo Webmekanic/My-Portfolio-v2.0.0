@@ -53,12 +53,15 @@ export const Nav = styled.nav`
 
   // Media Query
   @media ${({ theme }) => theme.mediaQueries.below768} {
-    border: 2px solid white;
+    // border: 2px solid white;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
+    background: rgba(9, 13, 15, 0.2);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
 
     .navLinkList,
     .socialIcons {
