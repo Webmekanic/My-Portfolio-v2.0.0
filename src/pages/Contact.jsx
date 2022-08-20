@@ -34,7 +34,7 @@ function Contact() {
               <input type="text" id="MessageInput" placeholder="Message..." />
             </form>
           </div>
-          <Button text={"send"} />
+          <Button text={"send"} className="contactBtn" />
         </div>
       </section>
       <Footer classname="contact-footer" />

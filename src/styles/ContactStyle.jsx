@@ -110,28 +110,28 @@ export const ContactMe = styled.div`
     z-index: 99;
     top: 80px;
     left: 50%;
-    width: 93%;
+    width: 90%;
     transform: translate(-50%);
   }
 
   .contactText {
-    border: 2px solid pink;
+    // border: 2px solid pink;
     width: 45%;
     color: ${({ theme }) => theme.colors.textColor};
     margin-bottom: 1rem;
   }
   .contactMe {
-    border: 2px solid white;
+    // border: 2px solid white;
 
     .contactInput {
-      border: 2px solid yellow;
+      // border: 2px solid yellow;
       width: 50%;
     }
 
     #NameInput,
     #emailInput {
       // border: 2px solid red;
-      width: 70%;
+      width: 75%;
       padding: 0.6rem;
       margin-bottom: 0.8rem;
       background: ${({ theme }) => theme.colors.borderColor};
@@ -141,13 +141,16 @@ export const ContactMe = styled.div`
     }
 
     #MessageInput {
-      border: 2px solid purple;
-      width: 70%;
+      width: 75%;
       background: ${({ theme }) => theme.colors.borderColor};
       padding: 10px 0px 120px 10px;
       color: ${({ theme }) => theme.colors.textColor};
       outline: none;
       border: none;
+    }
+
+    .contactBtn {
+      margin-top: 1.25rem;
     }
   }
 

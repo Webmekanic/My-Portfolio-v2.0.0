@@ -31,7 +31,7 @@ const PageButton = styled.button`
   font-style: regular;
   font-weight: 400;
   border: 2px solid ${({ theme }) => theme.colors.lightColor};
-  margin: 30px auto;
+  // margin: 30px auto;
   color: ${({ theme }) => theme.colors.lightColor};
   position: relative;
   overflow: hidden;
@@ -52,9 +52,9 @@ const PageButton = styled.button`
   }
 `
 
-function Button({ text }) {
+function Button({ text, className }) {
   return (
-    <PageButton>
+    <PageButton className={className}>
       <Btn>{text}</Btn>
       <ButtonText></ButtonText>
     </PageButton>
