@@ -7,7 +7,6 @@ export const ContactFooter = styled(FooterSection)`
 `
 
 export const ContactMe = styled.div`
-  // border: 2px solid purple;
   background-color: transparent;
   position: relative;
   height: 100vh;
@@ -16,14 +15,12 @@ export const ContactMe = styled.div`
   z-index: 10;
 
   .footerLayout {
-    // border: 2px solid blue;
     position: fixed;
     width: 100%;
     z-index: 99;
   }
 
   .pattern1 {
-    // border: 2px solid yellow;
     background: #090d0f;
     position: absolute;
     top: 70px;
@@ -38,7 +35,6 @@ export const ContactMe = styled.div`
   }
 
   .pattern2 {
-    // border: 1px solid red;
     position: absolute;
     background: #090d0f;
     position: absolute;
@@ -53,7 +49,6 @@ export const ContactMe = styled.div`
   }
 
   .pattern3 {
-    // border: 2px solid yellow;
     position: absolute;
     background: #090d0f;
     position: absolute;
@@ -72,11 +67,11 @@ export const ContactMe = styled.div`
     position: absolute;
     top: 0;
     z-index: 88;
-    margin-top: -6%;
-    margin-left: 500px;
+    margin-top: -9%;
+    // right: -10px;
+    margin-left: 38.375rem;
   }
   .svg text {
-    // border: 2px solid yellow;
     font-size: 14vw;
     // font-weight: 900;
     font-family: chivo;
@@ -84,7 +79,7 @@ export const ContactMe = styled.div`
     fill: transparent;
     stroke: #7151b6;
     letter-spacing: 4px;
-    // animation: effect 6s infinite alternate;
+    animation: effect 6s infinite alternate;
     z-index: 20;
     opacity: 0.4;
   }
@@ -105,24 +100,55 @@ export const ContactMe = styled.div`
     text-transform: capitalize;
     color: ${({ theme }) => theme.colors.neutral};
     z-index: 99;
+    // border: 2px solid red;
+    margin-bottom: 1rem;
   }
 
   .formSection {
     border: 2px solid red;
     position: absolute;
     z-index: 99;
-    top: 90px;
+    top: 80px;
     left: 50%;
-    // right: 50%;
-    width: 90%;
+    width: 93%;
     transform: translate(-50%);
   }
+
   .contactText {
     border: 2px solid pink;
-    width: 40%;
+    width: 45%;
+    color: ${({ theme }) => theme.colors.textColor};
+    margin-bottom: 1rem;
   }
   .contactMe {
-    border: 2px solid orange;
+    border: 2px solid white;
+
+    .contactInput {
+      border: 2px solid yellow;
+      width: 50%;
+    }
+
+    #NameInput,
+    #emailInput {
+      // border: 2px solid red;
+      width: 70%;
+      padding: 0.6rem;
+      margin-bottom: 0.8rem;
+      background: ${({ theme }) => theme.colors.borderColor};
+      color: ${({ theme }) => theme.colors.textColor};
+      outline: none;
+      border: none;
+    }
+
+    #MessageInput {
+      border: 2px solid purple;
+      width: 70%;
+      background: ${({ theme }) => theme.colors.borderColor};
+      padding: 10px 0px 120px 10px;
+      color: ${({ theme }) => theme.colors.textColor};
+      outline: none;
+      border: none;
+    }
   }
 
   .contactMeIcons {

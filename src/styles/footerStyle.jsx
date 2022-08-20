@@ -8,7 +8,7 @@ export const FooterSection = styled.footer`
   white-space: nowrap;
   // padding: 0 clamp(0.6rem, 3vw, 2.8rem);
   z-index: 99;
-  width: 95%;
+  width: 93%;
   margin: auto;
 
   .horizontalLine {

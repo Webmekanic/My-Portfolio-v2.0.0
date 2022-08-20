@@ -1,6 +1,5 @@
 const theme = {
   colors: {
-    // Primary
     dark: "#0C1114",
     purple: "#7151B6",
     lightColor: "#8AFAEC",

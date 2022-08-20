@@ -18,7 +18,7 @@ function Contact() {
           Contact
         </text>
       </svg>
-      {/* <section className="formSection">
+      <section className="formSection">
         <h1 className="contactTitle">Contact Me</h1>
         <p className="contactText">
           Let’s discuss your next project over a digital coffee. Got an idea?
@@ -26,17 +26,17 @@ function Contact() {
         </p>
         <div className="contactMe">
           <div className="contactForm">
-            <form>
+            <form className="contactInput">
               <input type="text" id="NameInput" placeholder="Your name" />
               <br />
-              <input type="text" id="emailInput" placeholder="Email address" />
+              <input type="email" id="emailInput" placeholder="Email address" />
               <br />
               <input type="text" id="MessageInput" placeholder="Message..." />
             </form>
           </div>
           <Button text={"send"} />
         </div>
-      </section> */}
+      </section>
       <Footer classname="contact-footer" />
     </ContactMe>
   )
