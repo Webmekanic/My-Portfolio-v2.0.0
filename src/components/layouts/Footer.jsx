@@ -3,11 +3,11 @@ import { FooterSection } from "../../styles/footerStyle"
 
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 
-const Footer = () => {
+const Footer = ({ classname }) => {
   const footerYear = new Date().getFullYear()
 
   return (
-    <FooterSection>
+    <FooterSection className={classname}>
       <div className="horizontalLine"></div>
       <div className="contactAddresses">
         <section className="copyRight">

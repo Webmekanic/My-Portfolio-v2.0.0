@@ -1,4 +1,8 @@
 import React from "react"
+import Button from "../components/shared/Button"
+import Footer from "../components/layouts/Footer"
+// import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
+
 // import BG1 from "../components/layouts/assets/bckCon1.svg"
 import { ContactMe } from "../styles/ContactStyle"
 
@@ -20,33 +24,41 @@ function Contact() {
           Let’s discuss your next project over a digital coffee. Got an idea?
           Need suggestions? Feel free to reach out at anytime.
         </p>
-        <div>
-          <form>
-            <input
-              type="text"
-              // value={}
-              id="NameInput"
-              placeholder="Your name"
-            />
-            <br />
-            <input
-              type="text"
-              // value={}
-              id="emailInput"
-              placeholder="Email address"
-            />{" "}
-            <br />
-            <input
-              type="text"
-              // value={}
-              id="MessageInput"
-              placeholder="Message..."
-            />
-          </form>
+        <div className="contactMe">
+          <div className="contactForm">
+            <form>
+              <input
+                type="text"
+                // value={}
+                id="NameInput"
+                placeholder="Your name"
+              />
+              <br />
+              <input
+                type="text"
+                // value={}
+                id="emailInput"
+                placeholder="Email address"
+              />
+              <br />
+              <input
+                type="text"
+                // value={}
+                id="MessageInput"
+                placeholder="Message..."
+              />
+            </form>
+            <div className="contactMeIcons">
+              {/* <GrLocation size={"50"} />
+            <GrLocation />
+            <FiGithub /> */}
+              {/* <p>sjsjhsjh</p> */}
+            </div>
+          </div>
+          <Button text={"send"} />
         </div>
       </section>
-
-      {/* <ContactFooter /> */}
+      <Footer classname="contact-footer" />
     </ContactMe>
   )
 }

@@ -15,6 +15,15 @@ export const ContactMe = styled.div`
   overflow: hidden;
   z-index: 5;
 
+  .contact-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    right: 0;
+    height: auto;
+  }
+
   .pattern1 {
     // border: 2px solid yellow;
     background: #090d0f;
@@ -80,6 +89,7 @@ export const ContactMe = styled.div`
     letter-spacing: 4px;
     animation: effect 6s infinite alternate;
     z-index: 20;
+    opacity: 0.4;
   }
   @keyframes effect {
     0% {
@@ -95,7 +105,7 @@ export const ContactMe = styled.div`
     font-family: "Chivo";
     font-style: normal;
     // font-weight: 900;
-    font-size: 64px;
+    font-size: 40px;
     text-transform: capitalize;
     color: ${({ theme }) => theme.colors.neutral};
     z-index: 99;
@@ -108,12 +118,19 @@ export const ContactMe = styled.div`
     top: 90px;
     left: 50%;
     // right: 50%;
-    width: 95%;
+    width: 90%;
     transform: translate(-50%);
   }
   .contactText {
     border: 2px solid pink;
     width: 40%;
+  }
+  .contactMe {
+    border: 2px solid orange;
+  }
+
+  .contactMeIcons {
+    border: 2px solid red;
   }
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
