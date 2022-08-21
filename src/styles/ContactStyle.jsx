@@ -21,12 +21,11 @@ export const ContactMe = styled.div`
   }
 
   .pattern1 {
-    background: #090d0f;
+    background: ${({ theme }) => theme.colors.barColor};
     position: absolute;
     top: 70px;
     width: 1440px;
     height: 175px;
-    z-index: 10;
     transform: rotate(-10deg);
     top: 150px;
     left: -30px;
@@ -36,7 +35,7 @@ export const ContactMe = styled.div`
 
   .pattern2 {
     position: absolute;
-    background: #090d0f;
+    background: ${({ theme }) => theme.colors.barColor};
     position: absolute;
     top: 30px;
     width: 1440px;
@@ -50,7 +49,7 @@ export const ContactMe = styled.div`
 
   .pattern3 {
     position: absolute;
-    background: #090d0f;
+    background: ${({ theme }) => theme.colors.barColor};
     position: absolute;
     top: 30px;
     width: 1440px;
@@ -192,6 +191,10 @@ export const ContactMe = styled.div`
       // display: none;
       transform: rotate(25deg);
       left: -300px;
+    }
+    #NameInput,
+    #emailInput {
+      border: 2px solid purple;
     }
   }
 `

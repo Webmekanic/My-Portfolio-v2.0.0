@@ -7,6 +7,7 @@ const theme = {
     textColor: "#C8C5B9",
     lineColor: "#E5E5E5",
     neutral: "#F8F6EF",
+    barColor: "#090d0f",
   },
   fontSizes: {
     large: "3rem",

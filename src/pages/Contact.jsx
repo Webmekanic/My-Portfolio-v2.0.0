@@ -1,12 +1,10 @@
 import React from "react"
 import Button from "../components/shared/Button"
 import Footer from "../components/layouts/Footer"
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
-
-// import BG1 from "../components/layouts/assets/bckCon1.svg"
+// import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 import { ContactMe } from "../styles/ContactStyle"
 
-function Contact() {
+const Contact = () => {
   return (
     <ContactMe>
       <div className="pattern1"></div>
@@ -33,6 +31,7 @@ function Contact() {
               <br />
               <input type="text" id="MessageInput" placeholder="Message..." />
             </form>
+            <div className="contactLocations">{/* <FiGithub /> */}</div>
           </div>
           <Button text={"send"} className="contactBtn" />
         </div>
