@@ -119,8 +119,9 @@ export const ContactMe = styled.div`
     color: ${({ theme }) => theme.colors.textColor};
     margin-bottom: 1rem;
   }
-  .contactMe {
+  .contactForm {
     // border: 2px solid white;
+    display: flex;
 
     .contactInput {
       // border: 2px solid yellow;
@@ -149,13 +150,21 @@ export const ContactMe = styled.div`
       resize: none;
     }
 
+    .contactLocations {
+      border: 2px solid ${({ theme }) => theme.colors.lightColor};
+      // color: ${({ theme }) => theme.colors.lightColor};
+      width: 50%;
+      position: relative;
+    }
+
+    .linkedinContact {
+      border: 2px solid red;
+      position: absolute;
+    }
+
     .contactBtn {
       margin-top: 1.25rem;
     }
-  }
-
-  .contactMeIcons {
-    // border: 2px solid red;
   }
 
   .contact-footer {
@@ -191,6 +200,10 @@ export const ContactMe = styled.div`
     #NameInput,
     #emailInput {
       border: 2px solid purple;
+    }
+
+    .contactLocations {
+      display: none;
     }
   }
 `

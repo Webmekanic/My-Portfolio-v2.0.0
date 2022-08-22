@@ -1,6 +1,8 @@
 import React from "react"
 import Button from "../components/shared/Button"
 import Footer from "../components/layouts/Footer"
+import { GrLocation } from "react-icons/gr"
+
 // import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 import { ContactMe } from "../styles/ContactStyle"
 
@@ -32,7 +34,24 @@ const Contact = () => {
               <textarea id="MessageInput" placeholder="Message..."></textarea>
               {/* <input type="text" placeholder="Message..." /> */}
             </form>
-            <div className="contactLocations">{/* <FiGithub /> */}</div>
+            <div className="contactLocations">
+              <div className="linkedinContact">
+                <GrLocation />
+                {/* <Button /> */}
+              </div>
+              <div>
+                <GrLocation />
+                {/* <Button /> */}
+              </div>
+              <div>
+                <GrLocation />
+                {/* <Button /> */}
+              </div>
+              <div>
+                <GrLocation />
+                {/* <Button /> */}
+              </div>
+            </div>
           </div>
           <Button text={"send"} className="contactBtn" />
         </div>
