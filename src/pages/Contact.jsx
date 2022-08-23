@@ -33,12 +33,11 @@ const Contact = () => {
               <input type="email" id="emailInput" placeholder="Email address" />
               <br />
               <textarea id="MessageInput" placeholder="Message..."></textarea>
-              {/* <input type="text" placeholder="Message..." /> */}
             </form>
             <div className="contactLocations">
               <div className="linkedinContact">
                 <HiOutlineLocationMarker />
-                {/* <Button text={"Linkedin"} className="profileIcon" /> */}
+                <Button text={"Linkedin"} className="profileIcon" />
               </div>
               <div className="twitterContact">
                 <HiOutlineLocationMarker className="locateMe" />
@@ -47,7 +46,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {/* <Button text={"Twitter"} className="profileIcon" /> */}
+                  <Button text={"Twitter"} className="profileIcon" />
                 </a>
               </div>
               <div className="githubContact">
@@ -58,13 +57,13 @@ const Contact = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {/* <Button text={"GitHub"} className="profileIcon" /> */}
+                  <Button text={"GitHub"} className="profileIcon" />
                 </a>
               </div>
               <div className="codewarsContact">
                 <HiOutlineLocationMarker />
                 <a href="http://www.codewars.com/webmekanic">
-                  {/* <Button text={"Codewars"} className="profileIcon" /> */}
+                  <Button text={"Codewars"} className="profileIcon" />
                 </a>
               </div>
             </div>
