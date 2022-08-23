@@ -1,7 +1,8 @@
 import React from "react"
 import Button from "../components/shared/Button"
 import Footer from "../components/layouts/Footer"
-import { GrLocation } from "react-icons/gr"
+import { HiOutlineLocationMarker } from "react-icons/hi"
+import { Link } from "react-router-dom"
 
 // import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 import { ContactMe } from "../styles/ContactStyle"
@@ -36,20 +37,35 @@ const Contact = () => {
             </form>
             <div className="contactLocations">
               <div className="linkedinContact">
-                <GrLocation />
-                {/* <Button /> */}
+                <HiOutlineLocationMarker />
+                {/* <Button text={"Linkedin"} className="profileIcon" /> */}
               </div>
-              <div>
-                <GrLocation />
-                {/* <Button /> */}
+              <div className="twitterContact">
+                <HiOutlineLocationMarker className="locateMe" />
+                <a
+                  href="http://www.twitter.com/webmekanic"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {/* <Button text={"Twitter"} className="profileIcon" /> */}
+                </a>
               </div>
-              <div>
-                <GrLocation />
-                {/* <Button /> */}
+              <div className="githubContact">
+                <HiOutlineLocationMarker />
+                <a
+                  className="profileLinks"
+                  href="http://www.github.com/webmekanic"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {/* <Button text={"GitHub"} className="profileIcon" /> */}
+                </a>
               </div>
-              <div>
-                <GrLocation />
-                {/* <Button /> */}
+              <div className="codewarsContact">
+                <HiOutlineLocationMarker />
+                <a href="http://www.codewars.com/webmekanic">
+                  {/* <Button text={"Codewars"} className="profileIcon" /> */}
+                </a>
               </div>
             </div>
           </div>

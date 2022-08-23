@@ -151,20 +151,76 @@ export const ContactMe = styled.div`
     }
 
     .contactLocations {
-      border: 2px solid ${({ theme }) => theme.colors.lightColor};
+      // border: 2px solid ${({ theme }) => theme.colors.lightColor};
       // color: ${({ theme }) => theme.colors.lightColor};
       width: 50%;
       position: relative;
     }
 
+    .profileIcon {
+      // border: 1px solid red;
+      padding: 0.6rem 1.6rem;
+    }
     .linkedinContact {
-      border: 2px solid red;
+      // border: 2px solid red;
+      color: ${({ theme }) => theme.colors.lightColor};
       position: absolute;
+      font-size: 38px;
+      left: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      // font-weight: lighter;
     }
 
-    .contactBtn {
-      margin-top: 1.25rem;
+    .twitterContact {
+      // border: 2px solid yellow;
+      color: ${({ theme }) => theme.colors.lightColor};
+      position: absolute;
+      right: 80px;
+      top: 10px;
+      font-size: 38px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
     }
+    .githubContact {
+      // border: 2px solid red;
+      color: ${({ theme }) => theme.colors.lightColor};
+      position: absolute;
+      font-size: 38px;
+      bottom: 60px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .codewarsContact {
+      // border: 2px solid purple;
+      color: ${({ theme }) => theme.colors.lightColor};
+      position: absolute;
+      font-size: 38px;
+      right: 100px;
+      bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      // opacity: 0.7;
+    }
+
+    .profileLinks {
+      // border: 2px solid red;
+      // padding: 0.6rem 1.6rem;
+    }
+  }
+
+  .contactBtn {
+    margin-top: 1.25rem;
   }
 
   .contact-footer {
