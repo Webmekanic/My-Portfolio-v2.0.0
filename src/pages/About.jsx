@@ -1,4 +1,5 @@
 import React from "react"
+import BgText from "../components/shared/BgText"
 import Footer from "../components/layouts/Footer"
 import { AboutMe } from "../styles/AboutStyle"
 
@@ -8,11 +9,7 @@ const About = () => {
       <div className="pattern1"></div>
       <div className="pattern2"></div>
       <div className="pattern3"></div>
-      <svg className="svg" width="100%" height="100vh">
-        <text x="20%" y="55%">
-          About
-        </text>
-      </svg>
+      <BgText text={"About"} />
       {/* <section>
         <h1 className="aboutTitle">A bit about me</h1>
         <div>

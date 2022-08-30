@@ -1,0 +1,14 @@
+import React from "react"
+import { BgTextStyle } from "../../styles/BgTextStyle"
+
+function BgText({ text }) {
+  return (
+    <BgTextStyle width="100%" height="100vh">
+      <text x="20%" y="55%">
+        {text}
+      </text>
+    </BgTextStyle>
+  )
+}
+
+export default BgText

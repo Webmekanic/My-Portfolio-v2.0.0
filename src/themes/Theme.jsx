@@ -15,6 +15,7 @@ const theme = {
   },
   mediaQueries: {
     below768: `only screen and (max-width: 768px)`,
+    below414: `only screen and (max-width: 414px)`,
   },
 }
 export default theme

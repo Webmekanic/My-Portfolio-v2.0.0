@@ -93,23 +93,10 @@ export const AboutMe = styled.div`
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
     .pattern1 {
-      // top: 0;
-      top: -10px;
-      transform: rotate(-18deg);
-      height: 160px;
     }
     .pattern2 {
-      // border: 1px solid red;
-      top: 600px;
-      transform: rotate(30deg);
-      left: -65px;
-      height: 160px;
     }
     .pattern3 {
-      top: 250px;
-      transform: rotate(-18deg);
-      left: -70px;
-      height: 160px;
     }
   }
 `
