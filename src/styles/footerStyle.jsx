@@ -2,35 +2,32 @@ import styled from "styled-components"
 
 export const FooterSection = styled.footer`
   background-color: transparent;
-  // border: 4px solid red;
-  // padding-bottom: 1rem;
   position: relative;
   white-space: nowrap;
-  // padding: 0 clamp(0.6rem, 3vw, 2.8rem);
   z-index: 99;
-  width: 93%;
+  width: 90%;
   margin: auto;
+  padding-bottom: 0.5rem;
 
   .horizontalLine {
     border-top: 2px solid ${({ theme }) => theme.colors.lineColor};
     margin: 1.875rem auto;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
   }
 
   .contactAddresses {
-    // border: 2px solid ${({ theme }) => theme.colors.purple}
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    // height: 20px;
   }
 
   .copyRight {
     display: flex;
     color: ${({ theme }) => theme.colors.textColor};
     font-style: Medium;
-    font-size: 14px;
+    font-size: clamp(0.8rem, 3vw, 0.875rem);
+    margin-top: -0.7rem;
   }
 
   .myInfo:first-child {
@@ -48,7 +45,6 @@ export const FooterSection = styled.footer`
     cursor: pointer;
   }
   .socialIcons {
-    // border: 2px solid yellow;
     display: flex;
     grid-gap: 1rem;
     font-size: 1.3rem;

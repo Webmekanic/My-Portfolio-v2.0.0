@@ -62,49 +62,18 @@ export const ContactMe = styled.div`
     right: 20px;
   }
 
-  .svg {
-    position: absolute;
-    top: 0;
-    z-index: 88;
-    margin-top: -9%;
-    // right: -10px;
-    margin-left: 38.375rem;
-  }
-  .svg text {
-    font-size: 14vw;
-    // font-weight: 900;
-    font-family: chivo;
-    stroke-width: 1px;
-    fill: transparent;
-    stroke: #7151b6;
-    letter-spacing: 4px;
-    animation: effect 6s infinite alternate;
-    z-index: 20;
-    opacity: 0.4;
-  }
-  @keyframes effect {
-    0% {
-      stroke-dasharray: 100% 40%;
-    }
-    100% {
-      stroke-dasharray: 40% 0%;
-      stroke-dashoffset: 40%;
-    }
-  }
-
   .contactTitle {
     font-family: Chivo;
     font-style: normal;
-    font-size: 40px;
+    font-size: clamp(1.9rem, 2vw, 2.5rem);
     text-transform: capitalize;
     color: ${({ theme }) => theme.colors.neutral};
     z-index: 99;
-    // border: 2px solid red;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
   }
 
   .formSection {
-    // border: 2px solid red;
     position: absolute;
     z-index: 99;
     top: 80px;
@@ -114,23 +83,19 @@ export const ContactMe = styled.div`
   }
 
   .contactText {
-    // border: 2px solid pink;
     width: 45%;
     color: ${({ theme }) => theme.colors.textColor};
     margin-bottom: 1rem;
   }
   .contactForm {
-    // border: 2px solid white;
     display: flex;
 
     .contactInput {
-      // border: 2px solid yellow;
       width: 50%;
     }
 
     #NameInput,
     #emailInput {
-      // border: 2px solid red;
       width: 75%;
       padding: 0.6rem;
       margin-bottom: 0.8rem;
@@ -158,11 +123,9 @@ export const ContactMe = styled.div`
     }
 
     .profileIcon {
-      // border: 1px solid red;
       padding: 0.6rem 1.6rem;
     }
     .linkedinContact {
-      // border: 2px solid red;
       color: ${({ theme }) => theme.colors.lightColor};
       position: absolute;
       font-size: 38px;
@@ -171,11 +134,9 @@ export const ContactMe = styled.div`
       flex-direction: column;
       align-items: center;
       cursor: pointer;
-      // font-weight: lighter;
     }
 
     .twitterContact {
-      // border: 2px solid yellow;
       color: ${({ theme }) => theme.colors.lightColor};
       position: absolute;
       right: 80px;
@@ -187,7 +148,6 @@ export const ContactMe = styled.div`
       cursor: pointer;
     }
     .githubContact {
-      // border: 2px solid red;
       color: ${({ theme }) => theme.colors.lightColor};
       position: absolute;
       font-size: 38px;
@@ -200,7 +160,6 @@ export const ContactMe = styled.div`
     }
 
     .codewarsContact {
-      // border: 2px solid purple;
       color: ${({ theme }) => theme.colors.lightColor};
       position: absolute;
       font-size: 38px;
@@ -220,7 +179,7 @@ export const ContactMe = styled.div`
   }
 
   .contactBtn {
-    margin-top: 1.25rem;
+    margin-top: 1.2rem;
   }
 
   .contact-footer {
@@ -240,22 +199,38 @@ export const ContactMe = styled.div`
     }
 
     .pattern2 {
-      // border: 2px solid pink;
       top: 265px;
       transform: rotate(-18deg);
       left: -55px;
     }
 
     .pattern3 {
-      // border: 2px solid purple;
       top: 500px;
-      // display: none;
       transform: rotate(25deg);
       left: -300px;
     }
-    #NameInput,
-    #emailInput {
-      border: 2px solid purple;
+
+    .contactText {
+      width: 100%;
+    }
+    .contactForm {
+      display: block;
+      width: 100%;
+
+      .contactInput {
+        width: 100%;
+      }
+
+      #NameInput,
+      #emailInput,
+      #MessageInput {
+        width: 100%;
+      }
+    }
+
+    .contactBtn {
+      margin-top: 1.25rem;
+      float: right;
     }
 
     .contactLocations {

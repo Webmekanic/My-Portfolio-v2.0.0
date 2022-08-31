@@ -33,7 +33,7 @@ const Contact = () => {
               <br />
               <textarea id="MessageInput" placeholder="Message..."></textarea>
             </form>
-            <div className="contactLocations">
+            {/* <div className="contactLocations">
               <div className="linkedinContact">
                 <HiOutlineLocationMarker />
                 <Button text={"Linkedin"} className="profileIcon" />
@@ -65,7 +65,7 @@ const Contact = () => {
                   <Button text={"Codewars"} className="profileIcon" />
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
           <Button text={"send"} className="contactBtn" />
         </div>
