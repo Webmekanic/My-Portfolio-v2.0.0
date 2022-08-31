@@ -1,10 +1,8 @@
 import React from "react"
 import Button from "../components/shared/Button"
 import Footer from "../components/layouts/Footer"
+import BgText from "../components/shared/BgText"
 import { HiOutlineLocationMarker } from "react-icons/hi"
-import { Link } from "react-router-dom"
-
-// import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 import { ContactMe } from "../styles/ContactStyle"
 
 const Contact = () => {
@@ -13,12 +11,13 @@ const Contact = () => {
       <div className="pattern1"></div>
       <div className="pattern2"></div>
       <div className="pattern3"></div>
-
+      <BgText text={"Contact"} />
+      {/* 
       <svg className="svg" width="100%" height="100vh">
         <text x="20%" y="55%">
           Contact
         </text>
-      </svg>
+      </svg> */}
       <section className="formSection">
         <h1 className="contactTitle">Contact Me</h1>
         <p className="contactText">
