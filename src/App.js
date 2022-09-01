@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound"
 import Layouts from "./components/layouts/Layouts"
 import MobileMenu from "./components/layouts/MobileMenu"
 import Skills from "./components/layouts/Skills"
+import Loading from "./components/layouts/Loading"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         </Route>
         <Route path="/menu" element={<MobileMenu />} />
         <Route path="/skills" element={<Skills />} />
+        <Route path="/loading" element={<Loading />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

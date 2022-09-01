@@ -9,7 +9,7 @@ const About = () => {
       <div className="pattern1"></div>
       <div className="pattern2"></div>
       <div className="pattern3"></div>
-      <BgText text={"About"} />
+      {/* <BgText text={"About"} /> */}
       {/* <section>
         <h1 className="aboutTitle">A bit about me</h1>
         <div>

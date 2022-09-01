@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Link from "../components/shared/NavLink"
 
 export const Nav = styled.nav`
+  border: 1px solid red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -14,8 +15,8 @@ export const Nav = styled.nav`
   left: 0;
   right: 0;
   z-index: 99;
-  width: 90%;
-  margin: auto;
+  // width: 96%;
+  // margin: auto;
 
   .myIntials {
     font-family: Wingdings 3;

@@ -1,9 +1,9 @@
 import React from "react"
 import { BgTextStyle } from "../../styles/BgTextStyle"
 
-function BgText({ text }) {
+function BgText({ text, classname }) {
   return (
-    <BgTextStyle width="100%" height="100vh">
+    <BgTextStyle width="100%" height="100vh" className={classname}>
       <text x="20%" y="55%">
         {text}
       </text>
