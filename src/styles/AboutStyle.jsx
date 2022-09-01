@@ -56,21 +56,31 @@ export const AboutMe = styled.div`
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
+    // .pattern {
+    //   // border: 1px solid yellow;
+    //   height: 100vh;
+    //   width: 5px;
+    //   margin: auto;
+    //   background: red;
+    //   display: relative;
+    //   z-index: 99;
+    // }
+
     .pattern1 {
-      // border: 2px solid red;
-      top: 15rem;
-      transform: skewY(-15deg);
-      height: 12rem;
+      top: 16.2rem;
+      transform: skewY(-15.5deg);
+      height: 11rem;
     }
     .pattern2 {
-      top: 33rem;
-      transform: skewY(-15deg);
+      top: 35rem;
+      transform: skewY(-15.5deg);
       height: 12rem;
+      // border: 2px solid red;
     }
     .pattern3 {
-      border: 2px solid red;
-      top: 38rem;
-      transform: skewY(15deg);
+      // border: 2px solid red;
+      top: 35rem;
+      transform: skewY(15.5deg);
       height: 12rem;
     }
   }
