@@ -17,6 +17,7 @@ const theme = {
     below768: `only screen and (max-width: 768px)`,
     medium: `only screen and (min-width: 1024px)`,
     large: `only screen and (min-width: 1280px)`,
+    xtraLarge: `only screen and (min-width: 1440px)`,
   },
 }
 export default theme

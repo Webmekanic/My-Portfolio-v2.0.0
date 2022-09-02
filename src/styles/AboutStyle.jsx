@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const AboutMe = styled.div`
-  // border: 2px solid red;
   background-color: transparent;
   position: relative;
   height: 100vh;
@@ -24,7 +23,6 @@ export const AboutMe = styled.div`
   .pattern2 {
     background: ${({ theme }) => theme.colors.barColor};
     position: absolute;
-    // border: 2px solid purple;
     z-index: 10;
     height: 13rem;
     width: 100%;
@@ -56,41 +54,52 @@ export const AboutMe = styled.div`
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
-    // .pattern {
-    //   // border: 1px solid yellow;
-    //   height: 100vh;
-    //   width: 5px;
-    //   margin: auto;
-    //   background: red;
-    //   display: relative;
-    //   z-index: 99;
-    // }
-
     .pattern1 {
-      top: 16.2rem;
+      top: 12rem;
       transform: skewY(-15.5deg);
-      height: 11rem;
+      height: 13rem;
     }
     .pattern2 {
-      top: 35rem;
+      top: 32.5rem;
       transform: skewY(-15.5deg);
-      height: 12rem;
-      // border: 2px solid red;
+      height: 13rem;
     }
     .pattern3 {
-      // border: 2px solid red;
-      top: 35rem;
+      top: 32.5rem;
       transform: skewY(15.5deg);
-      height: 12rem;
+      height: 13rem;
     }
   }
   @media ${({ theme }) => theme.mediaQueries.large} {
     .pattern1 {
-      // border: 2px solid white;
+      top: 14.3rem;
+      transform: skewY(-14deg);
     }
     .pattern2 {
+      top: 36rem;
+      transform: skewY(-14deg);
     }
     .pattern3 {
+      top: 36.5rem;
+      transform: skewY(14deg);
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 1023px) {
+    .pattern1 {
+      height: 12rem;
+      transform: skewY(-17deg);
+    }
+    .pattern2 {
+      height: 12rem;
+      transform: skewY(-17deg);
+      top: 32rem;
+    }
+    .pattern3 {
+      border: 2px solid yellow;
+      height: 12rem;
+      transform: skewY(17deg);
+      top: 32rem;
     }
   }
 `
