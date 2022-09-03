@@ -52,6 +52,17 @@ export const AboutMe = styled.div`
     z-index: 99;
     bottom: 10px;
   }
+  .aboutBgText {
+    margin-left: 3rem;
+    margin-top: -12rem;
+  }
+  .aboutMeBgText {
+    margin-left: -6.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .boutTitle {
+  }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
     .pattern1 {
@@ -69,6 +80,13 @@ export const AboutMe = styled.div`
       transform: skewY(15.5deg);
       height: 13rem;
     }
+    .aboutBgText {
+      margin-left: 30rem;
+      margin-top: -7rem;
+    }
+    .aboutMeBgText {
+      display: none;
+    }
   }
   @media ${({ theme }) => theme.mediaQueries.large} {
     .pattern1 {
@@ -83,6 +101,13 @@ export const AboutMe = styled.div`
       top: 36.5rem;
       transform: skewY(14deg);
     }
+    .aboutBgText {
+      margin-left: 33.5rem;
+      margin-top: -5rem;
+    }
+    .aboutMeBgText {
+      display: none;
+    }
   }
 
   @media (min-width: 481px) and (max-width: 1023px) {
@@ -96,10 +121,17 @@ export const AboutMe = styled.div`
       top: 32rem;
     }
     .pattern3 {
-      border: 2px solid yellow;
       height: 12rem;
       transform: skewY(17deg);
       top: 32rem;
+    }
+    .aboutBgText {
+      margin-left: 12rem;
+      margin-top: -6rem;
+    }
+    .aboutMeBgText {
+      margin-left: -10rem;
+      margin-top: 5rem;
     }
   }
 `

@@ -4,11 +4,9 @@ export const BgTextStyle = styled.svg`
   position: absolute;
   top: 0;
   z-index: 88;
-  margin-top: -9%;
-  margin-left: 32.375rem;
 
   text {
-    font-size: 14rem;
+    font-size: 13rem;
     // font-weight: 900;
     font-family: chivo;
     stroke-width: 1px;
@@ -27,10 +25,5 @@ export const BgTextStyle = styled.svg`
       stroke-dasharray: 40% 0%;
       stroke-dashoffset: 40%;
     }
-  }
-
-  @media ${({ theme }) => theme.mediaQueries.below768} {
-    margin-left: 7.5rem;
-    margin-top: -15%;
   }
 `
