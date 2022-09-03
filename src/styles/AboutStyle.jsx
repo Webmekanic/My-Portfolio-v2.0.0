@@ -6,7 +6,9 @@ export const AboutMe = styled.div`
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  z-index: 10;
+  z-index: 20;
+
+  padding-top: 5rem;
 
   .pattern1 {
     background: ${({ theme }) => theme.colors.barColor};
@@ -60,8 +62,44 @@ export const AboutMe = styled.div`
     margin-left: -6.5rem;
     margin-top: 2.5rem;
   }
+  .aboutContainer {
+    width: 95%;
+    margin: auto;
+  }
 
-  .boutTitle {
+  .aboutTitle {
+    position: relative;
+    z-index: 30;
+    font-family: "Chivo";
+    font-style: black;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 3vw, 2.8125rem);
+    text-transform: capitalize;
+    color: ${({ theme }) => theme.colors.neutral};
+    // margin: auto;
+    // width: 95%;
+    white-space: nowrap;
+  }
+  .aboutAniebo {
+    // border: 1px solid ${({ theme }) => theme.colors.lightColor};
+    position: relative;
+    z-index: 30;
+    // width: 95%;
+    // margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 13rem;
+  }
+  .aboutText {
+    border: 1px solid red;
+  }
+  .skillsCard {
+    border-top: 3px solid ${({ theme }) => theme.colors.purple};
+    background: #11171b;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+  }
+  .downloadResumeButton {
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {

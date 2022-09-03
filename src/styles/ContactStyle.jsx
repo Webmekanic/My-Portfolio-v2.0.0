@@ -55,7 +55,6 @@ export const ContactMe = styled.div`
     width: 1440px;
     height: 170px;
     z-index: 10;
-    z-index: 10;
     transform: rotate(8deg);
     top: 410px;
     left: -30px;

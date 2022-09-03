@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const BgTextStyle = styled.svg`
   position: absolute;
   top: 0;
-  z-index: 88;
+  z-index: 10;
 
   text {
     font-size: 13rem;

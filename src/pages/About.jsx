@@ -2,6 +2,7 @@ import React from "react"
 import BgText from "../components/shared/BgText"
 import Footer from "../components/layouts/Footer"
 import { AboutMe } from "../styles/AboutStyle"
+import Button from "../components/shared/Button"
 
 const About = () => {
   return (
@@ -12,11 +13,10 @@ const About = () => {
       <div className="pattern"></div>
       <BgText text={"About"} classname="aboutBgText" />
       <BgText text={"Me"} classname="aboutMeBgText" />
-
-      {
-        <section>
-          <h1 className="aboutTitle">A bit about me</h1>
-          {/* <div>
+      <section className="aboutContainer">
+        <h1 className="aboutTitle">A bit about me</h1>
+        <section className="aboutAniebo">
+          <div className="aboutText">
             <p>
               I am a Front-end Developer with skills in HTML, CSS, Bootstrap
               SaSS and ReactJS, passionate about developing clean, intuitive
@@ -30,9 +30,11 @@ const About = () => {
               I am open to freelance and full-time positions in an environment
               which presents fun challenges with provision for constant growth.
             </p>
-          </div> */}
+          </div>
+          <div className="skillsCard"></div>
         </section>
-      }
+        <Button text={"Download Resume"} className="downloadResumeButton" />
+      </section>
       <Footer classname="aboutFooter" />
     </AboutMe>
   )
