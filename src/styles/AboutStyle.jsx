@@ -3,9 +3,11 @@ import styled from "styled-components"
 export const AboutMe = styled.div`
   background-color: transparent;
   position: relative;
-  height: 100vh;
-  width: 100vw;
   overflow: hidden;
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
   z-index: 20;
 
   padding-top: 5rem;
@@ -63,7 +65,7 @@ export const AboutMe = styled.div`
     margin-top: 2.5rem;
   }
   .aboutContainer {
-    width: 95%;
+    width: 93%;
     margin: auto;
   }
 
@@ -76,22 +78,31 @@ export const AboutMe = styled.div`
     font-size: clamp(2.5rem, 3vw, 2.8125rem);
     text-transform: capitalize;
     color: ${({ theme }) => theme.colors.neutral};
-    // margin: auto;
-    // width: 95%;
     white-space: nowrap;
   }
   .aboutAniebo {
-    // border: 1px solid ${({ theme }) => theme.colors.lightColor};
+    border: 1px solid ${({ theme }) => theme.colors.lightColor};
     position: relative;
     z-index: 30;
-    // width: 95%;
-    // margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 13rem;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    // margin-top: 1.2rem;
   }
   .aboutText {
     border: 1px solid red;
+  }
+  .aboutText > * {
+    padding-top: 0.7rem;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.3125rem;
+    color: ${({ theme }) => theme.colors.textColor};
+  }
+  .aboutText2 {
+    padding-top: 0;
   }
   .skillsCard {
     border-top: 3px solid ${({ theme }) => theme.colors.purple};
@@ -100,9 +111,12 @@ export const AboutMe = styled.div`
     border-radius: 8px;
   }
   .downloadResumeButton {
+    margin-top: 1rem;
+    color: ${({ theme }) => theme.colors.lightColor};
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
+    height: 100vh;
     .pattern1 {
       top: 12rem;
       transform: skewY(-15.5deg);
@@ -124,6 +138,13 @@ export const AboutMe = styled.div`
     }
     .aboutMeBgText {
       display: none;
+    }
+    .aboutAniebo {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 12rem;
+    }
+    .aboutText2 {
+      padding-top: 0.7rem;
     }
   }
   @media ${({ theme }) => theme.mediaQueries.large} {

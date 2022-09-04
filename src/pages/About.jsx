@@ -10,7 +10,6 @@ const About = () => {
       <div className="pattern1"></div>
       <div className="pattern2"></div>
       <div className="pattern3"></div>
-      <div className="pattern"></div>
       <BgText text={"About"} classname="aboutBgText" />
       <BgText text={"Me"} classname="aboutMeBgText" />
       <section className="aboutContainer">
@@ -22,7 +21,7 @@ const About = () => {
               SaSS and ReactJS, passionate about developing clean, intuitive
               interfaces and adding my bit to the world of web development.
             </p>
-            <p>
+            <p className="aboutText2">
               When I am not knee-deep into programming, I can be found reading
               playing games or going for a walk with my dogs.
             </p>
@@ -30,10 +29,10 @@ const About = () => {
               I am open to freelance and full-time positions in an environment
               which presents fun challenges with provision for constant growth.
             </p>
+            <Button text={"Download Resume"} className="downloadResumeButton" />
           </div>
           <div className="skillsCard"></div>
         </section>
-        <Button text={"Download Resume"} className="downloadResumeButton" />
       </section>
       <Footer classname="aboutFooter" />
     </AboutMe>

@@ -5,7 +5,7 @@ export const FooterSection = styled.footer`
   position: relative;
   white-space: nowrap;
   z-index: 99;
-  width: 90%;
+  width: 93%;
   margin: auto;
   padding-bottom: 0.5rem;
 

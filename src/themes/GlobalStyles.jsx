@@ -14,6 +14,7 @@ html{
 body{
   color: white;
   background: #0C1114;
+  
 ;
   font-family: 'Work Sans';
 
