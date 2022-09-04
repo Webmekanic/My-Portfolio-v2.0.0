@@ -67,6 +67,18 @@ export const MyHome = styled.div`
     right: 0;
     top: 82.5rem;
   }
+  .pattern6 {
+    // border: 2px solid red;
+    background: ${({ theme }) => theme.colors.barColor};
+    position: absolute;
+    z-index: 10;
+    height: 13rem;
+    width: 100%;
+    transform: skewY(-35deg);
+    left: 0;
+    right: 0;
+    top: 82.5rem;
+  }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
     .pattern1 {
@@ -93,6 +105,10 @@ export const MyHome = styled.div`
       transform: skewY(15.5deg);
       top: 84.5rem;
     }
+    .pattern6 {
+      transform: skewY(-15.5deg);
+      top: 84.8rem;
+    }
   }
   @media ${({ theme }) => theme.mediaQueries.large} {
     .pattern1 {
@@ -113,6 +129,10 @@ export const MyHome = styled.div`
     }
     .pattern5 {
       transform: skewY(14deg);
+      top: 88.5rem;
+    }
+    .pattern6 {
+      transform: skewY(-14deg);
       top: 88.5rem;
     }
   }
@@ -137,6 +157,10 @@ export const MyHome = styled.div`
     }
     .pattern5 {
       transform: skewY(17deg);
+      top: 84rem;
+    }
+    .pattern6 {
+      transform: skewY(-17deg);
       top: 84rem;
     }
   }

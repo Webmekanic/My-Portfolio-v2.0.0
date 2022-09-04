@@ -10,6 +10,7 @@ function Home() {
       <div className="pattern3"></div>
       <div className="pattern4"></div>
       <div className="pattern5"></div>
+      <div className="pattern6"></div>
     </MyHome>
   )
 }
