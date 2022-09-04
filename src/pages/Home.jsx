@@ -8,6 +8,8 @@ function Home() {
       <div className="pattern1"></div>
       <div className="pattern2"></div>
       <div className="pattern3"></div>
+      <div className="pattern4"></div>
+      <div className="pattern5"></div>
     </MyHome>
   )
 }
