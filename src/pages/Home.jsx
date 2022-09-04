@@ -11,6 +11,9 @@ function Home() {
       <div className="pattern4"></div>
       <div className="pattern5"></div>
       <div className="pattern6"></div>
+      <div className="pattern7"></div>
+      <div className="pattern8"></div>
+      <div className="pattern9"></div>
     </MyHome>
   )
 }

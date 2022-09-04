@@ -79,6 +79,39 @@ export const MyHome = styled.div`
     right: 0;
     top: 82.5rem;
   }
+  .pattern7 {
+    position: absolute;
+    background: ${({ theme }) => theme.colors.barColor};
+    z-index: 10;
+    height: 13rem;
+    width: 100%;
+    transform: skewY(35deg);
+    left: 0;
+    right: 0;
+    top: 115rem;
+  }
+  .pattern8 {
+    position: absolute;
+    background: ${({ theme }) => theme.colors.barColor};
+    z-index: 10;
+    height: 13rem;
+    width: 100%;
+    transform: skewY(-35deg);
+    left: 0;
+    right: 0;
+    top: 115rem;
+  }
+  .pattern9 {
+    position: absolute;
+    background: ${({ theme }) => theme.colors.barColor};
+    z-index: 10;
+    height: 13rem;
+    width: 100%;
+    transform: skewY(-35deg);
+    left: 0;
+    right: 0;
+    top: 134rem;
+  }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
     .pattern1 {
@@ -109,6 +142,19 @@ export const MyHome = styled.div`
       transform: skewY(-15.5deg);
       top: 84.8rem;
     }
+    .pattern7 {
+      top: 117rem;
+      transform: skewY(15.5deg);
+      height: 13rem;
+    }
+    .pattern8 {
+      top: 117rem;
+      transform: skewY(-15.5deg);
+    }
+    .pattern9 {
+      top: 134.5rem;
+      transform: skewY(-15.5deg);
+    }
   }
   @media ${({ theme }) => theme.mediaQueries.large} {
     .pattern1 {
@@ -134,6 +180,18 @@ export const MyHome = styled.div`
     .pattern6 {
       transform: skewY(-14deg);
       top: 88.5rem;
+    }
+    .pattern7 {
+      top: 126rem;
+      transform: skewY(14deg);
+    }
+    .pattern8 {
+      top: 126rem;
+      transform: skewY(-14deg);
+    }
+    .pattern9 {
+      top: 146rem;
+      transform: skewY(-14deg);
     }
   }
   @media (min-width: 481px) and (max-width: 1023px) {
@@ -162,6 +220,18 @@ export const MyHome = styled.div`
     .pattern6 {
       transform: skewY(-17deg);
       top: 84rem;
+    }
+    .pattern7 {
+      transform: skewY(17deg);
+      top: 117rem;
+    }
+    .pattern8 {
+      transform: skewY(-17deg);
+      top: 117rem;
+    }
+    .pattern9 {
+      transform: skewY(-17deg);
+      top: 138rem;
     }
   }
 `
