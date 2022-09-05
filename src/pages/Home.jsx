@@ -1,4 +1,5 @@
 import React from "react"
+import Footer from "../components/layouts/Footer"
 import { MyHome } from "../styles/HomeStyle"
 // import BgText from "../components/shared/BgText"
 
@@ -14,6 +15,7 @@ function Home() {
       <div className="pattern7"></div>
       <div className="pattern8"></div>
       <div className="pattern9"></div>
+      <Footer classname="homeFooter" />
     </MyHome>
   )
 }

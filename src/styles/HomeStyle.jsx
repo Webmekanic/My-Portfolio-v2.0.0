@@ -113,6 +113,11 @@ export const MyHome = styled.div`
     top: 134rem;
   }
 
+  .homeFooter {
+    position: absolute;
+    bottom: 10px;
+  }
+
   @media ${({ theme }) => theme.mediaQueries.medium} {
     .pattern1 {
       top: 12rem;
