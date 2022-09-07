@@ -453,19 +453,14 @@ export const MyHome = styled.div`
   }
 
   .homeAboutMe {
-    // border: 2px solid red;
+    border: 2px solid red;
     position: relative;
     z-index: 20;
     width: 100%;
-    // overflow: hidden;
   }
   .homeAboutBgText {
-    // border: 2px solid red;
     position: absolute;
-    // margin-left: 11rem;
-    top: 100px;
-    // z-index: 20;
-    // overflow: hidden;
+    top: 40px;
   }
 
   .homeAboutMeText {
@@ -637,5 +632,61 @@ export const MyHome = styled.div`
     .xbox:after {
       font-size: 2.5rem;
     }
+  }
+`
+
+export const AboutAniebo = styled.section`
+  border: 2px solid green;
+  width: 89%;
+  margin: auto;
+  padding-top: 5.8rem;
+
+  .aboutTitle {
+    position: relative;
+    z-index: 30;
+    font-family: "Chivo";
+    font-style: black;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 3vw, 2.8125rem);
+    text-transform: capitalize;
+    color: ${({ theme }) => theme.colors.neutral};
+    white-space: nowrap;
+  }
+
+  .aboutText {
+    border: 1px solid red;
+    padding-top: 2rem;
+  }
+  .aboutText > * {
+    padding-top: 0.7rem;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.3125rem;
+    // color: ${({ theme }) => theme.colors.textColor};
+  }
+  .aboutText2 {
+    // padding-top: 0;
+  }
+  .aboutAniebo {
+    // border: 1px solid ${({ theme }) => theme.colors.lightColor};
+    position: relative;
+    z-index: 30;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 6rem;
+  }
+
+  .downloadResumeButton {
+    margin-top: 2rem;
+  }
+  .skillsCard {
+    border-top: 3px solid ${({ theme }) => theme.colors.purple};
+    background: #11171b;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    width: 100%;
+    height: 270px;
   }
 `

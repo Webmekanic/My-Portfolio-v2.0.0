@@ -4,7 +4,7 @@ export const BgTextStyle = styled.svg`
   position: absolute;
   // margin-left: 11rem;
   // top: 100px;
-  // z-index: 20;
+  z-index: 20;
   // overflow: hidden;
 
   text {

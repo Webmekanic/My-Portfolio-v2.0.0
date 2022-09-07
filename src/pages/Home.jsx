@@ -3,7 +3,7 @@ import Skills from "../components/layouts/Skills"
 import BgText from "../components/shared/BgText"
 import Button from "../components/shared/Button"
 // import Footer from "../components/layouts/Footer"
-import { MyHome } from "../styles/HomeStyle"
+import { MyHome, AboutAniebo } from "../styles/HomeStyle"
 // import { MySkills } from "../styles/SkillStyle"
 // import BgText from "../components/shared/BgText"
 import letsCodeIcon1 from "../components/layouts/assets/letcodeicon1.svg"
@@ -51,6 +51,35 @@ function Home() {
         <section className="homeAboutMe">
           <BgText text={"About"} classname="homeAboutBgText" />
           {/* <BgText text={"Me"} classname="homeAboutMeText" /> */}
+          <section>
+            <AboutAniebo>
+              <h1 className="aboutTitle">A bit about me</h1>
+              <section className="aboutAniebo">
+                <div className="aboutText">
+                  <p>
+                    I am a Front-end Developer with skills in HTML, CSS,
+                    Bootstrap SaSS and ReactJS, passionate about developing
+                    clean, intuitive interfaces and adding my bit to the world
+                    of web development.
+                  </p>
+                  <p className="aboutText2">
+                    When I am not knee-deep into programming, I can be found
+                    reading playing games or going for a walk with my dogs.
+                  </p>
+                  <p>
+                    I am open to freelance and full-time positions in an
+                    environment which presents fun challenges with provision for
+                    constant growth.
+                  </p>
+                  <Button
+                    text={"Download Resume"}
+                    className="downloadResumeButton"
+                  />
+                </div>
+                <div className="skillsCard"></div>
+              </section>
+            </AboutAniebo>
+          </section>
         </section>
       </MyHome>
       {/* <Footer classname="homeFooter" /> */}

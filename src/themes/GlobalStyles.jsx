@@ -28,7 +28,7 @@ html{
 	width: 7px;
 }
 body{
-  color: white;
+  color: ${({ theme }) => theme.colors.textColor};
   background: #0C1114;
   font-family: 'Work Sans';
 }
