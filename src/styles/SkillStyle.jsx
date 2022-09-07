@@ -2,14 +2,13 @@ import styled from "styled-components"
 
 export const MySkills = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.purple};
-  // margin: auto;
   position: relative;
+  z-index: 99;
   display: flex;
   align-items: center;
   width: 18.75rem;
   height: 18.75rem;
   border-radius: 50%;
-  // color: ${({ theme }) => theme.colors.purple};
   background: transparent;
 
   .skillsBorder1 {

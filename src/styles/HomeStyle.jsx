@@ -3,13 +3,14 @@ import styled from "styled-components"
 export const MyHome = styled.div`
   border: 2px solid red;
   background-color: transparent;
-  position: relative;
-  overflow: hidden;
-  overflow-y: scroll;
-  z-index: 20;
   padding-top: 5rem;
-  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  z-index: 20;
 
+  .pTag {
+    // margin-top: 20rem;
+  }
   .pattern1 {
     background: ${({ theme }) => theme.colors.barColor};
     position: absolute;
@@ -112,10 +113,21 @@ export const MyHome = styled.div`
     right: 0;
     top: 134rem;
   }
+  .homeContainer {
+    // border: 2px solid purple;
+    // height: 100%;
+    // position: relative;
+  }
+
+  .myName {
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 0 #aaa;
+  }
 
   .homeFooter {
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
+    // border: 2px solid red;
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
