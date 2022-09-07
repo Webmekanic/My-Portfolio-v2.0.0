@@ -28,7 +28,6 @@ html{
 	width: 7px;
 }
 body{
-	// border: 3px solid yellow;
   color: white;
   background: #0C1114;
   font-family: 'Work Sans';

@@ -28,7 +28,7 @@ function Home() {
               Aniebo<div class="inside"> Aniebo</div>
             </div>
           </div>
-          {/* <p>Software Engineer</p> */}
+          <p>Software Engineer</p>
         </section>
       </MyHome>
       {/* <Footer classname="homeFooter" /> */}

@@ -125,7 +125,7 @@ export const MyHome = styled.div`
 
   .xbox {
     // border: 2px solid yellow;
-    font-size: 4rem;
+    font-size: 3.1rem;
     position: relative;
     text-shadow: 0px 0px 3px ${({ theme }) => theme.colors.purple};
     color: ${({ theme }) => theme.colors.barColor};
@@ -135,16 +135,14 @@ export const MyHome = styled.div`
     z-index: 99;
     top: 0;
   }
-  // .xbox1 {
-  //   // border: 2px solid green;
-  //   margin-top: -1.9rem;
-  // }
+
   .fullName {
     border: 2px solid green;
     display: flex;
+    grid-gap: 0.9rem;
   }
   .xbox .inside {
-    font-size: 4rem;
+    font-size: 3.1rem;
     background-image: linear-gradient(180deg, #f8f6ef 10%, #f8f6ef 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -159,7 +157,7 @@ export const MyHome = styled.div`
   }
   .xbox:before {
     content: attr(data-char);
-    font-size: 4rem;
+    font-size: 3.1rem;
     position: absolute;
     text-shadow: 0px 0px 4px ${({ theme }) => theme.colors.purple};
     clip-path: polygon(
@@ -180,7 +178,7 @@ export const MyHome = styled.div`
   }
   .xbox:after {
     content: attr(data-char);
-    font-size: 4rem;
+    font-size: 3.1rem;
     position: absolute;
     text-shadow: 0px 0px 4px ${({ theme }) => theme.colors.purple};
     clip-path: polygon(
@@ -445,6 +443,21 @@ export const MyHome = styled.div`
       top: 134.5rem;
       transform: skewY(-15.5deg);
     }
+    .xbox1 {
+      // border: 2px solid green;
+      margin-top: -1.9rem;
+    }
+    .fullName {
+      display: flex;
+      flex-direction: column;
+      grid-gap: unset;
+    }
+    .xbox,
+    .xbox .inside,
+    .xbox:before,
+    .xbox:after {
+      font-size: 8.5rem;
+    }
   }
   @media ${({ theme }) => theme.mediaQueries.large} {
     .pattern1 {
@@ -522,6 +535,14 @@ export const MyHome = styled.div`
     .pattern9 {
       transform: skewY(-17deg);
       top: 138rem;
+    }
+  }
+  @media (max-width: 280px) {
+    .xbox,
+    .xbox .inside,
+    .xbox:before,
+    .xbox:after {
+      font-size: 2.5rem;
     }
   }
 `
