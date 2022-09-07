@@ -18,10 +18,18 @@ function Home() {
         <div className="pattern8"></div>
         <div className="pattern9"></div>
         {/* <MySkills /> */}
-        <div class="xbox" data-char="">
-          Aniebo
-          <div class="inside">Aniebo</div>
-        </div>
+
+        <section className="myNameContainer">
+          <div className="fullName">
+            <div class="xbox" data-char="David">
+              David<div class="inside">David</div>
+            </div>
+            <div class="xbox xbox1" data-char=" Aniebo">
+              Aniebo<div class="inside"> Aniebo</div>
+            </div>
+          </div>
+          {/* <p>Software Engineer</p> */}
+        </section>
       </MyHome>
       {/* <Footer classname="homeFooter" /> */}
     </>

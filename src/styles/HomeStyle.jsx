@@ -8,9 +8,6 @@ export const MyHome = styled.div`
   width: 100%;
   z-index: 20;
 
-  .pTag {
-    // margin-top: 20rem;
-  }
   .pattern1 {
     background: ${({ theme }) => theme.colors.barColor};
     position: absolute;
@@ -113,21 +110,297 @@ export const MyHome = styled.div`
     right: 0;
     top: 134rem;
   }
-  .homeContainer {
-    // border: 2px solid purple;
-    // height: 100%;
-    // position: relative;
-  }
-
-  .myName {
-    color: rgba(0, 0, 0, 0.5);
-    text-shadow: 3px 3px 0 #aaa;
-  }
 
   .homeFooter {
     position: absolute;
     bottom: 0;
-    // border: 2px solid red;
+  }
+  .myNameContainer {
+    // border: 2px solid pink;
+    width: 89%;
+    margin: auto;
+    z-index: 99;
+    padding-top: 3.4rem;
+  }
+
+  .xbox {
+    // border: 2px solid yellow;
+    font-size: 4rem;
+    position: relative;
+    text-shadow: 0px 0px 3px ${({ theme }) => theme.colors.purple};
+    color: ${({ theme }) => theme.colors.barColor};
+    font-family: Chivo;
+    font-style: normal;
+    font-weight: 900;
+    z-index: 99;
+    top: 0;
+  }
+  // .xbox1 {
+  //   // border: 2px solid green;
+  //   margin-top: -1.9rem;
+  // }
+  .fullName {
+    border: 2px solid green;
+    display: flex;
+  }
+  .xbox .inside {
+    font-size: 4rem;
+    background-image: linear-gradient(180deg, #f8f6ef 10%, #f8f6ef 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: none;
+    top: -5%;
+    left: -1%;
+    position: absolute;
+    z-index: 99;
+  }
+  .xbox:before {
+    content: attr(data-char);
+    font-size: 4rem;
+    position: absolute;
+    text-shadow: 0px 0px 4px ${({ theme }) => theme.colors.purple};
+    clip-path: polygon(
+      0% 100%,
+      0% 0%,
+      100% 0%,
+      100% 50%,
+      50% 50%,
+      100% 50%,
+      100% 100%
+    );
+    animation-name: loading;
+    animation-duration: 10s;
+    animation-delay: -0.1s;
+    animation-timing-function: cubic-bezier(0, 0.1, 0.9, 0.81);
+    animation-direction: reverse;
+    mix-blend-mode: color;
+  }
+  .xbox:after {
+    content: attr(data-char);
+    font-size: 4rem;
+    position: absolute;
+    text-shadow: 0px 0px 4px ${({ theme }) => theme.colors.purple};
+    clip-path: polygon(
+      0% 100%,
+      0% 0%,
+      100% 0%,
+      100% 50%,
+      50% 50%,
+      100% 50%,
+      100% 100%
+    );
+    animation-name: loading;
+    animation-duration: 10s;
+    animation-timing-function: cubic-bezier(0, 0.1, 0.9, 0.81);
+    animation-direction: reverse;
+    mix-blend-mode: color;
+    left: 0;
+    top: 0;
+  }
+  @keyframes loading {
+    0% {
+      clip-path: polygon(
+        0% 100%,
+        0% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        100% 50%,
+        100% 100%
+      );
+    }
+    12.5% {
+      clip-path: polygon(
+        0% 100%,
+        0% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        100% 100%,
+        100% 100%
+      );
+    }
+    25% {
+      clip-path: polygon(
+        0% 100%,
+        0% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        50% 100%,
+        50% 100%
+      );
+    }
+    37.5% {
+      clip-path: polygon(
+        0% 100%,
+        0% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        0% 100%,
+        0% 100%
+      );
+    }
+    50% {
+      clip-path: polygon(
+        0% 50%,
+        0% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        0% 50%,
+        0% 50%
+      );
+    }
+    62.5% {
+      clip-path: polygon(
+        0% 0%,
+        0% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        0% 0%,
+        0% 0%
+      );
+    }
+    75% {
+      clip-path: polygon(
+        50% 0%,
+        50% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        50% 0%,
+        50% 0%
+      );
+    }
+    87.5% {
+      clip-path: polygon(
+        100% 0%,
+        100% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        100% 0%,
+        100% 0%
+      );
+    }
+    100% {
+      clip-path: polygon(
+        100% 50%,
+        100% 50%,
+        100% 50%,
+        100% 50%,
+        50% 50%,
+        100% 50%,
+        100% 50%
+      );
+    }
+  }
+  @keyframes loading2 {
+    0% {
+      clip-path: polygon(
+        0% 100%,
+        0% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        100% 50%,
+        100% 100%
+      );
+    }
+    12.5% {
+      clip-path: polygon(
+        0% 100%,
+        0% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        100% 100%,
+        100% 100%
+      );
+    }
+    25% {
+      clip-path: polygon(
+        0% 100%,
+        0% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        50% 100%,
+        50% 100%
+      );
+    }
+    37.5% {
+      clip-path: polygon(
+        0% 100%,
+        0% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        0% 100%,
+        0% 100%
+      );
+    }
+    50% {
+      clip-path: polygon(
+        0% 50%,
+        0% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        0% 50%,
+        0% 50%
+      );
+    }
+    62.5% {
+      clip-path: polygon(
+        0% 0%,
+        0% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        0% 0%,
+        0% 0%
+      );
+    }
+    75% {
+      clip-path: polygon(
+        50% 0%,
+        50% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        50% 0%,
+        50% 0%
+      );
+    }
+    87.5% {
+      clip-path: polygon(
+        100% 0%,
+        100% 0%,
+        100% 0%,
+        100% 50%,
+        50% 50%,
+        100% 0%,
+        100% 0%
+      );
+    }
+    100% {
+      clip-path: polygon(
+        100% 50%,
+        100% 50%,
+        100% 50%,
+        100% 50%,
+        50% 50%,
+        100% 50%,
+        100% 50%
+      );
+    }
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
