@@ -20,7 +20,7 @@ const Btn = styled.p`
 const PageButton = styled.button`
   border: 2px solid red;
   display: inline-block;
-  padding: 0.6rem 1.875rem;
+  padding: 0.77rem 1.875rem;
   font-size: 14px;
   letter-spacing: 0.0938rem;
   text-transform: capitalize;

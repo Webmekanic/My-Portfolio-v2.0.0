@@ -10,22 +10,24 @@ import { MySkills } from "../../styles/SkillStyle"
 
 const Skills = () => {
   return (
-    <MySkills>
-      <div className="skillsBorder1">
-        <div className="skillsBorder2">
-          <div className="skillsBorder3">
-            <div className="aniIcon">
-              <img className="imgIcon" src={Aniebo} alt="" />
+    <>
+      <MySkills>
+        <div className="skillsBorder1">
+          <div className="skillsBorder2">
+            <div className="skillsBorder3">
+              <div className="aniIcon">
+                <img className="imgIcon" src={Aniebo} alt="" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      {/* skills Icon */}
-      <img className="jsLogo" src={JsLogo} alt="JS" />
-      <img className="cssLogo" src={CssLogo} alt="CSS" />
-      <img className="HtmlIcon" src={HtmlIcon} alt="HTML" />
-      <img className="ReactJs" src={ReactJs} alt="React" />
-    </MySkills>
+        {/* skills Icon */}
+        <img className="jsLogo" src={JsLogo} alt="JS" />
+        <img className="cssLogo" src={CssLogo} alt="CSS" />
+        <img className="HtmlIcon" src={HtmlIcon} alt="HTML" />
+        <img className="ReactJs" src={ReactJs} alt="React" />
+      </MySkills>
+    </>
   )
 }
 

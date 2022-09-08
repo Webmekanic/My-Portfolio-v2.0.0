@@ -1,9 +1,13 @@
 import React from "react"
+import Skills from "../components/layouts/Skills"
+import BgText from "../components/shared/BgText"
 import Button from "../components/shared/Button"
 // import Footer from "../components/layouts/Footer"
 import { MyHome } from "../styles/HomeStyle"
 // import { MySkills } from "../styles/SkillStyle"
 // import BgText from "../components/shared/BgText"
+import letsCodeIcon1 from "../components/layouts/assets/letcodeicon1.svg"
+import letsCodeIcon2 from "../components/layouts/assets/letcodeicon2.svg"
 
 function Home() {
   return (
@@ -21,16 +25,31 @@ function Home() {
         {/* <MySkills /> */}
 
         <section className="myNameContainer">
-          <div className="fullName">
-            <div class="xbox" data-char="David">
-              David<div class="inside">David</div>
+          <div className="aboutAniebo">
+            <div className="fullName">
+              <div class="xbox" data-char="David">
+                David<div class="inside">David</div>
+              </div>
+              <div class="xbox xbox1" data-char=" Aniebo">
+                Aniebo<div class="inside"> Aniebo</div>
+              </div>
             </div>
-            <div class="xbox xbox1" data-char=" Aniebo">
-              Aniebo<div class="inside"> Aniebo</div>
-            </div>
+            <Skills />
           </div>
           <p className="currentRole">Software Engineer</p>
-          <Button text={"Let’s code"} className="letsCodeBtn" />
+          <div className="letsCodeBtn">
+            <img src={letsCodeIcon1} alt="" className="img-circle" />
+            <img
+              src={letsCodeIcon2}
+              alt=""
+              className="img-circle2"
+              sizes="60px"
+            />
+            <Button text={"Let’s code"} />
+          </div>
+          <section className="homeAboutMe">
+            <BgText text={"About"} classname="homeAboutBgText" />
+          </section>
         </section>
       </MyHome>
       {/* <Footer classname="homeFooter" /> */}

@@ -2,12 +2,13 @@ import styled from "styled-components"
 
 export const BgTextStyle = styled.svg`
   position: absolute;
-  top: 0;
-  z-index: 10;
+  margin-left: 11rem;
+  top: 100px;
+  z-index: 20;
+  overflow: hidden;
 
   text {
-    font-size: 13rem;
-    // font-weight: 900;
+    font-size: 22rem;
     font-family: chivo;
     stroke-width: 1px;
     fill: transparent;

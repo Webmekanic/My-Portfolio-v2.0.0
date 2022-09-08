@@ -10,6 +10,7 @@ export const MySkills = styled.div`
   height: 18.75rem;
   border-radius: 50%;
   background: transparent;
+  margin: auto;
 
   .skillsBorder1 {
     border: 1px solid ${({ theme }) => theme.colors.purple};
@@ -81,5 +82,13 @@ export const MySkills = styled.div`
     left: 205px;
     width: 75px;
     height: 60px;
+  }
+  @media ${({ theme }) => theme.mediaQueries.above768} {
+  }
+  @media ${({ theme }) => theme.mediaQueries.medium} {
+    margin: unset;
+  }
+  @media (max-width: 280px) {
+    // width: 100%;
   }
 `

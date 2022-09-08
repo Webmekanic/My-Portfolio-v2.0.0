@@ -1,4 +1,5 @@
 import styled from "styled-components"
+// import kkkk from "../components/layouts/assets/kkkk"
 
 export const MyHome = styled.div`
   // border: 2px solid red;
@@ -116,12 +117,25 @@ export const MyHome = styled.div`
     bottom: 0;
   }
   .myNameContainer {
-    // border: 2px solid pink;
+    border: 2px solid pink;
     width: 89%;
     margin: auto;
     z-index: 99;
     padding-top: 3.4rem;
   }
+
+  .aboutAniebo {
+    // border: 2px solid red;
+    display: flex;
+    flex-direction: column-reverse;
+
+    // grid-template-rows: 1fr 1fr;
+    // grid-gap: 4rem;
+  }
+  // .homeSkills {
+  //   border: 2px solid yellow;
+  //   width: 54%;
+  // }
 
   .xbox {
     // border: 2px solid yellow;
@@ -413,11 +427,66 @@ export const MyHome = styled.div`
     // line-height: 21px;
   }
   .letsCodeBtn {
-    margin-top: 2rem;
+    margin-top: 4rem;
+    // border: 2px solid red;
+    position: relative;
+    z-index: 20;
+    display: inline-block;
   }
+
+  .img-circle {
+    position: absolute;
+    left: -40px;
+    top: -40px;
+  }
+  .img-circle2 {
+    // border: 2px solid red;
+    position: absolute;
+    top: -100px;
+    right: -50px;
+  }
+
   .letsCodeBtn:before {
+    content: url("../components/layouts/assets/letscode1.svg");
+    width: 60px;
+    height: 60px;
   }
   .letsCodeBtn:after {
+  }
+  .homeAboutMe {
+    // border: 2px solid red;
+    position: relative;
+    z-index: 20;
+    // overflow: hidden;
+  }
+  .homeAboutBgText {
+    // border: 2px solid red;
+    // position: absolute;
+    // margin-left: 11rem;
+    // top: 100px;
+    // z-index: 20;
+    // overflow: hidden;
+  }
+  @media ${({ theme }) => theme.mediaQueries.above768} {
+    .fullName {
+      display: flex;
+      flex-direction: column;
+      grid-gap: unset;
+    }
+    .xbox,
+    .xbox .inside,
+    .xbox:before,
+    .xbox:after {
+      font-size: 5.8rem;
+    }
+
+    .aboutAniebo {
+      // border: 2px solid green;
+      display: unset;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 4rem;
+    }
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {

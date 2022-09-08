@@ -3,7 +3,7 @@ import { BgTextStyle } from "../../styles/BgTextStyle"
 
 function BgText({ text, classname }) {
   return (
-    <BgTextStyle width="100%" height="100vh" className={classname}>
+    <BgTextStyle width="100%" height="75vh" className={classname}>
       <text x="20%" y="55%">
         {text}
       </text>
