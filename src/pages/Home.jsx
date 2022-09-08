@@ -1,4 +1,5 @@
 import React from "react"
+import Button from "../components/shared/Button"
 // import Footer from "../components/layouts/Footer"
 import { MyHome } from "../styles/HomeStyle"
 // import { MySkills } from "../styles/SkillStyle"
@@ -28,7 +29,8 @@ function Home() {
               Aniebo<div class="inside"> Aniebo</div>
             </div>
           </div>
-          <p>Software Engineer</p>
+          <p className="currentRole">Software Engineer</p>
+          <Button text={"Let’s code"} className="letsCodeBtn" />
         </section>
       </MyHome>
       {/* <Footer classname="homeFooter" /> */}

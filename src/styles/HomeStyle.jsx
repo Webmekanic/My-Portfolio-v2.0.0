@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const MyHome = styled.div`
-  border: 2px solid red;
+  // border: 2px solid red;
   background-color: transparent;
   padding-top: 5rem;
   position: relative;
@@ -137,7 +137,7 @@ export const MyHome = styled.div`
   }
 
   .fullName {
-    border: 2px solid green;
+    // border: 2px solid green;
     display: flex;
     grid-gap: 0.9rem;
   }
@@ -399,6 +399,25 @@ export const MyHome = styled.div`
         100% 50%
       );
     }
+  }
+
+  .currentRole {
+    // border: 2px solid red;
+    position: relative;
+    z-index: 99;
+    color: ${({ theme }) => theme.colors.textColor};
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    // line-height: 21px;
+  }
+  .letsCodeBtn {
+    margin-top: 2rem;
+  }
+  .letsCodeBtn:before {
+  }
+  .letsCodeBtn:after {
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
