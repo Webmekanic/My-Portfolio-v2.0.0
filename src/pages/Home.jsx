@@ -47,9 +47,10 @@ function Home() {
             />
             <Button text={"Let’s code"} />
           </div>
-          <section className="homeAboutMe">
-            <BgText text={"About"} classname="homeAboutBgText" />
-          </section>
+        </section>
+        <section className="homeAboutMe">
+          <BgText text={"About"} classname="homeAboutBgText" />
+          {/* <BgText text={"Me"} classname="homeAboutMeText" /> */}
         </section>
       </MyHome>
       {/* <Footer classname="homeFooter" /> */}

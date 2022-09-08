@@ -8,6 +8,8 @@ export const MyHome = styled.div`
   position: relative;
   width: 100%;
   z-index: 20;
+  // overflow-x: hidden;
+  // height: 100%;
 
   .pattern1 {
     background: ${({ theme }) => theme.colors.barColor};
@@ -117,7 +119,7 @@ export const MyHome = styled.div`
     bottom: 0;
   }
   .myNameContainer {
-    border: 2px solid pink;
+    // border: 2px solid pink;
     width: 89%;
     margin: auto;
     z-index: 99;
@@ -415,6 +417,10 @@ export const MyHome = styled.div`
     }
   }
 
+  .homeFooter {
+    position: absolute;
+    bottom: 0;
+  }
   .currentRole {
     // border: 2px solid red;
     position: relative;
@@ -446,26 +452,25 @@ export const MyHome = styled.div`
     right: -50px;
   }
 
-  .letsCodeBtn:before {
-    content: url("../components/layouts/assets/letscode1.svg");
-    width: 60px;
-    height: 60px;
-  }
-  .letsCodeBtn:after {
-  }
   .homeAboutMe {
     // border: 2px solid red;
     position: relative;
     z-index: 20;
+    width: 100%;
     // overflow: hidden;
   }
   .homeAboutBgText {
     // border: 2px solid red;
-    // position: absolute;
+    position: absolute;
     // margin-left: 11rem;
-    // top: 100px;
+    top: 100px;
     // z-index: 20;
     // overflow: hidden;
+  }
+
+  .homeAboutMeText {
+    margin-left: -13rem;
+    margin-top: 19rem;
   }
   @media ${({ theme }) => theme.mediaQueries.above768} {
     .fullName {
