@@ -654,8 +654,7 @@ export const AboutAniebo = styled.section`
   }
 
   .aboutText {
-    // border: 1px solid red;
-    padding-top: 2rem;
+    padding-top: clamp(0.1rem, 0.5rem, 2rem);
   }
   .aboutText > * {
     padding-top: 0.7rem;
@@ -668,13 +667,13 @@ export const AboutAniebo = styled.section`
     // padding-right: 2rem;
   }
   .aboutText2 {
-    // padding-top: 0;
+    padding-top: 0;
   }
   .aboutAniebo {
     position: relative;
     z-index: 30;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 4rem;
   }
 
@@ -688,5 +687,12 @@ export const AboutAniebo = styled.section`
     border-radius: 8px;
     width: 100%;
     height: 270px;
+  }
+
+  // media queries for my about second paragraph text
+  @media ${({ theme }) => theme.mediaQueries.above768} {
+    .aboutText2 {
+      padding-top: 0.7rem;
+    }
   }
 `
