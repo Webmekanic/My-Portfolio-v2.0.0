@@ -1,8 +1,8 @@
 import React from "react"
 import BgText from "../components/shared/BgText"
 import Footer from "../components/layouts/Footer"
-import { AboutMe } from "../styles/AboutStyle"
 import Button from "../components/shared/Button"
+import { AboutMe } from "../styles/AboutStyle"
 
 const About = () => {
   return (

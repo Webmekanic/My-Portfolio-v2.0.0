@@ -17,7 +17,7 @@ html{
 	transition: all 0.4s ease;
 }
 ::-webkit-scrollbar-thumb {
-	background: ${({ theme }) => theme.colors.textColor};
+	background: ${({ theme }) => theme.colors.lightColor};
 	border-radius: 7px;
 	width: 7px;
 	transition: all 0.4s ease;
