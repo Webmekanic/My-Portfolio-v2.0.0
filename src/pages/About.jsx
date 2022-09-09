@@ -31,7 +31,15 @@ const About = () => {
             </p>
             <Button text={"Download Resume"} className="downloadResumeButton" />
           </div>
-          <div className="skillsCard"></div>
+          <section className="skillsCard">
+            <div className="skillSet">
+              <img src="" alt="" />
+              <div className="skillSetRating">
+                <div className="skillRatingBar"></div>
+                <div className="skillRatingBar"></div>
+              </div>
+            </div>
+          </section>
         </section>
       </section>
       <Footer classname="aboutFooter" />
