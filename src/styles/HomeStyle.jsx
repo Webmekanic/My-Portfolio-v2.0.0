@@ -453,7 +453,7 @@ export const MyHome = styled.div`
   }
 
   .homeAboutMe {
-    border: 2px solid red;
+    // border: 2px solid red;
     position: relative;
     z-index: 20;
     width: 100%;
@@ -636,7 +636,7 @@ export const MyHome = styled.div`
 `
 
 export const AboutAniebo = styled.section`
-  border: 2px solid green;
+  // border: 2px solid green;
   width: 89%;
   margin: auto;
   padding-top: 5.8rem;
@@ -654,7 +654,7 @@ export const AboutAniebo = styled.section`
   }
 
   .aboutText {
-    border: 1px solid red;
+    // border: 1px solid red;
     padding-top: 2rem;
   }
   .aboutText > * {
@@ -665,17 +665,17 @@ export const AboutAniebo = styled.section`
     font-size: clamp(0.9rem, 2vw, 1rem);
     line-height: 1.3125rem;
     // color: ${({ theme }) => theme.colors.textColor};
+    // padding-right: 2rem;
   }
   .aboutText2 {
     // padding-top: 0;
   }
   .aboutAniebo {
-    // border: 1px solid ${({ theme }) => theme.colors.lightColor};
     position: relative;
     z-index: 30;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 6rem;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
   }
 
   .downloadResumeButton {

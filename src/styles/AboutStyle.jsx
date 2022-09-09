@@ -81,7 +81,7 @@ export const AboutMe = styled.div`
     white-space: nowrap;
   }
   .aboutAniebo {
-    border: 1px solid ${({ theme }) => theme.colors.lightColor};
+    // border: 1px solid ${({ theme }) => theme.colors.lightColor};
     position: relative;
     z-index: 30;
     display: grid;
@@ -90,7 +90,7 @@ export const AboutMe = styled.div`
     // margin-top: 1.2rem;
   }
   .aboutText {
-    border: 1px solid red;
+    // border: 1px solid red;
   }
   .aboutText > * {
     padding-top: 0.7rem;
