@@ -5,8 +5,6 @@ import ReactJs from "./assets/reactjs.svg"
 import HtmlIcon from "./assets/htmlIcon.svg"
 import CssLogo from "./assets/cssLogo.svg"
 import { MySkills } from "../../styles/SkillStyle"
-// import { FaHtml5, FaReact } from "react-icons/fa"
-// import {FaHtml5}
 
 const Skills = () => {
   return (

@@ -1,6 +1,5 @@
 import React from "react"
 import { FooterSection } from "../../styles/footerStyle"
-
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 
 const Footer = ({ classname }) => {

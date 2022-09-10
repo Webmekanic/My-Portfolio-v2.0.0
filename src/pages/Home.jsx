@@ -3,11 +3,13 @@ import Skills from "../components/layouts/Skills"
 import BgText from "../components/shared/BgText"
 import Button from "../components/shared/Button"
 // import Footer from "../components/layouts/Footer"
-import { MyHome, AboutAniebo } from "../styles/HomeStyle"
-// import { MySkills } from "../styles/SkillStyle"
-// import BgText from "../components/shared/BgText"
 import letsCodeIcon1 from "../components/layouts/assets/letcodeicon1.svg"
 import letsCodeIcon2 from "../components/layouts/assets/letcodeicon2.svg"
+import CssLogo from "../components/layouts/assets/cssLogo.svg"
+import JsLogo from "../components/layouts/assets/jsLogo.svg"
+import ReactJs from "../components/layouts/assets/reactjs.svg"
+import HtmlIcon from "../components/layouts/assets/htmlIcon.svg"
+import { MyHome, AboutAniebo } from "../styles/HomeStyle"
 
 function Home() {
   return (
@@ -22,8 +24,6 @@ function Home() {
         <div className="pattern7"></div>
         <div className="pattern8"></div>
         <div className="pattern9"></div>
-        {/* <MySkills /> */}
-
         <section className="myNameContainer">
           <div className="aboutAniebo">
             <div className="fullName">
@@ -54,7 +54,7 @@ function Home() {
           <section>
             <AboutAniebo>
               <h1 className="aboutTitle">A bit about me</h1>
-              <section className="aboutAniebo">
+              <section className="aboutAniebo1">
                 <div className="aboutText">
                   <p>
                     I am a Front-end Developer with skills in HTML, CSS,
@@ -76,13 +76,42 @@ function Home() {
                     className="downloadResumeButton"
                   />
                 </div>
-                <div className="skillsCard"></div>
+                <div className="skillsCard">
+                  <div className="skillSet">
+                    <img className="cssLogo" src={CssLogo} alt="CSS" />
+                    <div className="skillSetRating">
+                      <div className="skillRatingBar"></div>
+                      <div className="skillRatingBar"></div>
+                    </div>
+                  </div>
+                  <div className="skillSet">
+                    <img className="cssLogo" src={HtmlIcon} alt="CSS" />
+                    <div className="skillSetRating">
+                      <div className="skillRatingBar"></div>
+                      <div className="skillRatingBar"></div>
+                    </div>
+                  </div>
+                  <div className="skillSet">
+                    <img className="cssLogo" src={ReactJs} alt="CSS" />
+                    <div className="skillSetRating">
+                      <div className="skillRatingBar"></div>
+                      <div className="skillRatingBar"></div>
+                    </div>
+                  </div>
+                  <div className="skillSet">
+                    <img className="cssLogo" src={JsLogo} alt="CSS" />
+                    <div className="skillSetRating">
+                      <div className="skillRatingBar"></div>
+                      <div className="skillRatingBar"></div>
+                    </div>
+                  </div>
+                </div>
               </section>
             </AboutAniebo>
           </section>
         </section>
+        {/* <Footer classname="homeFooter" /> */}
       </MyHome>
-      {/* <Footer classname="homeFooter" /> */}
     </>
   )
 }

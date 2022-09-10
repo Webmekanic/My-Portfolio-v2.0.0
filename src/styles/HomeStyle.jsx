@@ -56,6 +56,7 @@ export const MyHome = styled.div`
     left: 0;
     right: 0;
     top: 65rem;
+    border: 2px solid red;
   }
   .pattern5 {
     position: absolute;
@@ -481,7 +482,6 @@ export const MyHome = styled.div`
     }
 
     .aboutAniebo {
-      // border: 2px solid green;
       display: unset;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -532,7 +532,6 @@ export const MyHome = styled.div`
       transform: skewY(-15.5deg);
     }
     .xbox1 {
-      // border: 2px solid green;
       margin-top: -1.9rem;
     }
     .fullName {
@@ -636,7 +635,6 @@ export const MyHome = styled.div`
 `
 
 export const AboutAniebo = styled.section`
-  // border: 2px solid green;
   width: 89%;
   margin: auto;
   padding-top: 5.8rem;
@@ -669,12 +667,12 @@ export const AboutAniebo = styled.section`
   .aboutText2 {
     padding-top: 0;
   }
-  .aboutAniebo {
+  .aboutAniebo1 {
     position: relative;
-    z-index: 30;
+    z-index: 20;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
   }
 
   .downloadResumeButton {
@@ -685,14 +683,51 @@ export const AboutAniebo = styled.section`
     background: #11171b;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
-    width: 100%;
     height: 270px;
+    padding: 25px 40px 0 40px;
+  }
+
+  .skillSet {
+    // border: 2px solid red;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 1.5rem;
+    margin-top: 0.4rem;
+  }
+  .cssLogo {
+    // border: 2px solid red;
+    width: 42.2px;
+    height: 40px;
+  }
+  .skillSetRating {
+    // border: 2px solid green;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.6rem;
+  }
+  .skillRatingBar {
+    background: ${({ theme }) => theme.colors.progressBar};
+    height: 6px;
+  }
+  .skillRatingBar1 {
+    // border: 2px solid red;
   }
 
   // media queries for my about second paragraph text
   @media ${({ theme }) => theme.mediaQueries.above768} {
     .aboutText2 {
       padding-top: 0.7rem;
+    }
+  }
+  @media ${({ theme }) => theme.mediaQueries.below768} {
+    .aboutAniebo1 {
+      display: unset;
+    }
+    .skillsCard {
+      margin-top: 2rem;
     }
   }
 `

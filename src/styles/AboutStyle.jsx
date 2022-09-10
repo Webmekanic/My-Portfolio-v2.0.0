@@ -87,7 +87,6 @@ export const AboutMe = styled.div`
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-gap: 1rem;
-    // margin-top: 1.2rem;
   }
   .aboutText {
     // border: 1px solid red;

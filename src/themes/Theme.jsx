@@ -8,6 +8,7 @@ const theme = {
     lineColor: "#E5E5E5",
     neutral: "#F8F6EF",
     barColor: "#090d0f",
+    progressBar: "#C4C4C4",
   },
   fontSizes: {
     large: "3rem",

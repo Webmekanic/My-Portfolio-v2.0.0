@@ -2,11 +2,16 @@ import React from "react"
 import { MyLink, Nav } from "../../styles/NavStyle"
 import { FiGithub, FiLinkedin } from "react-icons/fi"
 import { CgSortAz } from "react-icons/cg"
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
   return (
     <Nav>
-      <h1 className="myIntials">DA</h1>
+      <h1 className="myIntials">
+        <Link className="myIntials" style={{ textDecoration: "none" }} to={"/"}>
+          DA
+        </Link>
+      </h1>
       <ul className="navLinkList">
         <li className="navLinkItem">
           <MyLink to="/about">About</MyLink>
