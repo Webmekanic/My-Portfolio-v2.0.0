@@ -498,7 +498,8 @@ export const MyHome = styled.div`
     .pattern4 {
       transform: skewY(15.5deg);
       height: 13rem;
-      top: 67.5rem;
+      top: 75.5rem;
+      // border: 2px solid purple;
     }
     .pattern5 {
       transform: skewY(15.5deg);
@@ -551,15 +552,18 @@ export const MyHome = styled.div`
     }
     .pattern4 {
       transform: skewY(14deg);
-      top: 71.5rem;
+      top: 85.5rem;
+      // border: 2px solid red;
     }
     .pattern5 {
       transform: skewY(14deg);
-      top: 88.5rem;
+      top: 105.5rem;
+      // border: 2px solid blue;
     }
     .pattern6 {
       transform: skewY(-14deg);
-      top: 88.5rem;
+      top: 105.5rem;
+      // border: 2px solid white;
     }
     .pattern7 {
       top: 126rem;
