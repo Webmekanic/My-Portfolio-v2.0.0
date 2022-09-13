@@ -2,14 +2,11 @@ import styled from "styled-components"
 // import kkkk from "../components/layouts/assets/kkkk"
 
 export const MyHome = styled.div`
-  // border: 2px solid red;
   background-color: transparent;
   padding-top: 5rem;
   position: relative;
   width: 100%;
   z-index: 20;
-  // overflow-x: hidden;
-  // height: 100%;
 
   .pattern1 {
     background: ${({ theme }) => theme.colors.barColor};
@@ -56,7 +53,6 @@ export const MyHome = styled.div`
     left: 0;
     right: 0;
     top: 65rem;
-    border: 2px solid red;
   }
   .pattern5 {
     position: absolute;
@@ -70,7 +66,6 @@ export const MyHome = styled.div`
     top: 82.5rem;
   }
   .pattern6 {
-    // border: 2px solid red;
     background: ${({ theme }) => theme.colors.barColor};
     position: absolute;
     z-index: 10;
@@ -120,7 +115,6 @@ export const MyHome = styled.div`
     bottom: 0;
   }
   .myNameContainer {
-    // border: 2px solid pink;
     width: 89%;
     margin: auto;
     z-index: 99;
@@ -128,21 +122,12 @@ export const MyHome = styled.div`
   }
 
   .aboutAniebo {
-    // border: 2px solid red;
     display: flex;
     flex-direction: column-reverse;
-
-    // grid-template-rows: 1fr 1fr;
-    // grid-gap: 4rem;
   }
-  // .homeSkills {
-  //   border: 2px solid yellow;
-  //   width: 54%;
-  // }
 
   .xbox {
-    // border: 2px solid yellow;
-    font-size: 3.1rem;
+    font-size: 3.5rem;
     position: relative;
     text-shadow: 0px 0px 3px ${({ theme }) => theme.colors.purple};
     color: ${({ theme }) => theme.colors.barColor};
@@ -154,12 +139,12 @@ export const MyHome = styled.div`
   }
 
   .fullName {
-    // border: 2px solid green;
     display: flex;
     grid-gap: 0.9rem;
+    margin-top: 2.2rem;
   }
   .xbox .inside {
-    font-size: 3.1rem;
+    font-size: 3.5rem;
     background-image: linear-gradient(180deg, #f8f6ef 10%, #f8f6ef 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -174,7 +159,7 @@ export const MyHome = styled.div`
   }
   .xbox:before {
     content: attr(data-char);
-    font-size: 3.1rem;
+    font-size: 3.5rem;
     position: absolute;
     text-shadow: 0px 0px 4px ${({ theme }) => theme.colors.purple};
     clip-path: polygon(
@@ -195,7 +180,7 @@ export const MyHome = styled.div`
   }
   .xbox:after {
     content: attr(data-char);
-    font-size: 3.1rem;
+    font-size: 3.5rem;
     position: absolute;
     text-shadow: 0px 0px 4px ${({ theme }) => theme.colors.purple};
     clip-path: polygon(
@@ -461,7 +446,7 @@ export const MyHome = styled.div`
   }
   .homeAboutBgText {
     position: absolute;
-    top: 40px;
+    top: 25px;
   }
 
   .homeAboutMeText {
@@ -469,11 +454,16 @@ export const MyHome = styled.div`
     margin-top: 19rem;
   }
   @media ${({ theme }) => theme.mediaQueries.above768} {
+    .homeAboutBgText {
+      top: 40px;
+    }
     .fullName {
       display: flex;
       flex-direction: column;
       grid-gap: unset;
+      margin-top: unset;
     }
+
     .xbox,
     .xbox .inside,
     .xbox:before,
@@ -645,7 +635,7 @@ export const AboutAniebo = styled.section`
     font-family: "Chivo";
     font-style: black;
     font-weight: 900;
-    font-size: clamp(2.5rem, 3vw, 2.8125rem);
+    font-size: clamp(2.1rem, 3vw, 2.8125rem);
     text-transform: capitalize;
     color: ${({ theme }) => theme.colors.neutral};
     white-space: nowrap;
@@ -661,8 +651,6 @@ export const AboutAniebo = styled.section`
     font-weight: 400;
     font-size: clamp(0.9rem, 2vw, 1rem);
     line-height: 1.3125rem;
-    // color: ${({ theme }) => theme.colors.textColor};
-    // padding-right: 2rem;
   }
   .aboutText2 {
     padding-top: 0;
@@ -728,6 +716,9 @@ export const AboutAniebo = styled.section`
     }
     .skillsCard {
       margin-top: 2rem;
+    }
+    .fullName {
+      margin-top: 2.2rem;
     }
   }
 `

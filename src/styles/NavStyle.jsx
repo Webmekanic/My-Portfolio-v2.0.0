@@ -25,6 +25,16 @@ export const Nav = styled.nav`
     font-weight: lighter;
     color: ${({ theme }) => theme.colors.neutral};
   }
+  .logo {
+    border: 2px solid red;
+    width: 50px;
+    height: 50px;
+  }
+  .logo img {
+    width: 100%;
+    height: 100%;
+  }
+
   .navLinkList {
     display: flex;
     font-family: work sans;

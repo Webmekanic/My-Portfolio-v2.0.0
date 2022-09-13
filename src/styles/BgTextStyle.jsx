@@ -5,7 +5,6 @@ export const BgTextStyle = styled.svg`
   // margin-left: 11rem;
   // top: 100px;
   z-index: 20;
-  // overflow: hidden;
 
   text {
     font-size: 22rem;
@@ -18,6 +17,7 @@ export const BgTextStyle = styled.svg`
     z-index: 20;
     opacity: 0.4;
   }
+
   @keyframes effect {
     0% {
       stroke-dasharray: 100% 40%;
@@ -25,6 +25,11 @@ export const BgTextStyle = styled.svg`
     100% {
       stroke-dasharray: 40% 0%;
       stroke-dashoffset: 40%;
+    }
+  }
+  @media ${({ theme }) => theme.mediaQueries.below768} {
+    text {
+      font-size: 17rem;
     }
   }
 `

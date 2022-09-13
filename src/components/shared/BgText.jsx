@@ -9,7 +9,7 @@ function BgText({ text, classname }) {
       overflow="hidden"
       className={classname}
     >
-      <text x="35%" y="55%">
+      <text y="55%" x="35%" className="myBgText">
         {text}
       </text>
     </BgTextStyle>

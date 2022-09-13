@@ -11,7 +11,7 @@ const Contact = () => {
       <div className="pattern1"></div>
       <div className="pattern2"></div>
       <div className="pattern3"></div>
-      <BgText text={"Contact"} />
+      <BgText text={"Contact"} xAxis={"35%"} />
       {/* 
       <svg className="svg" width="100%" height="100vh">
         <text x="20%" y="55%">

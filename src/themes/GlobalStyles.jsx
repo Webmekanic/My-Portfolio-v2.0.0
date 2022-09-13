@@ -23,7 +23,7 @@ html{
 	transition: all 0.4s ease;
 }
 ::-webkit-scrollbar-track {
-	background: #0C1114;
+	background: ${({ theme }) => theme.colors.dark};
 	border-radius: 7px;
 	width: 7px;
 }
