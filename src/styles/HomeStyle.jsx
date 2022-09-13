@@ -453,6 +453,7 @@ export const MyHome = styled.div`
     margin-left: -13rem;
     margin-top: 19rem;
   }
+
   @media ${({ theme }) => theme.mediaQueries.above768} {
     .homeAboutBgText {
       top: 40px;
@@ -724,5 +725,32 @@ export const AboutAniebo = styled.section`
     .fullName {
       margin-top: 2.2rem;
     }
+  }
+`
+
+export const ProjectStats = styled.section`
+  border-top: 1px solid ${({ theme }) => theme.colors.lineColor};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.lineColor};
+  // padding: 70px 50px;
+  margin-top: 5.5rem;
+
+  .projectStatsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  .myStats {
+    color: black;
+    -webkit-text-fill-color: ${({ theme }) => theme.colors.dark};
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #8afaec;
+    font-family: Chivo;
+    font-style: black;
+    font-weight: 500;
+    font-size: 60px;
+    animation: effect 6s infinite alternate;
   }
 `

@@ -2,8 +2,6 @@ import styled from "styled-components"
 
 export const BgTextStyle = styled.svg`
   position: absolute;
-  // margin-left: 11rem;
-  // top: 100px;
   z-index: 20;
 
   text {

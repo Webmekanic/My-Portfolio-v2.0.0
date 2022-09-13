@@ -9,7 +9,7 @@ import CssLogo from "../components/layouts/assets/cssLogo.svg"
 import JsLogo from "../components/layouts/assets/jsLogo.svg"
 import ReactJs from "../components/layouts/assets/reactjs.svg"
 import HtmlIcon from "../components/layouts/assets/htmlIcon.svg"
-import { MyHome, AboutAniebo } from "../styles/HomeStyle"
+import { MyHome, AboutAniebo, ProjectStats } from "../styles/HomeStyle"
 
 function Home() {
   return (
@@ -109,6 +109,22 @@ function Home() {
               </section>
             </AboutAniebo>
           </section>
+          <ProjectStats>
+            <div className="projectStatsContainer">
+              <div className="projectStatsWrapper">
+                <h1 className="myStats">10</h1>
+                <p>Completed Projects</p>
+              </div>
+              <div className="projectStatsWrapper">
+                <h1 className="myStats">10</h1>
+                <p>Live Projects</p>
+              </div>
+              <div className="projectStatsWrapper">
+                <h1 className="myStats">10</h1>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+          </ProjectStats>
         </section>
         {/* <Footer classname="homeFooter" /> */}
       </MyHome>
