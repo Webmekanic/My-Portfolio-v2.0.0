@@ -125,6 +125,20 @@ function Home() {
               </div>
             </div>
           </ProjectStats>
+          <section className="projectSection">
+            <div>
+              <h1 className="aboutTitle">My Portfolio</h1>
+              <p>
+                Here are some select projects I have been excited to work on
+                with amazing and talented people.
+              </p>
+              <p>
+                This is just a glimpse of my capabilities as a developer. I
+                would definitely like to add a touch of my magic to your
+                project.
+              </p>
+            </div>
+          </section>
         </section>
         {/* <Footer classname="homeFooter" /> */}
       </MyHome>

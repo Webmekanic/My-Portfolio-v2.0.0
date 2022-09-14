@@ -454,6 +454,13 @@ export const MyHome = styled.div`
     margin-top: 19rem;
   }
 
+  .projectSection {
+    border: 1px solid red;
+    width: 89%;
+    margin: auto;
+    margin-top: 4rem;
+  }
+
   @media ${({ theme }) => theme.mediaQueries.above768} {
     .homeAboutBgText {
       top: 40px;
@@ -553,7 +560,7 @@ export const MyHome = styled.div`
     }
     .pattern4 {
       transform: skewY(14deg);
-      top: 85.5rem;
+      top: 84.5rem;
       // border: 2px solid red;
     }
     .pattern5 {
@@ -634,18 +641,6 @@ export const AboutAniebo = styled.section`
   margin: auto;
   padding-top: 5.8rem;
 
-  .aboutTitle {
-    position: relative;
-    z-index: 30;
-    font-family: "Chivo";
-    font-style: black;
-    font-weight: 900;
-    font-size: clamp(2.1rem, 3vw, 2.8125rem);
-    text-transform: capitalize;
-    color: ${({ theme }) => theme.colors.neutral};
-    white-space: nowrap;
-  }
-
   .aboutText {
     padding-top: clamp(0.1rem, 0.5rem, 2rem);
   }
@@ -681,7 +676,6 @@ export const AboutAniebo = styled.section`
   }
 
   .skillSet {
-    // border: 2px solid red;
     display: flex;
     text-align: center;
     align-items: center;
@@ -690,7 +684,6 @@ export const AboutAniebo = styled.section`
     margin-top: 0.4rem;
   }
   .cssLogo {
-    // border: 2px solid red;
     width: 42.2px;
     height: 40px;
   }
@@ -752,5 +745,8 @@ export const ProjectStats = styled.section`
     font-weight: 500;
     font-size: 60px;
     animation: effect 6s infinite alternate;
+  }
+  @media ${({ theme }) => theme.mediaQueries.below768} {
+    display: none;
   }
 `

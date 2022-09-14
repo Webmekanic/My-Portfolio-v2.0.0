@@ -32,6 +32,17 @@ body{
   background: #0C1114;
   font-family: 'Work Sans';
 }
+.aboutTitle {
+    position: relative;
+    z-index: 30;
+    font-family: "Chivo";
+    font-style: black;
+    font-weight: 900;
+    font-size: clamp(2.1rem, 3vw, 2.8125rem);
+    text-transform: capitalize;
+    color: ${({ theme }) => theme.colors.neutral};
+    white-space: nowrap;
+  }
 `
 
 export default GlobalStyle
