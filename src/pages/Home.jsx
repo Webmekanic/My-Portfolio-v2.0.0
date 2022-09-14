@@ -145,6 +145,7 @@ function Home() {
                   project.
                 </p>
               </div>
+              <section className="myProject"></section>
             </ProjectSection>
           </section>
         </section>

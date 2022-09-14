@@ -408,7 +408,6 @@ export const MyHome = styled.div`
     bottom: 0;
   }
   .currentRole {
-    // border: 2px solid red;
     position: relative;
     z-index: 99;
     color: ${({ theme }) => theme.colors.textColor};
@@ -416,11 +415,9 @@ export const MyHome = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    // line-height: 21px;
   }
   .letsCodeBtn {
     margin-top: 4rem;
-    // border: 2px solid red;
     position: relative;
     z-index: 20;
     display: inline-block;
@@ -432,14 +429,12 @@ export const MyHome = styled.div`
     top: -40px;
   }
   .img-circle2 {
-    // border: 2px solid red;
     position: absolute;
     top: -100px;
     right: -50px;
   }
 
   .homeAboutMe {
-    // border: 2px solid red;
     position: relative;
     z-index: 20;
     width: 100%;
@@ -508,7 +503,6 @@ export const MyHome = styled.div`
       transform: skewY(15.5deg);
       height: 13rem;
       top: 75.5rem;
-      // border: 2px solid purple;
     }
     .pattern5 {
       transform: skewY(15.5deg);
@@ -562,17 +556,14 @@ export const MyHome = styled.div`
     .pattern4 {
       transform: skewY(14deg);
       top: 84.5rem;
-      // border: 2px solid red;
     }
     .pattern5 {
       transform: skewY(14deg);
       top: 105.5rem;
-      // border: 2px solid blue;
     }
     .pattern6 {
       transform: skewY(-14deg);
       top: 105.5rem;
-      // border: 2px solid white;
     }
     .pattern7 {
       top: 126rem;
@@ -699,9 +690,6 @@ export const AboutAniebo = styled.section`
     background: ${({ theme }) => theme.colors.progressBar};
     height: 6px;
   }
-  .skillRatingBar1 {
-    // border: 2px solid red;
-  }
 
   // media queries for my about second paragraph text
   @media ${({ theme }) => theme.mediaQueries.above768} {
@@ -725,7 +713,6 @@ export const AboutAniebo = styled.section`
 export const ProjectStats = styled.section`
   border-top: 1px solid ${({ theme }) => theme.colors.lineColor};
   border-bottom: 1px solid ${({ theme }) => theme.colors.lineColor};
-  // padding: 70px 50px;
   margin-top: 5.5rem;
 
   .projectStatsContainer {
@@ -753,13 +740,11 @@ export const ProjectStats = styled.section`
 `
 
 export const ProjectSection = styled.section`
-  border: 4px solid purple;
   width: 89%;
   margin: auto;
 
   .projectParagraph {
     padding-top: 1.5rem;
-    border: 2px solid red;
   }
   .homeProjectBgText {
     position: absolute;
@@ -768,8 +753,12 @@ export const ProjectSection = styled.section`
 
   @media ${({ theme }) => theme.mediaQueries.above768} {
     .projectParagraph {
-      border: 2px solid red;
       width: 68%;
+    }
+  }
+  @media ${({ theme }) => theme.mediaQueries.medium} {
+    .projectParagraph {
+      width: 48%;
     }
   }
 `
