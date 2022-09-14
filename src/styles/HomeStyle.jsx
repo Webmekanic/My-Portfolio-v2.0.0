@@ -455,10 +455,11 @@ export const MyHome = styled.div`
   }
 
   .projectSection {
-    border: 1px solid red;
-    width: 89%;
-    margin: auto;
+    // border: 4px solid red;
     margin-top: 4rem;
+    z-index: 20;
+    position: relative;
+    width: 100%;
   }
 
   @media ${({ theme }) => theme.mediaQueries.above768} {
@@ -646,7 +647,7 @@ export const AboutAniebo = styled.section`
   }
   .aboutText > * {
     padding-top: 0.7rem;
-    font-family: "Work Sans";
+    font-family: Work Sans;
     font-style: normal;
     font-weight: 400;
     font-size: clamp(0.9rem, 2vw, 1rem);
@@ -748,5 +749,27 @@ export const ProjectStats = styled.section`
   }
   @media ${({ theme }) => theme.mediaQueries.below768} {
     display: none;
+  }
+`
+
+export const ProjectSection = styled.section`
+  border: 4px solid purple;
+  width: 89%;
+  margin: auto;
+
+  .projectParagraph {
+    padding-top: 1.5rem;
+    border: 2px solid red;
+  }
+  .homeProjectBgText {
+    position: absolute;
+    top: 25px;
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.above768} {
+    .projectParagraph {
+      border: 2px solid red;
+      width: 68%;
+    }
   }
 `

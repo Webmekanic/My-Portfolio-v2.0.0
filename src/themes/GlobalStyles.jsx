@@ -43,6 +43,13 @@ body{
     color: ${({ theme }) => theme.colors.neutral};
     white-space: nowrap;
   }
+  .sectionDescription{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.3125rem;
+  }
 `
 
 export default GlobalStyle

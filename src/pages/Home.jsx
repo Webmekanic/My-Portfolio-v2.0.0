@@ -9,7 +9,12 @@ import CssLogo from "../components/layouts/assets/cssLogo.svg"
 import JsLogo from "../components/layouts/assets/jsLogo.svg"
 import ReactJs from "../components/layouts/assets/reactjs.svg"
 import HtmlIcon from "../components/layouts/assets/htmlIcon.svg"
-import { MyHome, AboutAniebo, ProjectStats } from "../styles/HomeStyle"
+import {
+  MyHome,
+  AboutAniebo,
+  ProjectStats,
+  ProjectSection,
+} from "../styles/HomeStyle"
 
 function Home() {
   return (
@@ -126,18 +131,21 @@ function Home() {
             </div>
           </ProjectStats>
           <section className="projectSection">
-            <div>
+            <BgText text={"Project"} classname="homeProjectBgText" />
+            <ProjectSection>
               <h1 className="aboutTitle">My Portfolio</h1>
-              <p>
-                Here are some select projects I have been excited to work on
-                with amazing and talented people.
-              </p>
-              <p>
-                This is just a glimpse of my capabilities as a developer. I
-                would definitely like to add a touch of my magic to your
-                project.
-              </p>
-            </div>
+              <div className="projectParagraph">
+                <p className="sectionDescription">
+                  Here are some select projects I have been excited to work on
+                  with amazing and talented people.
+                </p>
+                <p className="sectionDescription">
+                  This is just a glimpse of my capabilities as a developer. I
+                  would definitely like to add a touch of my magic to your
+                  project.
+                </p>
+              </div>
+            </ProjectSection>
           </section>
         </section>
         {/* <Footer classname="homeFooter" /> */}
