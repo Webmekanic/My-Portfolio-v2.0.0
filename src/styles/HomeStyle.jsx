@@ -1,5 +1,4 @@
 import styled from "styled-components"
-// import kkkk from "../components/layouts/assets/kkkk"
 
 export const MyHome = styled.div`
   background-color: transparent;
@@ -86,7 +85,6 @@ export const MyHome = styled.div`
     left: 0;
     right: 0;
     top: 115rem;
-    border: 2px solid red;
   }
   .pattern8 {
     position: absolute;
@@ -451,14 +449,12 @@ export const MyHome = styled.div`
   }
 
   .projectSection {
-    // border: 4px solid red;
     margin-top: 4rem;
     z-index: 20;
     position: relative;
     width: 100%;
   }
   .contactSection {
-    border: 2px solid yellow;
     margin-top: 4rem;
     z-index: 20;
     position: relative;
@@ -687,7 +683,6 @@ export const AboutAniebo = styled.section`
     height: 40px;
   }
   .skillSetRating {
-    // border: 2px solid green;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -759,9 +754,14 @@ export const ProjectSection = styled.section`
     top: 20px;
   }
   .myProject {
-    border: 2px solid red;
+    display: flex;
+    grid-gap: 0.8rem;
+    justify-content: space-between;
+    position: relative;
+    z-index: 30;
+    width: 89%;
+    margin: auto;
     margin-top: 3.2rem;
-    height: 400px;
   }
   @media ${({ theme }) => theme.mediaQueries.above768} {
     .projectParagraph {

@@ -10,7 +10,7 @@ export const ProjectItemStyle = styled.div`
   cursor: pointer;
 
   .projectBg {
-    height: 200px;
+    height: 180px;
     position: relative;
     background-color: #485dab;
     border-radius: 3px;
@@ -28,19 +28,19 @@ export const ProjectItemStyle = styled.div`
   }
 
   .skillsTag {
-    // border: 1px solid red;
     display: flex;
     flex-direction: row;
     grid-gap: 0.5rem;
   }
 
   .projectDescription {
-    // border: 2px solid purple;
     margin-top: 5px;
     font-family: Chivo;
     font-style: black;
     line-height: 1.5;
     max-height: 60%;
+    font-size: 13.8px;
+    opacity: 0.9;
   }
   .projectLinks {
     margin-top: 0.6rem;

@@ -150,6 +150,9 @@ function Home() {
               </div>
               <section className="myProject">
                 <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
               </section>
             </ProjectSection>
           </section>
