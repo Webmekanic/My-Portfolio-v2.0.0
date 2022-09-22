@@ -15,6 +15,7 @@ import {
   ProjectStats,
   ProjectSection,
 } from "../styles/HomeStyle"
+import ProjectItem from "../components/shared/ProjectItem"
 
 function Home() {
   return (
@@ -147,7 +148,9 @@ function Home() {
                   </p>
                 </div>
               </div>
-              <section className="myProject"></section>
+              <section className="myProject">
+                <ProjectItem />
+              </section>
             </ProjectSection>
           </section>
           <section className="contactSection">

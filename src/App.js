@@ -9,6 +9,7 @@ import Layouts from "./components/layouts/Layouts"
 import MobileMenu from "./components/layouts/MobileMenu"
 import Skills from "./components/layouts/Skills"
 import Loading from "./components/layouts/Loading"
+import ProjectItem from "./components/shared/ProjectItem"
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/skills" element={<Skills />} />
         <Route path="/loading" element={<Loading />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/project" element={<ProjectItem />} />
       </Routes>
     </BrowserRouter>
   )
