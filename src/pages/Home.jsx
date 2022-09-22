@@ -133,20 +133,25 @@ function Home() {
           <section className="projectSection">
             <BgText text={"Project"} classname="homeProjectBgText" />
             <ProjectSection>
-              <h1 className="aboutTitle">My Portfolio</h1>
-              <div className="projectParagraph">
-                <p className="sectionDescription">
-                  Here are some select projects I have been excited to work on
-                  with amazing and talented people.
-                </p>
-                <p className="sectionDescription">
-                  This is just a glimpse of my capabilities as a developer. I
-                  would definitely like to add a touch of my magic to your
-                  project.
-                </p>
+              <div className="projectSectionContainer">
+                <h1 className="aboutTitle">My Portfolio</h1>
+                <div className="projectParagraph">
+                  <p className="sectionDescription">
+                    Here are some select projects I have been excited to work on
+                    with amazing and talented people.
+                  </p>
+                  <p className="sectionDescription">
+                    This is just a glimpse of my capabilities as a developer. I
+                    would definitely like to add a touch of my magic to your
+                    project.
+                  </p>
+                </div>
               </div>
               <section className="myProject"></section>
             </ProjectSection>
+          </section>
+          <section className="contactSection">
+            <BgText text={"Contact"} classname="contactBgText" />
           </section>
         </section>
         {/* <Footer classname="homeFooter" /> */}

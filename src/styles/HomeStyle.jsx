@@ -86,6 +86,7 @@ export const MyHome = styled.div`
     left: 0;
     right: 0;
     top: 115rem;
+    border: 2px solid red;
   }
   .pattern8 {
     position: absolute;
@@ -456,6 +457,12 @@ export const MyHome = styled.div`
     position: relative;
     width: 100%;
   }
+  .contactSection {
+    border: 2px solid yellow;
+    margin-top: 4rem;
+    z-index: 20;
+    position: relative;
+  }
 
   @media ${({ theme }) => theme.mediaQueries.above768} {
     .homeAboutBgText {
@@ -740,17 +747,22 @@ export const ProjectStats = styled.section`
 `
 
 export const ProjectSection = styled.section`
-  width: 89%;
-  margin: auto;
-
+  .projectSectionContainer {
+    width: 89%;
+    margin: auto;
+  }
   .projectParagraph {
     padding-top: 1.5rem;
   }
   .homeProjectBgText {
     position: absolute;
-    top: 25px;
+    top: 20px;
   }
-
+  .myProject {
+    border: 2px solid red;
+    margin-top: 3.2rem;
+    height: 400px;
+  }
   @media ${({ theme }) => theme.mediaQueries.above768} {
     .projectParagraph {
       width: 68%;
