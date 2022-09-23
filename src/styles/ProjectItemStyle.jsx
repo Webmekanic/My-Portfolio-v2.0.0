@@ -40,7 +40,7 @@ export const ProjectItemStyle = styled.div`
     line-height: 1.5;
     max-height: 60%;
     font-size: 13.8px;
-    opacity: 0.9;
+    // opacity: 0.9;
   }
   .projectLinks {
     margin-top: 0.6rem;

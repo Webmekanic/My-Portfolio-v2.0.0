@@ -5,9 +5,6 @@ export const AboutMe = styled.div`
   position: relative;
   overflow: hidden;
   min-height: 100vh;
-  min-height: fill-available;
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
   z-index: 20;
 
   padding-top: 5rem;
@@ -115,7 +112,7 @@ export const AboutMe = styled.div`
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
-    height: 100vh;
+    // height: 100vh;
     .pattern1 {
       top: 12rem;
       transform: skewY(-15.5deg);
