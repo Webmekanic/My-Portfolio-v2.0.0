@@ -5,7 +5,8 @@ export const AboutMe = styled.div`
   position: relative;
   z-index: 20;
   width: 100%;
-  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border: 2px solid red;
 
   .pattern1 {
     background: ${({ theme }) => theme.colors.barColor};
@@ -46,11 +47,15 @@ export const AboutMe = styled.div`
     position: relative;
     z-index: 20;
     width: 100%;
-    // padding-bottom: 2rem;
+    padding-bottom: 5rem;
   }
   .AboutBgText {
     position: absolute;
     top: 35px;
+  }
+  .aboutFooter {
+    position: absolute;
+    bottom: 0;
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {

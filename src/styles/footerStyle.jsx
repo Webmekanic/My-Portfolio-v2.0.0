@@ -5,8 +5,7 @@ export const FooterSection = styled.footer`
   position: relative;
   white-space: nowrap;
   z-index: 99;
-  width: 89%;
-  margin: auto;
+  width: 100%;
   padding-bottom: 0.5rem;
 
   .horizontalLine {
@@ -65,9 +64,8 @@ export const FooterSection = styled.footer`
   @media ${({ theme }) => theme.mediaQueries.below768} {
     position: relative;
     .socialIcons {
-      // border: 2px solid red;
       position: absolute;
-      top: 0;
+      top: 0px;
       right: unset;
     }
     .myRole {
@@ -77,5 +75,20 @@ export const FooterSection = styled.footer`
     .myEmail {
       display: none;
     }
+  }
+`
+
+export const SocialLink = styled.div`
+  display: flex;
+  grid-gap: 1rem;
+  font-size: 1.3rem;
+  position: absolute;
+  right: 0;
+  margin-bottom: 10px;
+
+  @media ${({ theme }) => theme.mediaQueries.below768} {
+    position: absolute;
+    top: 0;
+    right: unset;
   }
 `
