@@ -74,9 +74,7 @@ const About = () => {
             </section>
           </AboutAniebo>
         </section>
-        <section className="footerSection">
-          <Footer classname="aboutFooter socialIcon" />
-        </section>
+        <Footer classname="aboutFooter socialIcon" />
       </AboutMe>
     </>
   )
