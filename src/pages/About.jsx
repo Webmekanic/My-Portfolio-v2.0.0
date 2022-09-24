@@ -74,6 +74,7 @@ const About = () => {
             </section>
           </AboutAniebo>
         </section>
+        <Footer />
       </AboutMe>
     </>
   )

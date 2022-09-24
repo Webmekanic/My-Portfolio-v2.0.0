@@ -5,6 +5,7 @@ export const AboutMe = styled.div`
   position: relative;
   z-index: 20;
   width: 100%;
+  padding-top: 3rem;
 
   .pattern1 {
     background: ${({ theme }) => theme.colors.barColor};
@@ -45,11 +46,11 @@ export const AboutMe = styled.div`
     position: relative;
     z-index: 20;
     width: 100%;
-    border: 2px solid red;
+    // padding-bottom: 2rem;
   }
   .AboutBgText {
     position: absolute;
-    top: 25px;
+    top: 35px;
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
