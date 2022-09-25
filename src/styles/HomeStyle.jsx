@@ -656,6 +656,7 @@ export const AboutAniebo = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5rem;
+    margin-top: 1.5rem;
   }
 
   .downloadResumeButton {
@@ -742,12 +743,14 @@ export const ProjectStats = styled.section`
 `
 
 export const ProjectSection = styled.section`
+  border-top: 1px solid transparent;
   .projectSectionContainer {
     width: 89%;
     margin: auto;
+    margin-top: 40px;
   }
   .projectParagraph {
-    padding-top: 1.5rem;
+    padding-top: 2rem;
   }
   .homeProjectBgText {
     position: absolute;
@@ -761,7 +764,7 @@ export const ProjectSection = styled.section`
     z-index: 30;
     width: 89%;
     margin: auto;
-    margin-top: 3.2rem;
+    margin-top: 3.4rem;
   }
   @media ${({ theme }) => theme.mediaQueries.above768} {
     .projectParagraph {
