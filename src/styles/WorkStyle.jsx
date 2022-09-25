@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const MyWorks = styled.div`
-  border: 2px solid red;
   padding-top: 5rem;
   position: relative;
   width: 100%;
@@ -40,6 +39,19 @@ export const MyWorks = styled.div`
     right: 0;
     top: 30rem;
   }
+
+  .workSection {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    padding-bottom: 5rem;
+  }
+
+  .WorkBgText {
+    position: absolute;
+    top: 35px;
+  }
+
   @media ${({ theme }) => theme.mediaQueries.medium} {
     .pattern1 {
       top: 12rem;
