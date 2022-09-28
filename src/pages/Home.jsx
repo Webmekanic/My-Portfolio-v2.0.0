@@ -167,7 +167,28 @@ function Home() {
                   Let’s discuss your next project over a digital coffee. Got an
                   idea? Need suggestions? Feel free to reach out at anytime.
                 </p>
-                <section className="contactAniebo"></section>
+                <section className="contactMe">
+                  <section className="contactForm">
+                    <form className="contactInput">
+                      <input
+                        type="text"
+                        id="NameInput"
+                        placeholder="Your name"
+                      />
+                      <br />
+                      <input
+                        type="email"
+                        id="emailInput"
+                        placeholder="Email address"
+                      />
+                      <br />
+                      <textarea
+                        id="MessageInput"
+                        placeholder="Message..."
+                      ></textarea>
+                    </form>
+                  </section>
+                </section>
               </div>
             </ContactSection>
           </section>

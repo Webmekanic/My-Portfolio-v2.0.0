@@ -788,6 +788,37 @@ export const ContactSection = styled.section`
     color: ${({ theme }) => theme.colors.textColor};
   }
 
+  .contactMe {
+    border: 2px solid green;
+    position: relative;
+    z-index: 20;
+  }
+
+  .contactInput {
+    width: 50%;
+  }
+
+  #NameInput,
+  #emailInput {
+    width: 75%;
+    padding: 0.6rem;
+    margin-bottom: 0.8rem;
+    background: ${({ theme }) => theme.colors.borderColor};
+    color: ${({ theme }) => theme.colors.textColor};
+    outline: none;
+    border: none;
+  }
+
+  #MessageInput {
+    width: 75%;
+    background: ${({ theme }) => theme.colors.borderColor};
+    padding: 10px 0px 120px 10px;
+    color: ${({ theme }) => theme.colors.textColor};
+    outline: none;
+    border: none;
+    resize: none;
+  }
+
   @media ${({ theme }) => theme.mediaQueries.below768} {
     .contactText {
       width: 100%;
