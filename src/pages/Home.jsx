@@ -14,6 +14,7 @@ import {
   AboutAniebo,
   ProjectStats,
   ProjectSection,
+  ContactSection,
 } from "../styles/HomeStyle"
 import ProjectItem from "../components/shared/ProjectItem"
 
@@ -156,8 +157,19 @@ function Home() {
               </section>
             </ProjectSection>
           </section>
+
           <section className="contactSection">
             <BgText text={"Contact"} classname="contactBgText" />
+            <ContactSection>
+              <div className="contactContainer">
+                <h1 className="aboutTitle">Contact Me</h1>
+                <p className="contactText">
+                  Let’s discuss your next project over a digital coffee. Got an
+                  idea? Need suggestions? Feel free to reach out at anytime.
+                </p>
+                <section className="contactAniebo"></section>
+              </div>
+            </ContactSection>
           </section>
         </section>
         {/* <Footer classname="homeFooter" /> */}

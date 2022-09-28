@@ -448,16 +448,12 @@ export const MyHome = styled.div`
     margin-top: 19rem;
   }
 
-  .projectSection {
-    margin-top: 4rem;
-    z-index: 20;
-    position: relative;
-    width: 100%;
-  }
+  .projectSection,
   .contactSection {
     margin-top: 4rem;
     z-index: 20;
     position: relative;
+    width: 100%;
   }
 
   @media ${({ theme }) => theme.mediaQueries.above768} {
@@ -777,6 +773,24 @@ export const ProjectSection = styled.section`
   @media ${({ theme }) => theme.mediaQueries.medium} {
     .projectParagraph {
       width: 48%;
+    }
+  }
+`
+export const ContactSection = styled.section`
+  border: 2px solid red;
+  .contactContainer {
+    width: 89%;
+    margin: auto;
+    // margin-top: 40px;
+  }
+  .contactText {
+    width: 45%;
+    color: ${({ theme }) => theme.colors.textColor};
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.below768} {
+    .contactText {
+      width: 100%;
     }
   }
 `
