@@ -6,10 +6,10 @@ import HtmlIcon from "./assets/htmlIcon.svg"
 import CssLogo from "./assets/cssLogo.svg"
 import { MySkills } from "../../styles/SkillStyle"
 
-const Skills = () => {
+const Skills = ({ classNames }) => {
   return (
     <>
-      <MySkills>
+      <MySkills className={classNames}>
         <div className="skillsBorder1">
           <div className="skillsBorder2">
             <div className="skillsBorder3">

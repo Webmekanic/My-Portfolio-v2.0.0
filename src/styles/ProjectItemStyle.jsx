@@ -9,6 +9,10 @@ export const ProjectItemStyle = styled.div`
   background-color: #090d0f;
   cursor: pointer;
 
+  &:hover {
+    border: 1px solid ${({ theme }) => theme.colors.lightColor};
+  }
+
   .projectBg {
     height: 180px;
     position: relative;

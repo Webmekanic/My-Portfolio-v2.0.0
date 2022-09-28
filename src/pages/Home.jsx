@@ -40,7 +40,7 @@ function Home() {
                 Aniebo<div class="inside"> Aniebo</div>
               </div>
             </div>
-            <Skills />
+            <Skills classNames="skillSection" />
           </div>
           <p className="currentRole">Software Engineer</p>
           <div className="letsCodeBtn">

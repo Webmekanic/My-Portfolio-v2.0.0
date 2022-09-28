@@ -109,10 +109,6 @@ export const MyHome = styled.div`
     top: 134rem;
   }
 
-  .homeFooter {
-    position: absolute;
-    bottom: 0;
-  }
   .myNameContainer {
     width: 89%;
     margin: auto;
@@ -416,10 +412,14 @@ export const MyHome = styled.div`
     font-size: 18px;
   }
   .letsCodeBtn {
-    margin-top: 4rem;
+    margin-top: 3rem;
     position: relative;
     z-index: 20;
     display: inline-block;
+  }
+
+  .skillSection {
+    margin-top: 1rem;
   }
 
   .img-circle {
@@ -505,27 +505,27 @@ export const MyHome = styled.div`
     .pattern4 {
       transform: skewY(15.5deg);
       height: 13rem;
-      top: 75.5rem;
+      top: 85.7rem;
     }
     .pattern5 {
       transform: skewY(15.5deg);
-      top: 84.5rem;
+      top: 104.8rem;
     }
     .pattern6 {
       transform: skewY(-15.5deg);
-      top: 84.8rem;
+      top: 106rem;
     }
     .pattern7 {
-      top: 117rem;
+      top: 144rem;
       transform: skewY(15.5deg);
       height: 13rem;
     }
     .pattern8 {
-      top: 117rem;
+      top: 144rem;
       transform: skewY(-15.5deg);
     }
     .pattern9 {
-      top: 134.5rem;
+      top: 164.5rem;
       transform: skewY(-15.5deg);
     }
     .xbox1 {
@@ -569,15 +569,15 @@ export const MyHome = styled.div`
       top: 105.5rem;
     }
     .pattern7 {
-      top: 126rem;
+      top: 142rem;
       transform: skewY(14deg);
     }
     .pattern8 {
-      top: 126rem;
+      top: 142rem;
       transform: skewY(-14deg);
     }
     .pattern9 {
-      top: 146rem;
+      top: 163.3rem;
       transform: skewY(-14deg);
     }
   }
@@ -709,6 +709,9 @@ export const AboutAniebo = styled.section`
     }
     .fullName {
       margin-top: 2.2rem;
+    }
+    .skillSection {
+      margin-top: unset;
     }
   }
 `
