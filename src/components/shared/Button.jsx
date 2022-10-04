@@ -27,7 +27,7 @@ const PageButton = styled.button`
   min-width: 150px;
   background: transparent;
   cursor: pointer;
-  font-family: "Work Sans";
+  font-family: Work Sans;
   font-style: regular;
   font-weight: 400;
   border: 2px solid ${({ theme }) => theme.colors.lightColor};
@@ -35,10 +35,6 @@ const PageButton = styled.button`
   position: relative;
   overflow: hidden;
   z-index: 99;
-
-  &:hover {
-    // color: ${({ theme }) => theme.colors.purple};
-  }
 
   &:hover ${ButtonText} {
     transform: translateX(0%);

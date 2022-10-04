@@ -1,14 +1,27 @@
 import styled from "styled-components"
 
 export const SocialHandle = styled.div`
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 150px;
+  margin: auto;
 
-  .socials {
-    border: 2px solid red;
-    display: inline-block;
+  .location {
+    font-size: 36px;
+    margin: auto;
+    color: ${({ theme }) => theme.colors.lightColor};
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+
+  .mediaBtn {
+    padding: 10px 35px;
+    transform: translateY(-100%);
+    transition: all linear 3s;
+  }
+  .slideIn {
+    padding: 10px 35px;
+    transform: translateY(0%);
+    transition: all linear 3s;
   }
 `

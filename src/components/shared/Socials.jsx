@@ -1,20 +1,23 @@
-import React from "react"
+import React, { useState } from "react"
 import { SocialHandle } from "../../styles/SocialStyle"
-import { HiOutlineLocationMarker } from "react-icons/hi"
+import { FaMapMarkerAlt } from "react-icons/fa"
+import Button from "./Button"
 
 const Socials = () => {
+  const [iconOpen, setIconOpen] = useState(false)
+
   return (
     <SocialHandle>
-      <HiOutlineLocationMarker />
-      <button className="socials">
-        <a
-          href="http://www.codewars.com/webmekanic"
-          target="_blank"
-          rel="noreferrer"
-        >
-          kgkgitititi
-        </a>
-      </button>
+      <FaMapMarkerAlt
+        className="location"
+        onClick={(e) => setIconOpen(!iconOpen)}
+      />
+      {iconOpen && (
+        <Button
+          text={"Linkedin"}
+          className={iconOpen ? "slideIn" : "mediaBtn"}
+        />
+      )}
     </SocialHandle>
   )
 }
