@@ -781,28 +781,32 @@ export const ContactSection = styled.section`
   .contactContainer {
     width: 89%;
     margin: auto;
-    // margin-top: 40px;
+    margin-top: 40px;
   }
   .contactText {
     width: 45%;
     color: ${({ theme }) => theme.colors.textColor};
+    margin-top: 32px;
   }
 
   .contactMe {
     border: 2px solid green;
     position: relative;
     z-index: 20;
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
-  .contactInput {
-    width: 50%;
-  }
+  // .contactInput {
+  //   width: 50%;
+  // }
 
   #NameInput,
   #emailInput {
-    width: 75%;
+    width: 80%;
     padding: 0.6rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
     background: ${({ theme }) => theme.colors.borderColor};
     color: ${({ theme }) => theme.colors.textColor};
     outline: none;
@@ -810,18 +814,49 @@ export const ContactSection = styled.section`
   }
 
   #MessageInput {
-    width: 75%;
+    width: 80%;
     background: ${({ theme }) => theme.colors.borderColor};
-    padding: 10px 0px 120px 10px;
+    padding: 10px 0px 150px 10px;
     color: ${({ theme }) => theme.colors.textColor};
     outline: none;
     border: none;
     resize: none;
   }
 
+  .contactForm {
+    border: 2px solid ${({ theme }) => theme.colors.textColor};
+  }
+  .contactLocations {
+    border: 2px solid white;
+  }
+
+  .contactBtn {
+    margin-top: 35px;
+  }
   @media ${({ theme }) => theme.mediaQueries.below768} {
+    .contactMe {
+      display: unset;
+    }
+
     .contactText {
       width: 100%;
+    }
+    .contactForm {
+      display: block;
+      width: 100%;
+
+      .contactInput {
+        width: 100%;
+      }
+
+      #NameInput,
+      #emailInput,
+      #MessageInput {
+        width: 100%;
+      }
+    }
+    .contactLocations {
+      display: none;
     }
   }
 `

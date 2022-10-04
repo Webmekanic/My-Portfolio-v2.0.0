@@ -2,7 +2,7 @@ import React from "react"
 import Skills from "../components/layouts/Skills"
 import BgText from "../components/shared/BgText"
 import Button from "../components/shared/Button"
-// import Footer from "../components/layouts/Footer"
+import Footer from "../components/layouts/Footer"
 import letsCodeIcon1 from "../components/layouts/assets/letcodeicon1.svg"
 import letsCodeIcon2 from "../components/layouts/assets/letcodeicon2.svg"
 import CssLogo from "../components/layouts/assets/cssLogo.svg"
@@ -151,9 +151,9 @@ function Home() {
               </div>
               <section className="myProject">
                 <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
+                {/* <ProjectItem /> */}
+                {/* <ProjectItem /> */}
+                {/* <ProjectItem /> */}
               </section>
             </ProjectSection>
           </section>
@@ -188,12 +188,14 @@ function Home() {
                       ></textarea>
                     </form>
                   </section>
+                  <div className="contactLocations"></div>
                 </section>
+                <Button text={"send"} className="contactBtn" />
               </div>
             </ContactSection>
           </section>
         </section>
-        {/* <Footer classname="homeFooter" /> */}
+        <Footer classname="contact-footer" />
       </MyHome>
     </>
   )

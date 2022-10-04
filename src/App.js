@@ -10,6 +10,7 @@ import MobileMenu from "./components/layouts/MobileMenu"
 import Skills from "./components/layouts/Skills"
 import Loading from "./components/layouts/Loading"
 import ProjectItem from "./components/shared/ProjectItem"
+import Socials from "./components/shared/Socials"
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/loading" element={<Loading />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/project" element={<ProjectItem />} />
+        <Route path="/socials" element={<Socials />} />
       </Routes>
     </BrowserRouter>
   )
