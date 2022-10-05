@@ -17,6 +17,7 @@ import {
   ContactSection,
 } from "../styles/HomeStyle"
 import ProjectItem from "../components/shared/ProjectItem"
+import Socials from "../components/shared/Socials"
 
 function Home() {
   return (
@@ -151,9 +152,9 @@ function Home() {
               </div>
               <section className="myProject">
                 <ProjectItem />
-                {/* <ProjectItem /> */}
-                {/* <ProjectItem /> */}
-                {/* <ProjectItem /> */}
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
               </section>
             </ProjectSection>
           </section>
@@ -188,7 +189,12 @@ function Home() {
                       ></textarea>
                     </form>
                   </section>
-                  <div className="contactLocations"></div>
+                  <div className="contactLocations">
+                    <Socials />
+                    {/* <Socials />
+                    <Socials />
+                    <Socials /> */}
+                  </div>
                 </section>
                 <Button text={"send"} className="contactBtn" />
               </div>

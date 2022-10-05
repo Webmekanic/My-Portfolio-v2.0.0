@@ -4,7 +4,6 @@ export const SocialHandle = styled.div`
   display: flex;
   flex-direction: column;
   width: 150px;
-  margin: auto;
 
   .location {
     font-size: 36px;
@@ -14,14 +13,31 @@ export const SocialHandle = styled.div`
     margin-bottom: 5px;
   }
 
+  .scale {
+    font-size: 36px;
+    margin: auto;
+    color: ${({ theme }) => theme.colors.lightColor};
+    cursor: pointer;
+    margin-bottom: 3px;
+    transform: scale(0.8);
+  }
+
   .mediaBtn {
     padding: 10px 35px;
     transform: translateY(-100%);
     transition: all linear 3s;
+    background-color: transparent;
+    border: 1px solid ${({ theme }) => theme.colors.lightColor};
   }
   .slideIn {
     padding: 10px 35px;
     transform: translateY(0%);
-    transition: all linear 3s;
+    // transition: all linear 3s;
+    background-color: transparent;
+    border: 1px solid ${({ theme }) => theme.colors.lightColor};
+  }
+  .socialLinks {
+    color: ${({ theme }) => theme.colors.lightColor};
+    font-size: 16px;
   }
 `

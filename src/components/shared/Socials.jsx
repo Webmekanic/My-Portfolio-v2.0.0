@@ -1,22 +1,23 @@
 import React, { useState } from "react"
 import { SocialHandle } from "../../styles/SocialStyle"
 import { FaMapMarkerAlt } from "react-icons/fa"
-import Button from "./Button"
 
-const Socials = () => {
+const Socials = ({ mediaLink, myHandle, classname }) => {
   const [iconOpen, setIconOpen] = useState(false)
 
   return (
-    <SocialHandle>
+    <SocialHandle className={classname}>
       <FaMapMarkerAlt
-        className="location"
+        className={iconOpen ? "scale" : "location"}
         onClick={(e) => setIconOpen(!iconOpen)}
       />
+
       {iconOpen && (
-        <Button
-          text={"Linkedin"}
-          className={iconOpen ? "slideIn" : "mediaBtn"}
-        />
+        <button className={iconOpen ? "slideIn" : "mediaBtn"}>
+          <a className="socialLinks" href={mediaLink}>
+            {myHandle}
+          </a>
+        </button>
       )}
     </SocialHandle>
   )
