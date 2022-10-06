@@ -12,12 +12,6 @@ const Contact = () => {
       <div className="pattern2"></div>
       <div className="pattern3"></div>
       <BgText text={"Contact"} xAxis={"35%"} />
-      {/* 
-      <svg className="svg" width="100%" height="100vh">
-        <text x="20%" y="55%">
-          Contact
-        </text>
-      </svg> */}
       <section className="formSection">
         <h1 className="contactTitle">Contact Me</h1>
         <p className="contactText">

@@ -796,15 +796,12 @@ export const ContactSection = styled.section`
     margin-top: 32px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
   }
-
-  // .contactInput {
-  //   width: 50%;
-  // }
 
   #NameInput,
   #emailInput {
-    width: 80%;
+    width: 100%;
     padding: 0.6rem;
     margin-bottom: 1rem;
     background: ${({ theme }) => theme.colors.borderColor};
@@ -814,7 +811,7 @@ export const ContactSection = styled.section`
   }
 
   #MessageInput {
-    width: 80%;
+    width: 100%;
     background: ${({ theme }) => theme.colors.borderColor};
     padding: 10px 0px 150px 10px;
     color: ${({ theme }) => theme.colors.textColor};
@@ -827,7 +824,29 @@ export const ContactSection = styled.section`
     border: 2px solid ${({ theme }) => theme.colors.textColor};
   }
   .contactLocations {
-    border: 2px solid white;
+    border: 2px solid yellow;
+    position: relative;
+  }
+
+  .myLinkedin {
+    position: absolute;
+    left: 10px;
+  }
+
+  .myTwitter {
+    position: absolute;
+    right: 10px;
+  }
+
+  .myGitHub {
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .myCodewars {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
   }
 
   .contactBtn {
@@ -851,12 +870,44 @@ export const ContactSection = styled.section`
 
       #NameInput,
       #emailInput,
-      #MessageInput {
-        width: 100%;
-      }
+      
     }
     .contactLocations {
       display: none;
     }
   }
+  @media ${({ theme }) => theme.mediaQueries.above768} {
+    #MessageInput {
+         padding: 10px 0px 200px 10px;
+      }
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.large} {
+     .myLinkedin {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+  }
+
+  .myTwitter {
+    position: absolute;
+    right: 55px;
+    top: 40px;
+  }
+
+  .myGitHub {
+    bottom: 65px;
+    left: 30px;
+  }
+
+  .myCodewars {
+    position: absolute;
+    right: 55px;
+    bottom: 45px;
+  }
+
+
+  }
+  
+
 `

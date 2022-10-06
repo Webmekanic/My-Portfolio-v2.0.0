@@ -190,10 +190,26 @@ function Home() {
                     </form>
                   </section>
                   <div className="contactLocations">
-                    <Socials />
-                    {/* <Socials />
-                    <Socials />
-                    <Socials /> */}
+                    <Socials
+                      mediaLink="http://www.twitter.com/webmekanic"
+                      myHandle="Linkedin"
+                      classname="myLinkedin"
+                    />
+                    <Socials
+                      mediaLink="http://www.twitter.com/webmekanic"
+                      myHandle="#Twitter"
+                      classname="myTwitter"
+                    />
+                    <Socials
+                      mediaLink="http://www.twitter.com/webmekanic"
+                      myHandle="GitHub"
+                      classname="myGitHub"
+                    />
+                    <Socials
+                      mediaLink="http://www.twitter.com/webmekanic"
+                      myHandle="Codewars"
+                      classname="myCodewars"
+                    />
                   </div>
                 </section>
                 <Button text={"send"} className="contactBtn" />
