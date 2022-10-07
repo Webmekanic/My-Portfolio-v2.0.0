@@ -777,7 +777,7 @@ export const ProjectSection = styled.section`
   }
 `
 export const ContactSection = styled.section`
-  border: 2px solid red;
+  // border: 2px solid red;
   .contactContainer {
     width: 89%;
     margin: auto;
@@ -790,7 +790,7 @@ export const ContactSection = styled.section`
   }
 
   .contactMe {
-    border: 2px solid green;
+    // border: 2px solid green;
     position: relative;
     z-index: 20;
     margin-top: 32px;
@@ -821,32 +821,33 @@ export const ContactSection = styled.section`
   }
 
   .contactForm {
-    border: 2px solid ${({ theme }) => theme.colors.textColor};
+    // border: 2px solid ${({ theme }) => theme.colors.textColor};
   }
   .contactLocations {
-    border: 2px solid yellow;
+    // border: 2px solid yellow;
     position: relative;
   }
 
   .myLinkedin {
     position: absolute;
-    left: 10px;
+    left: 0px;
   }
 
   .myTwitter {
     position: absolute;
-    right: 10px;
+    right: 0px;
+    top: 30px;
   }
 
   .myGitHub {
     position: absolute;
-    bottom: 10px;
+    bottom: 65px;
   }
 
   .myCodewars {
     position: absolute;
-    right: 10px;
-    bottom: 10px;
+    right: 0px;
+    bottom: 50px;
   }
 
   .contactBtn {
@@ -886,13 +887,14 @@ export const ContactSection = styled.section`
      .myLinkedin {
     position: absolute;
     left: 10px;
-    top: 20px;
+    top: 40px;
   }
 
   .myTwitter {
     position: absolute;
     right: 55px;
-    top: 40px;
+    top: 35px;
+    
   }
 
   .myGitHub {
@@ -905,8 +907,10 @@ export const ContactSection = styled.section`
     right: 55px;
     bottom: 45px;
   }
+  .contactMe {
+    grid-gap: 6rem;
 
-
+  }
   }
   
 
