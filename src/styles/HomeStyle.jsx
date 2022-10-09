@@ -456,6 +456,24 @@ export const MyHome = styled.div`
     width: 100%;
   }
 
+  .contact-footer {
+    width: 89%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.below768} {
+    .contact-footer {
+      width: 95%;
+      margin: auto;
+      margin-bottom: 2rem;
+      position: absolute;
+      padding-left: 30px;
+      margin-top: 100px;
+      padding-bottom: 2rem;
+    }
+  }
+
   @media ${({ theme }) => theme.mediaQueries.above768} {
     .homeAboutBgText {
       top: 40px;
@@ -771,6 +789,7 @@ export const ProjectSection = styled.section`
       border: 2px solid red;
     }
   }
+
   @media ${({ theme }) => theme.mediaQueries.above768} {
     .projectParagraph {
       width: 68%;
@@ -783,7 +802,7 @@ export const ProjectSection = styled.section`
   }
 `
 export const ContactSection = styled.section`
-  // border: 2px solid red;
+  
   .contactContainer {
     width: 89%;
     margin: auto;
@@ -793,10 +812,11 @@ export const ContactSection = styled.section`
     width: 45%;
     color: ${({ theme }) => theme.colors.textColor};
     margin-top: 32px;
+    position: relative;
+    z-index: 20;
   }
 
   .contactMe {
-    // border: 2px solid green;
     position: relative;
     z-index: 20;
     margin-top: 32px;
@@ -866,6 +886,7 @@ export const ContactSection = styled.section`
 
     .contactText {
       width: 100%;
+      padding-bottom: 2rem;
     }
     .contactForm {
       display: block;
@@ -882,7 +903,15 @@ export const ContactSection = styled.section`
     .contactLocations {
       display: none;
     }
+    .contactBtn{
+      float: right;
+      margin-bottom: 2rem;
+      
+    }
   }
+
+
+
   @media ${({ theme }) => theme.mediaQueries.above768} {
     #MessageInput {
          padding: 10px 0px 200px 10px;
@@ -915,9 +944,6 @@ export const ContactSection = styled.section`
   }
   .contactMe {
     grid-gap: 6rem;
-
   }
   }
-  
-
 `

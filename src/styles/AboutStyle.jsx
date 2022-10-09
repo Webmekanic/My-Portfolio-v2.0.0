@@ -5,7 +5,7 @@ export const AboutMe = styled.div`
   position: relative;
   z-index: 20;
   width: 100%;
-  padding-bottom: 6rem;
+  padding-bottom: 1rem;
 
   .pattern1 {
     background: ${({ theme }) => theme.colors.barColor};
@@ -55,10 +55,8 @@ export const AboutMe = styled.div`
 
   .aboutFooter {
     position: absolute;
-    bottom: 25px;
     padding-left: 30px;
     padding-right: 30px;
-    // border: 2px solid yellow;
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
@@ -112,8 +110,14 @@ export const AboutMe = styled.div`
   }
 
   @media ${({ theme }) => theme.mediaQueries.above768} {
-    // border: 1px solid yellow;
     overflow: hidden;
     min-height: 100vh;
+
+    .aboutFooter {
+      position: relative;
+      width: 89%;
+      margin: auto;
+      padding: unset;
+    }
   }
 `

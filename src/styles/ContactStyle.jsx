@@ -1,5 +1,4 @@
 import styled from "styled-components"
-// import { FooterSection } from "./footerStyle"
 
 export const ContactMe = styled.div`
   padding-top: 5rem;
@@ -43,9 +42,15 @@ export const ContactMe = styled.div`
     top: 30rem;
   }
 
-  @media ${({ theme }) => theme.mediaQueries.above768} {
-    height: 100vh;
-    overflow: hidden;
+  .ContactBgText {
+    // margin-top: 2rem;
+  }
+
+  .contact-footer {
+    // border: 2px solid red;
+    width: 89%;
+    margin: auto;
+    margin-top: 10rem;
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
