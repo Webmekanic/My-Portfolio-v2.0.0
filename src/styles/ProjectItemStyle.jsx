@@ -10,7 +10,7 @@ export const ProjectItemStyle = styled.div`
   cursor: pointer;
 
   &:hover {
-    border: 1px solid ${({ theme }) => theme.colors.lightColor};
+    // border: 1px solid ${({ theme }) => theme.colors.lightColor};
   }
 
   .projectBg {
@@ -18,6 +18,10 @@ export const ProjectItemStyle = styled.div`
     position: relative;
     background-color: #485dab;
     border-radius: 3px;
+
+    &:hover {
+      // border-radius: 50%;
+    }
   }
   .projectSummary {
     margin-top: 10px;

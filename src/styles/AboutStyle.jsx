@@ -111,9 +111,6 @@ export const AboutMe = styled.div`
     }
   }
 
-  @media ${({ theme }) => theme.mediaQueries.below768} {
-    // border: 1px solid blue;
-  }
   @media ${({ theme }) => theme.mediaQueries.above768} {
     // border: 1px solid yellow;
     overflow: hidden;

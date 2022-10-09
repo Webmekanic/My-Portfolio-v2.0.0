@@ -1,239 +1,98 @@
 import styled from "styled-components"
-import { FooterSection } from "./footerStyle"
-
-export const ContactFooter = styled(FooterSection)`
-  // border: 2px solid red;
-  bottom: 0;
-`
+// import { FooterSection } from "./footerStyle"
 
 export const ContactMe = styled.div`
-  background-color: transparent;
+  padding-top: 5rem;
   position: relative;
-  height: 100vh;
   width: 100%;
-  overflow: hidden;
-  z-index: 10;
-
-  .footerLayout {
-    position: fixed;
-    width: 100%;
-    z-index: 99;
-  }
+  z-index: 20;
 
   .pattern1 {
     background: ${({ theme }) => theme.colors.barColor};
     position: absolute;
-    top: 70px;
-    width: 1440px;
-    height: 175px;
-    transform: rotate(-10deg);
-    top: 150px;
-    left: -30px;
-    right: 20px;
     z-index: 10;
+    height: 13rem;
+    width: 100%;
+    transform: skewY(-35deg);
+    left: 0;
+    right: 0;
+    top: 12.4rem;
   }
 
   .pattern2 {
-    position: absolute;
     background: ${({ theme }) => theme.colors.barColor};
     position: absolute;
-    top: 30px;
-    width: 1440px;
-    height: 170px;
     z-index: 10;
-    transform: rotate(-10deg);
-    top: 410px;
-    left: -30px;
-    right: 20px;
+    height: 13rem;
+    width: 100%;
+    transform: skewY(-35deg);
+    left: 0;
+    right: 0;
+    top: 30rem;
   }
 
   .pattern3 {
     position: absolute;
     background: ${({ theme }) => theme.colors.barColor};
-    position: absolute;
-    top: 30px;
-    width: 1440px;
-    height: 170px;
     z-index: 10;
-    transform: rotate(8deg);
-    top: 410px;
-    left: -30px;
-    right: 20px;
-  }
-
-  .contactTitle {
-    font-family: Chivo;
-    font-style: normal;
-    font-size: clamp(1.9rem, 2vw, 2.5rem);
-    text-transform: capitalize;
-    color: ${({ theme }) => theme.colors.neutral};
-    z-index: 99;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-  }
-
-  .formSection {
-    position: absolute;
-    z-index: 99;
-    top: 80px;
-    left: 50%;
-    width: 90%;
-    transform: translate(-50%);
-  }
-
-  .contactText {
-    width: 45%;
-    color: ${({ theme }) => theme.colors.textColor};
-    margin-bottom: 1rem;
-  }
-  .contactForm {
-    display: flex;
-
-    .contactInput {
-      width: 50%;
-    }
-
-    #NameInput,
-    #emailInput {
-      width: 75%;
-      padding: 0.6rem;
-      margin-bottom: 0.8rem;
-      background: ${({ theme }) => theme.colors.borderColor};
-      color: ${({ theme }) => theme.colors.textColor};
-      outline: none;
-      border: none;
-    }
-
-    #MessageInput {
-      width: 75%;
-      background: ${({ theme }) => theme.colors.borderColor};
-      padding: 10px 0px 120px 10px;
-      color: ${({ theme }) => theme.colors.textColor};
-      outline: none;
-      border: none;
-      resize: none;
-    }
-
-    .contactLocations {
-      // border: 2px solid ${({ theme }) => theme.colors.lightColor};
-      // color: ${({ theme }) => theme.colors.lightColor};
-      width: 50%;
-      position: relative;
-    }
-
-    .profileIcon {
-      padding: 0.6rem 1.6rem;
-    }
-    .linkedinContact {
-      color: ${({ theme }) => theme.colors.lightColor};
-      position: absolute;
-      font-size: 38px;
-      left: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-    }
-
-    .twitterContact {
-      color: ${({ theme }) => theme.colors.lightColor};
-      position: absolute;
-      right: 80px;
-      top: 10px;
-      font-size: 38px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-    }
-    .githubContact {
-      color: ${({ theme }) => theme.colors.lightColor};
-      position: absolute;
-      font-size: 38px;
-      bottom: 60px;
-      left: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-    }
-
-    .codewarsContact {
-      color: ${({ theme }) => theme.colors.lightColor};
-      position: absolute;
-      font-size: 38px;
-      right: 100px;
-      bottom: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-      // opacity: 0.7;
-    }
-
-    .profileLinks {
-      // border: 2px solid red;
-      // padding: 0.6rem 1.6rem;
-    }
-  }
-
-  .contactBtn {
-    margin-top: 1.2rem;
-  }
-
-  .contact-footer {
-    position: absolute;
+    height: 13rem;
+    width: 100%;
+    transform: skewY(35deg);
     left: 0;
     right: 0;
-    height: auto;
-    z-index: 99;
-    bottom: 10px;
+    top: 30rem;
   }
 
-  @media ${({ theme }) => theme.mediaQueries.below768} {
+  @media ${({ theme }) => theme.mediaQueries.above768} {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.medium} {
     .pattern1 {
-      top: 0;
-      top: 20px;
-      transform: rotate(-18deg);
+      top: 12rem;
+      transform: skewY(-15.5deg);
+      height: 13rem;
     }
-
     .pattern2 {
-      top: 265px;
-      transform: rotate(-18deg);
-      left: -55px;
+      top: 32.5rem;
+      transform: skewY(-15.5deg);
+      height: 13rem;
     }
-
     .pattern3 {
-      top: 500px;
-      transform: rotate(25deg);
-      left: -300px;
+      top: 32.5rem;
+      transform: skewY(15.5deg);
+      height: 13rem;
     }
-
-    .contactText {
-      width: 100%;
+  }
+  @media ${({ theme }) => theme.mediaQueries.large} {
+    .pattern1 {
+      top: 14.3rem;
+      transform: skewY(-14deg);
     }
-    .contactForm {
-      display: block;
-      width: 100%;
-
-      .contactInput {
-        width: 100%;
-      }
-
-      #NameInput,
-      #emailInput,
-      #MessageInput {
-        width: 100%;
-      }
+    .pattern2 {
+      top: 36rem;
+      transform: skewY(-14deg);
     }
-
-    .contactBtn {
-      margin-top: 1.25rem;
-      float: right;
+    .pattern3 {
+      top: 36.5rem;
+      transform: skewY(14deg);
     }
-
-    .contactLocations {
-      display: none;
+  }
+  @media (min-width: 481px) and (max-width: 1023px) {
+    .pattern1 {
+      height: 12rem;
+      transform: skewY(-17deg);
+    }
+    .pattern2 {
+      height: 12rem;
+      transform: skewY(-17deg);
+      top: 32rem;
+    }
+    .pattern3 {
+      height: 12rem;
+      transform: skewY(17deg);
+      top: 32rem;
     }
   }
 `

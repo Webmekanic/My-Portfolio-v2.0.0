@@ -765,6 +765,12 @@ export const ProjectSection = styled.section`
     margin: auto;
     margin-top: 3.4rem;
   }
+
+  @media ${({ theme }) => theme.mediaQueries.below768} {
+    .myProject {
+      border: 2px solid red;
+    }
+  }
   @media ${({ theme }) => theme.mediaQueries.above768} {
     .projectParagraph {
       width: 68%;
