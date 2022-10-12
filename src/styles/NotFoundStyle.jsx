@@ -1,10 +1,15 @@
 import styled from "styled-components"
 
 export const MyNotFound = styled.div`
-  padding-top: 5rem;
+  // padding-top: 5rem;
   position: relative;
   width: 100%;
   z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
   .pattern1 {
     background: ${({ theme }) => theme.colors.barColor};
@@ -39,6 +44,54 @@ export const MyNotFound = styled.div`
     left: 0;
     right: 0;
     top: 30rem;
+  }
+
+  .xbox {
+    font-size: 17rem;
+    position: relative;
+    text-shadow: 0px 0px 5px ${({ theme }) => theme.colors.purple};
+    color: ${({ theme }) => theme.colors.barColor};
+    font-family: Chivo;
+    font-style: normal;
+    font-weight: 900;
+    z-index: 99;
+    top: 0;
+  }
+
+  .xbox .inside {
+    font-size: 17rem;
+    color: ${({ theme }) => theme.colors.purple};
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: ${({ theme }) => theme.colors.purple};
+    -webkit-text-fill-color: ${({ theme }) => theme.colors.purple};
+    text-shadow: none;
+    top: -1%;
+    left: -1%;
+    position: absolute;
+    z-index: 99;
+  }
+
+  .inside2 {
+    font-size: 17rem;
+    color: ${({ theme }) => theme.colors.lightColor};
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: ${({ theme }) => theme.colors.lightColor};
+    -webkit-text-fill-color: ${({ theme }) => theme.colors.lightColor};
+    text-shadow: none;
+    top: -3%;
+    left: -2.3%;
+    position: absolute;
+    z-index: 99;
+  }
+
+  .notFoundText {
+    position: relative;
+    z-index: 20;
+  }
+  .notFoundBtn {
+    margin-top: 10px;
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {

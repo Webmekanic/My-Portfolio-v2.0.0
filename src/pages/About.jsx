@@ -38,7 +38,7 @@ const About = () => {
                 </p>
                 <Button
                   text={"Download Resume"}
-                  className="downloadResumeButton"
+                  classname="downloadResumeButton"
                 />
               </div>
               <div className="skillsCard">

@@ -61,7 +61,7 @@ const Contact = () => {
                 />
               </div>
             </section>
-            <Button text={"send"} className="contactBtn" />
+            <Button text={"send"} classname="contactBtn" />
           </div>
         </ContactSection>
       </section>
