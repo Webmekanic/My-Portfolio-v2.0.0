@@ -3,6 +3,7 @@ import BgText from "../components/shared/BgText"
 import { ProjectSection } from "../styles/HomeStyle"
 import ProjectItem from "../components/shared/ProjectItem"
 import { MyWorks } from "../styles/WorkStyle"
+import Footer from "../components/layouts/Footer"
 
 const Works = () => {
   return (
@@ -35,6 +36,7 @@ const Works = () => {
           </section>
         </ProjectSection>
       </section>
+      <Footer classname="workFooter" />
     </MyWorks>
   )
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const MyWorks = styled.div`
+export const MyNotFound = styled.div`
   padding-top: 5rem;
   position: relative;
   width: 100%;
@@ -17,6 +17,7 @@ export const MyWorks = styled.div`
     right: 0;
     top: 12.4rem;
   }
+
   .pattern2 {
     background: ${({ theme }) => theme.colors.barColor};
     position: absolute;
@@ -40,24 +41,6 @@ export const MyWorks = styled.div`
     top: 30rem;
   }
 
-  .workSection {
-    position: relative;
-    z-index: 20;
-    width: 100%;
-    padding-bottom: 5rem;
-  }
-
-  .WorkBgText {
-    position: absolute;
-    top: 35px;
-  }
-
-  .workFooter {
-    border: 1px solid transparent;
-    width: 89%;
-    margin: auto;
-  }
-
   @media ${({ theme }) => theme.mediaQueries.medium} {
     .pattern1 {
       top: 12rem;
@@ -75,6 +58,7 @@ export const MyWorks = styled.div`
       height: 13rem;
     }
   }
+
   @media ${({ theme }) => theme.mediaQueries.large} {
     .pattern1 {
       top: 14.3rem;
@@ -104,5 +88,10 @@ export const MyWorks = styled.div`
       transform: skewY(17deg);
       top: 32rem;
     }
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.above768} {
+    height: 100vh;
+    overflow: hidden;
   }
 `
