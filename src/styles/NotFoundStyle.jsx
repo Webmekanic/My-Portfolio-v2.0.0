@@ -10,6 +10,8 @@ export const MyNotFound = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 100vh;
+  overflow: hidden;
 
   .pattern1 {
     background: ${({ theme }) => theme.colors.barColor};
@@ -94,6 +96,14 @@ export const MyNotFound = styled.div`
     margin-top: 10px;
   }
 
+  .NotFoundFooter {
+    // border: 2px solid red;
+    position: absolute;
+    bottom: 10px;
+    width: 89%;
+    margin: auto;
+  }
+
   @media ${({ theme }) => theme.mediaQueries.medium} {
     .pattern1 {
       top: 12rem;
@@ -141,10 +151,5 @@ export const MyNotFound = styled.div`
       transform: skewY(17deg);
       top: 32rem;
     }
-  }
-
-  @media ${({ theme }) => theme.mediaQueries.above768} {
-    height: 100vh;
-    overflow: hidden;
   }
 `

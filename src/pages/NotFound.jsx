@@ -1,6 +1,7 @@
 import React from "react"
 import Navbar from "../components/layouts/Navbar"
 import Button from "../components/shared/Button"
+import Footer from "../components/layouts/Footer"
 import { MyNotFound } from "../styles/NotFoundStyle"
 
 function NotFound() {
@@ -17,6 +18,7 @@ function NotFound() {
       </div>
       <p className="notFoundText">Sorry, there’s nothing here</p>
       <Button text={"Go Back Home"} classname="notFoundBtn" />
+      <Footer classname="NotFoundFooter" />
     </MyNotFound>
   )
 }
