@@ -572,26 +572,26 @@ export const MyHome = styled.div`
     }
     .pattern4 {
       transform: skewY(14deg);
-      top: 84.5rem;
+      top: 80rem;
     }
     .pattern5 {
       transform: skewY(14deg);
-      top: 105.5rem;
+      top: 100.5rem;
     }
     .pattern6 {
       transform: skewY(-14deg);
-      top: 105.5rem;
+      top: 100.5rem;
     }
     .pattern7 {
-      top: 142rem;
+      top: 139rem;
       transform: skewY(14deg);
     }
     .pattern8 {
-      top: 142rem;
+      top: 139rem;
       transform: skewY(-14deg);
     }
     .pattern9 {
-      top: 163.3rem;
+      top: 160.3rem;
       transform: skewY(-14deg);
     }
   }
