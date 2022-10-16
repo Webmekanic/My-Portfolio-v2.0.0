@@ -460,6 +460,7 @@ export const MyHome = styled.div`
     width: 89%;
     margin: auto;
     margin-bottom: 1rem;
+    margin-top: 3.8rem;
   }
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
@@ -591,9 +592,6 @@ export const MyHome = styled.div`
       transform: skewY(-14deg);
     }
     .pattern9 {
-      // border: 2px solid red;
-      // top: 160rem;
-      // transform: skewY(-14deg);
       display: none;
     }
   }
