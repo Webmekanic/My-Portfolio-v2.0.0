@@ -450,7 +450,7 @@ export const MyHome = styled.div`
 
   .projectSection,
   .contactSection {
-    margin-top: 4rem;
+    margin-top: 6rem;
     z-index: 20;
     position: relative;
     width: 100%;
@@ -459,7 +459,7 @@ export const MyHome = styled.div`
   .contact-footer {
     width: 89%;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
@@ -572,27 +572,30 @@ export const MyHome = styled.div`
     }
     .pattern4 {
       transform: skewY(14deg);
-      top: 80rem;
+      top: 85rem;
     }
     .pattern5 {
       transform: skewY(14deg);
-      top: 100.5rem;
+      top: 105.5rem;
     }
     .pattern6 {
       transform: skewY(-14deg);
-      top: 100.5rem;
+      top: 105.5rem;
     }
     .pattern7 {
-      top: 139rem;
+      // border: 2px solid yellow;
+      top: 147rem;
       transform: skewY(14deg);
     }
     .pattern8 {
-      top: 139rem;
+      top: 147rem;
       transform: skewY(-14deg);
     }
     .pattern9 {
-      top: 160.3rem;
-      transform: skewY(-14deg);
+      // border: 2px solid red;
+      // top: 160rem;
+      // transform: skewY(-14deg);
+      display: none;
     }
   }
   @media (min-width: 481px) and (max-width: 1023px) {
@@ -643,8 +646,11 @@ export const MyHome = styled.div`
       font-size: 2.5rem;
     }
   }
-`
 
+  .homeAboutSection {
+    margin-top: 3rem;
+  }
+`
 export const AboutAniebo = styled.section`
   width: 89%;
   margin: auto;
@@ -654,7 +660,7 @@ export const AboutAniebo = styled.section`
     padding-top: clamp(0.1rem, 0.5rem, 2rem);
   }
   .aboutText > * {
-    padding-top: 0.7rem;
+    padding-top: 1rem;
     font-family: Work Sans;
     font-style: normal;
     font-weight: 400;
@@ -877,7 +883,8 @@ export const ContactSection = styled.section`
   }
 
   .contactBtn {
-    margin-top: 35px;
+    // margin-top: 35px;
+    
   }
   @media ${({ theme }) => theme.mediaQueries.below768} {
     .contactMe {
@@ -906,6 +913,8 @@ export const ContactSection = styled.section`
     .contactBtn{
       float: right;
       margin-bottom: 2rem;
+      margin-top:35px;
+      
       
     }
   }
@@ -915,6 +924,7 @@ export const ContactSection = styled.section`
   @media ${({ theme }) => theme.mediaQueries.above768} {
     #MessageInput {
          padding: 10px 0px 200px 10px;
+         margin-bottom: 1rem;
       }
   }
 

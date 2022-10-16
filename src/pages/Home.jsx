@@ -59,7 +59,7 @@ function Home() {
         <section className="homeAboutMe">
           <BgText text={"About"} classname="homeAboutBgText" />
           {/* <BgText text={"Me"} classname="homeAboutMeText" /> */}
-          <section>
+          <section className="homeAboutSection">
             <AboutAniebo>
               <h1 className="aboutTitle">A bit about me</h1>
               <section className="aboutAniebo1">
