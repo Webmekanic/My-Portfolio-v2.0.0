@@ -419,7 +419,7 @@ export const MyHome = styled.div`
   }
 
   .skillSection {
-    margin-top: 1rem;
+    // margin-top: 1rem;
   }
 
   .img-circle {
@@ -503,45 +503,46 @@ export const MyHome = styled.div`
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
     .pattern1 {
-      top: 12rem;
+      top: 14.5rem;
       transform: skewY(-15.5deg);
       height: 13rem;
     }
     .pattern2 {
-      top: 32.5rem;
+      top: 36.5rem;
       transform: skewY(-15.5deg);
       height: 13rem;
     }
     .pattern3 {
-      top: 32.5rem;
+      top: 36.5rem;
       transform: skewY(15.5deg);
       height: 13rem;
     }
     .pattern4 {
       transform: skewY(15.5deg);
       height: 13rem;
-      top: 85.7rem;
+      top: 87.7rem;
     }
     .pattern5 {
       transform: skewY(15.5deg);
-      top: 104.8rem;
+      top: 108.8rem;
     }
     .pattern6 {
       transform: skewY(-15.5deg);
-      top: 106rem;
+      top: 108.8rem;
     }
     .pattern7 {
-      top: 144rem;
+      top: 150rem;
       transform: skewY(15.5deg);
       height: 13rem;
     }
     .pattern8 {
-      top: 144rem;
+      top: 150rem;
       transform: skewY(-15.5deg);
     }
     .pattern9 {
       top: 164.5rem;
       transform: skewY(-15.5deg);
+      display: none;
     }
     .xbox1 {
       margin-top: -1.9rem;
@@ -562,6 +563,7 @@ export const MyHome = styled.div`
     .pattern1 {
       top: 14.3rem;
       transform: skewY(-14deg);
+      border: 2px solid yellow;
     }
     .pattern2 {
       top: 36rem;
