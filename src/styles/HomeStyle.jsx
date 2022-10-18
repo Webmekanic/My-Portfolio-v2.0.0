@@ -136,7 +136,7 @@ export const MyHome = styled.div`
   .fullName {
     display: flex;
     grid-gap: 0.9rem;
-    margin-top: 2.2rem;
+    margin-top: 35.2px;
   }
   .xbox .inside {
     font-size: 3.5rem;
@@ -563,7 +563,6 @@ export const MyHome = styled.div`
     .pattern1 {
       top: 14.3rem;
       transform: skewY(-14deg);
-      border: 2px solid yellow;
     }
     .pattern2 {
       top: 36rem;
@@ -601,6 +600,7 @@ export const MyHome = styled.div`
     .pattern1 {
       height: 12rem;
       transform: skewY(-17deg);
+      // border: 2px solid red;
     }
     .pattern2 {
       height: 12rem;
@@ -636,7 +636,13 @@ export const MyHome = styled.div`
       transform: skewY(-17deg);
       top: 138rem;
     }
+
+    .fullName {
+      // border: 2px solid green;
+      margin-top: 15px;
+    }
   }
+
   @media (max-width: 280px) {
     .xbox,
     .xbox .inside,
@@ -728,6 +734,7 @@ export const AboutAniebo = styled.section`
     }
     .fullName {
       margin-top: 2.2rem;
+      border: 2px solid yellow;
     }
     .skillSection {
       margin-top: unset;
