@@ -69,6 +69,35 @@ export const MySkills = styled.div`
       transform: translate(-50%, 50%);
       width: calc(100% + 130px);
     }
+
+    .diagonalLine {
+      border: 1px solid red;
+      transform: skewX(45deg);
+      height: calc(100% + 100px);
+      margin-top: -80px;
+    }
+
+    .diagonalLine1 {
+      border: 1px solid red;
+      transform: skewX(-45deg);
+      margin-top: -15px;
+      height: calc(100% + 100px);
+    }
+
+    .diagonalLine2 {
+      // position: absolute;
+      border: 1px solid red;
+      transform: skewX(-45deg);
+      height: calc(100% + 100px);
+      margin-top: -85px;
+    }
+
+    .diagonalLine3 {
+      border: 1px solid red;
+      transform: skewX(45deg);
+      height: calc(100% + 100px);
+      margin-top: -3px;
+    }
   }
 
   .jsLogo {
@@ -78,7 +107,7 @@ export const MySkills = styled.div`
     left: 42px;
     width: 53.5px;
     height: 56px;
-    animation: JavaScriptSpin 2.5s infinite linear;
+    // animation: JavaScriptSpin 2.5s infinite linear;
   }
   .cssLogo {
     // border: 2px solid red;
@@ -87,7 +116,7 @@ export const MySkills = styled.div`
     position: absolute;
     top: 0;
     left: 200px;
-    animation: CssSpin 2.5s infinite linear;
+    // animation: CssSpin 2.5s infinite linear;
   }
   .HtmlIcon {
     // border: 2px solid yellow;
@@ -121,7 +150,7 @@ export const MySkills = styled.div`
     }
 
     100% {
-      // transform: translate3D(-90px, -210px, 0);
+      transform: translate3D(-80px, -200px, 10px);
     }
   }
 
@@ -131,7 +160,7 @@ export const MySkills = styled.div`
     }
 
     100% {
-      // transform: translate3D(-90px, -210px, 0);
+      transform: translate3D(225px, -90px, 10px);
     }
   }
   @keyframes JavaScriptSpin {

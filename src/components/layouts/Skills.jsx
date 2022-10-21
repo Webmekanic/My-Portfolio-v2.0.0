@@ -14,9 +14,13 @@ const Skills = ({ classNames }) => {
           <div className="skillsBorder2">
             <div className="skillsBorder3">
               <div className="aniIcon">
+                <div className="diagonalLine2"></div>
+                <div className="diagonalLine3"></div>
                 <div className="straightLine"></div>
                 <div className="verticalLine"></div>
                 <img className="imgIcon" src={Aniebo} alt="" />
+                <div className="diagonalLine"></div>
+                <div className="diagonalLine1"></div>
               </div>
             </div>
           </div>
