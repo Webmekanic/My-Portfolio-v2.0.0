@@ -78,6 +78,7 @@ export const MySkills = styled.div`
     left: 42px;
     width: 53.5px;
     height: 56px;
+    animation: JavaScriptSpin 2.5s infinite linear;
   }
   .cssLogo {
     // border: 2px solid red;
@@ -86,6 +87,7 @@ export const MySkills = styled.div`
     position: absolute;
     top: 0;
     left: 200px;
+    animation: CssSpin 2.5s infinite linear;
   }
   .HtmlIcon {
     // border: 2px solid yellow;
@@ -94,6 +96,7 @@ export const MySkills = styled.div`
     left: 0;
     width: 80px;
     height: 60px;
+    animation: HtmlSpin 2.5s infinite linear;
   }
   .ReactJs {
     position: absolute;
@@ -101,7 +104,7 @@ export const MySkills = styled.div`
     left: 205px;
     width: 75px;
     height: 60px;
-    animation: straightLine 2.5s infinite linear;
+    animation: ReactSpin 2.5s infinite linear;
   }
   @media ${({ theme }) => theme.mediaQueries.above768} {
   }
@@ -112,9 +115,41 @@ export const MySkills = styled.div`
     // width: 100%;
   }
 
-  @keyframes straightLine {
+  @keyframes ReactSpin {
     50% {
       transform: translate3D(35px, -70px, 0);
+    }
+
+    100% {
+      // transform: translate3D(-90px, -210px, 0);
+    }
+  }
+
+  @keyframes HtmlSpin {
+    50% {
+      transform: translate3D(120px, 40px, 0);
+    }
+
+    100% {
+      // transform: translate3D(-90px, -210px, 0);
+    }
+  }
+  @keyframes JavaScriptSpin {
+    50% {
+      transform: translate3D(-60px, 120px, 0);
+    }
+
+    100% {
+      // transform: translate3D(-90px, -210px, 0);
+    }
+  }
+  @keyframes CssSpin {
+    50% {
+      transform: translate3D(-85px, -30px, 0);
+    }
+
+    100% {
+      // transform: translate3D(-90px, -210px, 0);
     }
   }
 `
