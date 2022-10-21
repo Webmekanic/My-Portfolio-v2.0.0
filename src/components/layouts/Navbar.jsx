@@ -47,6 +47,7 @@ const Navbar = () => {
         </a>
       </div>
       <CgSortAz className="sortIcon" />
+      {/* onClick={() => handleMenuClick()} */}
     </Nav>
   )
 }

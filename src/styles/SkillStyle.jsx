@@ -1,4 +1,6 @@
 import styled from "styled-components"
+// cubic - bezier(.85, -0.01, 1, .92) cubic bezier
+// cubic-bezier(.99,.99,.26,.26) linear bezier
 
 export const MySkills = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.purple};
@@ -10,7 +12,7 @@ export const MySkills = styled.div`
   height: 18.75rem;
   border-radius: 50%;
   background: transparent;
-  margin: auto;
+  margin: 50px auto;
 
   .skillsBorder1 {
     border: 1px solid ${({ theme }) => theme.colors.purple};
@@ -32,7 +34,7 @@ export const MySkills = styled.div`
     border-radius: 50%;
   }
   .aniIcon {
-    // border: 2px solid red;
+    border: 2px solid red;
     width: 12.5rem;
     height: 12.5rem;
     display: flex;
@@ -48,6 +50,24 @@ export const MySkills = styled.div`
       padding-left: 15px;
       width: 100%;
       height: 100%;
+    }
+
+    .straightLine {
+      border: 2px solid red;
+      position: absolute;
+      left: 50%;
+      top: -60px;
+      transform: translate(-50%);
+      height: calc(100% + 130px);
+    }
+
+    .verticalLine {
+      border: 2px solid red;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      width: calc(100% + 130px);
     }
   }
 
@@ -76,12 +96,12 @@ export const MySkills = styled.div`
     height: 60px;
   }
   .ReactJs {
-    // border: 2px solid yellow;
     position: absolute;
     top: 190px;
     left: 205px;
     width: 75px;
     height: 60px;
+    animation: straightLine 2.5s infinite linear;
   }
   @media ${({ theme }) => theme.mediaQueries.above768} {
   }
@@ -90,5 +110,11 @@ export const MySkills = styled.div`
   }
   @media (max-width: 280px) {
     // width: 100%;
+  }
+
+  @keyframes straightLine {
+    50% {
+      transform: translate3D(35px, -70px, 0);
+    }
   }
 `
