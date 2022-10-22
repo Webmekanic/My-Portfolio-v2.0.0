@@ -107,7 +107,7 @@ export const MySkills = styled.div`
     left: 42px;
     width: 53.5px;
     height: 56px;
-    // animation: JavaScriptSpin 2.5s infinite linear;
+    animation: JavaScriptSpin 2.5s infinite linear;
   }
   .cssLogo {
     // border: 2px solid red;
@@ -116,7 +116,7 @@ export const MySkills = styled.div`
     position: absolute;
     top: 0;
     left: 200px;
-    animation: CssSpin 2.5s infinite linear;
+    // animation: CssSpin 2.5s infinite linear;
   }
   .HtmlIcon {
     // border: 2px solid yellow;
@@ -165,11 +165,11 @@ export const MySkills = styled.div`
   }
   @keyframes JavaScriptSpin {
     50% {
-      transform: translate3D(-60px, 120px, 0);
+      transform: translate3D(-60px, 110px, 0);
     }
 
     100% {
-      // transform: translate3D(-90px, -210px, 0);
+      transform: translate3D(100px, 240px, 0);
     }
   }
   @keyframes CssSpin {
