@@ -108,6 +108,7 @@ export const MySkills = styled.div`
     width: 53.5px;
     height: 56px;
     animation: JavaScriptSpin 2.5s 1 linear;
+    animation-fill-mode: forwards;
   }
   .cssLogo {
     // border: 2px solid red;
@@ -117,6 +118,7 @@ export const MySkills = styled.div`
     top: 0;
     left: 200px;
     animation: CssSpin 2.5s 1 linear;
+    animation-fill-mode: forwards;
   }
   .HtmlIcon {
     // border: 2px solid yellow;
@@ -126,6 +128,7 @@ export const MySkills = styled.div`
     width: 80px;
     height: 60px;
     animation: HtmlSpin 2.5s 1 linear;
+    animation-fill-mode: forwards;
   }
 
   .ReactJs {
