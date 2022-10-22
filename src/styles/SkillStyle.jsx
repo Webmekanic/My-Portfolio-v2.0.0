@@ -116,7 +116,7 @@ export const MySkills = styled.div`
     position: absolute;
     top: 0;
     left: 200px;
-    // animation: CssSpin 2.5s infinite linear;
+    animation: CssSpin 2.5s infinite linear;
   }
   .HtmlIcon {
     // border: 2px solid yellow;
@@ -125,7 +125,7 @@ export const MySkills = styled.div`
     left: 0;
     width: 80px;
     height: 60px;
-    animation: HtmlSpin 2.5s infinite linear;
+    // animation: HtmlSpin 2.5s infinite linear;
   }
   .ReactJs {
     position: absolute;
@@ -133,7 +133,7 @@ export const MySkills = styled.div`
     left: 205px;
     width: 75px;
     height: 60px;
-    animation: ReactSpin 2.5s infinite linear;
+    // animation: ReactSpin 2.5s infinite linear;
   }
   @media ${({ theme }) => theme.mediaQueries.above768} {
   }
@@ -178,7 +178,7 @@ export const MySkills = styled.div`
     }
 
     100% {
-      // transform: translate3D(-90px, -210px, 0);
+      transform: translate3D(-220px, 108px, 0);
     }
   }
 `
