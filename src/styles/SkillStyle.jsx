@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 // cubic - bezier(.85, -0.01, 1, .92) cubic bezier
 // cubic-bezier(.99,.99,.26,.26) linear bezier
 
@@ -107,7 +107,7 @@ export const MySkills = styled.div`
     left: 42px;
     width: 53.5px;
     height: 56px;
-    animation: JavaScriptSpin 2.5s infinite linear;
+    animation: JavaScriptSpin 2.5s 1 linear;
   }
   .cssLogo {
     // border: 2px solid red;
@@ -116,7 +116,7 @@ export const MySkills = styled.div`
     position: absolute;
     top: 0;
     left: 200px;
-    animation: CssSpin 2.5s infinite linear;
+    animation: CssSpin 2.5s 1 linear;
   }
   .HtmlIcon {
     // border: 2px solid yellow;
@@ -125,16 +125,19 @@ export const MySkills = styled.div`
     left: 0;
     width: 80px;
     height: 60px;
-    animation: HtmlSpin 2.5s infinite linear;
+    animation: HtmlSpin 2.5s 1 linear;
   }
+
   .ReactJs {
     position: absolute;
     top: 190px;
     left: 205px;
     width: 75px;
     height: 60px;
-    animation: ReactSpin 2.5s infinite linear;
+    animation: ReactSpin 2.5s 1 linear;
+    animation-fill-mode: forwards;
   }
+
   @media ${({ theme }) => theme.mediaQueries.above768} {
   }
   @media ${({ theme }) => theme.mediaQueries.medium} {

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Aniebo from "./assets/Aniebo.svg"
 import JsLogo from "./assets/jsLogo.svg"
 import ReactJs from "./assets/reactjs.svg"
@@ -7,6 +7,14 @@ import CssLogo from "./assets/cssLogo.svg"
 import { MySkills } from "../../styles/SkillStyle"
 
 const Skills = ({ classNames }) => {
+  // const [animate, setAnimate] = useState(false)
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setAnimate(true)
+  //   }, 2500)
+  // }, [])
+
   return (
     <>
       <MySkills className={classNames}>
@@ -29,7 +37,15 @@ const Skills = ({ classNames }) => {
         <img className="jsLogo" src={JsLogo} alt="JS" />
         <img className="cssLogo" src={CssLogo} alt="CSS" />
         <img className="HtmlIcon" src={HtmlIcon} alt="HTML" />
-        <img className="ReactJs" src={ReactJs} alt="React" />
+        <img
+          className="ReactJs"
+          // style={{
+          //   top: animate ? "-12px" : "190px",
+          //   left: animate ? "119px" : "205px",
+          // }}
+          src={ReactJs}
+          alt="React"
+        />
       </MySkills>
     </>
   )
