@@ -8,8 +8,6 @@ import PortfolioContext from "../../context/portfolio/PortfolioContext"
 const Navbar = () => {
   const { dispatch } = useContext(PortfolioContext)
 
-  // if()
-
   return (
     <Nav>
       <h1 className="myIntials">

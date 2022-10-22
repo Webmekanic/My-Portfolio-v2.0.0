@@ -28,7 +28,6 @@ const MobileMenu = () => {
   }, [menu])
 
   return (
-    // me
     <Hamburger toggle={toggle}>
       <ul className="MobileNavLink">
         <li className="MobileNavLinkItem">

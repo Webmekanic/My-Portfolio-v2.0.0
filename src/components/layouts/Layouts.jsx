@@ -6,7 +6,7 @@ import { MyLayout } from "../../styles/LayoutStyle"
 import PortfolioContext from "../../context/portfolio/PortfolioContext"
 import MobileMenu from "./MobileMenu"
 
-function Layouts() {
+const Layouts = () => {
   const { menu } = useContext(PortfolioContext)
 
   return (

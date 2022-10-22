@@ -5,11 +5,8 @@ import ReactJs from "./assets/reactjs.svg"
 import HtmlIcon from "./assets/htmlIcon.svg"
 import CssLogo from "./assets/cssLogo.svg"
 import { MySkills } from "../../styles/SkillStyle"
-// import PortfolioContext from "../../context/portfolio/PortfolioContext"
 
 const Skills = ({ classNames }) => {
-  // const { alert } = useContext(PortfolioContext)
-
   return (
     <>
       <MySkills className={classNames}>
