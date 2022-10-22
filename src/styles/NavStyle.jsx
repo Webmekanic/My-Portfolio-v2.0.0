@@ -110,10 +110,15 @@ export const Hamburger = styled.div`
   height: 100vh;
   text-align: center;
   padding-bottom: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: ${({ theme }) => theme.colors.dark};
 
   .MobileNavLink {
     margin-top: 4rem;
-    // border: 2px solid red;
   }
 
   .socialIcons {

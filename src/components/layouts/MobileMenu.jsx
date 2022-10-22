@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useState, useEffect, useContext } from "react"
 import styled from "styled-components"
 import { MyLink, Hamburger } from "../../styles/NavStyle"
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 import { AiOutlineClose } from "react-icons/ai"
+import PortfolioContext from "../../context/portfolio/PortfolioContext"
 
 const MenuLink = styled(MyLink)`
   font-style: Black;
@@ -18,22 +19,42 @@ const MenuLink = styled(MyLink)`
   }
 `
 
-function MobileMenu() {
+const MobileMenu = () => {
+  const { menu, dispatch } = useContext(PortfolioContext)
+  const [toggle, setToggle] = useState(false)
+
+  useEffect(() => {
+    setToggle(menu)
+  }, [menu])
+
   return (
-    <Hamburger>
+    // me
+    <Hamburger toggle={toggle}>
       <ul className="MobileNavLink">
         <li className="MobileNavLinkItem">
-          <MenuLink to="/about">About</MenuLink>
+          <MenuLink to="/about" onClick={() => dispatch({ type: "SET_MENU" })}>
+            About
+          </MenuLink>
         </li>
         <li className="MobileNavLinkItem">
-          <MenuLink to="/works">Works</MenuLink>
+          <MenuLink to="/works" onClick={() => dispatch({ type: "SET_MENU" })}>
+            Works
+          </MenuLink>
         </li>
         <li className="MobileNavLinkItem">
-          <MenuLink to="/contact">Contact</MenuLink>
+          <MenuLink
+            to="/contact"
+            onClick={() => dispatch({ type: "SET_MENU" })}
+          >
+            Contact
+          </MenuLink>
         </li>
       </ul>
       {/* <button></button> */}
-      <AiOutlineClose className="closeMenu" />
+      <AiOutlineClose
+        className="closeMenu"
+        onClick={() => dispatch({ type: "SET_MENU" })}
+      />
       <div className="socialIcons">
         <a
           className="socialLink"

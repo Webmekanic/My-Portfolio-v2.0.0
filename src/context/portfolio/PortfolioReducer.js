@@ -9,7 +9,7 @@ const portfolioReducer = (state, action) => {
     case "SET_MENU":
       return {
         ...state,
-        menu: true,
+        menu: state.menu ? false : true,
       }
   }
 }
