@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Skills from "../components/layouts/Skills"
 import BgText from "../components/shared/BgText"
 import Button from "../components/shared/Button"
@@ -20,6 +20,21 @@ import ProjectItem from "../components/shared/ProjectItem"
 import Socials from "../components/shared/Socials"
 
 function Home() {
+  const [myProject, setMyproject] = useState([
+    {
+      id: "1",
+    },
+    {
+      id: "2",
+    },
+    {
+      id: "3",
+    },
+    {
+      id: "4",
+    },
+  ])
+
   return (
     <>
       <MyHome>
@@ -151,10 +166,9 @@ function Home() {
                 </div>
               </div>
               <section className="myProject">
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
+                {myProject.map((project) => {
+                  return <ProjectItem key={project._id} />
+                })}
               </section>
             </ProjectSection>
           </section>
