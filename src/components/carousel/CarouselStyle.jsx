@@ -1,12 +1,8 @@
 import styled from "styled-components"
 
 export const MySlider = styled.div`
-// border: 2px solid yellow;
   width: 100%;
-
-
 .flickity-page-dots{
-  // border: 2px solid red;
     position: absolute;
     width: 100%;
     bottom: -25px;
@@ -15,52 +11,9 @@ export const MySlider = styled.div`
     list-style: none;
     text-align: center;
     line-height: 1;
+    background: transparent;
 }
 
-.flickity-page-dots .dot.is-selected {
-    opacity: 1;
-}
-
-.flickity-page-dots .dot {
-    width: 18px;
-    height: 18px;
-    margin: 0;
-    background: none;
-    opacity: 1;
-}
-
-.flickity-page-dots .dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 8px;
-    background: ${({ theme }) => theme.colors.lightColor};
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    opacity: .25;
-    cursor: pointer;
-    // border: 2px solid red;
-}
-
-
-
-
-  
-
-
-.flickity-page-dots{
-  // border: 2px solid red;
-    position: absolute;
-    width: 100%;
-    bottom: -25px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-    line-height: 1;
-   
-}
 .flickity-page-dots:focus{
    outline: none;
    border: none;
@@ -70,35 +23,22 @@ export const MySlider = styled.div`
 
 .flickity-page-dots .dot.is-selected {
     opacity: 1;
-}
-
-.flickity-page-dots .dot {
-    width: 18px;
-    height: 18px;
-    margin: 0;
-    background: none;
-    opacity: 1;
+    background-color:${({ theme }) => theme.colors.lightColor}
 }
 
 .flickity-page-dots .dot {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 11px;
+    height: 11px;
     margin: 0 8px;
     background: ${({ theme }) => theme.colors.lightColor};
+    border: 1px solid ${({ theme }) => theme.colors.lightColor};
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
     opacity: .25;
     cursor: pointer;
-    // border: 2px solid red;
 }
-
-
-
-
-  
-
   .flickity-enabled.is-draggable {
     -webkit-tap-highlight-color: transparent;
     -webkit-user-select: none;
@@ -109,7 +49,6 @@ export const MySlider = styled.div`
 
   .flickity-enabled {
     position: relative;
-    // border: 2px solid red;
   }
 
   .flickity-enabled:focus{
@@ -155,19 +94,26 @@ export const MySlider = styled.div`
     list-style: none;
   }
 
+   .flickity-button{
+    // border: 2px solid red;
+   }
+
   .flickity-button:disabled {
     opacity: 0.2;
   }
 
   .flickity-prev-next-button.previous {
     right: 50px !important;
+    // border: 2px solid yellow;
+    top: -30px;
   }
 
   .flickity-prev-next-button.next,
   .flickity-prev-next-button.previous {
+    // border: 2px solid red;
     top: -40px;
     left: auto !important;
-    // right: 0 !important;
+    right: 0 !important;
     -webkit-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     -o-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     -moz-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -194,10 +140,6 @@ export const MySlider = styled.div`
     // left: 30px;
     background-image: url(https://www.realfevr.com/_next/static/media/ico-arrow-white-left.26f64e30.svg;
   }
-
-
-
-
   .flickity-prev-next-button {
     // top: 50%;
     width: 44px;
@@ -210,18 +152,12 @@ export const MySlider = styled.div`
     // -o-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-    
-
-
 .flickity-button {
   // position: absolute;
     // // background-color: hsla(0,0%,100%,.75);
     border: none;
     color: ${({ theme }) => theme.colors.lightColor}
   }
-    
-
-
 button {
   // background: none;
     // // border: none;
@@ -233,36 +169,17 @@ button {
     .flickity-prev-next-button.next svg, .flickity-prev-next-button.previous svg {
     display: none;
 }
-
-
-  
-  
-    
-    
-
 .flickity-prev-next-button .flickity-button-icon {position: absolute;
   left: 20%;
   top: 20%;
   width: 60%;
   height: 60%;
 }
-  
-  
-    
-
-
 .flickity-button-icon {
   fill: currentColor;
   // border: 2px solid ${({ theme }) => theme.colors.lightColor};
 }
-    
-
-    
-
-
 svg {
 overflow: hidden;
 }
-
-
 `
