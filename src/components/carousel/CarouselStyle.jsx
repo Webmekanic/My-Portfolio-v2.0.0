@@ -15,6 +15,13 @@ export const MySlider = styled.div`
     list-style: none;
     text-align: center;
     line-height: 1;
+   
+}
+.flickity-page-dots:focus{
+   outline: none;
+   border: none;
+   -webkit-outline: none;
+   -webkit-border: none;
 }
 
 .flickity-page-dots .dot.is-selected {
@@ -61,6 +68,13 @@ export const MySlider = styled.div`
     // border: 2px solid red;
   }
 
+  .flickity-enabled:focus{
+   outline: none;
+   border: none;
+   -webkit-outline: none;
+   -webkit-border: none;
+}
+
   .carousel-news .flickity-viewport {
     overflow: visible;
   }
@@ -68,8 +82,7 @@ export const MySlider = styled.div`
   .flickity-viewport {
     overflow: hidden;
     position: relative;
-    // height: 100%;
-    touch-action: pan-x;
+    touch-action: pan-y;
   }
   .flickity-slider {
     position: absolute;
@@ -84,7 +97,7 @@ export const MySlider = styled.div`
   }
 
   .carousel-news .carousel-cell {
-    min-height: 360px;
+    // min-height: 400px;
     width: -webkit-calc(25% - 20px);
     width: -moz-calc(25% - 20px);
     width: calc(25% - 20px);
@@ -98,22 +111,22 @@ export const MySlider = styled.div`
     list-style: none;
   }
 
-  .carousel--arrows-top-right .flickity-button:disabled {
+  .flickity-button:disabled {
     opacity: 0.2;
   }
 
-  .carousel--arrows-top-right .flickity-prev-next-button.previous {
+  .flickity-prev-next-button.previous {
     right: 50px !important;
   }
 
-  .carousel--arrows-top-right .flickity-prev-next-button.next,
-  .carousel--arrows-top-right .flickity-prev-next-button.previous {
+  .flickity-prev-next-button.next,
+  .flickity-prev-next-button.previous {
     top: -40px;
     left: auto !important;
     // right: 0 !important;
-    // -webkit-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    // -o-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    // -moz-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    -webkit-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    -o-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    -moz-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
