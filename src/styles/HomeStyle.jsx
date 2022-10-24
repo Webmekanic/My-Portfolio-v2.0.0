@@ -803,7 +803,7 @@ export const ProjectSection = styled.section`
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
     .myProject {
-      border: 2px solid red;
+      // border: 2px solid red;
     }
   }
 

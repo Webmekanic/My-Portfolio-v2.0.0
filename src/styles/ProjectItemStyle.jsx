@@ -16,6 +16,7 @@ export const ProjectItemStyle = styled.div`
     hsl(200deg 25% 5%) 99%
   );
   cursor: pointer;
+  margin-right: 1rem;
 
   &:hover {
     // border: 1px solid ${({ theme }) => theme.colors.lightColor};
