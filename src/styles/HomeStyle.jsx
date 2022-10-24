@@ -794,7 +794,12 @@ export const ProjectSection = styled.section`
     width: 89%;
     margin: auto;
     margin-top: 3.4rem;
+    // border: 2px solid red;
   }
+
+  // .myProject > * + * {
+  //   margin-left: 0.4rem;
+  // }
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
     .myProject {

@@ -16,24 +16,25 @@ import {
   ProjectSection,
   ContactSection,
 } from "../styles/HomeStyle"
-import ProjectItem from "../components/shared/ProjectItem"
+// import ProjectItem from "../components/shared/ProjectItem"
 import Socials from "../components/shared/Socials"
+import Carousel from "../components/carousel/Carousel"
 
 function Home() {
-  const [myProject, setMyproject] = useState([
-    {
-      id: "1",
-    },
-    {
-      id: "2",
-    },
-    {
-      id: "3",
-    },
-    {
-      id: "4",
-    },
-  ])
+  // const [myProject, setMyproject] = useState([
+  //   {
+  //     id: "1",
+  //   },
+  //   {
+  //     id: "2",
+  //   },
+  //   {
+  //     id: "3",
+  //   },
+  //   {
+  //     id: "4",
+  //   },
+  // ])
 
   return (
     <>
@@ -166,9 +167,7 @@ function Home() {
                 </div>
               </div>
               <section className="myProject">
-                {myProject.map((project) => {
-                  return <ProjectItem key={project._id} />
-                })}
+                <Carousel initialIndex={4} />
               </section>
             </ProjectSection>
           </section>
