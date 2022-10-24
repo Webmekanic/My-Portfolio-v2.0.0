@@ -15,6 +15,50 @@ export const MySlider = styled.div`
     list-style: none;
     text-align: center;
     line-height: 1;
+}
+
+.flickity-page-dots .dot.is-selected {
+    opacity: 1;
+}
+
+.flickity-page-dots .dot {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    background: none;
+    opacity: 1;
+}
+
+.flickity-page-dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px;
+    background: ${({ theme }) => theme.colors.lightColor};
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    opacity: .25;
+    cursor: pointer;
+    // border: 2px solid red;
+}
+
+
+
+
+  
+
+
+.flickity-page-dots{
+  // border: 2px solid red;
+    position: absolute;
+    width: 100%;
+    bottom: -25px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 1;
    
 }
 .flickity-page-dots:focus{
@@ -152,6 +196,8 @@ export const MySlider = styled.div`
   }
 
 
+
+
   .flickity-prev-next-button {
     // top: 50%;
     width: 44px;
@@ -209,6 +255,8 @@ button {
   fill: currentColor;
   // border: 2px solid ${({ theme }) => theme.colors.lightColor};
 }
+    
+
     
 
 
