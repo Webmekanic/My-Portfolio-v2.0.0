@@ -80,7 +80,14 @@ export const MySlider = styled.div`
     background-color: transparent;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    cursor: pointer;
   }
+
+  .flickity-button:disabled {
+    // opacity: .3;
+    cursor: auto;
+    pointer-events: none;
+}
 
   .flickity-prev-next-button.previous {
     // left: 30px;
@@ -88,8 +95,8 @@ export const MySlider = styled.div`
   }
   .flickity-prev-next-button {
     // top: 50%;
-    // width: 44px;
-    // height: 44px;
+    width: 44px;
+    height: 44px;
     // -webkit-border-radius: 50%;
     // -moz-border-radius: 50%;
     border-radius: 50%;
@@ -103,8 +110,7 @@ export const MySlider = styled.div`
     // position: absolute;
     // // background-color: hsla(0,0%,100%,.75);
     border: none;
-    color: red;
-    background-color: purple;
+    color: ${({ theme }) => theme.colors.lightColor}
 }
 
 button {
@@ -115,5 +121,35 @@ button {
     // box-shadow: none;
     // font-family: Azo Sans,arial,helvetica,sans-serif;
     // outline: 0!important;
+
+
+    .flickity-prev-next-button.next svg, .flickity-prev-next-button.previous svg {
+    display: none;
+    }
+
+    .flickity-prev-next-button .flickity-button-icon {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    width: 60%;
+    height: 60%;
 }
+
+.flickity-button-icon {
+    fill: currentColor;
+    // border: 2px solid ${({ theme }) => theme.colors.lightColor};
+}
+
+svg {
+    overflow: hidden;
+}
+
+.flickity-page-dots{
+  border: 2px solid red;
+}
+
+
+
+
+
 `

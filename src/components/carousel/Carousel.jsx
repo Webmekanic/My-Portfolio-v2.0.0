@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react"
 import ProjectItem from "../shared/ProjectItem"
 import Flickity from "react-flickity-component"
@@ -25,6 +26,24 @@ const Carousel = (props) => {
     },
     {
       id: "6",
+    },
+    {
+      id: "7",
+    },
+    {
+      id: "8",
+    },
+    {
+      id: "9",
+    },
+    {
+      id: "10",
+    },
+    {
+      id: "11",
+    },
+    {
+      id: "12",
     },
   ])
 
@@ -67,6 +86,7 @@ const Carousel = (props) => {
         {myProject.map((project) => {
           return <ProjectItem key={project.id} />
         })}
+        {setMyproject}
       </Flickity>
     </MySlider>
   )

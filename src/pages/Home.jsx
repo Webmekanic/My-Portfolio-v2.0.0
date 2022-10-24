@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Skills from "../components/layouts/Skills"
 import BgText from "../components/shared/BgText"
 import Button from "../components/shared/Button"
