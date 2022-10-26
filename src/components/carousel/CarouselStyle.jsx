@@ -12,6 +12,7 @@ export const MySlider = styled.div`
     text-align: center;
     line-height: 1;
     background: transparent;
+    // border: 2px solid red;
 }
 
 .flickity-page-dots:focus{
@@ -95,7 +96,7 @@ export const MySlider = styled.div`
   }
 
    .flickity-button{
-    // border: 2px solid red;
+    border: 2px solid red;
    }
 
   .flickity-button:disabled {
@@ -103,17 +104,26 @@ export const MySlider = styled.div`
   }
 
   .flickity-prev-next-button.previous {
-    right: 50px !important;
     // border: 2px solid yellow;
-    top: -30px;
+    top: 30px;
+    position: relative;
+    bottom: -30px;
+    left: 320px;
+     z-index: 99;
+
   }
+    .flickity-prev-next-button.next{
+      position: absolute;
+      right: 0px;
+      bottom: -30px;
+      // border: 2px solid blue;
+       right: 320px;
+       z-index: 99;
+    }
 
   .flickity-prev-next-button.next,
   .flickity-prev-next-button.previous {
-    // border: 2px solid red;
-    top: -40px;
-    left: auto !important;
-    right: 0 !important;
+    // top: -40px;
     -webkit-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     -o-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     -moz-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -131,7 +141,7 @@ export const MySlider = styled.div`
   }
 
   .flickity-button:disabled {
-    // opacity: .3;
+    opacity: .3;
     cursor: auto;
     pointer-events: none;
 }
@@ -153,33 +163,28 @@ export const MySlider = styled.div`
     transform: translateY(-50%);
   }
 .flickity-button {
-  // position: absolute;
-    // // background-color: hsla(0,0%,100%,.75);
     border: none;
     color: ${({ theme }) => theme.colors.lightColor}
   }
 button {
-  // background: none;
-    // // border: none;
-    // // -webkit-box-shadow: none;
-    // // -moz-box-shadow: none;
-    // box-shadow: none;
-    // font-family: Azo Sans,arial,helvetica,sans-serif;
-    // outline: 0!important;
     .flickity-prev-next-button.next svg, .flickity-prev-next-button.previous svg {
     display: none;
 }
-.flickity-prev-next-button .flickity-button-icon {position: absolute;
+.flickity-prev-next-button .flickity-button-icon {
+  position: absolute;
   left: 20%;
   top: 20%;
   width: 60%;
   height: 60%;
+  // border: 2px solid red;
 }
 .flickity-button-icon {
   fill: currentColor;
   // border: 2px solid ${({ theme }) => theme.colors.lightColor};
+  // border: 2px solid red;
 }
 svg {
 overflow: hidden;
+}
 }
 `
