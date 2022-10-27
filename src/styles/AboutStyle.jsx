@@ -6,6 +6,7 @@ export const AboutMe = styled.div`
   z-index: 20;
   width: 100%;
   padding-bottom: 1rem;
+  height: 100vh;
 
   .pattern1 {
     background: ${({ theme }) => theme.colors.barColor};

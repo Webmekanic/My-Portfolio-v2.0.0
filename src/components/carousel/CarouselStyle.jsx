@@ -116,7 +116,6 @@ export const MySlider = styled.div`
       position: absolute;
       right: 0px;
       bottom: -30px;
-      // border: 2px solid blue;
        right: 320px;
        z-index: 99;
     }
@@ -186,5 +185,16 @@ button {
 svg {
 overflow: hidden;
 }
+}
+
+@media(max-width: 1090px) {
+   .flickity-prev-next-button.next{
+      position: absolute;
+      right: 0px;
+      bottom: -30px;
+       right: 290px;
+       z-index: 99;
+      //  border: 2px solid red;
+    }
 }
 `
