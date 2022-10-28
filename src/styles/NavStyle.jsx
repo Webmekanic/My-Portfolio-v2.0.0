@@ -7,7 +7,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  padding: clamp(0.5rem, 1.3vw, 3rem) 0;
+  padding: clamp(0.5rem, 1.3vw, 3rem);
   color: ${({ theme }) => theme.colors.textColor};
   position: fixed;
   top: 0;
@@ -16,6 +16,11 @@ export const Nav = styled.nav`
   z-index: 99;
   width: 89%;
   margin: auto;
+  // background: rgba(9, 13, 15, 0.2);
+  // backdrop-filter: blur(24px);
+  // -webkit-backdrop-filter: blur(24px);
+  // padding-left: 4.375rem;
+  // padding-right: 4.375rem;
 
   .myIntials {
     font-family: Wingdings 3;

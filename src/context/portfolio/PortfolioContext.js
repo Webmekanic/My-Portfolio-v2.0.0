@@ -7,6 +7,8 @@ export const PortfolioProvider = ({ children }) => {
   const initialState = {
     loading: false,
     menu: false,
+    projects: [],
+    error: null,
   }
 
   const [state, dispatch] = useReducer(portfolioReducer, initialState)

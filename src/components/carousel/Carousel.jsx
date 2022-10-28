@@ -61,7 +61,7 @@ const Carousel = (props) => {
           initialIndex: props.initialIndex,
           cellAlign: "left",
           contain: true,
-          autoPlay: false,
+          autoPlay: true,
           draggable: ">1",
           freeScroll: false,
           pageDots: true,

@@ -11,6 +11,14 @@ const portfolioReducer = (state, action) => {
         ...state,
         menu: state.menu ? false : true,
       }
+    case "GET_PROJECTS":
+      return {
+        ...state,
+        projects: action.payload,
+        loading: false,
+      }
+    default:
+      return state
   }
 }
 
