@@ -21,21 +21,6 @@ import Socials from "../components/shared/Socials"
 import Carousel from "../components/carousel/Carousel"
 
 function Home() {
-  // const [myProject, setMyproject] = useState([
-  //   {
-  //     id: "1",
-  //   },
-  //   {
-  //     id: "2",
-  //   },
-  //   {
-  //     id: "3",
-  //   },
-  //   {
-  //     id: "4",
-  //   },
-  // ])
-
   return (
     <>
       <MyHome>

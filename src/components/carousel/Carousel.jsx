@@ -74,7 +74,6 @@ const Carousel = (props) => {
         {myProject.map((project) => {
           return <ProjectItem key={project.id} />
         })}
-        {setMyproject}
       </Flickity>
     </MySlider>
   )

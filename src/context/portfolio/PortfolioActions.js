@@ -6,16 +6,17 @@ export const client = createClient({
   host: process.env.REACT_APP_HOST,
 })
 
-// const getProjects = async () => {
-//   try {
-//     const response = await client.getEntries()
-//     dispatch({
-//       type: "GET_PROJECTS",
-//       payload: response.items,
-//     })
-//   } catch (error) {
-//     if (error) {
-//       console.log(error)
-//     }
-//   }
-// }
+export const getProjects = async () => {
+  try {
+    const entries = await client.getEntries({
+      content_type: "Project",
+      select: "false",
+    })
+
+    return { projects: entries }
+  } catch (error) {
+    if (error) {
+      console.log(error.message)
+    }
+  }
+}

@@ -2,14 +2,7 @@ import React from "react"
 import { ProjectItemStyle } from "../../styles/ProjectItemStyle"
 import { FiGithub, FiExternalLink } from "react-icons/fi"
 
-const ProjectItem = ({
-  projectName,
-  aboutProject,
-  techUsed,
-  projectImg,
-  repoLink,
-  liveLink,
-}) => {
+const ProjectItem = () => {
   return (
     <ProjectItemStyle>
       <section className="projectContainer">
