@@ -1,8 +1,21 @@
-import React from "react"
+import React, { useContext, useEffect } from "react"
 import { ProjectItemStyle } from "../../styles/ProjectItemStyle"
 import { FiGithub, FiExternalLink } from "react-icons/fi"
+import { getProjects } from "../../context/portfolio/PortfolioActions"
+import PortfolioContext from "../../context/portfolio/PortfolioContext"
 
 const ProjectItem = () => {
+  const { projects, dispatch } = useContext(PortfolioContext)
+
+  useEffect(() => {
+    const getprod = async () => {
+      const { projects } = await getProjects()
+      dispatch({ type: "GET_PROJECTS", payload: projects })
+    }
+
+    getprod()
+  }, [dispatch])
+
   return (
     <ProjectItemStyle>
       <section className="projectContainer">
@@ -44,5 +57,4 @@ const ProjectItem = () => {
     </ProjectItemStyle>
   )
 }
-
 export default ProjectItem

@@ -1,12 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import ProjectItem from "../shared/ProjectItem"
 import Flickity from "react-flickity-component"
 import { MySlider } from "./CarouselStyle"
+import PortfolioContext from "../../context/portfolio/PortfolioContext"
 
 const Carousel = (props) => {
   let flkty
   let [carouselIndex, setCarouselIndex] = useState(null)
+
+  const { projects } = useContext(PortfolioContext)
+
+  console.log(projects)
 
   const [myProject, setMyproject] = useState([
     {
@@ -37,7 +42,7 @@ const Carousel = (props) => {
 
   const handleChange = (index) => {
     setCarouselIndex(index) // Not working
-    console.log({ carouselIndex, index })
+    // console.log({ carouselIndex, index })
   }
 
   useEffect(() => {

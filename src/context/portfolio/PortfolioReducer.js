@@ -14,7 +14,7 @@ const portfolioReducer = (state, action) => {
     case "GET_PROJECTS":
       return {
         ...state,
-        projects: action.payload.projects,
+        projects: action.payload,
         loading: false,
       }
     default:
