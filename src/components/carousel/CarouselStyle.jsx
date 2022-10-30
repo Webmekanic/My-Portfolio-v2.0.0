@@ -104,13 +104,11 @@ export const MySlider = styled.div`
   }
 
   .flickity-prev-next-button.previous {
-    // border: 2px solid yellow;
-    top: 30px;
+    top: 33.6px;
     position: relative;
-    bottom: -30px;
+    // bottom: -30px;
     left: 320px;
      z-index: 99;
-
   }
     .flickity-prev-next-button.next{
       position: absolute;

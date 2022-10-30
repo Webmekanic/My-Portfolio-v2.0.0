@@ -58,6 +58,10 @@ export const MyWorks = styled.div`
     margin: auto;
   }
 
+  .myProject {
+    border: 2px solid green;
+  }
+
   @media ${({ theme }) => theme.mediaQueries.medium} {
     .pattern1 {
       top: 12rem;
