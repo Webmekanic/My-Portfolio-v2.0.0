@@ -11,34 +11,7 @@ const Carousel = (props) => {
 
   const { projects } = useContext(PortfolioContext)
 
-  // console.log(projects)
-
-  const [myProject, setMyproject] = useState([
-    {
-      id: "1",
-    },
-    {
-      id: "2",
-    },
-    {
-      id: "3",
-    },
-    {
-      id: "4",
-    },
-    {
-      id: "5",
-    },
-    {
-      id: "6",
-    },
-    {
-      id: "7",
-    },
-    {
-      id: "8",
-    },
-  ])
+  console.log(projects)
 
   const handleChange = (index) => {
     setCarouselIndex(index) // Not working
@@ -49,7 +22,7 @@ const Carousel = (props) => {
     if (flkty) {
       console.log("this ran")
       flkty.on("settle", () => {
-        console.log(`current index is ${flkty.selectedIndex}`)
+        // console.log(`current index is ${flkty.selectedIndex}`)
       })
 
       flkty.on("change", (index) => {
@@ -76,8 +49,8 @@ const Carousel = (props) => {
           wrapAround: false,
         }}
       >
-        {myProject.map((project) => {
-          return <ProjectItem key={project.id} />
+        {projects.map((project, index) => {
+          return <ProjectItem key={project.id} project={project.fields} />
         })}
       </Flickity>
     </MySlider>

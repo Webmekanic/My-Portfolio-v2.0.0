@@ -16,7 +16,7 @@ const ProjectItem = ({ project }) => {
     getprod()
   }, [dispatch])
 
-  console.log(projects)
+  // console.log(projects)
 
   return (
     <ProjectItemStyle>

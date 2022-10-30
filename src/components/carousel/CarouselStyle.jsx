@@ -12,7 +12,6 @@ export const MySlider = styled.div`
     text-align: center;
     line-height: 1;
     background: transparent;
-    // border: 2px solid red;
 }
 
 .flickity-page-dots:focus{
@@ -81,7 +80,6 @@ export const MySlider = styled.div`
   }
 
   .carousel-news .carousel-cell {
-    // min-height: 400px;
     width: -webkit-calc(25% - 20px);
     width: -moz-calc(25% - 20px);
     width: calc(25% - 20px);
@@ -106,7 +104,6 @@ export const MySlider = styled.div`
   .flickity-prev-next-button.previous {
     top: 33.6px;
     position: relative;
-    // bottom: -30px;
     left: 320px;
      z-index: 99;
   }
@@ -120,7 +117,6 @@ export const MySlider = styled.div`
 
   .flickity-prev-next-button.next,
   .flickity-prev-next-button.previous {
-    // top: -40px;
     -webkit-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     -o-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     -moz-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
