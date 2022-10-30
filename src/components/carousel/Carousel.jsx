@@ -11,7 +11,7 @@ const Carousel = (props) => {
 
   const { projects } = useContext(PortfolioContext)
 
-  console.log(projects)
+  // console.log(projects)
 
   const [myProject, setMyproject] = useState([
     {

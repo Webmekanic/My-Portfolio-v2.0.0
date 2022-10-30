@@ -4,7 +4,7 @@ import { FiGithub, FiExternalLink } from "react-icons/fi"
 import { getProjects } from "../../context/portfolio/PortfolioActions"
 import PortfolioContext from "../../context/portfolio/PortfolioContext"
 
-const ProjectItem = () => {
+const ProjectItem = ({ project }) => {
   const { projects, dispatch } = useContext(PortfolioContext)
 
   useEffect(() => {
@@ -16,6 +16,8 @@ const ProjectItem = () => {
     getprod()
   }, [dispatch])
 
+  console.log(projects)
+
   return (
     <ProjectItemStyle>
       <section className="projectContainer">
@@ -23,11 +25,7 @@ const ProjectItem = () => {
         <div className="projectSummary">
           <p className="projectTitle">Advice generator app</p>
           <div className="skillsTag"></div>
-          <p className="projectDescription">
-            The perfect project if you're learning how to interact with
-            3rd-party APIs. This challenge uses the Advice Slip API to generate
-            random quotes of advice.
-          </p>
+          <p className="projectDescription">Description</p>
           <div className="projectLinks">
             <button>
               Repo
