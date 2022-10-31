@@ -9,16 +9,6 @@ export const getProjects = async () => {
   console.log(client)
   try {
     const entries = await client.getEntries()
-
-    // const sanitizedEntries = entries.items.map((item) => {
-    //   const avatar = item.fields.avatar.fields
-
-    //   return {
-    //     ...item.fields,
-    //     avatar,
-    //   }
-    // })
-
     return { projects: entries.items }
   } catch (error) {
     if (error) {

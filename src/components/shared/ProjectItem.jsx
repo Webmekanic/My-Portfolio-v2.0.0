@@ -16,8 +16,6 @@ const ProjectItem = ({ project }) => {
     getprod()
   }, [dispatch])
 
-  // console.log(projects)
-
   return (
     <ProjectItemStyle>
       <section className="projectContainer">
@@ -25,7 +23,12 @@ const ProjectItem = ({ project }) => {
         <div className="projectSummary">
           <p className="projectTitle">Advice generator app</p>
           <div className="skillsTag"></div>
-          <p className="projectDescription">Description</p>
+          <p className="projectDescription">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            assumenda illum dolorum odit ut veritatis aspernatur doloribus quasi
+            sint. Quo! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quo, dolores.
+          </p>
           <div className="projectLinks">
             <button>
               Repo

@@ -20,7 +20,7 @@ import {
 import Socials from "../components/shared/Socials"
 import Carousel from "../components/carousel/Carousel"
 
-function Home() {
+const Home = () => {
   return (
     <>
       <MyHome>
@@ -36,11 +36,11 @@ function Home() {
         <section className="myNameContainer">
           <div className="aboutAniebo">
             <div className="fullName">
-              <div class="xbox" data-char="David">
-                David<div class="inside">David</div>
+              <div className="xbox" data-char="David">
+                David<div className="inside">David</div>
               </div>
               <div class="xbox xbox1" data-char=" Aniebo">
-                Aniebo<div class="inside"> Aniebo</div>
+                Aniebo<div className="inside"> Aniebo</div>
               </div>
             </div>
             <Skills classNames="skillSection" />

@@ -43,7 +43,20 @@ const pulseAlphaD = keyframes`
 100%{
   transform: scale(1.5)
 }
+`
 
+const load = keyframes`
+0% { 
+  width: 0%; 
+}
+
+25%{
+  width: 35%; 
+
+}
+  100% { 
+    width: 100%; 
+  }
 `
 
 const LoadSection = styled.div`
@@ -132,24 +145,26 @@ const LoadSection = styled.div`
     animation: ${pulseAlphaD} 1.7s ease-in-out infinite;
     animation-fill-mode: both;
   }
-  .line {
-    width: 70vw;
+  
+  .progress{
+     width: 70vw;
     margin-top: 3.5rem;
-    height: 4px;
+     height: 4px;
     background-color: ${({ theme }) => theme.colors.borderColor};
     border-radius: 3px;
   }
-  .inner {
-    border-radius: 3px;
-    width: 100%;
-    height: inherit;
+
+  .progress-value {
+  width: 0;
+   height: inherit;
     background: linear-gradient(
       90deg,
       rgba(138, 250, 236, 1) 0%,
       rgba(113, 81, 182, 1) 35%,
       rgba(138, 250, 236, 1) 100%
     );
-  }
+    animation: ${load} 1.7s normal forwards;
+}
 `
 
 const Loading = () => {
@@ -165,8 +180,8 @@ const Loading = () => {
             <div className="vector-right"></div>
           </div>
         </div>
-        <div className="line">
-          <div className="inner"></div>
+        <div class="progress">
+          <div class="progress-value"></div>
         </div>
       </section>
     </LoadSection>

@@ -33,6 +33,11 @@ const Works = () => {
             <ProjectItem />
             <ProjectItem />
             <ProjectItem />
+            <ProjectItem />
+            <ProjectItem />
+            <ProjectItem />
+            <ProjectItem />
+            <ProjectItem />
           </section>
         </ProjectSection>
       </section>

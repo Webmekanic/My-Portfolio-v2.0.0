@@ -15,15 +15,12 @@ const Carousel = (props) => {
 
   const handleChange = (index) => {
     setCarouselIndex(index) // Not working
-    // console.log({ carouselIndex, index })
   }
 
   useEffect(() => {
     if (flkty) {
       console.log("this ran")
-      flkty.on("settle", () => {
-        // console.log(`current index is ${flkty.selectedIndex}`)
-      })
+      flkty.on("settle", () => {})
 
       flkty.on("change", (index) => {
         handleChange(index)
