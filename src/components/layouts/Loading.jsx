@@ -54,6 +54,10 @@ const load = keyframes`
   width: 35%; 
 
 }
+75% {
+  width: 70%; 
+
+}
   100% { 
     width: 100%; 
   }
@@ -163,7 +167,7 @@ const LoadSection = styled.div`
       rgba(113, 81, 182, 1) 35%,
       rgba(138, 250, 236, 1) 100%
     );
-    animation: ${load} 1.7s normal forwards;
+    animation: ${load} 3s normal forwards;
 }
 `
 
