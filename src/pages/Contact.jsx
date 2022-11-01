@@ -8,6 +8,14 @@ import { ContactSection } from "../styles/HomeStyle"
 import PortfolioContext from "../context/portfolio/PortfolioContext"
 
 const Contact = () => {
+  const { loading, dispatch } = useContext(PortfolioContext)
+
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch({ type: "SET_LOADING" })
+    }, 3000)
+  }, [loading])
+
   return (
     <ContactMe>
       <div className="pattern1"></div>
