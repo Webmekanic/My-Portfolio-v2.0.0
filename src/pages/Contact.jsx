@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useContext, useEffect } from "react"
 import Footer from "../components/layouts/Footer"
 import BgText from "../components/shared/BgText"
 import Button from "../components/shared/Button"
 import Socials from "../components/shared/Socials"
 import { ContactMe } from "../styles/ContactStyle"
 import { ContactSection } from "../styles/HomeStyle"
+import PortfolioContext from "../context/portfolio/PortfolioContext"
 
 const Contact = () => {
   return (

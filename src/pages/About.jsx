@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useContext } from "react"
 import BgText from "../components/shared/BgText"
 import Footer from "../components/layouts/Footer"
 import Button from "../components/shared/Button"
@@ -8,8 +8,18 @@ import CssLogo from "../components/layouts/assets/cssLogo.svg"
 import JsLogo from "../components/layouts/assets/jsLogo.svg"
 import ReactJs from "../components/layouts/assets/reactjs.svg"
 import HtmlIcon from "../components/layouts/assets/htmlIcon.svg"
+import PortfolioContext from "../context/portfolio/PortfolioContext"
 
 const About = () => {
+  const { loading, dispatch } = useContext(PortfolioContext)
+
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch({ type: "SET_LOADING" })
+    }, 3000)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <>
       <AboutMe>

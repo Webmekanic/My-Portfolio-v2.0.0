@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import React, { useState, useEffect, useContext } from "react"
 import styled from "styled-components"
 import { MyLink, Hamburger } from "../../styles/NavStyle"
@@ -12,7 +13,6 @@ const MenuLink = styled(MyLink)`
   font-family: chivo;
   font-style: Black;
   font-weight: 900;
-  
 
   &:active,
   &:hover {
