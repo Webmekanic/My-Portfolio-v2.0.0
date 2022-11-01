@@ -12,6 +12,7 @@ const MenuLink = styled(MyLink)`
   font-family: chivo;
   font-style: Black;
   font-weight: 900;
+  
 
   &:active,
   &:hover {

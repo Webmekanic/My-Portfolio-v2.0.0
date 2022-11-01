@@ -5,7 +5,7 @@ const PortfolioContext = createContext()
 
 export const PortfolioProvider = ({ children }) => {
   const initialState = {
-    loading: false,
+    loading: true,
     menu: false,
     projects: [],
     error: null,

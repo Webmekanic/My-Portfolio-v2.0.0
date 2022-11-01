@@ -5,9 +5,10 @@ import Navbar from "./Navbar"
 import { MyLayout } from "../../styles/LayoutStyle"
 import PortfolioContext from "../../context/portfolio/PortfolioContext"
 import MobileMenu from "./MobileMenu"
+import Loading from "./Loading"
 
 const Layouts = () => {
-  const { menu } = useContext(PortfolioContext)
+  const { menu, loading } = useContext(PortfolioContext)
 
   return (
     <MyLayout>
@@ -15,6 +16,7 @@ const Layouts = () => {
       <Outlet />
       {/* <Footer /> */}
       {menu && <MobileMenu />}
+      {loading && <Loading />}
     </MyLayout>
   )
 }

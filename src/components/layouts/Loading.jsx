@@ -69,6 +69,12 @@ const LoadSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+   height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
 
   .loadBoxContainer {
     display: flex;

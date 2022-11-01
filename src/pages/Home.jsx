@@ -1,4 +1,4 @@
-import React from "react"
+import { useContext, useEffect } from "react"
 import Skills from "../components/layouts/Skills"
 import BgText from "../components/shared/BgText"
 import Button from "../components/shared/Button"
@@ -16,11 +16,20 @@ import {
   ProjectSection,
   ContactSection,
 } from "../styles/HomeStyle"
-// import ProjectItem from "../components/shared/ProjectItem"
 import Socials from "../components/shared/Socials"
 import Carousel from "../components/carousel/Carousel"
+import PortfolioContext from "../context/portfolio/PortfolioContext"
 
 const Home = () => {
+  const { loading, dispatch } = useContext(PortfolioContext)
+
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch({ type: "SET_LOADING" })
+    }, 3000)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <>
       <MyHome>

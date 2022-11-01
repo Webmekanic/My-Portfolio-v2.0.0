@@ -4,7 +4,7 @@ const portfolioReducer = (state, action) => {
     case "SET_LOADING":
       return {
         ...state,
-        loading: state.loading ? true : false,
+        loading: false,
       }
     case "SET_MENU":
       return {
