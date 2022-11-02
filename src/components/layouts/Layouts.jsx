@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import { Outlet } from "react-router-dom"
 // import Footer from "./Footer"
 import Navbar from "./Navbar"
@@ -8,7 +8,15 @@ import MobileMenu from "./MobileMenu"
 import Loading from "./Loading"
 
 const Layouts = () => {
-  const { menu, loading } = useContext(PortfolioContext)
+  const { menu, loading, dispatch } = useContext(PortfolioContext)
+
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch({ type: "SET_LOADING", payload: false })
+    }, 5000)
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading])
 
   return (
     <MyLayout>

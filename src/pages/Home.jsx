@@ -23,12 +23,12 @@ import PortfolioContext from "../context/portfolio/PortfolioContext"
 const Home = () => {
   const { loading, dispatch } = useContext(PortfolioContext)
 
-  useEffect(() => {
-    setTimeout(() => {
-      dispatch({ type: "SET_LOADING" })
-    }, 3000)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loading])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     dispatch({ type: "SET_LOADING" })
+  //   }, 3000)
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [loading])
 
   return (
     <>

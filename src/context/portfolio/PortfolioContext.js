@@ -9,6 +9,7 @@ export const PortfolioProvider = ({ children }) => {
     menu: false,
     projects: [],
     error: null,
+    pageLoad: false,
   }
 
   const [state, dispatch] = useReducer(portfolioReducer, initialState)
