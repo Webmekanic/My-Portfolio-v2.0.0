@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-duplicate-props */
-import React, { useState, useEffect, useContext } from "react"
+import React, { useContext } from "react"
 import styled from "styled-components"
 import { MyLink, Hamburger } from "../../styles/NavStyle"
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
@@ -21,7 +21,7 @@ const MenuLink = styled(MyLink)`
 `
 
 const MobileMenu = () => {
-  const { menu, dispatch } = useContext(PortfolioContext)
+  const { dispatch } = useContext(PortfolioContext)
 
   return (
     <Hamburger>

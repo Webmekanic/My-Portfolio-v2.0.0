@@ -2,7 +2,6 @@ import React, { useContext } from "react"
 import { MyLink, Nav } from "../../styles/NavStyle"
 import { FiGithub, FiLinkedin } from "react-icons/fi"
 import { CgSortAz } from "react-icons/cg"
-import { Link } from "react-router-dom"
 import PortfolioContext from "../../context/portfolio/PortfolioContext"
 
 const Navbar = () => {
