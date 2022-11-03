@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react"
 import { Outlet } from "react-router-dom"
-// import Footer from "./Footer"
 import Navbar from "./Navbar"
 import { MyLayout } from "../../styles/LayoutStyle"
 import PortfolioContext from "../../context/portfolio/PortfolioContext"
