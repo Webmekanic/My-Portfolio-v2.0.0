@@ -9,9 +9,7 @@ import { useLocation } from "react-router-dom"
 
 const Layouts = () => {
   const location = useLocation()
-
   const path = location.pathname || ""
-  // const pathExist = path[path.length - 1] || null
 
   const { menu, loading, dispatch } = useContext(PortfolioContext)
   const ref = useRef(path)
@@ -24,23 +22,18 @@ const Layouts = () => {
       ref.current = path
     }
   }, [path, dispatch])
-  console.log(menu)
 
   useEffect(() => {
     if (ref.current === path) {
-      // console.log("unset")
       setTimeout(() => {
         dispatch({ type: "SET_LOADING", payload: false })
       }, 3000)
     }
   }, [path, dispatch])
 
-  // console.log(ref.current)
-
   return (
     <MyLayout>
       <Navbar />
-      {/* <Footer /> */}
       {menu && <MobileMenu />}
       {loading ? <Loading /> : <Outlet />}
     </MyLayout>

@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 import React, { useContext } from "react"
 import styled from "styled-components"
+import PortfolioContext from "../../context/portfolio/PortfolioContext"
 import { MyLink, Hamburger } from "../../styles/NavStyle"
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 import { AiOutlineClose } from "react-icons/ai"
-import PortfolioContext from "../../context/portfolio/PortfolioContext"
 
 const MenuLink = styled(MyLink)`
   font-style: Black;
