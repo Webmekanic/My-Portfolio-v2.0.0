@@ -32,22 +32,13 @@ const MobileMenu = () => {
     <Hamburger toggle={toggle}>
       <ul className="MobileNavLink">
         <li className="MobileNavLinkItem">
-          <MenuLink to="/about" onClick={() => dispatch({ type: "SET_MENU" })}>
-            About
-          </MenuLink>
+          <MenuLink to="/about">About</MenuLink>
         </li>
         <li className="MobileNavLinkItem">
-          <MenuLink to="/works" onClick={() => dispatch({ type: "SET_MENU" })}>
-            Works
-          </MenuLink>
+          <MenuLink to="/works">Works</MenuLink>
         </li>
         <li className="MobileNavLinkItem">
-          <MenuLink
-            to="/contact"
-            onClick={() => dispatch({ type: "SET_MENU" })}
-          >
-            Contact
-          </MenuLink>
+          <MenuLink to="/contact">Contact</MenuLink>
         </li>
       </ul>
       {/* <button></button> */}

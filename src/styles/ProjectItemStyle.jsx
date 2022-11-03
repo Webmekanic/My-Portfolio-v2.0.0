@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const ProjectItemStyle = styled.div`
   border: 1px solid #414141;
-  width: 350px;
+  // width: 350px;
   height: auto;
   padding: 15px;
   border-radius: 5px;
@@ -16,7 +16,7 @@ export const ProjectItemStyle = styled.div`
     hsl(200deg 25% 5%) 99%
   );
   cursor: pointer;
-  margin-right: 1rem;
+  // margin-right: 1rem;
 
   &:hover {
     // border: 1px solid ${({ theme }) => theme.colors.lightColor};

@@ -59,10 +59,9 @@ export const MyWorks = styled.div`
   }
 
   .myProject {
-    border: 2px solid green;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    // row-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    grid-gap: 1.5rem;
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
