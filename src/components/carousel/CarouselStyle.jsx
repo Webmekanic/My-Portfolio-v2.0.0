@@ -73,12 +73,12 @@ export const MySlider = styled.div`
     height: 100%;
     left: 0px;
     transform: translateX(-51.63%);
-    grid-gap: 1rem;
+    
   }
 
-  //  .flickity-slider > * + * {
-  //   margin-left: 1rem;
-  //  }
+   .flickity-slider > * + * {
+    margin-left: 1rem;
+   }
 
   .carousel-news .carousel-cell:not(:last-child) {
     margin-right: 30px;

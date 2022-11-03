@@ -11,8 +11,6 @@ const Carousel = (props) => {
 
   const { projects } = useContext(PortfolioContext)
 
-  console.log(projects)
-
   const handleChange = (index) => {
     setCarouselIndex(index) // Not working
   }

@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const ProjectItemStyle = styled.div`
   border: 1px solid #414141;
-  width: 350px;
+  // width: 350px;
   height: auto;
   padding: 15px;
   border-radius: 5px;
@@ -16,7 +16,7 @@ export const ProjectItemStyle = styled.div`
     hsl(200deg 25% 5%) 99%
   );
   cursor: pointer;
-  margin-right: 1rem;
+  // margin-right: 1rem;
 
   &:hover {
     // border: 1px solid ${({ theme }) => theme.colors.lightColor};
@@ -62,7 +62,6 @@ export const ProjectItemStyle = styled.div`
     font-size: 13.8px;
   }
   .projectLinks {
-    margin-top: 0.6rem;
     display: flex;
     text-align: center;
     align-items: center;
@@ -78,19 +77,6 @@ export const ProjectItemStyle = styled.div`
       grid-gap: 0.4rem;
       border: none;
       border-radius: 3px;
-      // background-image: linear-gradient(
-      //   45deg,
-      //   hsl(173deg 92% 76%) 0%,
-      //   hsl(181deg 80% 66%) 11%,
-      //   hsl(186deg 87% 56%) 22%,
-      //   hsl(190deg 100% 47%) 33%,
-      //   hsl(194deg 100% 48%) 44%,
-      //   hsl(198deg 100% 47%) 56%,
-      //   hsl(202deg 100% 46%) 67%,
-      //   hsl(213deg 72% 54%) 78%,
-      //   hsl(231deg 54% 57%) 89%,
-      //   hsl(259deg 41% 52%) 100%
-      // );
     }
   }
   .socialLink {

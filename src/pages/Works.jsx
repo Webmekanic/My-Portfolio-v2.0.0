@@ -1,11 +1,14 @@
-import React from "react"
+import React, { useContext } from "react"
 import BgText from "../components/shared/BgText"
 import { ProjectSection } from "../styles/HomeStyle"
 import ProjectItem from "../components/shared/ProjectItem"
 import { MyWorks } from "../styles/WorkStyle"
 import Footer from "../components/layouts/Footer"
+import PortfolioContext from "../context/portfolio/PortfolioContext"
 
 const Works = () => {
+  const { projects } = useContext(PortfolioContext)
+
   return (
     <MyWorks>
       <div className="pattern1"></div>
@@ -29,15 +32,17 @@ const Works = () => {
             </div>
           </div>
           <section className="myProject">
-            <ProjectItem />
-            <ProjectItem />
-            <ProjectItem />
-            <ProjectItem />
-            <ProjectItem />
-            <ProjectItem />
-            <ProjectItem />
-            <ProjectItem />
-            <ProjectItem />
+            {projects.map((project, index) => {
+              return (
+                <ProjectItem
+                  key={project.id}
+                  project={project.fields}
+                  projectImg={project.fields.avatar}
+                  title={project.fields.title}
+                  description={project.fields.description}
+                />
+              )
+            })}
           </section>
         </ProjectSection>
       </section>
