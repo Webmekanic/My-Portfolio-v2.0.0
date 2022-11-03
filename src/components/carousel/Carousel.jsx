@@ -47,7 +47,15 @@ const Carousel = (props) => {
         }}
       >
         {projects.map((project, index) => {
-          return <ProjectItem key={project.id} project={project.fields} />
+          return (
+            <ProjectItem
+              key={project.id}
+              project={project.fields}
+              projectImg={project.fields.avatar}
+              title={project.fields.title}
+              description={project.fields.description}
+            />
+          )
         })}
       </Flickity>
     </MySlider>

@@ -4,7 +4,7 @@ import { FiGithub, FiExternalLink } from "react-icons/fi"
 import { getProjects } from "../../context/portfolio/PortfolioActions"
 import PortfolioContext from "../../context/portfolio/PortfolioContext"
 
-const ProjectItem = ({ project }) => {
+const ProjectItem = ({ project, title, description, projectImg }) => {
   const { projects, dispatch } = useContext(PortfolioContext)
 
   useEffect(() => {
@@ -19,16 +19,13 @@ const ProjectItem = ({ project }) => {
   return (
     <ProjectItemStyle>
       <section className="projectContainer">
-        <div className="projectBg"></div>
+        <div className="projectBg">
+          <img src={projectImg} alt="Project" />
+        </div>
         <div className="projectSummary">
-          <p className="projectTitle">Advice generator app</p>
+          <p className="projectTitle">{title}</p>
           <div className="skillsTag"></div>
-          <p className="projectDescription">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
-            assumenda illum dolorum odit ut veritatis aspernatur doloribus quasi
-            sint. Quo! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quo, dolores.
-          </p>
+          <p className="projectDescription">{description}</p>
           <div className="projectLinks">
             <button>
               Repo

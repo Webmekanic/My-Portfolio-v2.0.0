@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const ProjectItemStyle = styled.div`
   border: 1px solid #414141;
-  // width: 350px;
+  width: 350px;
   height: auto;
   padding: 15px;
   border-radius: 5px;
@@ -16,7 +16,7 @@ export const ProjectItemStyle = styled.div`
     hsl(200deg 25% 5%) 99%
   );
   cursor: pointer;
-  // margin-right: 1rem;
+  margin-right: 1rem;
 
   &:hover {
     // border: 1px solid ${({ theme }) => theme.colors.lightColor};
@@ -27,11 +27,13 @@ export const ProjectItemStyle = styled.div`
     position: relative;
     background-color: #485dab;
     border-radius: 3px;
-
-    &:hover {
-      // border-radius: 50%;
-    }
   }
+
+  .projectBg img {
+    height: 100%;
+    width: 100%;
+  }
+
   .projectSummary {
     margin-top: 10px;
   }
@@ -51,13 +53,13 @@ export const ProjectItemStyle = styled.div`
   }
 
   .projectDescription {
+    // border: 2px solid red;
     margin-top: 5px;
     font-family: Chivo;
     font-style: black;
     line-height: 1.5;
-    max-height: 60%;
+    height: 120px;
     font-size: 13.8px;
-    // opacity: 0.9;
   }
   .projectLinks {
     margin-top: 0.6rem;

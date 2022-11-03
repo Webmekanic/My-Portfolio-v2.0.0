@@ -69,11 +69,16 @@ export const MySlider = styled.div`
   }
   .flickity-slider {
     position: absolute;
-    width: 100%;
+    width: 340px;
     height: 100%;
     left: 0px;
     transform: translateX(-51.63%);
+    grid-gap: 1rem;
   }
+
+  //  .flickity-slider > * + * {
+  //   margin-left: 1rem;
+  //  }
 
   .carousel-news .carousel-cell:not(:last-child) {
     margin-right: 30px;

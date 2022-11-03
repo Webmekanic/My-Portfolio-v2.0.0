@@ -1,22 +1,12 @@
-import React, { useContext, useEffect } from "react"
+import React from "react"
 import Footer from "../components/layouts/Footer"
 import BgText from "../components/shared/BgText"
 import Button from "../components/shared/Button"
 import Socials from "../components/shared/Socials"
 import { ContactMe } from "../styles/ContactStyle"
 import { ContactSection } from "../styles/HomeStyle"
-import PortfolioContext from "../context/portfolio/PortfolioContext"
 
 const Contact = () => {
-  const { loading, dispatch } = useContext(PortfolioContext)
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     dispatch({ type: "SET_LOADING" })
-  //   }, 3000)
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [loading])
-
   return (
     <ContactMe>
       <div className="pattern1"></div>

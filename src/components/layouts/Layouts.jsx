@@ -1,31 +1,47 @@
-import React, { useContext, useEffect } from "react"
-import { Outlet } from "react-router-dom"
+import React, { useContext, useEffect, useRef } from "react"
 import Navbar from "./Navbar"
-import { MyLayout } from "../../styles/LayoutStyle"
 import PortfolioContext from "../../context/portfolio/PortfolioContext"
 import MobileMenu from "./MobileMenu"
 import Loading from "./Loading"
+import { MyLayout } from "../../styles/LayoutStyle"
+import { Outlet } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 
 const Layouts = () => {
   const location = useLocation()
+
+  const path = location.pathname || ""
+  // const pathExist = path[path.length - 1] || null
+
   const { menu, loading, dispatch } = useContext(PortfolioContext)
+  const ref = useRef(path)
 
   useEffect(() => {
-    setTimeout(() => {
-      dispatch({ type: "SET_LOADING", payload: false })
-    }, 5000)
+    if (path) {
+      dispatch({ type: "SET_LOADING", payload: true })
+      console.log("set")
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loading, location])
+      ref.current = path
+    }
+  }, [path, dispatch])
+
+  useEffect(() => {
+    if (ref.current === path) {
+      console.log("unset")
+      setTimeout(() => {
+        dispatch({ type: "SET_LOADING", payload: false })
+      }, 3000)
+    }
+  }, [path, dispatch])
+
+  console.log(ref.current)
 
   return (
     <MyLayout>
       <Navbar />
-      <Outlet />
       {/* <Footer /> */}
       {menu && <MobileMenu />}
-      {loading && <Loading />}
+      {loading ? <Loading /> : <Outlet />}
     </MyLayout>
   )
 }

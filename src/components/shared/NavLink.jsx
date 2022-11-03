@@ -4,7 +4,6 @@ import PortfolioContext from "../../context/portfolio/PortfolioContext"
 
 const Link = function ({ to, children, className, ...props }) {
   const { dispatch } = useContext(PortfolioContext)
-
   return (
     <NavLinkReactRouterDom
       {...props}
@@ -12,7 +11,7 @@ const Link = function ({ to, children, className, ...props }) {
         [className, isActive ? "is-active" : null].filter(Boolean).join(" ")
       }
       to={to}
-      onClick={() => dispatch({ type: "SET_LOADING", payload: true })}
+      // onClick={() => dispatch({ type: "SET_LOADING", payload: true })}
     >
       {children}
     </NavLinkReactRouterDom>

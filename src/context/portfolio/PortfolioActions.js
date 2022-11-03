@@ -6,7 +6,6 @@ export const client = createClient({
 })
 
 export const getProjects = async () => {
-  console.log(client)
   try {
     const entries = await client.getEntries()
     return { projects: entries.items }

@@ -11,12 +11,7 @@ const Navbar = () => {
   return (
     <Nav>
       <h1 className="myIntials">
-        <Link
-          className="myIntials"
-          style={{ textDecoration: "none" }}
-          to={"/"}
-          onClick={() => dispatch({ type: "SET_LOADING", payload: true })}
-        >
+        <Link className="myIntials" style={{ textDecoration: "none" }} to={"/"}>
           DA
         </Link>
       </h1>
