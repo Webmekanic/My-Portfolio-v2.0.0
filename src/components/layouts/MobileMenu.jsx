@@ -22,14 +22,9 @@ const MenuLink = styled(MyLink)`
 
 const MobileMenu = () => {
   const { menu, dispatch } = useContext(PortfolioContext)
-  const [toggle, setToggle] = useState(false)
-
-  useEffect(() => {
-    setToggle(menu)
-  }, [menu])
 
   return (
-    <Hamburger toggle={toggle}>
+    <Hamburger>
       <ul className="MobileNavLink">
         <li className="MobileNavLinkItem">
           <MenuLink to="/about">About</MenuLink>
@@ -44,7 +39,7 @@ const MobileMenu = () => {
       {/* <button></button> */}
       <AiOutlineClose
         className="closeMenu"
-        onClick={() => dispatch({ type: "SET_MENU" })}
+        onClick={() => dispatch({ type: "SET_MENU", payload: false })}
       />
       <div className="socialIcons">
         <a

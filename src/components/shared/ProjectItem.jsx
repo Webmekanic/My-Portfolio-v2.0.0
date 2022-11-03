@@ -5,7 +5,7 @@ import { getProjects } from "../../context/portfolio/PortfolioActions"
 import PortfolioContext from "../../context/portfolio/PortfolioContext"
 
 const ProjectItem = ({ project, title, description, projectImg }) => {
-  const { projects, dispatch } = useContext(PortfolioContext)
+  const { dispatch } = useContext(PortfolioContext)
 
   useEffect(() => {
     const getprod = async () => {

@@ -11,9 +11,13 @@ const Navbar = () => {
   return (
     <Nav>
       <h1 className="myIntials">
-        <Link className="myIntials" style={{ textDecoration: "none" }} to={"/"}>
+        <MyLink
+          className="myIntials"
+          style={{ textDecoration: "none" }}
+          to={"/"}
+        >
           DA
-        </Link>
+        </MyLink>
       </h1>
       <ul className="navLinkList">
         <li className="navLinkItem">
@@ -47,7 +51,7 @@ const Navbar = () => {
       </div>
       <CgSortAz
         className="sortIcon"
-        onClick={() => dispatch({ type: "SET_MENU" })}
+        onClick={() => dispatch({ type: "SET_MENU", payload: true })}
       />
     </Nav>
   )

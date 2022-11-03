@@ -19,22 +19,23 @@ const Layouts = () => {
   useEffect(() => {
     if (path) {
       dispatch({ type: "SET_LOADING", payload: true })
-      console.log("set")
+      dispatch({ type: "SET_MENU", payload: false })
 
       ref.current = path
     }
   }, [path, dispatch])
+  console.log(menu)
 
   useEffect(() => {
     if (ref.current === path) {
-      console.log("unset")
+      // console.log("unset")
       setTimeout(() => {
         dispatch({ type: "SET_LOADING", payload: false })
       }, 3000)
     }
   }, [path, dispatch])
 
-  console.log(ref.current)
+  // console.log(ref.current)
 
   return (
     <MyLayout>

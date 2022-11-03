@@ -9,7 +9,7 @@ const portfolioReducer = (state, action) => {
     case "SET_MENU":
       return {
         ...state,
-        menu: state.menu ? false : true,
+        menu: action.payload,
       }
     case "GET_PROJECTS":
       return {

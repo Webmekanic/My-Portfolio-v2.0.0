@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const ProjectItemStyle = styled.div`
   border: 1px solid #414141;
-  // width: 350px;
+  width: 350px;
   height: auto;
   padding: 15px;
   border-radius: 5px;
@@ -25,13 +25,14 @@ export const ProjectItemStyle = styled.div`
   .projectBg {
     height: 180px;
     position: relative;
-    background-color: #485dab;
+    // background-color: #485dab;
     border-radius: 3px;
   }
 
   .projectBg img {
     height: 100%;
     width: 100%;
+    border: 2px solid green;
   }
 
   .projectSummary {

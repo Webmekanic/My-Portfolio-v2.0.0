@@ -1,10 +1,10 @@
 import React, { useContext } from "react"
 import BgText from "../components/shared/BgText"
-import { ProjectSection } from "../styles/HomeStyle"
 import ProjectItem from "../components/shared/ProjectItem"
-import { MyWorks } from "../styles/WorkStyle"
 import Footer from "../components/layouts/Footer"
 import PortfolioContext from "../context/portfolio/PortfolioContext"
+import { ProjectSection } from "../styles/HomeStyle"
+import { MyWorks } from "../styles/WorkStyle"
 
 const Works = () => {
   const { projects } = useContext(PortfolioContext)
