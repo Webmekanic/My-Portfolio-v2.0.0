@@ -21,10 +21,16 @@ import Carousel from "../components/carousel/Carousel"
 import { useNavigate } from "react-router-dom"
 
 const Home = () => {
+  const url =
+    "https://drive.google.com/file/d/1DSBBj4rwJqRkyRokKVfH29DTWd3QRsYd/view?usp=sharing"
   const navigate = useNavigate()
 
   const handleClick = () => {
     navigate("/about")
+  }
+
+  const downloadResume = () => {
+    window.open(url, "_blank")
   }
 
   return (
@@ -89,6 +95,7 @@ const Home = () => {
                   <Button
                     text={"Download Resume"}
                     classname="downloadResumeButton"
+                    handleClick={downloadResume}
                   />
                 </div>
                 <div className="skillsCard">
