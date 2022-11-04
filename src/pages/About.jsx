@@ -10,6 +10,13 @@ import { AboutMe } from "../styles/AboutStyle"
 import { AboutAniebo } from "../styles/HomeStyle"
 
 const About = () => {
+  const url =
+    "https://drive.google.com/file/d/1DSBBj4rwJqRkyRokKVfH29DTWd3QRsYd/view?usp=sharing"
+
+  const downloadResume = () => {
+    window.open(url, "_blank")
+  }
+
   return (
     <>
       <AboutMe>
@@ -39,6 +46,7 @@ const About = () => {
                 <Button
                   text={"Download Resume"}
                   classname="downloadResumeButton"
+                  handleClick={downloadResume}
                 />
               </div>
               <div className="skillsCard">
