@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 const ButtonText = styled.div`
   position: absolute;
@@ -47,9 +48,9 @@ const PageButton = styled.button`
   }
 `
 
-function Button({ text, classname }) {
+function Button({ text, classname, handleClick }) {
   return (
-    <PageButton className={classname}>
+    <PageButton className={classname} onClick={(e) => handleClick(e)}>
       <Btn>{text}</Btn>
       <ButtonText></ButtonText>
     </PageButton>

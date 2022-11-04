@@ -18,8 +18,15 @@ import {
 } from "../styles/HomeStyle"
 import Socials from "../components/shared/Socials"
 import Carousel from "../components/carousel/Carousel"
+import { useNavigate } from "react-router-dom"
 
 const Home = () => {
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate("/about")
+  }
+
   return (
     <>
       <MyHome>
@@ -53,7 +60,7 @@ const Home = () => {
               className="img-circle2"
               sizes="60px"
             />
-            <Button text={"Let’s code"} />
+            <Button text={"Let’s code"} handleClick={handleClick} />
           </div>
         </section>
         <section className="homeAboutMe">
