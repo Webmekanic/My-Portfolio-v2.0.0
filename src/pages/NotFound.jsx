@@ -3,8 +3,15 @@ import Navbar from "../components/layouts/Navbar"
 import Button from "../components/shared/Button"
 import Footer from "../components/layouts/Footer"
 import { MyNotFound } from "../styles/NotFoundStyle"
+import { useNavigate } from "react-router-dom"
 
-function NotFound() {
+const NotFound = () => {
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate("/")
+  }
+
   return (
     <MyNotFound>
       <Navbar />
@@ -17,7 +24,11 @@ function NotFound() {
         <div class="inside2">404</div>
       </div>
       <p className="notFoundText">Sorry, there’s nothing here</p>
-      <Button text={"Go Back Home"} classname="notFoundBtn" />
+      <Button
+        text={"Go Back Home"}
+        classname="notFoundBtn"
+        handleClick={handleClick}
+      />
       <Footer classname="NotFoundFooter" />
     </MyNotFound>
   )
