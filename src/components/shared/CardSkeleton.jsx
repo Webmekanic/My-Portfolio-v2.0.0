@@ -1,6 +1,5 @@
 import React from "react"
 import { ProjectItemStyle } from "../../styles/ProjectItemStyle"
-import { FiGithub, FiExternalLink } from "react-icons/fi"
 import Skeleton from "react-loading-skeleton"
 
 const CardSkeleton = () => {
