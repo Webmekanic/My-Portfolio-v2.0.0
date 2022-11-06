@@ -14,7 +14,7 @@ const ProjectItem = ({ project, title, description, projectImg }) => {
     }
 
     getprod()
-  }, [dispatch])
+  }, [dispatch]) 
 
   return (
     <ProjectItemStyle>
