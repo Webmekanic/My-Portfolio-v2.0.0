@@ -10,6 +10,7 @@ const Carousel = (props) => {
   let [carouselIndex, setCarouselIndex] = useState(null)
 
   const { projects } = useContext(PortfolioContext)
+  console.log(projects)
 
   const handleChange = (index) => {
     setCarouselIndex(index) // Not working
@@ -44,6 +45,7 @@ const Carousel = (props) => {
           wrapAround: false,
         }}
       >
+        {/* {projects.length === 0 ? } */}
         {projects.map((project, index) => {
           return (
             <ProjectItem

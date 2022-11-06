@@ -1,8 +1,10 @@
 import React, { useContext, useEffect } from "react"
-import { ProjectItemStyle } from "../../styles/ProjectItemStyle"
+import PortfolioContext from "../../context/portfolio/PortfolioContext"
+import Skeleton from "react-loading-skeleton"
+import "react-loading-skeleton/dist/skeleton.css"
 import { FiGithub, FiExternalLink } from "react-icons/fi"
 import { getProjects } from "../../context/portfolio/PortfolioActions"
-import PortfolioContext from "../../context/portfolio/PortfolioContext"
+import { ProjectItemStyle } from "../../styles/ProjectItemStyle"
 
 const ProjectItem = ({ project, title, description, projectImg }) => {
   const { dispatch } = useContext(PortfolioContext)
@@ -14,18 +16,20 @@ const ProjectItem = ({ project, title, description, projectImg }) => {
     }
 
     getprod()
-  }, [dispatch]) 
+  }, [dispatch])
 
   return (
     <ProjectItemStyle>
       <section className="projectContainer">
         <div className="projectBg">
-          <img src={projectImg} alt="Project" />
+          <img src={projectImg || <Skeleton />} alt="Project" />
         </div>
         <div className="projectSummary">
-          <p className="projectTitle">{title}</p>
+          <p className="projectTitle">{title || <Skeleton />}</p>
           <div className="skillsTag"></div>
-          <p className="projectDescription">{description}</p>
+          <p className="projectDescription">
+            {description || <Skeleton count={5} />}
+          </p>
           <div className="projectLinks">
             <button>
               Repo

@@ -12,32 +12,36 @@ import Loading from "./components/layouts/Loading"
 import ProjectItem from "./components/shared/ProjectItem"
 import Socials from "./components/shared/Socials"
 import { PortfolioProvider } from "./context/portfolio/PortfolioContext"
+import { SkeletonTheme } from "react-loading-skeleton"
+import CardSkeleton from "./components/shared/CardSkeleton"
 
 function App() {
   return (
     <PortfolioProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layouts />}>
-            <Route index element={<Home />} />
-          </Route>
-          <Route path="/about" element={<Layouts />}>
-            <Route index element={<About />} />
-          </Route>
-          <Route path="/works" element={<Layouts />}>
-            <Route index element={<Works />} />
-          </Route>
-          <Route path="/contact" element={<Layouts />}>
-            <Route index element={<Contact />} />
-          </Route>
-          <Route path="/menu" element={<MobileMenu />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/loading" element={<Loading />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="/project" element={<ProjectItem />} />
-          <Route path="/socials" element={<Socials />} />
-        </Routes>
-      </BrowserRouter>
+      <SkeletonTheme baseColor="#202020" highlightColor="#444">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layouts />}>
+              <Route index element={<Home />} />
+            </Route>
+            <Route path="/about" element={<Layouts />}>
+              <Route index element={<About />} />
+            </Route>
+            <Route path="/works" element={<Layouts />}>
+              <Route index element={<Works />} />
+            </Route>
+            <Route path="/contact" element={<Layouts />}>
+              <Route index element={<Contact />} />
+            </Route>
+            <Route path="/menu" element={<MobileMenu />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/loading" element={<Loading />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/project" element={<ProjectItem />} />
+            <Route path="/skeleton" element={<CardSkeleton />} />
+          </Routes>
+        </BrowserRouter>
+      </SkeletonTheme>
     </PortfolioProvider>
   )
 }
