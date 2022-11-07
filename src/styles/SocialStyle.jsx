@@ -28,6 +28,7 @@ export const SocialHandle = styled.div`
     transition: all linear 3s;
     background-color: transparent;
     border: 1px solid ${({ theme }) => theme.colors.lightColor};
+    cursor: pointer;
   }
   .slideIn {
     padding: 10px 35px;
@@ -35,6 +36,7 @@ export const SocialHandle = styled.div`
     // transition: all linear 3s;
     background-color: transparent;
     border: 1px solid ${({ theme }) => theme.colors.lightColor};
+    cursor: pointer;
   }
   .socialLinks {
     color: ${({ theme }) => theme.colors.lightColor};
