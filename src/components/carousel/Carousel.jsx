@@ -46,20 +46,22 @@ const Carousel = (props) => {
           wrapAround: false,
         }}
       >
-        <CardSkeleton cards={4} />
-
-        {/* {projects.length === 0 ? } */}
-        {projects.map((project, index) => {
-          return (
-            <ProjectItem
-              key={project.id}
-              project={project.fields}
-              projectImg={project.fields.avatar}
-              title={project.fields.title}
-              description={project.fields.description}
-            />
-          )
-        })}
+        {projects.length === 0 ? (
+          <CardSkeleton cards={4} />
+        ) : (
+          projects.map((project, index) => {
+            return (
+              <ProjectItem
+                key={project.id}
+                project={project.fields}
+                projectImg={project.fields.avatar}
+                title={project.fields.title}
+                description={project.fields.description}
+              />
+            )
+          })
+        )}
+        {/* {} */}
       </Flickity>
     </MySlider>
   )
