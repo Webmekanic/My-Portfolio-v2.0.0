@@ -14,6 +14,7 @@ export const MySlider = styled.div`
     background: transparent;
 }
 
+
 .flickity-page-dots:focus{
    outline: none;
    border: none;
@@ -69,11 +70,15 @@ export const MySlider = styled.div`
   }
   .flickity-slider {
     position: absolute;
-    width: 340px;
+    // width: 340px;
     height: 100%;
     left: 0px;
     transform: translateX(-51.63%);
+    // border: 2px solid red;
     
+  }
+  .cardWidth{
+    width: 320px;
   }
 
    .flickity-slider > * + * {
@@ -91,6 +96,7 @@ export const MySlider = styled.div`
     position: absolute;
     left: 0px;
     transform: translateX(0%);
+    border: 2px solid red;
   }
 
   li {

@@ -64,6 +64,9 @@ export const MyWorks = styled.div`
     grid-gap: 1.5rem;
   }
 
+  .btnPro {
+    border: 2px solid red;
+  }
   @media ${({ theme }) => theme.mediaQueries.medium} {
     .pattern1 {
       top: 12rem;

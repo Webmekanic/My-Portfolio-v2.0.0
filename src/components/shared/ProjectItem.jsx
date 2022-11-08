@@ -6,7 +6,14 @@ import { FiGithub, FiExternalLink } from "react-icons/fi"
 import { getProjects } from "../../context/portfolio/PortfolioActions"
 import { ProjectItemStyle } from "../../styles/ProjectItemStyle"
 
-const ProjectItem = ({ project, title, description, projectImg }) => {
+const ProjectItem = ({
+  project,
+  title,
+  description,
+  projectImg,
+  projectClass,
+  classname,
+}) => {
   const { dispatch } = useContext(PortfolioContext)
 
   useEffect(() => {
@@ -19,7 +26,12 @@ const ProjectItem = ({ project, title, description, projectImg }) => {
   }, [dispatch])
 
   return (
-    <ProjectItemStyle>
+    <ProjectItemStyle
+      // style={{
+      //   width: buttonWidth,
+      // }}
+      className={classname}
+    >
       <section className="projectContainer">
         <div className="projectBg">
           <img src={projectImg || <Skeleton />} alt="Project" />

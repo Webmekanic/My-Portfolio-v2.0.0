@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const ProjectItemStyle = styled.div`
   border: 1px solid #414141;
-  width: 350px;
+  width: 330px;
   height: auto;
   padding: 15px;
   border-radius: 5px;
@@ -10,8 +10,7 @@ export const ProjectItemStyle = styled.div`
     145deg,
     hsl(203deg 25% 6%) 1%,
     hsl(202deg 25% 6%) 49%,
-    hsl(201deg 25% 6%) 51%,
-    hsl(201deg 25% 5%) 49%,
+    hsl(201deg 25% 6%) 51%3 hsl(201deg 25% 5%) 49%,
     hsl(200deg 25% 5%) 51%,
     hsl(200deg 25% 5%) 99%
   );

@@ -4,6 +4,7 @@ import ProjectItem from "../components/shared/ProjectItem"
 import Footer from "../components/layouts/Footer"
 import PortfolioContext from "../context/portfolio/PortfolioContext"
 import { ProjectSection } from "../styles/HomeStyle"
+import CardSkeleton from "../components/shared/CardSkeleton"
 import { MyWorks } from "../styles/WorkStyle"
 
 const Works = () => {
@@ -32,17 +33,21 @@ const Works = () => {
             </div>
           </div>
           <section className="myProject">
-            {projects.map((project, index) => {
-              return (
-                <ProjectItem
-                  key={project.id}
-                  project={project.fields}
-                  projectImg={project.fields.avatar}
-                  title={project.fields.title}
-                  description={project.fields.description}
-                />
-              )
-            })}
+            {projects.length === 0 ? (
+              <CardSkeleton cards={9} />
+            ) : (
+              projects.map((project, index) => {
+                return (
+                  <ProjectItem
+                    key={project.id}
+                    project={project.fields}
+                    projectImg={project.fields.avatar}
+                    title={project.fields.title}
+                    description={project.fields.description}
+                  />
+                )
+              })
+            )}
           </section>
         </ProjectSection>
       </section>
