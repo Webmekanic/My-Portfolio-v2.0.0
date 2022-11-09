@@ -5,6 +5,7 @@ export const ContactMe = styled.div`
   position: relative;
   width: 100%;
   z-index: 20;
+  padding-bottom: 2rem;
 
   .pattern1 {
     background: ${({ theme }) => theme.colors.barColor};
@@ -47,7 +48,7 @@ export const ContactMe = styled.div`
   }
 
   .contact-footer {
-    // border: 2px solid red;
+    border: 1px solid transparent;
     width: 89%;
     margin: auto;
     margin-top: 10rem;
