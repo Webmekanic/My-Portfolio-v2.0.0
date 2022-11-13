@@ -66,19 +66,16 @@ export const MySlider = styled.div`
   .flickity-viewport {
     overflow: hidden;
     position: relative;
-    touch-action: pan-y;
+    touch-action: pan-x;
   }
   .flickity-slider {
     position: absolute;
-    width: 340px;
+    width: 100%;
     height: 100%;
     left: 0px;
-    transform: translateX(-51.63%);
-    
+    transform: translateX(-51.63%); 
   }
-  // .cardWidth{
-  //   width: 320px;
-  // }
+  
 
    .flickity-slider > * + * {
     margin-left: 1rem;
@@ -95,7 +92,6 @@ export const MySlider = styled.div`
     position: absolute;
     left: 0px;
     transform: translateX(0%);
-    border: 2px solid red;
   }
 
   li {
@@ -103,9 +99,9 @@ export const MySlider = styled.div`
     list-style: none;
   }
 
-   .flickity-button{
-    border: 2px solid red;
-   }
+  //  .flickity-button{
+  //   border: 2px solid red;
+  //  }
 
   .flickity-button:disabled {
     opacity: 0.2;

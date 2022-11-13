@@ -45,7 +45,7 @@ const Carousel = (props) => {
           wrapAround: false,
         }}
       >
-        {projects.length === 0 ? (
+        {projects.length === undefined ? (
           <CardSkeleton cards={4} />
         ) : (
           projects.map((project, index) => {

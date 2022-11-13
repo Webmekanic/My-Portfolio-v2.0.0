@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const ProjectItemStyle = styled.div`
   border: 1px solid #414141;
-  width: 330px;
+  width: 340px;
   height: auto;
   padding: 15px;
   border-radius: 5px;

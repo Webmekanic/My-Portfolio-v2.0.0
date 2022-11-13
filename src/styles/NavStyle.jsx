@@ -14,13 +14,16 @@ export const Nav = styled.nav`
   left: 0;
   right: 0;
   z-index: 99;
-  width: 89%;
+  width: 100%;
   margin: auto;
   // background: rgba(9, 13, 15, 0.2);
   // backdrop-filter: blur(24px);
   // -webkit-backdrop-filter: blur(24px);
-  // padding-left: 4.375rem;
-  // padding-right: 4.375rem;
+  padding-left: 4.375rem;
+  padding-right: 4.375rem;
+  background: rgba(9, 13, 15, 0.2);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 
   .myIntials {
     font-family: Wingdings 3;
