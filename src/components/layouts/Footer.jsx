@@ -1,5 +1,5 @@
 import React from "react"
-import { FooterSection, SocialLink } from "../../styles/footerStyle"
+import { FooterSection } from "../../styles/footerStyle"
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
 
 const Footer = ({ classname }) => {
@@ -13,7 +13,7 @@ const Footer = ({ classname }) => {
           <p className="myInfo">&copy; David Aniebo {footerYear} </p>
           <p className="myInfo myRole">Software Engineer</p>
           <a className="myEmail" href="mailto:aniebovictor001@gmail.com">
-            davidaniebo@gmail.com
+            aniebovictor001@gmail.com
           </a>
         </section>
 
@@ -28,20 +28,20 @@ const Footer = ({ classname }) => {
             <FiGithub />
           </a>
           <a
-            href="https://github.com/Webmekanic"
+            href="https://www.linkedin.com/in/david-aniebo/"
             target="_blank"
             rel="noreferrer"
             className="socialLink"
           >
-            <FiLinkedin className="" />
+            <FiLinkedin />
           </a>
           <a
-            href="https://github.com/Webmekanic"
+            href="https://twitter.com/Webmekanic_"
             target="_blank"
             rel="noreferrer"
             className="socialLink"
           >
-            <FiTwitter className="" />
+            <FiTwitter />
           </a>
         </div>
       </div>

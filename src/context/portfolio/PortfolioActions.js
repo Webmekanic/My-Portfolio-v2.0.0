@@ -10,8 +10,6 @@ export const getProjects = async () => {
     const entries = await client.getEntries()
     return { projects: entries.items }
   } catch (error) {
-    if (error) {
-      console.log(error.message)
-    }
+    console.log(error.message)
   }
 }

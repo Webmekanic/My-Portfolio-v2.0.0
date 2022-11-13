@@ -6,6 +6,7 @@ import Loading from "./Loading"
 import { MyLayout } from "../../styles/LayoutStyle"
 import { Outlet } from "react-router-dom"
 import { useLocation } from "react-router-dom"
+import { getProjects } from "../../context/portfolio/PortfolioActions"
 
 const Layouts = () => {
   const location = useLocation()
@@ -13,6 +14,16 @@ const Layouts = () => {
 
   const { menu, loading, dispatch } = useContext(PortfolioContext)
   const ref = useRef(path)
+
+  useEffect(() => {
+    const getprod = async () => {
+      const { projects } = await getProjects()
+      console.log(projects)
+      dispatch({ type: "GET_PROJECTS", payload: projects })
+    }
+
+    getprod()
+  }, [dispatch])
 
   useEffect(() => {
     if (path) {

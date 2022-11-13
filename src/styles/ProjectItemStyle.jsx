@@ -31,7 +31,7 @@ export const ProjectItemStyle = styled.div`
   .projectBg img {
     height: 100%;
     width: 100%;
-    border: 2px solid green;
+    // border: 2px solid green;
   }
 
   .projectSummary {

@@ -51,7 +51,7 @@ const Home = () => {
               <div className="xbox" data-char="David">
                 David<div className="inside">David</div>
               </div>
-              <div class="xbox xbox1" data-char=" Aniebo">
+              <div className="xbox xbox1" data-char=" Aniebo">
                 Aniebo<div className="inside"> Aniebo</div>
               </div>
             </div>

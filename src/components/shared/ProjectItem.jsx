@@ -1,36 +1,18 @@
-import React, { useContext, useEffect } from "react"
-import PortfolioContext from "../../context/portfolio/PortfolioContext"
+import React from "react"
 import Skeleton from "react-loading-skeleton"
 import "react-loading-skeleton/dist/skeleton.css"
 import { FiGithub, FiExternalLink } from "react-icons/fi"
-import { getProjects } from "../../context/portfolio/PortfolioActions"
 import { ProjectItemStyle } from "../../styles/ProjectItemStyle"
 
-const ProjectItem = ({
-  project,
-  title,
-  description,
-  projectImg,
-  projectClass,
-  classname,
-}) => {
-  const { dispatch } = useContext(PortfolioContext)
-
-  useEffect(() => {
-    const getprod = async () => {
-      const { projects } = await getProjects()
-      dispatch({ type: "GET_PROJECTS", payload: projects })
-    }
-
-    getprod()
-  }, [dispatch])
+const ProjectItem = ({ project, title, description, projectImg }) => {
+  // const { projectImg, title, description } = project.fields
 
   return (
     <ProjectItemStyle
-      // style={{
-      //   width: buttonWidth,
-      // }}
-      className={classname}
+    // style={{
+    //   width: buttonWidth,
+    // }}
+    // className={classname}
     >
       <section className="projectContainer">
         <div className="projectBg">

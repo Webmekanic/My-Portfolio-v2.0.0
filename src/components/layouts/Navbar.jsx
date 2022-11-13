@@ -40,7 +40,7 @@ const Navbar = () => {
           <FiGithub />
         </a>
         <a
-          href="https://github.com/Webmekanic"
+          href="https://www.linkedin.com/in/david-aniebo/"
           target="_blank"
           rel="noreferrer"
           className="socialLink"

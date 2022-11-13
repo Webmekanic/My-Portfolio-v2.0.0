@@ -190,8 +190,8 @@ const Loading = () => {
             <div className="vector-right"></div>
           </div>
         </div>
-        <div class="progress">
-          <div class="progress-value"></div>
+        <div className="progress">
+          <div className="progress-value"></div>
         </div>
       </section>
     </LoadSection>

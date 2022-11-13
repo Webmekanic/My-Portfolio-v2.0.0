@@ -39,7 +39,7 @@ const Works = () => {
               projects.map((project, index) => {
                 return (
                   <ProjectItem
-                    key={project.id}
+                    key={index}
                     project={project.fields}
                     projectImg={project.fields.avatar}
                     title={project.fields.title}

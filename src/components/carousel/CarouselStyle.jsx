@@ -70,16 +70,15 @@ export const MySlider = styled.div`
   }
   .flickity-slider {
     position: absolute;
-    // width: 340px;
+    width: 340px;
     height: 100%;
     left: 0px;
     transform: translateX(-51.63%);
-    // border: 2px solid red;
     
   }
-  .cardWidth{
-    width: 320px;
-  }
+  // .cardWidth{
+  //   width: 320px;
+  // }
 
    .flickity-slider > * + * {
     margin-left: 1rem;

@@ -19,7 +19,6 @@ const Carousel = (props) => {
 
   useEffect(() => {
     if (flkty) {
-      console.log("this ran")
       flkty.on("settle", () => {})
 
       flkty.on("change", (index) => {
@@ -52,7 +51,7 @@ const Carousel = (props) => {
           projects.map((project, index) => {
             return (
               <ProjectItem
-                key={project.id}
+                key={index}
                 project={project.fields}
                 projectImg={project.fields.avatar}
                 title={project.fields.title}
@@ -61,7 +60,6 @@ const Carousel = (props) => {
             )
           })
         )}
-        {/* {} */}
       </Flickity>
     </MySlider>
   )

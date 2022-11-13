@@ -7,7 +7,7 @@ export const PortfolioProvider = ({ children }) => {
   const initialState = {
     loading: true,
     menu: false,
-    projects: [],
+    projects: {},
     error: null,
     pageLoad: false,
   }
