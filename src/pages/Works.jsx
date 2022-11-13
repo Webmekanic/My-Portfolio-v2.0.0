@@ -33,7 +33,7 @@ const Works = () => {
             </div>
           </div>
           <section className="myProject">
-            {projects.length === 0 ? (
+            {projects.length === undefined ? (
               <CardSkeleton cards={9} />
             ) : (
               projects.map((project, index) => {
