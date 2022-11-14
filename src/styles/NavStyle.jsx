@@ -124,6 +124,7 @@ export const Hamburger = styled.div`
   right: 0;
   z-index: 99;
   background-color: ${({ theme }) => theme.colors.dark};
+  z-index: 99;
 
   .MobileNavLink {
     margin-top: 4rem;

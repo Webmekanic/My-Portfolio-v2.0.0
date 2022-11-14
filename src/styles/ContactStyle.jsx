@@ -43,8 +43,9 @@ export const ContactMe = styled.div`
     top: 30rem;
   }
 
-  .ContactBgText {
-    // margin-top: 2rem;
+  .contactMe {
+    position: relative;
+    z-index: 20;
   }
 
   .contact-footer {

@@ -638,7 +638,6 @@ export const MyHome = styled.div`
     }
 
     .fullName {
-      // border: 2px solid green;
       margin-top: 15px;
     }
   }
