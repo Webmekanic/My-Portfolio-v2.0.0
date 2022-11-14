@@ -172,6 +172,13 @@ overflow: hidden;
 }
 }
 
+@media ${({ theme }) => theme.mediaQueries.below768} {
+  .flickity-button {
+    display:none;
+  }
+
+}
+
 @media(max-width: 1090px) {
    .flickity-prev-next-button.next{
       position: absolute;
