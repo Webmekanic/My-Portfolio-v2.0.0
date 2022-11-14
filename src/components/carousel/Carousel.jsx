@@ -53,7 +53,7 @@ const Carousel = (props) => {
               <ProjectItem
                 key={index}
                 project={project.fields}
-                projectImg={project.fields.avatar}
+                projectImg={project.fields.avatar.fields.file.url}
                 title={project.fields.title}
                 description={project.fields.description}
               />

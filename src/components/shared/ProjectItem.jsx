@@ -5,8 +5,6 @@ import { FiGithub, FiExternalLink } from "react-icons/fi"
 import { ProjectItemStyle } from "../../styles/ProjectItemStyle"
 
 const ProjectItem = ({ project, title, description, projectImg }) => {
-  // const { projectImg, title, description } = project.fields
-
   return (
     <ProjectItemStyle
     // style={{
