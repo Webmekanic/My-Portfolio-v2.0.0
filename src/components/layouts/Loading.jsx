@@ -65,7 +65,6 @@ const load = keyframes`
 
 const LoadSection = styled.div`
   background-color: ${({ theme }) => theme.colors.dark};
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
