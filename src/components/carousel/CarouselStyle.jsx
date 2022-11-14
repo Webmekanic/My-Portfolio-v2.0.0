@@ -14,7 +14,6 @@ export const MySlider = styled.div`
     background: transparent;
 }
 
-
 .flickity-page-dots:focus{
    outline: none;
    border: none;
@@ -99,10 +98,6 @@ export const MySlider = styled.div`
     list-style: none;
   }
 
-  //  .flickity-button{
-  //   border: 2px solid red;
-  //  }
-
   .flickity-button:disabled {
     opacity: 0.2;
   }
@@ -146,19 +141,12 @@ export const MySlider = styled.div`
 }
 
   .flickity-prev-next-button.previous {
-    // left: 30px;
     background-image: url(https://www.realfevr.com/_next/static/media/ico-arrow-white-left.26f64e30.svg;
   }
   .flickity-prev-next-button {
-    // top: 50%;
     width: 44px;
     height: 44px;
-    // -webkit-border-radius: 50%;
-    // -moz-border-radius: 50%;
     border-radius: 50%;
-    // -webkit-transform: translateY(-50%);
-    // -moz-transform: translateY(-50%);
-    // -o-transform: translateY(-50%);
     transform: translateY(-50%);
   }
 .flickity-button {
@@ -175,12 +163,9 @@ button {
   top: 20%;
   width: 60%;
   height: 60%;
-  // border: 2px solid red;
 }
 .flickity-button-icon {
   fill: currentColor;
-  // border: 2px solid ${({ theme }) => theme.colors.lightColor};
-  // border: 2px solid red;
 }
 svg {
 overflow: hidden;
@@ -194,7 +179,6 @@ overflow: hidden;
       bottom: -30px;
        right: 290px;
        z-index: 99;
-      //  border: 2px solid red;
     }
 }
 `
