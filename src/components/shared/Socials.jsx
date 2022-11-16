@@ -14,7 +14,12 @@ const Socials = ({ mediaLink, myHandle, classname }) => {
 
       {iconOpen && (
         <button className={iconOpen ? "slideIn" : "mediaBtn"}>
-          <a className="socialLinks" href={mediaLink}>
+          <a
+            className="socialLinks"
+            href={mediaLink}
+            target="_blank"
+            rel="noreferrer"
+          >
             {myHandle}
           </a>
         </button>

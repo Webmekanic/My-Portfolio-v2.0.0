@@ -202,22 +202,22 @@ const Home = () => {
                   </section>
                   <div className="contactLocations">
                     <Socials
-                      mediaLink="http://www.twitter.com/webmekanic"
+                      mediaLink="https://www.linkedin.com/in/david-aniebo/"
                       myHandle="Linkedin"
                       classname="myLinkedin"
                     />
                     <Socials
-                      mediaLink="http://www.twitter.com/webmekanic"
+                      mediaLink="https://twitter.com/Webmekanic_"
                       myHandle="#Twitter"
                       classname="myTwitter"
                     />
                     <Socials
-                      mediaLink="http://www.twitter.com/webmekanic"
+                      mediaLink="https://github.com/Webmekanic"
                       myHandle="GitHub"
                       classname="myGitHub"
                     />
                     <Socials
-                      mediaLink="http://www.twitter.com/webmekanic"
+                      mediaLink="https://www.codewars.com/users/webmekanic"
                       myHandle="Codewars"
                       classname="myCodewars"
                     />

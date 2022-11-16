@@ -40,22 +40,22 @@ const Contact = () => {
               </section>
               <div className="contactLocations">
                 <Socials
-                  mediaLink="http://www.twitter.com/webmekanic"
+                  mediaLink="https://www.linkedin.com/in/david-aniebo/"
                   myHandle="Linkedin"
                   classname="myLinkedin"
                 />
                 <Socials
-                  mediaLink="http://www.twitter.com/webmekanic"
+                  mediaLink="http://www.twitter.com/webmekanic_"
                   myHandle="#Twitter"
                   classname="myTwitter"
                 />
                 <Socials
-                  mediaLink="http://www.twitter.com/webmekanic"
+                  mediaLink="http://github.com/webmekanic"
                   myHandle="GitHub"
                   classname="myGitHub"
                 />
                 <Socials
-                  mediaLink="http://www.twitter.com/webmekanic"
+                  mediaLink="https://www.codewars.com/users/webmekanic"
                   myHandle="Codewars"
                   classname="myCodewars"
                 />
