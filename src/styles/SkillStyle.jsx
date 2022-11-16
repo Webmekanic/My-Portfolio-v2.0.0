@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const MySkills = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.purple};
   position: relative;
-  z-index: 99;
+  z-index: 10;
   display: flex;
   align-items: center;
   width: 18.75rem;
