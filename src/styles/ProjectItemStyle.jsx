@@ -24,14 +24,13 @@ export const ProjectItemStyle = styled.div`
   .projectBg {
     height: 180px;
     position: relative;
-    // background-color: #485dab;
     border-radius: 3px;
   }
 
   .projectBg img {
     height: 100%;
     width: 100%;
-    // border: 2px solid green;
+    // object-fit: center;
   }
 
   .projectSummary {

@@ -10,10 +10,10 @@ import MobileMenu from "./components/layouts/MobileMenu"
 import Skills from "./components/layouts/Skills"
 import Loading from "./components/layouts/Loading"
 import ProjectItem from "./components/shared/ProjectItem"
-import Socials from "./components/shared/Socials"
 import { PortfolioProvider } from "./context/portfolio/PortfolioContext"
 import { SkeletonTheme } from "react-loading-skeleton"
 import CardSkeleton from "./components/shared/CardSkeleton"
+import Success from "./pages/Success"
 
 function App() {
   return (
@@ -38,7 +38,7 @@ function App() {
             <Route path="/loading" element={<Loading />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/project" element={<ProjectItem />} />
-            <Route path="/skeleton" element={<CardSkeleton />} />
+            <Route path="/success" element={<Success />} />
           </Routes>
         </BrowserRouter>
       </SkeletonTheme>

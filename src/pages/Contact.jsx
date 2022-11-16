@@ -1,12 +1,40 @@
-import React from "react"
+import React, { useRef } from "react"
 import Footer from "../components/layouts/Footer"
 import BgText from "../components/shared/BgText"
 import Button from "../components/shared/Button"
 import Socials from "../components/shared/Socials"
 import { ContactMe } from "../styles/ContactStyle"
 import { ContactSection } from "../styles/HomeStyle"
+import emailjs from "@emailjs/browser"
 
 const Contact = () => {
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_USER_ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        }
+      )
+    e.target.reset()
+  }
+
+  const handleClick = () => {
+    console.log("email sent")
+  }
+
   return (
     <ContactMe>
       <div className="pattern1"></div>
@@ -23,7 +51,7 @@ const Contact = () => {
             </p>
             <section className="contactMe">
               <section className="contactForm">
-                <form className="contactInput">
+                <form className="contactInput" ref={form} onSubmit={sendEmail}>
                   <input type="text" id="NameInput" placeholder="Your name" />
                   <br />
                   <input
@@ -61,7 +89,11 @@ const Contact = () => {
                 />
               </div>
             </section>
-            <Button text={"send"} classname="contactBtn" />
+            <Button
+              text={"send"}
+              classname="contactBtn"
+              handleClick={handleClick}
+            />
           </div>
         </ContactSection>
       </section>
