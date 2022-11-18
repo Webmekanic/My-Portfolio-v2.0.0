@@ -2,11 +2,16 @@ import React from "react"
 import { ProjectItemStyle } from "../../styles/ProjectItemStyle"
 import Skeleton from "react-loading-skeleton"
 
-const CardSkeleton = ({ cards }) => {
+const CardSkeleton = ({ cards, cardWidth }) => {
   return Array(cards)
     .fill(0)
     .map((item, index) => (
-      <ProjectItemStyle key={index}>
+      <ProjectItemStyle
+        key={index}
+        style={{
+          width: cardWidth,
+        }}
+      >
         <section className="projectContainer">
           <div className="projectBg">
             <Skeleton height={180} />

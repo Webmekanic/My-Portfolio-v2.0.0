@@ -32,7 +32,7 @@ const Works = () => {
               </p>
             </div>
           </div>
-          <section className="myProject">
+          <section className="myProject myproject-works">
             {projects.length === undefined ? (
               <CardSkeleton cards={9} />
             ) : (
@@ -45,6 +45,7 @@ const Works = () => {
                     projectImg={project.fields.avatar.fields.file.url}
                     title={project.fields.title}
                     description={project.fields.description}
+                    // cardWidth="100%"
                   />
                 )
               })

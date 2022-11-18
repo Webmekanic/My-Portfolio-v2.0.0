@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const ProjectItemStyle = styled.div`
   border: 1px solid #414141;
-  width: 340px;
+  // width: ${({ cardWidth }) => (cardWidth ? "0px" : "340px")};
   height: auto;
   padding: 15px;
   border-radius: 5px;
@@ -15,22 +15,30 @@ export const ProjectItemStyle = styled.div`
     hsl(200deg 25% 5%) 99%
   );
   cursor: pointer;
-  // margin-right: 1rem;
 
   &:hover {
-    // border: 1px solid ${({ theme }) => theme.colors.lightColor};
+    // border: 1px solid ${({ theme }) => theme.colors.purple};
   }
 
   .projectBg {
     height: 180px;
-    position: relative;
+    // position: relative;
     border-radius: 3px;
+    // border: 2px solid red;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
   }
 
   .projectBg img {
     height: 100%;
     width: 100%;
     // object-fit: center;
+
+    :hover {
+      transition: transform 0.5s ease;
+      transform: scale(1.02);
+    }
   }
 
   .projectSummary {

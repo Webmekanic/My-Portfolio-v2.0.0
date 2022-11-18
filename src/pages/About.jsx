@@ -8,6 +8,7 @@ import ReactJs from "../components/layouts/assets/reactjs.svg"
 import HtmlIcon from "../components/layouts/assets/htmlIcon.svg"
 import { AboutMe } from "../styles/AboutStyle"
 import { AboutAniebo } from "../styles/HomeStyle"
+import styled from "styled-components"
 
 const About = () => {
   const url =
@@ -17,6 +18,10 @@ const About = () => {
     window.open(url, "_blank")
   }
 
+  const AboutDavid = styled(AboutAniebo)`
+    margin-top: 40px;
+  `
+
   return (
     <>
       <AboutMe>
@@ -25,14 +30,15 @@ const About = () => {
         <div className="pattern3"></div>
         <section className="aboutContainer">
           <BgText text={"About"} classname="AboutBgText" />
-          <AboutAniebo>
+          <AboutDavid>
             <h1 className="aboutTitle">A bit about me</h1>
             <section className="aboutAniebo1">
               <div className="aboutText">
                 <p>
-                  I am a Front-end Developer with skills in HTML, CSS, Bootstrap
-                  SaSS and ReactJS, passionate about developing clean, intuitive
-                  interfaces and adding my bit to the world of web development.
+                  I am a Software Engineer with skills in MongoDB, ExpressJS,
+                  ReactJS, and NodeJS (MERN Stack), passionate about developing
+                  clean, intuitive interfaces and adding my bit to the world of
+                  web development.
                 </p>
                 <p className="aboutText2">
                   When I am not knee-deep into programming, I can be found
@@ -80,9 +86,9 @@ const About = () => {
                 </div>
               </div>
             </section>
-          </AboutAniebo>
+          </AboutDavid>
+          <Footer classname="aboutFooter socialIcon" />
         </section>
-        <Footer classname="aboutFooter socialIcon" />
       </AboutMe>
     </>
   )

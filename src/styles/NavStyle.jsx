@@ -7,7 +7,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  padding: clamp(0.5rem, 1.3vw, 3rem);
+  padding: clamp(0.3rem, 1.3vw, 2rem);
   color: ${({ theme }) => theme.colors.textColor};
   position: fixed;
   top: 0;

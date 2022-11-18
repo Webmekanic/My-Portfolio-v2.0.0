@@ -1,19 +1,33 @@
-import React from "react"
+import React, { memo } from "react"
 import Skeleton from "react-loading-skeleton"
 import "react-loading-skeleton/dist/skeleton.css"
 import { FiGithub, FiExternalLink } from "react-icons/fi"
 import { ProjectItemStyle } from "../../styles/ProjectItemStyle"
 
-const ProjectItem = ({ project, title, description, projectImg }) => {
+const ProjectItem = ({
+  project,
+  title,
+  description,
+  projectImg,
+  cardWidth,
+}) => {
   return (
     <ProjectItemStyle
-    // style={{
-    //   width: buttonWidth,
-    // }}
-    // className={classname}
+      className="my-project-cards"
+      primary={true}
+      style={{
+        width: cardWidth,
+      }}
     >
       <section className="projectContainer">
-        <div className="projectBg">
+        <div
+          className="projectBg"
+          style={
+            {
+              // backgroundImage: `${projectImg}`,
+            }
+          }
+        >
           <img src={projectImg || <Skeleton />} alt="Project" />
         </div>
         <div className="projectSummary">

@@ -1,7 +1,7 @@
 import React from "react"
 
-function kkkk() {
+const Kkkkkk = () => {
   return <div>kkkk</div>
 }
 
-export default kkkk
+export default Kkkkkk

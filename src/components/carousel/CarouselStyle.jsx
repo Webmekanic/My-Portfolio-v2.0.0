@@ -187,5 +187,20 @@ overflow: hidden;
        right: 290px;
        z-index: 99;
     }
+    .flickity-prev-next-button.previous{
+    left: 290px;
+    }
+}
+
+@media(max-width: 971px) {
+  .flickity-prev-next-button.previous{
+    left: 220px;
+    // border: 2px solid red;
+    }
+
+  .flickity-prev-next-button.next{
+      right: 220px;
+
+       }
 }
 `

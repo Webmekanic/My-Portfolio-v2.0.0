@@ -46,7 +46,7 @@ const Carousel = (props) => {
         }}
       >
         {projects.length === undefined ? (
-          <CardSkeleton cards={4} />
+          <CardSkeleton cards={4} cardWidth="340px" />
         ) : (
           projects.map((project, index) => {
             return (
@@ -56,6 +56,7 @@ const Carousel = (props) => {
                 projectImg={project.fields.avatar.fields.file.url}
                 title={project.fields.title}
                 description={project.fields.description}
+                cardWidth="340px"
               />
             )
           })

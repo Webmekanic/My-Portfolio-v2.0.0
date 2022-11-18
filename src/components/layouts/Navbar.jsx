@@ -3,6 +3,8 @@ import { MyLink, Nav } from "../../styles/NavStyle"
 import { FiGithub, FiLinkedin } from "react-icons/fi"
 import { CgSortAz } from "react-icons/cg"
 import PortfolioContext from "../../context/portfolio/PortfolioContext"
+import Kkkkkk from "./assets/myLogo.svg"
+import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
   const { dispatch } = useContext(PortfolioContext)
@@ -10,13 +12,25 @@ const Navbar = () => {
   return (
     <Nav>
       <h1 className="myIntials">
-        <MyLink
-          className="myIntials"
-          style={{ textDecoration: "none" }}
-          to={"/"}
-        >
-          DA
-        </MyLink>
+        <NavLink to="/">
+          <header
+            className="myIntials"
+            style={{
+              textDecoration: "none",
+              width: "60px",
+              height: "40px",
+              cursor: "pointer",
+            }}
+          >
+            <img
+              src={Kkkkkk}
+              alt="Logo"
+              srcset=""
+              style={{ width: "100%", height: "100%" }}
+            />
+            {/* DA */}
+          </header>
+        </NavLink>
       </h1>
       <ul className="navLinkList">
         <li className="navLinkItem">

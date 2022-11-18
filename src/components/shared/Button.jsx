@@ -30,7 +30,11 @@ const PageButton = styled.button`
   font-family: Work Sans;
   font-style: regular;
   font-weight: 400;
-  border: 2px solid ${({ theme }) => theme.colors.lightColor};
+  border: 2px solid
+    ${(props) => {
+      console.log(props)
+      return props.theme.colors.lightColor
+    }};
   color: ${({ theme }) => theme.colors.lightColor};
   position: relative;
   overflow: hidden;

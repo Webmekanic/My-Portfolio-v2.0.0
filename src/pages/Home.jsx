@@ -78,10 +78,10 @@ const Home = () => {
               <section className="aboutAniebo1">
                 <div className="aboutText">
                   <p>
-                    I am a Front-end Developer with skills in HTML, CSS,
-                    Bootstrap SaSS and ReactJS, passionate about developing
-                    clean, intuitive interfaces and adding my bit to the world
-                    of web development.
+                    I am a Software Engineer with skills in MongoDB, ExpressJS,
+                    ReactJS, and NodeJS (MERN Stack), passionate about
+                    developing clean, intuitive interfaces and adding my bit to
+                    the world of web development.
                   </p>
                   <p className="aboutText2">
                     When I am not knee-deep into programming, I can be found
