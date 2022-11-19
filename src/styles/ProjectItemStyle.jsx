@@ -30,7 +30,7 @@ export const ProjectItemStyle = styled.div`
     overflow: hidden;
 
     :hover {
-      transition: transform 0.5s ease;
+      transition: transform 1s ease;
       transform: scale(1.02);
     }
   }

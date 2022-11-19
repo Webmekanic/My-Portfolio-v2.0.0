@@ -51,7 +51,7 @@ export const AboutMe = styled.div`
   }
   .AboutBgText {
     position: absolute;
-    top: 35px;
+    top: 45px;
   }
 
   .aboutFooter {
