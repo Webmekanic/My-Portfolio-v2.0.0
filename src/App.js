@@ -12,7 +12,6 @@ import Loading from "./components/layouts/Loading"
 import ProjectItem from "./components/shared/ProjectItem"
 import { PortfolioProvider } from "./context/portfolio/PortfolioContext"
 import { SkeletonTheme } from "react-loading-skeleton"
-import CardSkeleton from "./components/shared/CardSkeleton"
 import Success from "./pages/Success"
 
 function App() {

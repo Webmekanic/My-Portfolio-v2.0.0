@@ -22,13 +22,11 @@ const ProjectItem = ({
       <section className="projectContainer">
         <div
           className="projectBg"
-          style={
-            {
-              // backgroundImage: `${projectImg}`,
-            }
-          }
+          style={{
+            backgroundImage: `url(${projectImg})`,
+          }}
         >
-          <img src={projectImg || <Skeleton />} alt="Project" />
+          {/* <img src={projectImg || <Skeleton />} alt="Project" /> */}
         </div>
         <div className="projectSummary">
           <p className="projectTitle">{title || <Skeleton />}</p>

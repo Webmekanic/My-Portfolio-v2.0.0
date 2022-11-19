@@ -21,19 +21,13 @@ export const ProjectItemStyle = styled.div`
   }
 
   .projectBg {
-    height: 180px;
-    // position: relative;
-    border-radius: 3px;
-    // border: 2px solid red;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-  }
-
-  .projectBg img {
-    height: 100%;
+    min-height: 180px;
     width: 100%;
-    // object-fit: center;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    overflow: hidden;
 
     :hover {
       transition: transform 0.5s ease;
