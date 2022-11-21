@@ -18,7 +18,7 @@ const Layouts = () => {
   useEffect(() => {
     const getprod = async () => {
       const { projects } = await getProjects()
-      console.log(projects)
+      // console.log(projects)
       dispatch({ type: "GET_PROJECTS", payload: projects })
     }
 
