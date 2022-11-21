@@ -47,7 +47,9 @@ export const AboutMe = styled.div`
     position: relative;
     z-index: 20;
     width: 100%;
-    padding-bottom: 5rem;
+    height: 100vh;
+    // padding-bottom: 5rem;
+    // border: 2px solid green;
   }
   .AboutBgText {
     position: absolute;
@@ -58,6 +60,8 @@ export const AboutMe = styled.div`
     position: absolute;
     padding-left: 30px;
     padding-right: 30px;
+    // border: 2px solid red;
+    // bottom: 0;
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {

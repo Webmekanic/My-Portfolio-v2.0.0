@@ -47,6 +47,12 @@ export const ContactMe = styled.div`
     position: relative;
     z-index: 20;
   }
+  #NameInput,
+  #emailInput,
+  #MessageInput {
+    position: relative;
+    z-index: 20;
+  }
 
   .contact-footer {
     border: 1px solid transparent;
