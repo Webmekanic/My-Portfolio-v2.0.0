@@ -37,7 +37,6 @@ const Works = () => {
               <CardSkeleton cards={9} />
             ) : (
               projects.map((project, index) => {
-                console.log(project.fields.avatar.fields.file.url)
                 return (
                   <ProjectItem
                     key={index}
@@ -45,7 +44,8 @@ const Works = () => {
                     projectImg={project.fields.avatar.fields.file.url}
                     title={project.fields.title}
                     description={project.fields.description}
-                    // cardWidth="100%"
+                    projectRepo={project.fields.repoLink}
+                    projectDemo={project.fields.liveLink}
                   />
                 )
               })

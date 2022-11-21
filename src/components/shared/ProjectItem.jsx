@@ -1,4 +1,4 @@
-import React, { memo } from "react"
+import React from "react"
 import Skeleton from "react-loading-skeleton"
 import "react-loading-skeleton/dist/skeleton.css"
 import { FiGithub, FiExternalLink } from "react-icons/fi"
@@ -10,6 +10,8 @@ const ProjectItem = ({
   description,
   projectImg,
   cardWidth,
+  projectRepo,
+  projectDemo,
 }) => {
   return (
     <ProjectItemStyle
@@ -37,7 +39,7 @@ const ProjectItem = ({
           <div className="projectLinks">
             <a
               className="socialLink"
-              href="https://github.com/Webmekanic"
+              href={projectRepo}
               target="_blank"
               rel="noreferrer"
             >
@@ -49,7 +51,7 @@ const ProjectItem = ({
 
             <a
               className="socialLink"
-              href="https://github.com/Webmekanic"
+              href={projectDemo}
               target="_blank"
               rel="noreferrer"
             >

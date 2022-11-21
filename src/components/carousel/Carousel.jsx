@@ -56,6 +56,8 @@ const Carousel = (props) => {
                 projectImg={project.fields.avatar.fields.file.url}
                 title={project.fields.title}
                 description={project.fields.description}
+                projectRepo={project.fields.repoLink}
+                projectDemo={project.fields.liveLink}
                 cardWidth="340px"
               />
             )
