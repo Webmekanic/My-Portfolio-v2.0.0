@@ -35,28 +35,29 @@ const ProjectItem = ({
             {description || <Skeleton count={5} />}
           </p>
           <div className="projectLinks">
-            <button>
-              Repo
-              <a
-                className="socialLink"
-                href="https://github.com/Webmekanic"
-                target="_blank"
-                rel="noreferrer"
-              >
+            <a
+              className="socialLink"
+              href="https://github.com/Webmekanic"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="projectItemBtn">
+                Repo
                 <FiGithub />
-              </a>
-            </button>
-            <button>
-              Live View
-              <a
-                className="socialLink"
-                href="https://github.com/Webmekanic"
-                target="_blank"
-                rel="noreferrer"
-              >
+              </button>
+            </a>
+
+            <a
+              className="socialLink"
+              href="https://github.com/Webmekanic"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="projectItemBtn">
+                Live Link
                 <FiExternalLink />
-              </a>
-            </button>
+              </button>
+            </a>
           </div>
         </div>
       </section>

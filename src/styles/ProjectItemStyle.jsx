@@ -62,7 +62,10 @@ export const ProjectItemStyle = styled.div`
     align-items: center;
     grid-gap: 1rem;
 
-    button {
+    .socialLink {
+      text-decoration: none;
+    }
+    .projectItemBtn {
       display: flex;
       text-align: center;
       align-items: center;
@@ -72,6 +75,7 @@ export const ProjectItemStyle = styled.div`
       grid-gap: 0.4rem;
       border: none;
       border-radius: 3px;
+      cursor: pointer;
     }
   }
 
