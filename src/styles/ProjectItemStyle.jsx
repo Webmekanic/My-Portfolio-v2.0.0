@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 export const ProjectItemStyle = styled.div`
   border: 1px solid #414141;
-  // width: ${({ cardWidth }) => (cardWidth ? "0px" : "340px")};
   height: auto;
   padding: 15px;
   border-radius: 5px;
@@ -15,10 +14,6 @@ export const ProjectItemStyle = styled.div`
     hsl(200deg 25% 5%) 99%
   );
   cursor: pointer;
-
-  &:hover {
-    // border: 1px solid ${({ theme }) => theme.colors.purple};
-  }
 
   .projectBg {
     min-height: 180px;
@@ -54,7 +49,6 @@ export const ProjectItemStyle = styled.div`
   }
 
   .projectDescription {
-    // border: 2px solid red;
     margin-top: 5px;
     font-family: Chivo;
     font-style: black;
@@ -79,10 +73,6 @@ export const ProjectItemStyle = styled.div`
       border: none;
       border-radius: 3px;
     }
-  }
-  .socialLink {
-    // border: 2px solid red;
-    // background-color: ${({ theme }) => theme.colors.lightColor};
   }
 
   .skill1 {

@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 import Footer from "../components/layouts/Footer"
 import BgText from "../components/shared/BgText"
 import Button from "../components/shared/Button"
@@ -9,6 +9,18 @@ import emailjs from "@emailjs/browser"
 
 const Contact = () => {
   const form = useRef()
+
+  const [contact, setContact] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+
+  const { name, email, message } = contact
+
+  const onChange = (e) => {
+    setContact({ ...contact, [e.target.name]: e.target.value })
+  }
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -21,18 +33,14 @@ const Contact = () => {
         process.env.REACT_APP_USER_ID
       )
       .then(
-        (result) => {
-          console.log(result.text)
+        (response) => {
+          console.log("Success", response.text)
         },
-        (error) => {
-          console.log(error.text)
+        (err) => {
+          console.log("Failed", err.text)
         }
       )
     e.target.reset()
-  }
-
-  const handleClick = () => {
-    console.log("email sent")
   }
 
   return (
@@ -52,18 +60,32 @@ const Contact = () => {
             <section className="contactMe">
               <section className="contactForm">
                 <form className="contactInput" ref={form} onSubmit={sendEmail}>
-                  <input type="text" id="NameInput" placeholder="Your name" />
+                  <input
+                    type="text"
+                    id="NameInput"
+                    placeholder="Your name"
+                    onChange={onChange}
+                    name="name"
+                    value={name}
+                  />
                   <br />
                   <input
                     type="email"
                     id="emailInput"
                     placeholder="Email address"
+                    onChange={onChange}
+                    name="email"
+                    value={email}
                   />
                   <br />
                   <textarea
                     id="MessageInput"
                     placeholder="Message..."
+                    name="message"
+                    value={message}
+                    onChange={onChange}
                   ></textarea>
+                  {/* <input type="submit" value="send" /> */}
                 </form>
               </section>
               <div className="contactLocations">
@@ -92,7 +114,7 @@ const Contact = () => {
             <Button
               text={"send"}
               classname="contactBtn"
-              handleClick={handleClick}
+              handleClick={sendEmail}
             />
           </div>
         </ContactSection>
