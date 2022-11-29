@@ -155,29 +155,20 @@ export const AboutMe = styled.div`
       // height: unset;
     }
     .skillSet {
-      // border: 2px solid red;
       padding: 0;
       margin-top: 1rem;
     }
 
-    // .AboutBgText {
-    //   position: absolute;
-    //   top: -45px;
-    // }
-
     .aboutFooter {
-      // border: 2px solid red;
       margin-top: 2rem;
       padding-bottom: 2rem;
     }
 
     @media (max-width: 414px) {
       .pattern2 {
-        // border: 2px solid green;
         top: 32rem;
       }
       .pattern3 {
-        // border: 2px solid green;
         top: 32rem;
       }
 
@@ -185,5 +176,8 @@ export const AboutMe = styled.div`
         top: -45px;
       }
     }
+  }
+  @media ${({ theme }) => theme.mediaQueries.xtraLarge} {
+    // border: 4px solid white;
   }
 `
