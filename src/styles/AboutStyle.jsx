@@ -61,6 +61,7 @@ export const AboutMe = styled.div`
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
+    // border: 2px solid red;
     .pattern1 {
       top: 12rem;
       transform: skewY(-15.5deg);
@@ -79,6 +80,20 @@ export const AboutMe = styled.div`
   }
 
   @media ${({ theme }) => theme.mediaQueries.large} {
+    padding-bottom: 3rem;
+
+    .skillsCard {
+      height: 302px;
+    }
+
+    .aboutAniebo1 {
+      margin-top: 1rem;
+      padding-bottom: 5rem;
+    }
+    .downloadResumeButton {
+      margin-top: 3.5rem;
+    }
+
     .pattern1 {
       top: 14.3rem;
       transform: skewY(-14deg);
@@ -90,6 +105,10 @@ export const AboutMe = styled.div`
     .pattern3 {
       top: 36.5rem;
       transform: skewY(14deg);
+    }
+
+    .aboutFooter {
+      // border: 2px solid purple;
     }
   }
 
