@@ -5,7 +5,7 @@ export const AboutMe = styled.div`
   position: relative;
   z-index: 20;
   width: 100%;
-  padding-bottom: 1rem;
+  // padding-bottom: 1rem;
   height: 100vh;
 
   .pattern1 {
@@ -48,8 +48,6 @@ export const AboutMe = styled.div`
     z-index: 20;
     width: 100%;
     height: 100vh;
-    // padding-bottom: 5rem;
-    // border: 2px solid green;
   }
   .AboutBgText {
     position: absolute;
@@ -60,8 +58,6 @@ export const AboutMe = styled.div`
     position: absolute;
     padding-left: 30px;
     padding-right: 30px;
-    // border: 2px solid red;
-    // bottom: 0;
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
@@ -123,6 +119,52 @@ export const AboutMe = styled.div`
       width: 89%;
       margin: auto;
       padding: unset;
+    }
+  }
+  @media ${({ theme }) => theme.mediaQueries.below768} {
+    // border: 2px solid red;
+    height: 100%;
+    padding-bottom: 1rem;
+
+    .skillsCard {
+      background: none;
+      box-shadow: none;
+      border: none;
+      padding: 0;
+      margin-top: 3rem;
+      // border: 2px solid red;
+      // height: unset;
+    }
+    .skillSet {
+      // border: 2px solid red;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    // .AboutBgText {
+    //   position: absolute;
+    //   top: -45px;
+    // }
+
+    .aboutFooter {
+      // border: 2px solid red;
+      margin-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    @media (max-width: 414px) {
+      .pattern2 {
+        // border: 2px solid green;
+        top: 32rem;
+      }
+      .pattern3 {
+        // border: 2px solid green;
+        top: 32rem;
+      }
+
+      .AboutBgText {
+        top: -45px;
+      }
     }
   }
 `

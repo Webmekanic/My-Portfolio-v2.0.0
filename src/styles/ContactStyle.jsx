@@ -6,6 +6,7 @@ export const ContactMe = styled.div`
   width: 100%;
   z-index: 20;
   padding-bottom: 2rem;
+  border: 2px solid red;
 
   .pattern1 {
     background: ${({ theme }) => theme.colors.barColor};

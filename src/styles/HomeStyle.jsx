@@ -659,6 +659,7 @@ export const AboutAniebo = styled.section`
   width: 89%;
   margin: auto;
   padding-top: 5.8rem;
+  // border: 2px solid red;
 
   .aboutText {
     padding-top: clamp(0.1rem, 0.5rem, 2rem);

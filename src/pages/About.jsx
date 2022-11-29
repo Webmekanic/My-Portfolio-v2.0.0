@@ -20,6 +20,10 @@ const About = () => {
 
   const AboutDavid = styled(AboutAniebo)`
     margin-top: 40px;
+
+    @media ${({ theme }) => theme.mediaQueries.below768} {
+      margin-top: 0;
+    }
   `
 
   return (

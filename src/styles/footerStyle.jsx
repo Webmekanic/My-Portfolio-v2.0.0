@@ -19,6 +19,8 @@ export const FooterSection = styled.footer`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    // border: 2px solid red;
+    margin-top: 2.5rem;
   }
 
   .copyRight {
