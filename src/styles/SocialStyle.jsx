@@ -33,7 +33,6 @@ export const SocialHandle = styled.div`
   .slideIn {
     padding: 10px 35px;
     transform: translateY(0%);
-    // transition: all linear 3s;
     background-color: transparent;
     border: 1px solid ${({ theme }) => theme.colors.lightColor};
     cursor: pointer;

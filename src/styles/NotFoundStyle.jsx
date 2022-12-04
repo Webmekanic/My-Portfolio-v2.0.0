@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const MyNotFound = styled.div`
-  // padding-top: 5rem;
   position: relative;
   width: 100%;
   z-index: 20;
@@ -97,7 +96,6 @@ export const MyNotFound = styled.div`
   }
 
   .NotFoundFooter {
-    // border: 2px solid red;
     position: absolute;
     bottom: 10px;
     width: 89%;

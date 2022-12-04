@@ -418,10 +418,6 @@ export const MyHome = styled.div`
     display: inline-block;
   }
 
-  .skillSection {
-    // margin-top: 1rem;
-  }
-
   .img-circle {
     position: absolute;
     left: -40px;
@@ -600,7 +596,6 @@ export const MyHome = styled.div`
     .pattern1 {
       height: 12rem;
       transform: skewY(-17deg);
-      // border: 2px solid red;
     }
     .pattern2 {
       height: 12rem;
@@ -659,7 +654,6 @@ export const AboutAniebo = styled.section`
   width: 89%;
   margin: auto;
   padding-top: 5.8rem;
-  // border: 2px solid red;
 
   .aboutText {
     padding-top: clamp(0.1rem, 0.5rem, 2rem);
@@ -794,17 +788,9 @@ export const ProjectSection = styled.section`
     width: 89%;
     margin: auto;
     margin-top: 3.4rem;
-    // border: 2px solid red;
   }
 
-  // .myProject > * + * {
-  //   margin-left: 0.4rem;
-  // }
-
   @media ${({ theme }) => theme.mediaQueries.below768} {
-    .myProject {
-      // border: 2px solid red;
-    }
   }
 
   @media ${({ theme }) => theme.mediaQueries.above768} {
@@ -863,11 +849,7 @@ export const ContactSection = styled.section`
     resize: none;
   }
 
-  .contactForm {
-    // border: 2px solid ${({ theme }) => theme.colors.textColor};
-  }
   .contactLocations {
-    // border: 2px solid yellow;
     position: relative;
   }
 
@@ -893,10 +875,6 @@ export const ContactSection = styled.section`
     bottom: 50px;
   }
 
-  .contactBtn {
-    // margin-top: 35px;
-    
-  }
   @media ${({ theme }) => theme.mediaQueries.below768} {
     .contactMe {
       display: unset;
@@ -924,9 +902,7 @@ export const ContactSection = styled.section`
     .contactBtn{
       float: right;
       margin-bottom: 2rem;
-      margin-top:35px;
-      
-      
+      margin-top:35px;  
     }
   }
 

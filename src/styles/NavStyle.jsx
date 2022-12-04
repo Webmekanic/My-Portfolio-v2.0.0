@@ -70,7 +70,6 @@ export const Nav = styled.nav`
 
   // Media Query
   @media ${({ theme }) => theme.mediaQueries.below768} {
-    // border: 2px solid white;
     position: fixed;
     top: 0;
     left: 0;

@@ -92,9 +92,6 @@ export const MySkills = styled.div`
   @media ${({ theme }) => theme.mediaQueries.medium} {
     margin: unset;
   }
-  @media (max-width: 280px) {
-    // width: 100%;
-  }
 
   @keyframes ReactSpin {
     50% {
