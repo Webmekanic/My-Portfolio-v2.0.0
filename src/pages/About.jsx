@@ -91,8 +91,8 @@ const About = () => {
               </div>
             </section>
           </AboutDavid>
-          <Footer classname="aboutFooter socialIcon" />
         </section>
+        <Footer classname="aboutFooter socialIcon" />
       </AboutMe>
     </>
   )
