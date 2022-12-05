@@ -102,6 +102,18 @@ export const MyNotFound = styled.div`
     margin: auto;
   }
 
+  @media ${({ theme }) => theme.mediaQueries.below768} {
+    .xbox {
+      font-size: 10rem;
+    }
+    .xbox .inside {
+      font-size: 10rem;
+    }
+    .inside2 {
+      font-size: 10rem;
+    }
+  }
+
   @media ${({ theme }) => theme.mediaQueries.medium} {
     .pattern1 {
       top: 12rem;
