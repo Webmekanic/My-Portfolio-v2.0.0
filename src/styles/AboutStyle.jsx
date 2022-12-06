@@ -42,6 +42,16 @@ export const AboutMe = styled.div`
     top: 30rem;
   }
 
+  .aboutText {
+    position: relative;
+    z-index: 20;
+  }
+
+  .skillsCard {
+    position: relative;
+    z-index: 20;
+  }
+
   .aboutFooter {
     position: absolute;
     bottom: 10px;
