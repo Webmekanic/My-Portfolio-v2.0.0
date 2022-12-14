@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef, useState } from "react"
 import Skills from "../components/layouts/Skills"
 import BgText from "../components/shared/BgText"
 import Button from "../components/shared/Button"
@@ -19,16 +19,56 @@ import {
 import Socials from "../components/shared/Socials"
 import Carousel from "../components/carousel/Carousel"
 import { useNavigate } from "react-router-dom"
+import emailjs from "@emailjs/browser"
 
 const Home = () => {
+  // contact me using Emailjs
+  const form = useRef()
+
+  const [contact, setContact] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+
+  const { name, email, message } = contact
+
+  const onChange = (e) => {
+    setContact({ ...contact, [e.target.name]: e.target.value })
+  }
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_USER_ID
+      )
+      .then(
+        (response) => {
+          console.log("Success", response.text)
+        },
+        (err) => {
+          console.log("Failed", err.text)
+        }
+      )
+    e.target.reset()
+  }
+
+  // Navigate to google drive
   const navigate = useNavigate()
   const url =
     "https://drive.google.com/file/d/1DSBBj4rwJqRkyRokKVfH29DTWd3QRsYd/view?usp=sharing"
 
+  // Route to my About page
   const handleClick = () => {
     navigate("/about")
   }
 
+  // Open Resume in another tab
   const downloadResume = () => {
     window.open(url, "_blank")
   }
@@ -181,22 +221,32 @@ const Home = () => {
                 </p>
                 <section className="contactMe">
                   <section className="contactForm">
-                    <form className="contactInput">
+                    <form
+                      className="contactInput"
+                      ref={form}
+                      onSubmit={sendEmail}
+                    >
                       <input
                         type="text"
                         id="NameInput"
                         placeholder="Your name"
+                        value={name}
+                        onChange={onChange}
                       />
                       <br />
                       <input
                         type="email"
                         id="emailInput"
                         placeholder="Email address"
+                        value={email}
+                        onChange={onChange}
                       />
                       <br />
                       <textarea
                         id="MessageInput"
                         placeholder="Message..."
+                        value={message}
+                        onChange={onChange}
                       ></textarea>
                     </form>
                   </section>
@@ -220,6 +270,7 @@ const Home = () => {
                       mediaLink="https://www.codewars.com/users/webmekanic"
                       myHandle="Codewars"
                       classname="myCodewars"
+                      handleClick={sendEmail}
                     />
                   </div>
                 </section>
