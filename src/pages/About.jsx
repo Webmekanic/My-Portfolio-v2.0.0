@@ -11,6 +11,7 @@ import { AboutAniebo } from "../styles/HomeStyle"
 import styled from "styled-components"
 
 const About = () => {
+  // Link to resume on google drive
   const url =
     "https://drive.google.com/file/d/1DSBBj4rwJqRkyRokKVfH29DTWd3QRsYd/view?usp=sharing"
 

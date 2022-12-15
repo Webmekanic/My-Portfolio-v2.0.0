@@ -27,9 +27,7 @@ const ProjectItem = ({
           style={{
             backgroundImage: `url(${projectImg})`,
           }}
-        >
-          {/* <img src={projectImg || <Skeleton />} alt="Project" /> */}
-        </div>
+        ></div>
         <div className="projectSummary">
           <p className="projectTitle">{title || <Skeleton />}</p>
           <div className="skillsTag"></div>

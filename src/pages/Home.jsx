@@ -111,7 +111,6 @@ const Home = () => {
         </section>
         <section className="homeAboutMe">
           <BgText text={"About"} classname="homeAboutBgText" />
-          {/* <BgText text={"Me"} classname="homeAboutMeText" /> */}
           <section className="homeAboutSection">
             <AboutAniebo>
               <h1 className="aboutTitle">A bit about me</h1>
