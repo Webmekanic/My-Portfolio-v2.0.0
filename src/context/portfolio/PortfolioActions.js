@@ -5,6 +5,7 @@ export const client = createClient({
   accessToken: process.env.REACT_APP_ACCESS_TOKEN,
 })
 
+// make API call to Contentful
 export const getProjects = async () => {
   try {
     const entries = await client.getEntries()

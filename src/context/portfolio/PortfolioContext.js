@@ -4,6 +4,7 @@ import portfolioReducer from "./PortfolioReducer"
 const PortfolioContext = createContext()
 
 export const PortfolioProvider = ({ children }) => {
+  // My default state
   const initialState = {
     loading: true,
     menu: false,
