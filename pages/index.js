@@ -113,7 +113,7 @@ const Home = () => {
                 Aniebo<div className="inside"> Aniebo</div>
               </div>
             </div>
-            <Skills classNames="skillSection" />
+            {/* <Skills classNames="skillSection" /> */}
           </div>
           <p className="currentRole">Software Engineer</p>
           <div className="letsCodeBtn">

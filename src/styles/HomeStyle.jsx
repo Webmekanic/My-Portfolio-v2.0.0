@@ -122,7 +122,7 @@ export const MyHome = styled.div`
   }
 
   .xbox {
-    font-size: 3.5rem;
+    font-size: 0.1rem;
     position: relative;
     text-shadow: 0px 0px 3px ${({ theme }) => theme.colors.purple};
     color: ${({ theme }) => theme.colors.barColor};
@@ -131,6 +131,7 @@ export const MyHome = styled.div`
     font-weight: 900;
     z-index: 99;
     top: 0;
+    // border: 2px solid ${({ theme }) => theme.colors.purple};
   }
 
   .fullName {
@@ -460,6 +461,18 @@ export const MyHome = styled.div`
   }
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
+    .fullName {
+      flex-wrap: nowrap;
+      overflow: hidden;
+    }
+
+    .xbox,
+    .xbox .inside,
+    .xbox:before,
+    .xbox:after {
+      font-size: 3rem;
+    }
+
     .contact-footer {
       width: 95%;
       margin: auto;
@@ -477,8 +490,8 @@ export const MyHome = styled.div`
     }
     .fullName {
       display: flex;
-      flex-direction: column;
-      grid-gap: unset;
+      flex-direction: row;
+      grid-gap: 0.9rem;
       margin-top: unset;
     }
 
@@ -540,13 +553,13 @@ export const MyHome = styled.div`
       transform: skewY(-15.5deg);
       display: none;
     }
-    .xbox1 {
-      margin-top: -1.9rem;
-    }
+    // .xbox1 {
+    //   margin-top: -1.9rem;
+    // }
     .fullName {
       display: flex;
-      flex-direction: column;
-      grid-gap: unset;
+      flex-direction: row;
+      grid-gap: 0.9rem;
     }
     .xbox,
     .xbox .inside,
@@ -634,6 +647,7 @@ export const MyHome = styled.div`
 
     .fullName {
       margin-top: 15px;
+      border: 2px solid yellow;
     }
   }
 
