@@ -7,17 +7,17 @@ export const MyHome = styled.div`
   width: 100%;
   z-index: 20;
 
-  .pattern1 {
-    background: ${({ theme }) => theme.colors.barColor};
-    position: absolute;
-    z-index: 10;
-    height: 13rem;
-    width: 100%;
-    transform: skewY(-35deg);
-    left: 0;
-    right: 0;
-    top: 12.4rem;
-  }
+  // .pattern1 {
+  //   background: ${({ theme }) => theme.colors.barColor};
+  //   position: absolute;
+  //   z-index: 10;
+  //   height: 13rem;
+  //   width: 100%;
+  //   transform: skewY(-35deg);
+  //   left: 0;
+  //   right: 0;
+  //   top: 12.4rem;
+  // }
 
   .pattern2 {
     background: ${({ theme }) => theme.colors.barColor};
@@ -113,7 +113,7 @@ export const MyHome = styled.div`
     width: 89%;
     margin: auto;
     z-index: 99;
-    padding-top: 3.4rem;
+    padding-top: 5rem;
   }
 
   .aboutAniebo {
@@ -121,17 +121,22 @@ export const MyHome = styled.div`
     flex-direction: column-reverse;
   }
 
+  .myBio{
+  border: 2px solid ${({ theme }) => theme.colors.purple};
+  margin-top: 1rem;
+  height: 100px;
+  width: 100%;
+  padding: 1rem;
+  } 
+  
   .xbox {
-    font-size: 0.1rem;
     position: relative;
     text-shadow: 0px 0px 3px ${({ theme }) => theme.colors.purple};
     color: ${({ theme }) => theme.colors.barColor};
-    font-family: Chivo;
+    font-family: 'Bungee', cursive;
     font-style: normal;
-    font-weight: 900;
-    z-index: 99;
+    font-weight: 400;
     top: 0;
-    // border: 2px solid ${({ theme }) => theme.colors.purple};
   }
 
   .fullName {
@@ -407,16 +412,19 @@ export const MyHome = styled.div`
     position: relative;
     z-index: 99;
     color: ${({ theme }) => theme.colors.textColor};
-    font-family: Work Sans;
+    font-family: 'Chivo Mono', monospace;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
   }
+
   .letsCodeBtn {
     margin-top: 3rem;
     position: relative;
     z-index: 20;
     display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .img-circle {
@@ -511,11 +519,11 @@ export const MyHome = styled.div`
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
-    .pattern1 {
-      top: 14.5rem;
-      transform: skewY(-15.5deg);
-      height: 13rem;
-    }
+    // .pattern1 {
+    //   top: 14.5rem;
+    //   transform: skewY(-15.5deg);
+    //   height: 13rem;
+    // }
     .pattern2 {
       top: 36.5rem;
       transform: skewY(-15.5deg);
@@ -565,14 +573,14 @@ export const MyHome = styled.div`
     .xbox .inside,
     .xbox:before,
     .xbox:after {
-      font-size: 8.5rem;
+      font-size: 6.5rem;
     }
   }
   @media ${({ theme }) => theme.mediaQueries.large} {
-    .pattern1 {
-      top: 14.3rem;
-      transform: skewY(-14deg);
-    }
+    // .pattern1 {
+    //   top: 14.3rem;
+    //   transform: skewY(-14deg);
+    // }
     .pattern2 {
       top: 36rem;
       transform: skewY(-14deg);
@@ -606,10 +614,10 @@ export const MyHome = styled.div`
     }
   }
   @media (min-width: 481px) and (max-width: 1023px) {
-    .pattern1 {
-      height: 12rem;
-      transform: skewY(-17deg);
-    }
+    // .pattern1 {
+    //   height: 12rem;
+    //   transform: skewY(-17deg);
+    // }
     .pattern2 {
       height: 12rem;
       transform: skewY(-17deg);
@@ -647,7 +655,6 @@ export const MyHome = styled.div`
 
     .fullName {
       margin-top: 15px;
-      border: 2px solid yellow;
     }
   }
 
@@ -663,11 +670,9 @@ export const MyHome = styled.div`
   .homeAboutSection {
     margin-top: 3rem;
   }
-`
+`;
 export const AboutAniebo = styled.section`
-  width: 89%;
   margin: auto;
-  padding-top: 5.8rem;
 
   .aboutText {
     padding-top: clamp(0.1rem, 0.5rem, 2rem);
@@ -687,18 +692,16 @@ export const AboutAniebo = styled.section`
     position: relative;
     z-index: 20;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-gap: 5rem;
-    margin-top: 1.5rem;
+    border: 3px solid red;
   }
 
   .downloadResumeButton {
     margin-top: 2rem;
   }
   .skillsCard {
-    border-top: 3px solid ${({ theme }) => theme.colors.purple};
-    background: #11171b;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #191E21;
     border-radius: 8px;
     height: 270px;
     padding: 25px 40px 0 40px;

@@ -113,9 +113,37 @@ const Home = () => {
                 Aniebo<div className="inside"> Aniebo</div>
               </div>
             </div>
-            {/* <Skills classNames="skillSection" /> */}
           </div>
           <p className="currentRole">Software Engineer</p>
+
+          <section className="homeAboutSection">
+            <AboutAniebo>
+              <section className="aboutAniebo1">
+                <div className="skillsCard">
+                  <div className="skillSet">
+
+                  </div>
+                </div>
+                <div className="aboutText">
+                  <p>
+                    I am a Software Engineer with skills in MongoDB, ExpressJS,
+                    ReactJS, and NodeJS (MERN Stack), passionate about
+                    developing clean, intuitive interfaces and adding my bit to
+                    the world of web development.
+                  </p>
+                  <p className="aboutText2">
+                    When I am not knee-deep into programming, I can be found
+                    reading playing games or going for a walk with my dogs.
+                  </p>
+                  <p>
+                    I am open to freelance and full-time positions in an
+                    environment which presents fun challenges with provision for
+                    constant growth.
+                  </p>
+                </div>
+              </section>
+            </AboutAniebo>
+          </section>
           <div className="letsCodeBtn">
             <img src="/assets/letcodeicon1.svg" alt="" className="img-circle" />
             <img
@@ -125,11 +153,13 @@ const Home = () => {
               width={60}
               height={60}
             />
-            <Button text={"Let's code"} handleClick={handleClick} />
+            <Button text={"Let's Build"} handleClick={handleClick} />
           </div>
         </section>
+
         <section className="homeAboutMe">
           <BgText text={"About"} classname="homeAboutBgText" />
+          {/* 
           <section className="homeAboutSection">
             <AboutAniebo>
               <h1 className="aboutTitle">A bit about me</h1>
@@ -150,36 +180,48 @@ const Home = () => {
                     environment which presents fun challenges with provision for
                     constant growth.
                   </p>
-                  <Button
-                    text={"Download Resume"}
-                    classname="downloadResumeButton"
-                    handleClick={downloadResume}
-                  />
+
                 </div>
                 <div className="skillsCard">
                   <div className="skillSet">
-                    <img className="cssLogo" src="/assets/cssLogo.svg" alt="CSS" />
+                    <img
+                      className="cssLogo"
+                      src="/assets/cssLogo.svg"
+                      alt="CSS"
+                    />
                     <div className="skillSetRating">
                       <div className="skillRatingBar"></div>
                       <div className="skillRatingBar"></div>
                     </div>
                   </div>
                   <div className="skillSet">
-                    <img className="cssLogo" src="/assets/htmlIcon.svg" alt="HTML" />
+                    <img
+                      className="cssLogo"
+                      src="/assets/htmlIcon.svg"
+                      alt="HTML"
+                    />
                     <div className="skillSetRating">
                       <div className="skillRatingBar"></div>
                       <div className="skillRatingBar"></div>
                     </div>
                   </div>
                   <div className="skillSet">
-                    <img className="cssLogo" src="/assets/reactjs.svg" alt="React" />
+                    <img
+                      className="cssLogo"
+                      src="/assets/reactjs.svg"
+                      alt="React"
+                    />
                     <div className="skillSetRating">
                       <div className="skillRatingBar"></div>
                       <div className="skillRatingBar"></div>
                     </div>
                   </div>
                   <div className="skillSet">
-                    <img className="cssLogo" src="/assets/jsLogo.svg" alt="JavaScript" />
+                    <img
+                      className="cssLogo"
+                      src="/assets/jsLogo.svg"
+                      alt="JavaScript"
+                    />
                     <div className="skillSetRating">
                       <div className="skillRatingBar"></div>
                       <div className="skillRatingBar"></div>
@@ -188,7 +230,8 @@ const Home = () => {
                 </div>
               </section>
             </AboutAniebo>
-          </section>
+          </section> */}
+
           <ProjectStats>
             <div className="projectStatsContainer">
               <div className="projectStatsWrapper">
@@ -306,7 +349,7 @@ const Home = () => {
         <Footer classname="contact-footer" />
       </MyHome>
     </>
-  )
+  );
 }
 
 export default Home

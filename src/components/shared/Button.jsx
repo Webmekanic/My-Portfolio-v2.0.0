@@ -18,7 +18,6 @@ const Btn = styled.p`
 `
 
 const PageButton = styled.button`
-  border: 2px solid red;
   display: inline-block;
   padding: 0.77rem 1.875rem;
   font-size: 14px;
@@ -39,6 +38,7 @@ const PageButton = styled.button`
   position: relative;
   overflow: hidden;
   z-index: 99;
+  border-radius: 4px;
 
   &:hover ${ButtonText} {
     transform: translateX(0%);
