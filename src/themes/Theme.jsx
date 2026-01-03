@@ -9,6 +9,7 @@ const theme = {
     neutral: "#F8F6EF",
     barColor: "#090d0f",
     progressBar: "#C4C4C4",
+    secondaryColor: "#81868D",
   },
   fontSizes: {
     large: "3rem",

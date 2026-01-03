@@ -110,30 +110,41 @@ export const MyHome = styled.div`
   }
 
   .myNameContainer {
-    width: 89%;
+    // border: 2px solid yellow;
     margin: auto;
     z-index: 99;
+    position: relative;
     padding-top: 5rem;
+    padding-bottom: 5rem;
+    overflow: hidden;
+    background-color: #0c1114;
+    padding-right: 7.5%;
+    padding-left: 7.5%;
   }
+
+  // .myBio1 {
+  //   width: 85%;
+  //   margin: auto;
+  // }
 
   .aboutAniebo {
     display: flex;
     flex-direction: column-reverse;
   }
 
-  .myBio{
-  border: 2px solid ${({ theme }) => theme.colors.purple};
-  margin-top: 1rem;
-  height: 100px;
-  width: 100%;
-  padding: 1rem;
-  } 
-  
+  .myBio {
+    border: 2px solid ${({ theme }) => theme.colors.purple};
+    margin-top: 1rem;
+    height: 100px;
+    width: 100%;
+    padding: 1rem;
+  }
+
   .xbox {
     position: relative;
     text-shadow: 0px 0px 3px ${({ theme }) => theme.colors.purple};
     color: ${({ theme }) => theme.colors.barColor};
-    font-family: 'Bungee', cursive;
+    font-family: "Bungee", cursive;
     font-style: normal;
     font-weight: 400;
     top: 0;
@@ -412,19 +423,17 @@ export const MyHome = styled.div`
     position: relative;
     z-index: 99;
     color: ${({ theme }) => theme.colors.textColor};
-    font-family: 'Chivo Mono', monospace;
+    font-family: "Chivo Mono", monospace;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
   }
 
   .letsCodeBtn {
-    margin-top: 3rem;
+    margin-top: 2rem;
     position: relative;
     z-index: 20;
     display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .img-circle {
@@ -524,11 +533,13 @@ export const MyHome = styled.div`
     //   transform: skewY(-15.5deg);
     //   height: 13rem;
     // }
+
     .pattern2 {
       top: 36.5rem;
       transform: skewY(-15.5deg);
       height: 13rem;
     }
+
     .pattern3 {
       top: 36.5rem;
       transform: skewY(15.5deg);
@@ -582,11 +593,11 @@ export const MyHome = styled.div`
     //   transform: skewY(-14deg);
     // }
     .pattern2 {
-      top: 36rem;
+      top: 43.8rem;
       transform: skewY(-14deg);
     }
     .pattern3 {
-      top: 36.5rem;
+      top: 43.8rem;
       transform: skewY(14deg);
     }
     .pattern4 {
@@ -668,15 +679,12 @@ export const MyHome = styled.div`
   }
 
   .homeAboutSection {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 `;
 export const AboutAniebo = styled.section`
   margin: auto;
 
-  .aboutText {
-    padding-top: clamp(0.1rem, 0.5rem, 2rem);
-  }
   .aboutText > * {
     padding-top: 1rem;
     font-family: Work Sans;
@@ -694,27 +702,28 @@ export const AboutAniebo = styled.section`
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 5rem;
-    border: 3px solid red;
+    // border: 3px solid red;
   }
 
   .downloadResumeButton {
-    margin-top: 2rem;
-  }
-  .skillsCard {
-    background: #191E21;
-    border-radius: 8px;
-    height: 270px;
-    padding: 25px 40px 0 40px;
+    margin-top: 3rem;
   }
 
-  .skillSet {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-    grid-gap: 1.5rem;
-    margin-top: 0.4rem;
+  .skillsCard {
+    display: grid;
+    grid-template-columns: repeat(3, 104px);
+    grid-template-rows: repeat(2, 104px);
+    gap: 1rem;
   }
+
+  .skillItem {
+    width: 104px;
+    height: 104px;
+    border-radius: 13px;
+    border: 1px solid #262C2F;
+    background: #191E21;
+  }
+
   .cssLogo {
     width: 42.2px;
     height: 40px;
@@ -745,7 +754,6 @@ export const AboutAniebo = styled.section`
     }
     .fullName {
       margin-top: 2.2rem;
-      border: 2px solid yellow;
     }
     .skillSection {
       margin-top: unset;
@@ -754,33 +762,37 @@ export const AboutAniebo = styled.section`
 `
 
 export const ProjectStats = styled.section`
-  border-top: 1px solid ${({ theme }) => theme.colors.lineColor};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.lineColor};
-  margin-top: 5.5rem;
+  .certifications {
+    font-family: "Chivo Mono", monospace;
+    font-style: light;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 32px;
+    color: ${({ theme }) => theme.colors.secondaryColor};
+    text-align: center;
+    padding: 1rem;
+  }
 
-  .projectStatsContainer {
+  .certificationItem {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
+    gap: 2rem;
+    flex-direction: row;
     align-items: center;
-    padding: 2rem 0;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
   }
-  .myStats {
-    color: black;
-    -webkit-text-fill-color: ${({ theme }) => theme.colors.dark};
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #8afaec;
-    font-family: Chivo;
-    font-style: black;
-    font-weight: 500;
-    font-size: 60px;
-    animation: effect 6s infinite alternate;
+
+  .certificationLogo {
+    width: 100px;
+    height: 100px;
   }
+
   @media ${({ theme }) => theme.mediaQueries.below768} {
     display: none;
   }
-`
+`;
 
 export const ProjectSection = styled.section`
   border-top: 1px solid transparent;
