@@ -593,11 +593,11 @@ export const MyHome = styled.div`
     //   transform: skewY(-14deg);
     // }
     .pattern2 {
-      top: 43.8rem;
+      top: 42.9rem;
       transform: skewY(-14deg);
     }
     .pattern3 {
-      top: 43.8rem;
+      top: 42.9rem;
       transform: skewY(14deg);
     }
     .pattern4 {
@@ -686,16 +686,21 @@ export const AboutAniebo = styled.section`
   margin: auto;
 
   .aboutText > * {
-    padding-top: 1rem;
-    font-family: Work Sans;
-    font-style: normal;
-    font-weight: 400;
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-family: "Chivo Mono";
+    font-weight: 300;
+    font-size: 18px;
     line-height: 1.3125rem;
+    color: ${({ theme }) => theme.colors.textColor};
   }
+
   .aboutText2 {
     padding-top: 0;
   }
+
+  .aboutText3 {
+    padding-top: 1rem;
+  }
+
   .aboutAniebo1 {
     position: relative;
     z-index: 20;
@@ -720,8 +725,8 @@ export const AboutAniebo = styled.section`
     width: 104px;
     height: 104px;
     border-radius: 13px;
-    border: 1px solid #262C2F;
-    background: #191E21;
+    border: 1px solid #262c2f;
+    background: #191e21;
   }
 
   .cssLogo {
@@ -759,7 +764,7 @@ export const AboutAniebo = styled.section`
       margin-top: unset;
     }
   }
-`
+`;
 
 export const ProjectStats = styled.section`
   .certifications {
@@ -797,19 +802,20 @@ export const ProjectStats = styled.section`
 export const ProjectSection = styled.section`
   border-top: 1px solid transparent;
   .projectSectionContainer {
-    width: 89%;
+    width: 85%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 85px;
   }
   .projectParagraph {
-    padding-top: 2rem;
+    padding-top: 0.5rem;
   }
   .homeProjectBgText {
     position: absolute;
     top: 20px;
   }
   .myProject {
-    display: flex;
+  border: 2px solid green;
+    display: row;
     grid-gap: 0.8rem;
     justify-content: space-between;
     position: relative;

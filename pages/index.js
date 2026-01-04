@@ -19,6 +19,7 @@ import PortfolioContext from "../src/context/portfolio/PortfolioContext"
 import { getProjects } from "../src/context/portfolio/PortfolioActions"
 import MobileMenu from "../src/components/layouts/MobileMenu"
 import Loading from "../src/components/layouts/Loading"
+import TypingEffect from "../src/components/shared/TypingEffect"
 const Home = () => {
   const router = useRouter()
   const form = useRef()
@@ -107,12 +108,8 @@ const Home = () => {
           <div className="myBio1">
             <div className="aboutAniebo">
               <div className="fullName">
-                <div className="xbox" data-char="David">
-                  David<div className="inside">David</div>
-                </div>
-                <div className="xbox xbox1" data-char=" Aniebo">
-                  Aniebo<div className="inside"> Aniebo</div>
-                </div>
+                <TypingEffect text="David" className="xbox" />
+                <TypingEffect text="Aniebo" className="xbox xbox1" />
               </div>
             </div>
             <p className="currentRole">Software Engineer</p>
@@ -139,7 +136,7 @@ const Home = () => {
                       When I am not knee-deep into programming, I can be found
                       reading playing games or going for a walk with my dogs.
                     </p>
-                    <p>
+                    <p className="aboutText3">
                       I am open to freelance and full-time positions in an
                       environment which presents fun challenges with provision
                       for constant growth.
@@ -188,16 +185,10 @@ const Home = () => {
           <section className="projectSection">
             <ProjectSection>
               <div className="projectSectionContainer">
-                <h1 className="aboutTitle">My Portfolio</h1>
+                <h1 className="aboutTitle">Featured Work</h1>
                 <div className="projectParagraph">
                   <p className="sectionDescription">
-                    Here are some select projects I have been excited to work on
-                    with amazing and talented people.
-                  </p>
-                  <p className="sectionDescription">
-                    This is just a glimpse of my capabilities as a developer. I
-                    would definitely like to add a touch of my magic to your
-                    project.
+                    Here are some cool stuff I have worked on
                   </p>
                 </div>
               </div>

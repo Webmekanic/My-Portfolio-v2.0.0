@@ -59,6 +59,7 @@ export const MyWorks = styled.div`
   }
 
   .myProject {
+  border: 2px solid green;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     // border: 1px solid green;
@@ -71,9 +72,6 @@ export const MyWorks = styled.div`
     }
   }
 
-  .btnPro {
-    border: 2px solid red;
-  }
   @media ${({ theme }) => theme.mediaQueries.medium} {
     .pattern1 {
       top: 12rem;

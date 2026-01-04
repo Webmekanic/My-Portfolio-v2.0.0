@@ -1,7 +1,8 @@
 import styled from "styled-components"
 
 export const ProjectItemStyle = styled.div`
-  border: 1px solid #414141;
+border: 2px solid purple;
+  // border: 1px solid #414141;
   height: auto;
   padding: 15px;
   border-radius: 5px;

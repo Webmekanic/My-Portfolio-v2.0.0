@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const MySlider = styled.div`
+border: 2px solid yellow;
   width: 100%;
 .flickity-page-dots{
     position: absolute;

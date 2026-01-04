@@ -4,12 +4,13 @@ const theme = {
     purple: "#7151B6",
     lightColor: "#8AFAEC",
     borderColor: "#1F2224",
-    textColor: "#C9CDD2",
+    textColor: "#CBD2DB",
     lineColor: "#E5E5E5",
     neutral: "#F8F6EF",
     barColor: "#090d0f",
     progressBar: "#C4C4C4",
     secondaryColor: "#81868D",
+    tertiaryColor: "#E8EBF1",
   },
   fontSizes: {
     large: "3rem",
@@ -22,5 +23,5 @@ const theme = {
     large: `only screen and (min-width: 1280px)`,
     xtraLarge: `only screen and (min-width: 1440px)`,
   },
-}
+};
 export default theme
