@@ -59,11 +59,10 @@ export const MyWorks = styled.div`
   }
 
   .myProject {
-  border: 2px solid green;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     // border: 1px solid green;
-    // grid-gap: 1.5rem;
 
     &.myproject-works {
       .jrmCnS {

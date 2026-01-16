@@ -110,7 +110,6 @@ export const MyHome = styled.div`
   }
 
   .myNameContainer {
-    // border: 2px solid yellow;
     margin: auto;
     z-index: 99;
     position: relative;
@@ -602,22 +601,25 @@ export const MyHome = styled.div`
     }
     .pattern4 {
       transform: skewY(14deg);
-      top: 89rem;
+      top: 105rem;
     }
+
     .pattern5 {
       transform: skewY(14deg);
-      top: 110rem;
+      top: 128rem;
     }
     .pattern6 {
       transform: skewY(-14deg);
-      top: 110rem;
+      top: 130rem;
     }
     .pattern7 {
-      top: 150rem;
+      top: 180rem;
       transform: skewY(14deg);
+      border: 2px solid cyan;
     }
     .pattern8 {
-      top: 150rem;
+      border: 2px solid red;
+      top: 180rem;
       transform: skewY(-14deg);
     }
     .pattern9 {
@@ -707,7 +709,6 @@ export const AboutAniebo = styled.section`
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 5rem;
-    // border: 3px solid red;
   }
 
   .downloadResumeButton {
@@ -814,7 +815,6 @@ export const ProjectSection = styled.section`
     top: 20px;
   }
   .myProject {
-  border: 2px solid green;
     display: row;
     grid-gap: 0.8rem;
     justify-content: space-between;
@@ -822,7 +822,7 @@ export const ProjectSection = styled.section`
     z-index: 30;
     width: 89%;
     margin: auto;
-    margin-top: 3.4rem;
+    // margin-top: 3.4rem;
   }
 
   @media ${({ theme }) => theme.mediaQueries.below768} {

@@ -11,6 +11,8 @@ const theme = {
     progressBar: "#C4C4C4",
     secondaryColor: "#81868D",
     tertiaryColor: "#E8EBF1",
+    cardColor: "#191E21",
+    cardBorderColor: "#343A3E",
   },
   fontSizes: {
     large: "3rem",

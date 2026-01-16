@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext, useEffect, useRef } from "react"
 import BgText from "../src/components/shared/BgText"
 import ProjectItem from "../src/components/shared/ProjectItem"
 import Footer from "../src/components/layouts/Footer"
@@ -10,9 +10,16 @@ import Navbar from "../src/components/layouts/Navbar"
 import MobileMenu from "../src/components/layouts/MobileMenu"
 import Loading from "../src/components/layouts/Loading"
 import { getProjects } from "../src/context/portfolio/PortfolioActions"
+import { useScroll } from "framer-motion"
+import Lenis from "@studio-freight/lenis"
 
 const Works = () => {
   const { projects, menu, loading, dispatch } = useContext(PortfolioContext)
+  const container = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end end"],
+  })
 
   useEffect(() => {
     const getprod = async () => {
@@ -32,13 +39,28 @@ const Works = () => {
     }, 3000)
   }, [dispatch])
 
+  useEffect(() => {
+    const lenis = new Lenis()
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+    return () => {
+      lenis.destroy()
+    }
+  }, [])
+
   if (loading) return <Loading />
 
   return (
     <>
       <Navbar />
       {menu && <MobileMenu />}
-      <MyWorks>
+      <MyWorks ref={container}>
         <div className="pattern1"></div>
         <div className="pattern2"></div>
         <div className="pattern3"></div>
@@ -64,15 +86,20 @@ const Works = () => {
                 <CardSkeleton cards={9} />
               ) : (
                 projects.map((project, index) => {
+                  const targetScale = 1 - (projects.length - index) * 0.08
                   return (
                     <ProjectItem
                       key={index}
+                      i={index}
                       project={project.fields}
                       projectImg={project.fields.avatar.fields.file.url}
                       title={project.fields.title}
                       description={project.fields.description}
                       projectRepo={project.fields.repoLink}
                       projectDemo={project.fields.liveLink}
+                      progress={scrollYProgress}
+                      range={[index * 0.1, 1]}
+                      targetScale={targetScale}
                     />
                   )
                 })

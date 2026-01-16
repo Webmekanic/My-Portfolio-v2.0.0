@@ -1,10 +1,13 @@
 import styled from "styled-components"
 
 export const ProjectItemStyle = styled.div`
-border: 2px solid purple;
-  // border: 1px solid #414141;
-  height: auto;
+  // height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 15px;
+  position: sticky;
+  top: 20%;
   border-radius: 5px;
   background-image: linear-gradient(
     145deg,
@@ -15,6 +18,25 @@ border: 2px solid purple;
     hsl(200deg 25% 5%) 99%
   );
   cursor: pointer;
+
+  .projectContainer {
+    display: flex;
+    position: relative;
+    top: -10%;
+    background-color: ${({ theme }) => theme.colors.cardColor};
+    border-radius: 20px;
+    border: 1px solid ${({ theme }) => theme.colors.cardBorderColor};
+    gap: 32px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 32px;
+    height: 380px;
+    width: 100%;
+    // max-width: 1100px;
+    // transform-origin: top;
+    overflow: hidden;
+  }
 
   .projectBg {
     min-height: 180px;
@@ -56,6 +78,8 @@ border: 2px solid purple;
     line-height: 1.5;
     height: 120px;
     font-size: 13.8px;
+    // display: flex;
+    // align-items: center;
   }
   .projectLinks {
     display: flex;
@@ -115,4 +139,4 @@ border: 2px solid purple;
       border-bottom: 7.5px solid transparent;
     }
   }
-`
+`;

@@ -29,7 +29,7 @@ const Carousel = (props) => {
 
   return (
     <MySlider>
-      <Flickity
+      {/* <Flickity
         flickityRef={(c) => (flkty = c)}
         options={{
           initialIndex: props.initialIndex,
@@ -44,7 +44,7 @@ const Carousel = (props) => {
           watchCSS: false,
           wrapAround: false,
         }}
-      >
+      > */}
         {projects.length === undefined ? (
           <CardSkeleton cards={4} cardWidth="340px" />
         ) : (
@@ -58,12 +58,12 @@ const Carousel = (props) => {
                 description={project.fields.description}
                 projectRepo={project.fields.repoLink}
                 projectDemo={project.fields.liveLink}
-                cardWidth="340px"
+                cardWidth="100%"
               />
             )
           })
         )}
-      </Flickity>
+      {/* </Flickity> */}
     </MySlider>
   )
 }
