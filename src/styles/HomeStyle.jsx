@@ -613,13 +613,13 @@ export const MyHome = styled.div`
       top: 130rem;
     }
     .pattern7 {
-      top: 180rem;
+      top: 185rem;
       transform: skewY(14deg);
       border: 2px solid cyan;
     }
     .pattern8 {
       border: 2px solid red;
-      top: 180rem;
+      top: 185rem;
       transform: skewY(-14deg);
     }
     .pattern9 {

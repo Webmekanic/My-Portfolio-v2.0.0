@@ -1,13 +1,11 @@
 import styled from "styled-components"
 
 export const ProjectItemStyle = styled.div`
-  // height: 100vh;
-  display: flex;
+  // display: flex;
   align-items: center;
   justify-content: center;
   padding: 15px;
   position: sticky;
-  top: 20%;
   border-radius: 5px;
   background-image: linear-gradient(
     145deg,
@@ -20,9 +18,8 @@ export const ProjectItemStyle = styled.div`
   cursor: pointer;
 
   .projectContainer {
-    display: flex;
+    // display: flex;
     position: relative;
-    top: -10%;
     background-color: ${({ theme }) => theme.colors.cardColor};
     border-radius: 20px;
     border: 1px solid ${({ theme }) => theme.colors.cardBorderColor};
@@ -40,7 +37,8 @@ export const ProjectItemStyle = styled.div`
 
   .projectBg {
     min-height: 180px;
-    width: 100%;
+    width: 50%;
+    flex-shrink: 0;
     border-radius: 3px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -54,6 +52,7 @@ export const ProjectItemStyle = styled.div`
   }
 
   .projectSummary {
+    width: 50%; 
     margin-top: 10px;
   }
   .projectTitle {

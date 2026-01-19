@@ -31,61 +31,61 @@ const ProjectItem = ({
   return (
     <ProjectItemStyle
       ref={container}
-      className="my-project-cards"
-      primary={true}
       style={{
         width: cardWidth,
         top: `calc(10vh + ${i * 30}px)`,
       }}
     >
-      <motion.section
-        className="projectContainer"
-        style={{
-          scale: i === 0 ? 1 : scale,
-          opacity: i === 0 ? 1 : opacity,
-          transformOrigin: 'top center',
-        }}
-      >
-        <div
-          className="projectBg"
+        <motion.section
+          className="projectContainer"
           style={{
-            backgroundImage: `url(${projectImg})`,
+            scale: i === 0 ? 1 : scale,
+            opacity: i === 0 ? 1 : opacity,
+            transformOrigin: "top center",
+            display: "flex",
+            flexDirection: i % 2 === 0 ? "row" : "row-reverse",
           }}
-        ></div>
-        <div className="projectSummary">
-          <p className="projectTitle">{title || <Skeleton />}</p>
-          <div className="skillsTag"></div>
-          <p className="projectDescription">
-            {description || <Skeleton count={5} />}
-          </p>
-          <div className="projectLinks">
-            <a
-              className="socialLink"
-              href={projectRepo}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="projectItemBtn">
-                Repo
-                <FiGithub />
-              </button>
-            </a>
+        >
+          <div
+            className="projectBg"
+            style={{
+              backgroundImage: `url(${projectImg})`,
+            }}
+          ></div>
+          <div className="projectSummary">
+            <p className="projectTitle">{title || <Skeleton />}</p>
+            <div className="skillsTag"></div>
+            <p className="projectDescription">
+              {description || <Skeleton count={5} />}
+            </p>
+            <div className="projectLinks">
+              <a
+                className="socialLink"
+                href={projectRepo}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button className="projectItemBtn">
+                  Repo
+                  <FiGithub />
+                </button>
+              </a>
 
-            <a
-              className="socialLink"
-              href={projectDemo}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="projectItemBtn">
-                Live Link
-                <FiExternalLink />
-              </button>
-            </a>
+              <a
+                className="socialLink"
+                href={projectDemo}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button className="projectItemBtn">
+                  Live Link
+                  <FiExternalLink />
+                </button>
+              </a>
+            </div>
           </div>
-        </div>
-      </motion.section>
-    </ProjectItemStyle>
+        </motion.section>
+      </ProjectItemStyle>
   )
 }
 export default ProjectItem
