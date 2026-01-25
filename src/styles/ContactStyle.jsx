@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const ContactMe = styled.div`
+export const talksList = styled.div`
   padding-top: 5rem;
   position: relative;
   width: 100%;
@@ -43,7 +43,7 @@ export const ContactMe = styled.div`
     top: 30rem;
   }
 
-  .contactMe {
+  .talksList {
     position: relative;
     z-index: 20;
   }
@@ -58,7 +58,6 @@ export const ContactMe = styled.div`
     border: 1px solid transparent;
     width: 89%;
     margin: auto;
-    margin-top: 10rem;
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {

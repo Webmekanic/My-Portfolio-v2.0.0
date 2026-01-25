@@ -10,7 +10,7 @@ import {
   AboutAniebo,
   ProjectStats,
   ProjectSection,
-  ContactSection,
+  TalksSection,
 } from "../src/styles/HomeStyle"
 import Socials from "../src/components/shared/Socials"
 import Carousel from "../src/components/carousel/Carousel"
@@ -198,82 +198,84 @@ const Home = () => {
             </ProjectSection>
           </section>
 
-          <section className="contactSection">
-            <BgText text={"Contact"} classname="contactBgText" />
-            <ContactSection>
-              <div className="contactContainer">
-                <h1 className="aboutTitle">Contact Me</h1>
+          <section className="talksSection">
+            <TalksSection>
+              <div className="talksContainer">
+                <h1 className="aboutTitle">Talks and Engagements</h1>
                 <p className="contactText">
-                  Let's discuss your next project over a digital coffee. Got an
-                  idea? Need suggestions? Feel free to reach out at anytime.
+                  Here are some talks, workshops, and events where I've shared
+                  ideas.
                 </p>
-                <section className="contactMe">
-                  <section className="contactForm">
-                    <form
-                      className="contactInput"
-                      ref={form}
-                      onSubmit={sendEmail}
-                    >
-                      <input
-                        type="text"
-                        id="NameInput"
-                        placeholder="Your name"
-                        name="name"
-                        value={name}
-                        onChange={onChange}
-                      />
-                      <br />
-                      <input
-                        type="email"
-                        id="emailInput"
-                        placeholder="Email address"
-                        name="email"
-                        value={email}
-                        onChange={onChange}
-                      />
-                      <br />
-                      <textarea
-                        id="MessageInput"
-                        placeholder="Message..."
-                        name="message"
-                        value={message}
-                        onChange={onChange}
-                      ></textarea>
-                    </form>
-                  </section>
-                  <div className="contactLocations">
-                    <Socials
-                      mediaLink="https://www.linkedin.com/in/david-aniebo/"
-                      myHandle="Linkedin"
-                      classname="myLinkedin"
-                    />
-                    <Socials
-                      mediaLink="https://twitter.com/Webmekanic_"
-                      myHandle="#Twitter"
-                      classname="myTwitter"
-                    />
-                    <Socials
-                      mediaLink="https://github.com/Webmekanic"
-                      myHandle="GitHub"
-                      classname="myGitHub"
-                    />
-                    <Socials
-                      mediaLink="https://www.codewars.com/users/webmekanic"
-                      myHandle="Codewars"
-                      classname="myCodewars"
-                    />
+                <section className="talksList">
+                  <div className="talkItem">
+                    <div className="talkInfo">
+                      <p className="talkDate">28th March, 2025</p>{" "}
+                      <span className="talkSeparator"></span>
+                      <p className="talkDuration">38 mins</p>
+                    </div>
+                    <h3 className="talkTitle">Future of AI in Africa</h3>
+                    <p className="talkDescription">
+                      In this talk, I explored the potential impact of AI on
+                      various sectors in Africa, discussing both opportunities
+                      and challenges.
+                    </p>
+                    <a href="#" className="talkLink">
+                      Learn more
+                    </a>
+                  </div>
+                  <div className="talkImage">
+                    <img srcSet="/assets/api-design.png" alt="Talk Image" />
                   </div>
                 </section>
-                <Button
-                  text={"send"}
-                  classname="contactBtn"
-                  handleClick={sendEmail}
-                />
+
+                <section className="talksList">
+                  <div className="talkItem">
+                    <div className="talkInfo">
+                      <p className="talkDate">28th March, 2025</p>{" "}
+                      <span className="talkSeparator"></span>
+                      <p className="talkDuration">38 mins</p>
+                    </div>
+                    <h3 className="talkTitle">Future of AI in Africa</h3>
+                    <p className="talkDescription">
+                      In this talk, I explored the potential impact of AI on
+                      various sectors in Africa, discussing both opportunities
+                      and challenges.
+                    </p>
+                    <a href="#" className="talkLink">
+                      Learn more
+                    </a>
+                  </div>
+                  <div className="talkImage">
+                    <img srcSet="/assets/api-design.png" alt="Talk Image" />
+                  </div>
+                </section>
+
+                <section className="talksList">
+                  <div className="talkItem">
+                    <div className="talkInfo">
+                      <p className="talkDate">28th March, 2025</p>{" "}
+                      <span className="talkSeparator"></span>
+                      <p className="talkDuration">38 mins</p>
+                    </div>
+                    <h3 className="talkTitle">Future of AI in Africa</h3>
+                    <p className="talkDescription">
+                      In this talk, I explored the potential impact of AI on
+                      various sectors in Africa, discussing both opportunities
+                      and challenges.
+                    </p>
+                    <a href="#" className="talkLink">
+                      Learn more
+                    </a>
+                  </div>
+                  <div className="talkImage">
+                    <img srcSet="/assets/api-design.png" alt="Talk Image" />
+                  </div>
+                </section>
               </div>
-            </ContactSection>
+            </TalksSection>
           </section>
         </section>
-        <Footer classname="contact-footer" />
+        {/* <Footer classname="contact-footer" /> */}
       </MyHome>
     </>
   );

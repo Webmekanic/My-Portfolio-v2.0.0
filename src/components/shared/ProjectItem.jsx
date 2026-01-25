@@ -4,6 +4,7 @@ import "react-loading-skeleton/dist/skeleton.css"
 import { FiGithub, FiExternalLink } from "react-icons/fi"
 import { ProjectItemStyle } from "../../styles/ProjectItemStyle"
 import { useTransform, motion, useScroll } from "framer-motion"
+import Button from "./Button"
 
 const ProjectItem = ({
   i = 0,
@@ -36,56 +37,55 @@ const ProjectItem = ({
         top: `calc(10vh + ${i * 30}px)`,
       }}
     >
-        <motion.section
-          className="projectContainer"
+      <motion.section
+        className="projectContainer"
+        style={{
+          scale: i === 0 ? 1 : scale,
+          opacity: i === 0 ? 1 : opacity,
+          transformOrigin: "top center",
+          display: "flex",
+          flexDirection: i % 2 === 0 ? "row" : "row-reverse",
+        }}
+      >
+        <div
+          className="projectBg"
           style={{
-            scale: i === 0 ? 1 : scale,
-            opacity: i === 0 ? 1 : opacity,
-            transformOrigin: "top center",
-            display: "flex",
-            flexDirection: i % 2 === 0 ? "row" : "row-reverse",
+            backgroundImage: `url(${projectImg})`,
           }}
-        >
-          <div
-            className="projectBg"
-            style={{
-              backgroundImage: `url(${projectImg})`,
-            }}
-          ></div>
-          <div className="projectSummary">
-            <p className="projectTitle">{title || <Skeleton />}</p>
-            <div className="skillsTag"></div>
-            <p className="projectDescription">
-              {description || <Skeleton count={5} />}
-            </p>
-            <div className="projectLinks">
-              <a
-                className="socialLink"
-                href={projectRepo}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <button className="projectItemBtn">
-                  Repo
-                  <FiGithub />
-                </button>
-              </a>
+        ></div>
+        <div className="projectSummary">
+          <p className="projectTitle">{title || <Skeleton />}</p>
+          <div className="skillsTag"></div>
+          <p className="projectDescription">
+            {description || <Skeleton count={5} />}
+          </p>
+          <div className="projectLinks">
+            <a
+              className="socialLink"
+              href={projectRepo}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="projectItemBtn">
+                Repo
+                <FiGithub />
+              </button>
+            </a>
 
-              <a
-                className="socialLink"
-                href={projectDemo}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <button className="projectItemBtn">
-                  Live Link
-                  <FiExternalLink />
-                </button>
-              </a>
-            </div>
+            <a
+              className="socialLink"
+              href={projectDemo}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button text={"Live Link"} className="projectItemBtn">
+                <FiExternalLink />
+              </Button>
+            </a>
           </div>
-        </motion.section>
-      </ProjectItemStyle>
-  )
+        </div>
+      </motion.section>
+    </ProjectItemStyle>
+  );
 }
 export default ProjectItem

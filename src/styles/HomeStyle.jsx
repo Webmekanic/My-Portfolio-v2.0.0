@@ -462,7 +462,7 @@ export const MyHome = styled.div`
   }
 
   .projectSection,
-  .contactSection {
+  .talksSection {
     margin-top: 6rem;
     z-index: 20;
     position: relative;
@@ -569,7 +569,7 @@ export const MyHome = styled.div`
     .pattern9 {
       top: 164.5rem;
       transform: skewY(-15.5deg);
-      display: none;
+      // display: none;
     }
     // .xbox1 {
     //   margin-top: -1.9rem;
@@ -615,15 +615,14 @@ export const MyHome = styled.div`
     .pattern7 {
       top: 185rem;
       transform: skewY(14deg);
-      border: 2px solid cyan;
     }
     .pattern8 {
-      border: 2px solid red;
       top: 185rem;
       transform: skewY(-14deg);
     }
     .pattern9 {
-      display: none;
+      top: 208rem;
+      transform: skewY(-14deg);
     }
   }
   @media (min-width: 481px) and (max-width: 1023px) {
@@ -822,7 +821,6 @@ export const ProjectSection = styled.section`
     z-index: 30;
     width: 89%;
     margin: auto;
-    // margin-top: 3.4rem;
   }
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
@@ -839,28 +837,102 @@ export const ProjectSection = styled.section`
     }
   }
 `
-export const ContactSection = styled.section`
+export const TalksSection = styled.section`
   
-  .contactContainer {
+  .talksContainer {
     width: 89%;
     margin: auto;
     margin-top: 40px;
   }
+  
+  .talksList{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  grid-gap: 8rem;
+  }
+
+  .talkItem{
+  width: 55%;
+  }
+
+  .talkLink{
+    font-family: "Chivo Mono", monospace;
+    font-style: Regular;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: ${({ theme }) => theme.colors.lightColor};
+    text-decoration: none;
+  }
+  
   .contactText {
     width: 45%;
     color: ${({ theme }) => theme.colors.textColor};
-    margin-top: 32px;
     position: relative;
     z-index: 20;
   }
 
-  .contactMe {
+  .talkImage{
+    width: 360px;
+    height: 189px;
+  }
+
+  .talkImage img {
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .talksList {
+    border: 1px solid green;
     position: relative;
     z-index: 20;
-    margin-top: 32px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 3rem;
+  }
+
+  .talkInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .talkDate, .talkDuration{
+    font-family: "Chivo Mono", monospace;
+    font-style: light;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: ${({ theme }) => theme.colors.secondaryColor};
+  }
+
+  .talkSeparator{
+    font-weight: 300;
+    color: ${({ theme }) => theme.colors.secondaryColor};
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background: ${({ theme }) => theme.colors.white};
+    flex-shrink: 0;
+    margin: 0 0.4rem;
+  }
+
+  .talkTitle{
+    font-family: "Chivo Mono", monospace;
+    font-style: Regular;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: ${({ theme }) => theme.colors.white};
+  }
+
+  .talkDescription{
+    font-family: "Chivo Mono", monospace;
+    font-style: Regular;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: ${({ theme }) => theme.colors.tertiaryColor};
   }
 
   #NameInput,
@@ -911,7 +983,7 @@ export const ContactSection = styled.section`
   }
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
-    .contactMe {
+    .talksList {
       display: unset;
     }
 
@@ -974,8 +1046,8 @@ export const ContactSection = styled.section`
     right: 55px;
     bottom: 45px;
   }
-  .contactMe {
+  .talksList {
     grid-gap: 6rem;
   }
   }
-`
+`;

@@ -4,8 +4,8 @@ import Footer from "../src/components/layouts/Footer"
 import BgText from "../src/components/shared/BgText"
 import Button from "../src/components/shared/Button"
 import Socials from "../src/components/shared/Socials"
-import { ContactMe } from "../src/styles/ContactStyle"
-import { ContactSection } from "../src/styles/HomeStyle"
+import { talksList } from "../src/styles/ContactStyle"
+import { talksSection } from "../src/styles/HomeStyle"
 import emailjs from "@emailjs/browser"
 import Navbar from "../src/components/layouts/Navbar"
 import MobileMenu from "../src/components/layouts/MobileMenu"
@@ -66,20 +66,20 @@ const Contact = () => {
     <>
       <Navbar />
       {menu && <MobileMenu />}
-      <ContactMe>
+      <talksList>
         <div className="pattern1"></div>
         <div className="pattern2"></div>
         <div className="pattern3"></div>
-        <section className="contactSection">
+        <section className="talksSection">
           <BgText text={"Contact"} classname="ContactBgText" />
-          <ContactSection>
-            <div className="contactContainer">
+          <talksSection>
+            <div className="talksContainer">
               <h1 className="aboutTitle">Contact Me</h1>
               <p className="contactText">
                 Let's discuss your next project over a digital coffee. Got an
                 idea? Need suggestions? Feel free to reach out at anytime.
               </p>
-              <section className="contactMe">
+              <section className="talksList">
                 <section className="contactForm">
                   <form className="contactInput" ref={form} onSubmit={sendEmail}>
                     <input
@@ -138,11 +138,11 @@ const Contact = () => {
                 handleClick={sendEmail}
               />
             </div>
-          </ContactSection>
+          </talksSection>
         </section>
 
         <Footer classname="contact-footer" />
-      </ContactMe>
+      </talksList>
     </>
   )
 }
