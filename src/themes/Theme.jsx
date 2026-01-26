@@ -13,7 +13,8 @@ const theme = {
     tertiaryColor: "#E8EBF1",
     cardColor: "#191E21",
     cardBorderColor: "#343A3E",
-    white: "#F7FCFD"
+    white: "#F7FCFD",
+    secondaryBorder: "#242A2D"
   },
   fontSizes: {
     large: "3rem",

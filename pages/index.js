@@ -1,4 +1,6 @@
 import React, { useRef, useState, useContext, useEffect } from "react"
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRouter } from "next/router"
 import Navbar from "../src/components/layouts/Navbar"
 import Skills from "../src/components/layouts/Skills"
@@ -20,10 +22,46 @@ import { getProjects } from "../src/context/portfolio/PortfolioActions"
 import MobileMenu from "../src/components/layouts/MobileMenu"
 import Loading from "../src/components/layouts/Loading"
 import TypingEffect from "../src/components/shared/TypingEffect"
+
+ gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
-  const router = useRouter()
-  const form = useRef()
-  const { menu, loading, dispatch } = useContext(PortfolioContext)
+    const router = useRouter();
+    const form = useRef();
+    const { menu, loading, dispatch } = useContext(PortfolioContext);
+  const sectionRef = useRef(null);
+  const triggerRef = useRef(null);
+
+useEffect(() => {
+  if (loading) return;
+  if (!sectionRef.current || !triggerRef.current) return;
+
+  const ctx = gsap.context(() => {
+    // total horizontal distance to travel = how much wider the track is than the viewport
+    const getScrollDistance = () =>
+      sectionRef.current.scrollWidth - window.innerWidth;
+
+    gsap.fromTo(
+      sectionRef.current,
+      {
+        x: 0,
+      },
+      {
+        x: () => -getScrollDistance(),
+        ease: "none",
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: "top top",
+          end: () => "+=" + getScrollDistance(), // scroll distance matches actual content width
+          scrub: 0.6,
+          pin: true,
+          invalidateOnRefresh: true, // recalculates on resize
+        },
+      },
+    );
+  });
+
+  return () => ctx.revert();
+}, [loading]);
 
   const [contact, setContact] = useState({
     name: "",
@@ -274,8 +312,50 @@ const Home = () => {
               </div>
             </TalksSection>
           </section>
+          <section className="scroll-section-outer">
+            <div ref={triggerRef}>
+              <div ref={sectionRef} className="scroll-section-inner">
+                <div className="scroll-section">
+                  <div className="card">
+                    <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
+                    <h3>Future of AI in Africa 1</h3>
+                  </div>
+                </div>
+                <div className="scroll-section">
+                  <div className="card">
+                    <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
+                    <h3>Future of AI in Africa 2</h3>
+                  </div>
+                </div>
+                <div className="scroll-section">
+                  <div className="card">
+                    <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
+                    <h3>Future of AI in Africa 3</h3>
+                  </div>
+                </div>
+                <div className="scroll-section">
+                  <div className="card">
+                    <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
+                    <h3>Future of AI in Africa 4</h3>
+                  </div>
+                </div>
+                <div className="scroll-section">
+                  <div className="card">
+                    <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
+                    <h3>Future of AI in Africa 5</h3>
+                  </div>
+                </div>
+                <div className="scroll-section">
+                  <div className="card">
+                    <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
+                    <h3>Future of AI in Africa 6</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </section>
-        {/* <Footer classname="contact-footer" /> */}
+        <Footer classname="contact-footer" />
       </MyHome>
     </>
   );

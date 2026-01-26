@@ -451,6 +451,44 @@ export const MyHome = styled.div`
     z-index: 20;
     width: 100%;
   }
+
+  .scroll-section-outer {
+    overflow: hidden;
+  }
+
+  .scroll-section-inner {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    // width: 600vw;
+    gap: 2rem;
+    height: 100vh;
+  }
+
+  .scroll-section {
+    height: 100vh;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  .card {
+    width: min(525px, 85vw);
+    height: min(525px, 75vh);
+    border: 1px solid ${({ theme }) => theme.colors.cardBorderColor};
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    background-color: ${({ theme }) => theme.colors.cardColor};
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
   .homeAboutBgText {
     position: absolute;
     top: 25px;
@@ -886,9 +924,15 @@ export const TalksSection = styled.section`
   }
 
   .talksList {
-    border: 1px solid green;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.secondaryBorder};
+    padding: 1.2rem 0;
+    grid-gap: 2rem;
     position: relative;
     z-index: 20;
+  }
+
+  .talksList:last-child {
+    border-bottom: none;
   }
 
   .talkInfo{
