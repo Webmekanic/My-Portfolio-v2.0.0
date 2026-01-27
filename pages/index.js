@@ -354,6 +354,22 @@ useEffect(() => {
               </div>
             </div>
           </section>
+          <section className="awardSection">
+            <h1 className="aboutTitle">Recognitions</h1>
+            <p className="contactText">
+              Here are some cool stuff I have worked on
+            </p>
+            <div className="talkItem">
+              <div className="talkInfo">
+                <p className="talkDate">28th March, 2025</p>{" "}
+              </div>
+              <h3 className="talkTitle">GitLab Notable Contributor</h3>
+              <p className="talkDescription">
+                Recognized as GitLab 18.7 notable contributor.
+              </p>
+            </div>
+            <div className="awardLink"></div>
+          </section>
         </section>
         <Footer classname="contact-footer" />
       </MyHome>

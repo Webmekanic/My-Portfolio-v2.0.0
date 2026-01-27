@@ -460,8 +460,7 @@ export const MyHome = styled.div`
     display: flex;
     flex-direction: row;
     position: relative;
-    // width: 600vw;
-    gap: 2rem;
+    gap: 3rem;
     height: 100vh;
   }
 
@@ -473,8 +472,8 @@ export const MyHome = styled.div`
   }
 
   .card {
-    width: min(525px, 85vw);
-    height: min(525px, 75vh);
+    width: min(510px, 85vw);
+    height: min(500px, 75vh);
     border: 1px solid ${({ theme }) => theme.colors.cardBorderColor};
     border-radius: 12px;
     display: flex;
@@ -487,6 +486,7 @@ export const MyHome = styled.div`
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    flex-shrink: 0;
   }
 
   .homeAboutBgText {
