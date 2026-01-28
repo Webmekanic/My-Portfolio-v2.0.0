@@ -1,19 +1,40 @@
 import React from "react"
 import { FooterSection } from "../../styles/footerStyle"
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi"
+import Button from "../shared/Button"
 
 const Footer = ({ classname }) => {
   const footerYear = new Date().getFullYear()
 
+    const handleClick = () => {
+      router.push("/about");
+    };
+
   return (
     <FooterSection className={classname}>
+      <div className="contactSection">
+        <div className="contactTitle">
+          <h2>Ready to build?</h2>
+          <h2>let’s grab a coffee</h2>
+        </div>
+        <div>
+          <p>
+            Let’s discuss your next project over a digital coffee. Got an idea?
+            Need suggestions? Reach out!
+          </p>
+          <div className="contactButton">
+            <Button text={"Send Message"} handleClick={handleClick} />
+            <Button text={"Book a Call"} handleClick={handleClick} />
+          </div>
+        </div>
+      </div>
       <div className="horizontalLine"></div>
       <div className="contactAddresses">
         <section className="copyRight">
           <p className="myInfo">&copy; David Aniebo {footerYear} </p>
           <p className="myInfo myRole">Software Engineer</p>
           <a className="myEmail" href="mailto:aniebovictor001@gmail.com">
-            aniebovictor001@gmail.com
+            davidaniebo001@gmail.com
           </a>
         </section>
 
@@ -46,7 +67,7 @@ const Footer = ({ classname }) => {
         </div>
       </div>
     </FooterSection>
-  )
+  );
 }
 
 export default Footer

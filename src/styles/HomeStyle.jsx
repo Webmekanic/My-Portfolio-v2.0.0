@@ -489,6 +489,37 @@ export const MyHome = styled.div`
     flex-shrink: 0;
   }
 
+  .awardSection {
+    width: 89%;
+    margin: auto;
+  }
+
+  .awardList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .awardWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .awardLink {
+    height: 72px;
+    width: 72px;
+    border-radius: 24px;
+    padding: 12px;
+    font-size: 24px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: ${({ theme }) => theme.colors.cardColor};
+  }
+
   .homeAboutBgText {
     position: absolute;
     top: 25px;
@@ -508,10 +539,10 @@ export const MyHome = styled.div`
   }
 
   .contact-footer {
-    width: 89%;
-    margin: auto;
-    margin-bottom: 1rem;
+    // width: 89%;
+    padding: 5rem;
     margin-top: 3.8rem;
+    background: ${({ theme }) => theme.colors.dark};
   }
 
   @media ${({ theme }) => theme.mediaQueries.below768} {

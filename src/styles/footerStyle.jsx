@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const FooterSection = styled.footer`
-  background-color: transparent;
   position: relative;
   white-space: nowrap;
   z-index: 99;
@@ -48,8 +47,6 @@ export const FooterSection = styled.footer`
     display: flex;
     grid-gap: 1rem;
     font-size: 1.3rem;
-    position: absolute;
-    right: 0;
     margin-bottom: 10px;
   }
   .socialLink {
@@ -59,6 +56,10 @@ export const FooterSection = styled.footer`
 
   .socialLink:hover {
     color: ${({ theme }) => theme.colors.lightColor};
+  }
+
+  .contactTitle{
+    font: 3rem;
   }
 
   // Media Query
@@ -77,7 +78,7 @@ export const FooterSection = styled.footer`
       display: none;
     }
   }
-`
+`;
 
 export const SocialLink = styled.div`
   display: flex;
