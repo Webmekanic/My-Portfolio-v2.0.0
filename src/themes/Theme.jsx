@@ -14,7 +14,8 @@ const theme = {
     cardColor: "#191E21",
     cardBorderColor: "#343A3E",
     white: "#F7FCFD",
-    secondaryBorder: "#242A2D"
+    secondaryBorder: "#242A2D",
+    footerWhite: "#EFF5F8"
   },
   fontSizes: {
     large: "3rem",

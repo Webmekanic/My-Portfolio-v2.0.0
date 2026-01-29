@@ -58,8 +58,18 @@ export const FooterSection = styled.footer`
     color: ${({ theme }) => theme.colors.lightColor};
   }
 
-  .contactTitle{
-    font: 3rem;
+  .contactSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 5rem;
+  }
+
+  .contactTitleText {
+    font-size: 3rem;
+    color: ${({ theme }) => theme.colors.footerWhite};
+    font-family: "Bungee";
+    font-weight: 400;
   }
 
   // Media Query

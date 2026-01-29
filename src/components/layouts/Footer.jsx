@@ -14,8 +14,8 @@ const Footer = ({ classname }) => {
     <FooterSection className={classname}>
       <div className="contactSection">
         <div className="contactTitle">
-          <h2>Ready to build?</h2>
-          <h2>let’s grab a coffee</h2>
+          <h2 className="contactTitleText">Ready to build?</h2>
+          <h2 className="contactTitleText">let’s grab a coffee</h2>
         </div>
         <div>
           <p>
