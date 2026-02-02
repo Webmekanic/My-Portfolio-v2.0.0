@@ -18,14 +18,18 @@ const Footer = ({ classname }) => {
             Ready to build? <br />
             let’s grab a coffee
           </h2>
-          </div>
+        </div>
         <div>
           <p className="contactText">
             Let’s discuss your next project over a digital coffee. <br />
             Got an idea? Need suggestions? Reach out!
           </p>
           <div className="contactButton">
-            <Button text={"Send Message"} handleClick={handleClick} />
+            <Button
+              variant="primary"
+              text={"Send Message"}
+              handleClick={handleClick}
+            />
             <Button text={"Book a Call"} handleClick={handleClick} />
           </div>
         </div>

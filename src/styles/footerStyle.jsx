@@ -24,19 +24,27 @@ export const FooterSection = styled.footer`
   .copyRight {
     display: flex;
     color: ${({ theme }) => theme.colors.textColor};
-    font-style: Medium;
+    font-style: light;
     font-size: clamp(0.8rem, 3vw, 0.875rem);
     margin-top: -0.7rem;
+    font-family: "Chivo Mono";
+    gap: 0.5rem;
+  }
+
+  .myInfo {
+    // // border: 2px solid ${({ theme }) => theme.colors.tertiaryColor};
+    // padding-right: 5rem;
   }
 
   .myInfo:first-child {
-    padding-right: 0.2rem;
-    border-right: 1.2px solid ${({ theme }) => theme.colors.textColor};
+    padding: 0 0.2rem;
+    padding-right: 0.5rem;
+    border-right: 1.2px solid ${({ theme }) => theme.colors.tertiaryColor};
   }
   .myRole {
     padding: 0 0.2rem 0 0.2rem;
-    border-right: 1.2px solid ${({ theme }) => theme.colors.textColor};
-    margin-right: 0.2rem;
+    padding-right: 0.5rem;
+    border-right: 1.2px solid ${({ theme }) => theme.colors.tertiaryColor};
   }
   .myEmail {
     color: ${({ theme }) => theme.colors.textColor};
@@ -83,7 +91,7 @@ export const FooterSection = styled.footer`
     line-height: 20px;
   }
 
-  .contactButton{
+  .contactButton {
     display: flex;
     gap: 1rem;
     margin-top: 1.5rem;
