@@ -15,6 +15,9 @@ const ButtonText = styled.div`
 const Btn = styled.p`
   position: relative;
   z-index: 99;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 `;
 
 const PageButton = styled.button`
@@ -66,14 +69,23 @@ const PageButton = styled.button`
     `}
 `;
 
-function Button({ text, classname, handleClick, variant = "secondary" }) {
+function Button({
+  text,
+  classname,
+  handleClick,
+  variant = "secondary",
+  icon: Icon,
+}) {
   return (
     <PageButton
       className={classname}
       variant={variant}
       onClick={(e) => handleClick(e)}
     >
-      <Btn>{text}</Btn>
+      <Btn>
+        {Icon && <Icon size={16} />}
+        {text}
+      </Btn>
       <ButtonText></ButtonText>
     </PageButton>
   );

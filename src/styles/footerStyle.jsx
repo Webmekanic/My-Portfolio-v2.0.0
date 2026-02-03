@@ -58,7 +58,7 @@ export const FooterSection = styled.footer`
     margin-bottom: 10px;
   }
   .socialLink {
-    color: ${({ theme }) => theme.colors.textColor};
+    color: ${({ theme }) => theme.colors.iconColor};
     cursor: pointer;
   }
 

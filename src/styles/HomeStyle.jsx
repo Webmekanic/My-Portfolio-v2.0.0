@@ -500,13 +500,21 @@ export const MyHome = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.secondaryBorder};
+    padding: 1.2rem 0;
+    grid-gap: 2rem;
   }
-  .awardWrapper{
+
+  .awardList:last-child {
+    border-bottom: none;
+  }
+
+  .awardWrapper {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .awardLink {
     height: 72px;
     width: 72px;
@@ -518,6 +526,43 @@ export const MyHome = styled.div`
     display: flex;
     justify-content: center;
     background-color: ${({ theme }) => theme.colors.cardColor};
+    cursor: pointer;
+    border: 1px solid ${({ theme }) => theme.colors.cardBorderColor};
+  }
+
+  .awardLink:hover {
+    background-color: ${({ theme }) => theme.colors.lightColor};
+    color: ${({ theme }) => theme.colors.barColor};
+  }
+
+  .awardLinkIcon {
+    color: ${({ theme }) => theme.colors.white};
+  }
+
+  .awardDate {
+    font-size: 14px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.colors.secondaryColor};
+    font-style: regular;
+    font-family: "Chivo Mono", monospace;
+    margin-bottom: 0.75rem;
+  }
+
+  .awardTitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.colors.white};
+    font-style: regular;
+    font-family: "Chivo Mono", monospace;
+    margin-bottom: 0.5rem;
+  }
+
+  .awardDescription {
+    font-size: 16px;
+    font-weight: 300;
+    color: ${({ theme }) => theme.colors.textColor};
+    font-style: regular;
+    font-family: "Chivo Mono", monospace;
   }
 
   .homeAboutBgText {
@@ -922,7 +967,7 @@ export const TalksSection = styled.section`
   }
 
   .talkItem{
-  width: 55%;
+    width: 55%;
   }
 
   .talkLink{

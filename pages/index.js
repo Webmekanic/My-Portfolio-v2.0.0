@@ -22,7 +22,7 @@ import { getProjects } from "../src/context/portfolio/PortfolioActions"
 import MobileMenu from "../src/components/layouts/MobileMenu"
 import Loading from "../src/components/layouts/Loading"
 import TypingEffect from "../src/components/shared/TypingEffect"
-import { ArrowUpRight } from "lucide-react";
+import { FiArrowUpRight } from "react-icons/fi";
 
 
  gsap.registerPlugin(ScrollTrigger);
@@ -183,7 +183,11 @@ useEffect(() => {
                     </p>
 
                     <div className="letsCodeBtn">
-                      <Button text={"Let's Build"} handleClick={handleClick} />
+                      <Button
+                        variant="primary"
+                        text={"Let's Build"}
+                        handleClick={handleClick}
+                      />
                     </div>
                   </div>
                 </section>
@@ -362,64 +366,64 @@ useEffect(() => {
               Here are some cool stuff I have worked on
             </p>
             <div className="awardWrapper">
-            <div className="awardList">
-              <div className="talkItem">
-                <div className="talkInfo">
-                  <p className="talkDate">28th March, 2025</p>{" "}
+              <div className="awardList">
+                <div className="awardItem">
+                  <div className="awardInfo">
+                    <p className="awardDate">28th March, 2025</p>{" "}
+                  </div>
+                  <h3 className="awardTitle">GitLab Notable Contributor</h3>
+                  <p className="awardDescription">
+                    Recognized as GitLab 18.7 notable contributor.
+                  </p>
                 </div>
-                <h3 className="talkTitle">GitLab Notable Contributor</h3>
-                <p className="talkDescription">
-                  Recognized as GitLab 18.7 notable contributor.
-                </p>
-              </div>
-              <div className="awardLink">
                 <a
                   href="https://docs.gitlab.com/releases/18/gitlab-18-7-released/"
                   className="awardLinkIcon"
                 >
-                  <ArrowUpRight />
+                  <div className="awardLink">
+                    <FiArrowUpRight size={36} />
+                  </div>
                 </a>
               </div>
-            </div>
-            <div className="awardList">
-              <div className="talkItem">
-                <div className="talkInfo">
-                  <p className="talkDate">28th March, 2025</p>{" "}
+              <div className="awardList">
+                <div className="awardItem">
+                  <div className="awardInfo">
+                    <p className="awardDate">28th March, 2025</p>{" "}
+                  </div>
+                  <h3 className="awardTitle">GitLab Notable Contributor</h3>
+                  <p className="awardDescription">
+                    Recognized as GitLab 18.7 notable contributor.
+                  </p>
                 </div>
-                <h3 className="talkTitle">GitLab Notable Contributor</h3>
-                <p className="talkDescription">
-                  Recognized as GitLab 18.7 notable contributor.
-                </p>
-              </div>
-              <div className="awardLink">
                 <a
                   href="https://docs.gitlab.com/releases/18/gitlab-18-7-released/"
                   className="awardLinkIcon"
                 >
-                  <ArrowUpRight />
+                  <div className="awardLink">
+                    <FiArrowUpRight size={36} />
+                  </div>
                 </a>
               </div>
-            </div>
-            <div className="awardList">
-              <div className="talkItem">
-                <div className="talkInfo">
-                  <p className="talkDate">28th March, 2025</p>{" "}
+              <div className="awardList">
+                <div className="awardItem">
+                  <div className="awardInfo">
+                    <p className="awardDate">28th March, 2025</p>{" "}
+                  </div>
+                  <h3 className="awardTitle">GitLab Notable Contributor</h3>
+                  <p className="awardDescription">
+                    Recognized as GitLab 18.7 notable contributor.
+                  </p>
                 </div>
-                <h3 className="talkTitle">GitLab Notable Contributor</h3>
-                <p className="talkDescription">
-                  Recognized as GitLab 18.7 notable contributor.
-                </p>
-              </div>
-              <div className="awardLink">
                 <a
                   href="https://docs.gitlab.com/releases/18/gitlab-18-7-released/"
                   className="awardLinkIcon"
                 >
-                  <ArrowUpRight />
+                  <div className="awardLink">
+                    <FiArrowUpRight size={36} />
+                  </div>
                 </a>
               </div>
             </div>
-          </div>
           </section>
         </section>
         <Footer classname="contact-footer" />

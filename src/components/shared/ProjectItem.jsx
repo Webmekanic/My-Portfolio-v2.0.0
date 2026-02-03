@@ -66,10 +66,11 @@ const ProjectItem = ({
               target="_blank"
               rel="noreferrer"
             >
-              <button className="projectItemBtn">
-                Repo
-                <FiGithub />
-              </button>
+              <Button
+                icon={FiGithub}
+                text={"Repository"}
+                className="projectItemBtn"
+              />
             </a>
 
             <a
@@ -78,9 +79,12 @@ const ProjectItem = ({
               target="_blank"
               rel="noreferrer"
             >
-              <Button text={"Live Link"} className="projectItemBtn">
-                <FiExternalLink />
-              </Button>
+              <Button
+                icon={FiExternalLink}
+                variant="primary"
+                text={"Live Link"}
+                className="projectItemBtn" 
+              />
             </a>
           </div>
         </div>
