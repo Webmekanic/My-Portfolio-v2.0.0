@@ -40,7 +40,7 @@ useEffect(() => {
   const ctx = gsap.context(() => {
     // total horizontal distance to travel = how much wider the track is than the viewport
     const getScrollDistance = () =>
-      sectionRef.current.scrollWidth - window.innerWidth;
+      sectionRef.current.scrollWidth - triggerRef.current.offsetWidth;
 
     gsap.fromTo(
       sectionRef.current,
@@ -50,12 +50,14 @@ useEffect(() => {
       {
         x: () => -getScrollDistance(),
         ease: "none",
+        force3D: true,
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
           end: () => "+=" + getScrollDistance(), // scroll distance matches actual content width
-          scrub: 0.6,
+          scrub: true,
           pin: true,
+          // pinType: "transform",
           invalidateOnRefresh: true, // recalculates on resize
         },
       },
@@ -319,7 +321,8 @@ useEffect(() => {
             </TalksSection>
           </section>
           <section className="scroll-section-outer">
-            <div ref={triggerRef}>
+            <div div className="scroll-clip">
+            <div ref={triggerRef} className="scroll-trigger-wrapper">
               <div ref={sectionRef} className="scroll-section-inner">
                 <div className="scroll-section">
                   <div className="card">
@@ -358,6 +361,7 @@ useEffect(() => {
                   </div>
                 </div>
               </div>
+            </div>
             </div>
           </section>
           <section className="awardSection">

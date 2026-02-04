@@ -452,8 +452,15 @@ export const MyHome = styled.div`
     width: 100%;
   }
 
-  .scroll-section-outer {
-    overflow: hidden;
+  scroll-section-outer {
+    // overflow: hidden;
+    width: 89%;
+    border: 2px solid red;
+    margin: auto;
+  }
+
+  .scroll-trigger-wrapper {
+    width: 100%;
   }
 
   .scroll-section-inner {
@@ -462,6 +469,7 @@ export const MyHome = styled.div`
     position: relative;
     gap: 3rem;
     height: 100vh;
+    will-change: transform;
   }
 
   .scroll-section {
@@ -481,12 +489,20 @@ export const MyHome = styled.div`
     background-color: ${({ theme }) => theme.colors.cardColor};
   }
 
+  .scroll-clip {
+    clip-path: inset(0);
+    overflow: hidden;
+    width: 89%;
+    margin: auto;
+  }
+
   .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
     flex-shrink: 0;
+    margin: auto;
   }
 
   .awardSection {
@@ -559,7 +575,7 @@ export const MyHome = styled.div`
 
   .awardDescription {
     font-size: 16px;
-    font-weight: 300;
+    font-w.eight: 300;
     color: ${({ theme }) => theme.colors.textColor};
     font-style: regular;
     font-family: "Chivo Mono", monospace;
