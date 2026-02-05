@@ -322,46 +322,95 @@ useEffect(() => {
           </section>
           <section className="scroll-section-outer">
             <div div className="scroll-clip">
-            <div ref={triggerRef} className="scroll-trigger-wrapper">
-              <div ref={sectionRef} className="scroll-section-inner">
-                <div className="scroll-section">
-                  <div className="card">
-                    <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
-                    <h3>Future of AI in Africa 1</h3>
+              <div ref={triggerRef} className="scroll-trigger-wrapper">
+                <div ref={sectionRef} className="scroll-section-inner">
+                  <div className="scroll-section">
+                    <div className="card">
+                      <div className="scroll-section-image-container">
+                        <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
+                      </div>
+                      <div className="eventDetails">
+                        <h4 className="eventName">GDG DevFest Uyo 2024</h4>
+                        <h3 className="sessionTopic">Future of AI in Africa</h3>
+                        <a href="#" className="eventLink">
+                          See events
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="scroll-section">
-                  <div className="card">
-                    <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
-                    <h3>Future of AI in Africa 2</h3>
+                  <div className="scroll-section">
+                    <div className="card">
+                      <div className="scroll-section-image-container">
+                        <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
+                      </div>
+                      <div className="eventDetails">
+                        <h4 className="eventName">GDG DevFest Uyo 2024</h4>
+                        <h3 className="sessionTopic">Future of AI in Africa</h3>
+                        <a href="#" className="eventLink">
+                          See events
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="scroll-section">
-                  <div className="card">
-                    <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
-                    <h3>Future of AI in Africa 3</h3>
+                  <div className="scroll-section">
+                    <div className="card">
+                      <div className="scroll-section-image-container">
+                        <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
+                      </div>
+                      <div className="eventDetails">
+                        <h4 className="eventName">GDG DevFest Uyo 2024</h4>
+                        <h3 className="sessionTopic">Future of AI in Africa</h3>
+                        <a href="#" className="eventLink">
+                          See events
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="scroll-section">
-                  <div className="card">
-                    <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
-                    <h3>Future of AI in Africa 4</h3>
+
+                  <div className="scroll-section">
+                    <div className="card">
+                      <div className="scroll-section-image-container">
+                        <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
+                      </div>
+                      <div className="eventDetails">
+                        <h4 className="eventName">GDG DevFest Uyo 2024</h4>
+                        <h3 className="sessionTopic">Future of AI in Africa</h3>
+                        <a href="#" className="eventLink">
+                          See events
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="scroll-section">
-                  <div className="card">
-                    <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
-                    <h3>Future of AI in Africa 5</h3>
+                  <div className="scroll-section">
+                    <div className="card">
+                      <div className="scroll-section-image-container">
+                        <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
+                      </div>
+                      <div className="eventDetails">
+                        <h4 className="eventName">GDG DevFest Uyo 2024</h4>
+                        <h3 className="sessionTopic">Future of AI in Africa</h3>
+                        <a href="#" className="eventLink">
+                          See events
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="scroll-section">
-                  <div className="card">
-                    <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
-                    <h3>Future of AI in Africa 6</h3>
+                  <div className="scroll-section">
+                    <div className="card">
+                      <div className="scroll-section-image-container">
+                        <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
+                      </div>
+                      <div className="eventDetails">
+                        <h4 className="eventName">GDG DevFest Uyo 2024</h4>
+                        <h3 className="sessionTopic">Future of AI in Africa</h3>
+                        <a href="#" className="eventLink">
+                          See events
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             </div>
           </section>
           <section className="awardSection">

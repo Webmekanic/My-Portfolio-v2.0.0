@@ -453,9 +453,7 @@ export const MyHome = styled.div`
   }
 
   scroll-section-outer {
-    // overflow: hidden;
     width: 89%;
-    border: 2px solid red;
     margin: auto;
   }
 
@@ -467,7 +465,7 @@ export const MyHome = styled.div`
     display: flex;
     flex-direction: row;
     position: relative;
-    gap: 3rem;
+    gap: 4.1rem;
     height: 100vh;
     will-change: transform;
   }
@@ -480,13 +478,23 @@ export const MyHome = styled.div`
   }
 
   .card {
-    width: min(510px, 85vw);
+    width: min(400px, 85vw);
     height: min(500px, 75vh);
-    border: 1px solid ${({ theme }) => theme.colors.cardBorderColor};
+    // border: 1px solid ${({ theme }) => theme.colors.cardBorderColor};
     border-radius: 12px;
     display: flex;
+    // align-items: center;
     flex-direction: column;
-    background-color: ${({ theme }) => theme.colors.cardColor};
+    // background-color: ${({ theme }) => theme.colors.cardColor};
+  }
+
+  .scroll-section-image-container {
+    // border: 2px solid red;
+    width: 400px;
+    height: 370px;
+    border-radius: 10px;
+    // padding: 1px;
+    // margin: 2.2rem 0;
   }
 
   .scroll-clip {
@@ -496,13 +504,47 @@ export const MyHome = styled.div`
     margin: auto;
   }
 
-  .card img {
+  .scroll-section-image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    // border-radius: 10px;
     border-radius: 10px;
     flex-shrink: 0;
     margin: auto;
+  }
+
+  .eventDetails {
+    // border: 2px solid red;
+    padding-top: 1.5rem;
+  }
+
+  .eventName {
+    font-size: 20px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.colors.white};
+    font-style: regular;
+    font-family: "Chivo Mono", monospace;
+    margin-bottom: 0.4rem;
+  }
+
+  .sessionTopic {
+    font-size: 16px;
+    font-weight: 300;
+    color: ${({ theme }) => theme.colors.textColor};
+    font-style: regular;
+    font-family: "Chivo Mono", monospace;
+    margin-bottom: 1rem;
+  }
+
+  .eventLink {
+    font-family: "Chivo Mono", monospace;
+    font-style: Regular;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: ${({ theme }) => theme.colors.lightColor};
+    text-decoration: none;
   }
 
   .awardSection {
@@ -575,7 +617,7 @@ export const MyHome = styled.div`
 
   .awardDescription {
     font-size: 16px;
-    font-w.eight: 300;
+    font-weight: 300;
     color: ${({ theme }) => theme.colors.textColor};
     font-style: regular;
     font-family: "Chivo Mono", monospace;
