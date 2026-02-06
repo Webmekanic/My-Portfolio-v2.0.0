@@ -23,15 +23,18 @@ import MobileMenu from "../src/components/layouts/MobileMenu"
 import Loading from "../src/components/layouts/Loading"
 import TypingEffect from "../src/components/shared/TypingEffect"
 import { FiArrowUpRight, FiArrowRight } from "react-icons/fi";
-
+import BlogItem from "../src/components/shared/BlogItem";
+import CardSkeleton from "../src/components/shared/CardSkeleton";
+import { BlogItemStyle } from "../src/styles/BlogtemStyle";
 
  gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
-    const router = useRouter();
-    const form = useRef();
-    const { menu, loading, dispatch } = useContext(PortfolioContext);
+  const router = useRouter();
+  const form = useRef();
+  const { menu, loading, dispatch } = useContext(PortfolioContext);
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
+  const { blogPosts } = useContext(PortfolioContext);
 
 useEffect(() => {
   if (loading) return;
@@ -251,78 +254,31 @@ useEffect(() => {
 
           <section className="talksSection">
             <TalksSection>
-              <div className="talksContainer">
-                <h1 className="aboutTitle">Talks and Engagements</h1>
-                <p className="contactText">
-                  Here are some talks, workshops, and events where I've shared
-                  ideas.
-                </p>
-                <section className="talksList">
-                  <div className="talkItem">
-                    <div className="talkInfo">
-                      <p className="talkDate">28th March, 2025</p>{" "}
-                      <span className="talkSeparator"></span>
-                      <p className="talkDuration">38 mins</p>
-                    </div>
-                    <h3 className="talkTitle">Future of AI in Africa</h3>
-                    <p className="talkDescription">
-                      In this talk, I explored the potential impact of AI on
-                      various sectors in Africa, discussing both opportunities
-                      and challenges.
-                    </p>
-                    <a href="#" className="talkLink">
-                      Read more <FiArrowRight />
-                    </a>
-                  </div>
-                  <div className="talkImage">
-                    <img srcSet="/assets/api-design.png" alt="Talk Image" />
-                  </div>
-                </section>
-
-                <section className="talksList">
-                  <div className="talkItem">
-                    <div className="talkInfo">
-                      <p className="talkDate">28th March, 2025</p>{" "}
-                      <span className="talkSeparator"></span>
-                      <p className="talkDuration">38 mins</p>
-                    </div>
-                    <h3 className="talkTitle">Future of AI in Africa</h3>
-                    <p className="talkDescription">
-                      In this talk, I explored the potential impact of AI on
-                      various sectors in Africa, discussing both opportunities
-                      and challenges.
-                    </p>
-                    <a href="#" className="talkLink">
-                      Read more <FiArrowRight />
-                    </a>
-                  </div>
-                  <div className="talkImage">
-                    <img srcSet="/assets/api-design.png" alt="Talk Image" />
-                  </div>
-                </section>
-
-                <section className="talksList">
-                  <div className="talkItem">
-                    <div className="talkInfo">
-                      <p className="talkDate">28th March, 2025</p>{" "}
-                      <span className="talkSeparator"></span>
-                      <p className="talkDuration">38 mins</p>
-                    </div>
-                    <h3 className="talkTitle">Future of AI in Africa</h3>
-                    <p className="talkDescription">
-                      In this talk, I explored the potential impact of AI on
-                      various sectors in Africa, discussing both opportunities
-                      and challenges.
-                    </p>
-                    <a href="#" className="talkLink">
-                      Read more <FiArrowRight />
-                    </a>
-                  </div>
-                  <div className="talkImage">
-                    <img srcSet="/assets/api-design.png" alt="Talk Image" />
-                  </div>
-                </section>
-              </div>
+              <BlogItemStyle>
+                <div className="talksContainer">
+                  <h1 className="aboutTitle">Talks and Engagements</h1>
+                  <p className="contactText">
+                    Here are some talks, workshops, and events where I've shared
+                    ideas.
+                  </p>
+                </div>
+                {/*  */}
+                {blogPosts?.length === undefined ? (
+                  <CardSkeleton cards={3} cardWidth="100%" />
+                ) : (
+                  blogPosts.map((blogPost, index) => (
+                    <BlogItem
+                      key={index}
+                      date={blogPost.fields.datePosted}
+                      duration={blogPost.fields.readTime}
+                      title={blogPost.fields.title}
+                      description={blogPost.fields.description}
+                      talkImg={blogPost.fields.coverPhoto?.fields?.file?.url}
+                      talkLink={blogPost.fields.blogLink}
+                    />
+                  ))
+                )}
+              </BlogItemStyle>
             </TalksSection>
           </section>
           <section className="scroll-section-outer">
