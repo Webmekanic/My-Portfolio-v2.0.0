@@ -54,14 +54,16 @@ export const ProjectItemStyle = styled.div`
   .projectSummary {
     width: 50%; 
     margin-top: 10px;
+    align-items: center;
+    padding: 2rem;
   }
   .projectTitle {
-    color: ${({ theme }) => theme.colors.neutral};
-    font-size: 20px;
-    font-family: Chivo;
-    font-style: black;
-    font-weight: 600;
-    letter-spacing: 1px;
+    color: ${({ theme }) => theme.colors.footerWhite};
+    font-size: 28px;
+    font-family: "Chivo mono";
+    font-weight: 300;
+    font-style: light;
+    padding-top: 0.5rem;
   }
 
   .skillsTag {
@@ -71,20 +73,22 @@ export const ProjectItemStyle = styled.div`
   }
 
   .projectDescription {
+  color: ${({ theme }) => theme.colors.textColor};
     margin-top: 5px;
-    font-family: Chivo;
-    font-style: black;
+    font-family: "Chivo mono";
+    font-style: light;
     line-height: 1.5;
-    height: 120px;
-    font-size: 13.8px;
+    font-size: 16px;
     // display: flex;
     // align-items: center;
+    margin-top: 2rem;
   }
   .projectLinks {
     display: flex;
     text-align: center;
     align-items: center;
     grid-gap: 1rem;
+    margin-top: 2rem;
 
     .socialLink {
       text-decoration: none;

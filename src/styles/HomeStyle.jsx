@@ -452,11 +452,11 @@ export const MyHome = styled.div`
     width: 100%;
   }
 
-  scroll-section-outer {
-    width: 89%;
-    margin: auto;
-  }
-
+  // .scroll-section-outer {
+  //   border: 2px solid red;
+  // }
+  
+  
   .scroll-trigger-wrapper {
     width: 100%;
   }
@@ -1036,6 +1036,9 @@ export const TalksSection = styled.section`
     line-height: 20px;
     color: ${({ theme }) => theme.colors.lightColor};
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
   }
   
   .contactText {
@@ -1082,6 +1085,7 @@ export const TalksSection = styled.section`
     font-size: 16px;
     line-height: 20px;
     color: ${({ theme }) => theme.colors.secondaryColor};
+    margin-bottom: 1rem;
   }
 
   .talkSeparator{
@@ -1093,6 +1097,7 @@ export const TalksSection = styled.section`
     background: ${({ theme }) => theme.colors.white};
     flex-shrink: 0;
     margin: 0 0.4rem;
+    margin-bottom: 1rem;
   }
 
   .talkTitle{
@@ -1111,6 +1116,8 @@ export const TalksSection = styled.section`
     font-size: 16px;
     line-height: 20px;
     color: ${({ theme }) => theme.colors.tertiaryColor};
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   #NameInput,

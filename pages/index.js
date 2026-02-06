@@ -22,7 +22,7 @@ import { getProjects } from "../src/context/portfolio/PortfolioActions"
 import MobileMenu from "../src/components/layouts/MobileMenu"
 import Loading from "../src/components/layouts/Loading"
 import TypingEffect from "../src/components/shared/TypingEffect"
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight, FiArrowRight } from "react-icons/fi";
 
 
  gsap.registerPlugin(ScrollTrigger);
@@ -266,7 +266,7 @@ useEffect(() => {
                       and challenges.
                     </p>
                     <a href="#" className="talkLink">
-                      Learn more
+                      Learn more <FiArrowRight />
                     </a>
                   </div>
                   <div className="talkImage">
@@ -288,7 +288,7 @@ useEffect(() => {
                       and challenges.
                     </p>
                     <a href="#" className="talkLink">
-                      Learn more
+                      Learn more <FiArrowRight />
                     </a>
                   </div>
                   <div className="talkImage">
@@ -310,7 +310,7 @@ useEffect(() => {
                       and challenges.
                     </p>
                     <a href="#" className="talkLink">
-                      Learn more
+                      Learn more <FiArrowRight />
                     </a>
                   </div>
                   <div className="talkImage">
@@ -321,6 +321,11 @@ useEffect(() => {
             </TalksSection>
           </section>
           <section className="scroll-section-outer">
+            <h1>Talks and Engagements</h1>
+            <p>
+              Here are some talks, workshops, and events where I've shared
+              ideas.
+            </p>
             <div div className="scroll-clip">
               <div ref={triggerRef} className="scroll-trigger-wrapper">
                 <div ref={sectionRef} className="scroll-section-inner">
