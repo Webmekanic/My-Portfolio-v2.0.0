@@ -167,22 +167,24 @@ useEffect(() => {
                     <div className="skillItem"></div>
                     <div className="skillItem"></div>
                   </div>
-                  <div className="aboutText">
-                    <p>
-                      I am a Software Engineer with skills in MongoDB,
-                      ExpressJS, ReactJS, and NodeJS (MERN Stack), passionate
-                      about developing clean, intuitive interfaces and adding my
-                      bit to the world of web development.
-                    </p>
-                    <p className="aboutText2">
-                      When I am not knee-deep into programming, I can be found
-                      reading playing games or going for a walk with my dogs.
-                    </p>
-                    <p className="aboutText3">
-                      I am open to freelance and full-time positions in an
-                      environment which presents fun challenges with provision
-                      for constant growth.
-                    </p>
+                  <div className="aboutTextDescription">
+                    <div className="aboutText">
+                      <p>
+                        I am a Software Engineer with skills in MongoDB,
+                        ExpressJS, ReactJS, and NodeJS (MERN Stack), passionate
+                        about developing clean, intuitive interfaces and adding
+                        my bit to the world of web development.
+                      </p>
+                      <p className="aboutText2">
+                        When I am not knee-deep into programming, I can be found
+                        reading playing games or going for a walk with my dogs.
+                      </p>
+                      <p className="aboutText3">
+                        I am open to freelance and full-time positions in an
+                        environment which presents fun challenges with provision
+                        for constant growth.
+                      </p>
+                    </div>
 
                     <div className="letsCodeBtn">
                       <Button
@@ -266,7 +268,7 @@ useEffect(() => {
                       and challenges.
                     </p>
                     <a href="#" className="talkLink">
-                      Learn more <FiArrowRight />
+                      Read more <FiArrowRight />
                     </a>
                   </div>
                   <div className="talkImage">
@@ -288,7 +290,7 @@ useEffect(() => {
                       and challenges.
                     </p>
                     <a href="#" className="talkLink">
-                      Learn more <FiArrowRight />
+                      Read more <FiArrowRight />
                     </a>
                   </div>
                   <div className="talkImage">
@@ -310,7 +312,7 @@ useEffect(() => {
                       and challenges.
                     </p>
                     <a href="#" className="talkLink">
-                      Learn more <FiArrowRight />
+                      Read more <FiArrowRight />
                     </a>
                   </div>
                   <div className="talkImage">

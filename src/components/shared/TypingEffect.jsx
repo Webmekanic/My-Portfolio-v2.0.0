@@ -53,6 +53,7 @@ const TypingContainer = styled.div`
 `;
 
 const TypingEffect = ({ text, className, startDelay = 0 }) => {
+  const containerRef = useRef(null);
   const svgRef = useRef(null);
   const textRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -60,6 +61,7 @@ const TypingEffect = ({ text, className, startDelay = 0 }) => {
   useEffect(() => {
     if (hasAnimated || !textRef.current || !svgRef.current) return;
 
+    const timeouts = [];
     const letters = textRef.current.querySelectorAll('span');
     const svg = svgRef.current;
 
@@ -168,9 +170,11 @@ const TypingEffect = ({ text, className, startDelay = 0 }) => {
 
       // Skip confetti for spaces
       if (!isSpace) {
-        setTimeout(() => {
+        const timeoutId = setTimeout(() => {
+          if (!letter.isConnected || !textRef.current || !containerRef.current || !svgRef.current) return;
+
           const updatedRect = letter.getBoundingClientRect();
-          const containerRect = textRef.current.parentElement.getBoundingClientRect();
+          const containerRect = containerRef.current.getBoundingClientRect();
           const x0 = updatedRect.left - containerRect.left + updatedRect.width / 2;
           const y0 = updatedRect.top - containerRect.top + updatedRect.height / 2;
           const color = colors[index % colors.length];
@@ -179,6 +183,8 @@ const TypingEffect = ({ text, className, startDelay = 0 }) => {
           for (let i = 0; i < 8; i++) addTri(x0, y0, shade, fontSize);
           for (let i = 0; i < 8; i++) addCirc(x0, y0, fontSize);
         }, (delay + 0.15) * 1000);
+
+        timeouts.push(timeoutId);
       }
     };
 
@@ -187,10 +193,14 @@ const TypingEffect = ({ text, className, startDelay = 0 }) => {
     });
 
     setHasAnimated(true);
+
+    return () => {
+      timeouts.forEach(clearTimeout);
+    };
   }, [hasAnimated, startDelay]);
 
   return (
-    <TypingContainer className={className}>
+    <TypingContainer className={className} ref={containerRef}>
       <svg ref={svgRef}></svg>
       <div className="typing-text" ref={textRef}>
         {text.split('').map((char, index) => (

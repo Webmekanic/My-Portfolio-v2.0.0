@@ -8,6 +8,7 @@ export const FooterSection = styled.footer`
   padding-bottom: 0.5rem;
 
   .horizontalLine {
+    width: 89%;
     border-top: 1px solid ${({ theme }) => theme.colors.cardBorderColor};
     margin: 1.875rem auto;
     margin-top: 2.5rem;
@@ -19,6 +20,8 @@ export const FooterSection = styled.footer`
     justify-content: space-between;
     align-items: center;
     margin-top: 2.5rem;
+    width: 89%;
+    margin: auto;
   }
 
   .copyRight {
@@ -67,14 +70,17 @@ export const FooterSection = styled.footer`
   }
 
   .contactSection {
+    // border: 2px solid red;
     display: flex;
-    justify-content: space-between;
-    padding: 2rem;
+    width: 89%;
+    margin: auto;
+    // justify-content: space-between;
     gap: 5rem;
+    padding-top: 4rem;
   }
 
   .contactTitleText {
-    font-size: 3rem;
+    font-size: clamp(1rem, 7vw, 3rem);
     color: ${({ theme }) => theme.colors.footerWhite};
     font-family: "Bungee";
     font-weight: 400;
@@ -84,7 +90,7 @@ export const FooterSection = styled.footer`
 
   .contactText {
     color: ${({ theme }) => theme.colors.tertiaryColor};
-    font-size: 16px;
+    font-size: clamp(0.875rem, 2vw, 1rem);
     font-weight: 300;
     font-style: light;
     font-family: "Chivo Mono";
@@ -100,17 +106,20 @@ export const FooterSection = styled.footer`
   // Media Query
   @media ${({ theme }) => theme.mediaQueries.below768} {
     position: relative;
-    .socialIcons {
-      position: absolute;
-      top: 0px;
-      right: unset;
-    }
+
     .myRole {
       border: none;
     }
 
     .myEmail {
       display: none;
+    }
+
+    .contactSection {
+      display: flex;
+      flex-direction: column;
+      padding-top: 2rem;
+      gap: 2rem;
     }
   }
 `;

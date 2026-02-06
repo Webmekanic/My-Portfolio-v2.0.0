@@ -643,7 +643,7 @@ export const MyHome = styled.div`
 
   .contact-footer {
     // width: 89%;
-    padding: 5rem;
+    // padding: 5rem;
     margin-top: 3.8rem;
     background: ${({ theme }) => theme.colors.dark};
   }
@@ -661,15 +661,15 @@ export const MyHome = styled.div`
       font-size: 3rem;
     }
 
-    .contact-footer {
-      width: 95%;
-      margin: auto;
-      margin-bottom: 2rem;
-      position: absolute;
-      padding-left: 30px;
-      margin-top: 100px;
-      padding-bottom: 2rem;
-    }
+    // .contact-footer {
+    //   width: 95%;
+    //   margin: auto;
+    //   margin-bottom: 2rem;
+    //   position: absolute;
+    //   padding-left: 30px;
+    //   margin-top: 100px;
+    //   padding-bottom: 2rem;
+    // }
   }
 
   @media ${({ theme }) => theme.mediaQueries.above768} {
@@ -861,7 +861,7 @@ export const AboutAniebo = styled.section`
   .aboutText > * {
     font-family: "Chivo Mono";
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.3125rem;
     color: ${({ theme }) => theme.colors.textColor};
   }
@@ -926,9 +926,26 @@ export const AboutAniebo = styled.section`
     .aboutAniebo1 {
       display: unset;
     }
-    .skillsCard {
+    .aboutTextDescription {
       margin-top: 2rem;
     }
+
+    .skillsCard {
+      margin-top: 2rem;
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-rows: 104px;
+      gap: 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .skillsCard::-webkit-scrollbar {
+      display: none;
+    }
+
     .fullName {
       margin-top: 2.2rem;
     }
@@ -1169,7 +1186,27 @@ export const TalksSection = styled.section`
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
     .talksList {
-      display: unset;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      gap: 1.5rem;
+    }
+
+    .talkItem {
+      width: 100%;
+    }
+
+    .talkDescription {
+      display: none;
+    }
+
+    .talkImage {
+      width: 100%;
+      height: auto;
+    }
+
+    .talkImage img {
+      height: auto;
     }
 
     .contactText {

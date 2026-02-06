@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const ProjectItemStyle = styled.div`
-  // display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 15px;
@@ -11,37 +11,35 @@ export const ProjectItemStyle = styled.div`
     145deg,
     hsl(203deg 25% 6%) 1%,
     hsl(202deg 25% 6%) 49%,
-    hsl(201deg 25% 6%) 51%3 hsl(201deg 25% 5%) 49%,
+    hsl(201deg 25% 6%) 51%,
+    hsl(201deg 25% 5%) 49%,
     hsl(200deg 25% 5%) 51%,
     hsl(200deg 25% 5%) 99%
   );
   cursor: pointer;
 
   .projectContainer {
-    // display: flex;
     position: relative;
     background-color: ${({ theme }) => theme.colors.cardColor};
     border-radius: 20px;
     border: 1px solid ${({ theme }) => theme.colors.cardBorderColor};
+    display: flex;
+    flex-direction: row;
     gap: 32px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 12px;
-    padding-right: 32px;
+    padding: 12px;
     height: 380px;
+    min-height: 380px;
     width: 100%;
-    // max-width: 1100px;
-    // transform-origin: top;
     overflow: hidden;
   }
 
   .projectBg {
-    min-height: 180px;
     width: 50%;
+    height: 100%;
     flex-shrink: 0;
-    border-radius: 3px;
+    border-radius: 12px;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: 50% 50%;
     overflow: hidden;
 
@@ -52,10 +50,9 @@ export const ProjectItemStyle = styled.div`
   }
 
   .projectSummary {
-    width: 50%; 
+    width: 50%;
     margin-top: 10px;
-    align-items: center;
-    padding: 2rem;
+    padding: 0 0.5rem 0.5rem;
   }
   .projectTitle {
     color: ${({ theme }) => theme.colors.footerWhite};
@@ -73,7 +70,7 @@ export const ProjectItemStyle = styled.div`
   }
 
   .projectDescription {
-  color: ${({ theme }) => theme.colors.textColor};
+    color: ${({ theme }) => theme.colors.textColor};
     margin-top: 5px;
     font-family: "Chivo mono";
     font-style: light;
@@ -141,5 +138,49 @@ export const ProjectItemStyle = styled.div`
       border-top: 7.5px solid transparent;
       border-bottom: 7.5px solid transparent;
     }
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.below768} {
+  .projectContainer {
+      flex-direction: column !important;
+      height: auto;
+      min-height: unset;
+      overflow: visible;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .projectBg {
+      width: 100%;
+      height: 220px;
+    }
+
+    .projectSummary {
+      width: 100%;
+      margin-top: 0;
+      padding: 0 0.25rem 0.75rem;
+    }
+
+    .projectTitle {
+      font-size: 22px;
+      padding-top: 0;
+    }
+
+    .projectDescription {
+      margin-top: 1rem;
+      font-size: 14px;
+    }
+
+    .projectLinks {
+      margin-top: 1.25rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.above768} {
+
+  }
+  @media ${({ theme }) => theme.mediaQueries.medium} {
+
   }
 `;
