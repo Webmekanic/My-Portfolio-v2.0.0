@@ -18,7 +18,7 @@ import Socials from "../src/components/shared/Socials"
 import Carousel from "../src/components/carousel/Carousel"
 import emailjs from "@emailjs/browser"
 import PortfolioContext from "../src/context/portfolio/PortfolioContext"
-import { getProjects } from "../src/context/portfolio/PortfolioActions"
+import { getProjects, getBlogPosts } from "../src/context/portfolio/PortfolioActions"
 import MobileMenu from "../src/components/layouts/MobileMenu"
 import Loading from "../src/components/layouts/Loading"
 import TypingEffect from "../src/components/shared/TypingEffect"
@@ -78,7 +78,10 @@ useEffect(() => {
   useEffect(() => {
     const getprod = async () => {
       const { projects } = await getProjects()
+      const { blogPosts } = await getBlogPosts()
+      console.log({ projects, "blogPosts": blogPosts })
       dispatch({ type: "GET_PROJECTS", payload: projects })
+      dispatch({ type: "GET_BLOG_POSTS", payload: blogPosts })
     }
 
     getprod()

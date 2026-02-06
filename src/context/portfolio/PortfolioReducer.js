@@ -5,20 +5,26 @@ const portfolioReducer = (state, action) => {
       return {
         ...state,
         loading: action.payload,
-      }
+      };
     case "SET_MENU":
       return {
         ...state,
         menu: action.payload,
-      }
+      };
     case "GET_PROJECTS":
       return {
         ...state,
         projects: action.payload,
         loading: false,
-      }
+      };
+    case "GET_BLOG_POSTS":
+      return {
+        ...state,
+        blogPosts: action.payload,
+        loading: false,
+      };
     default:
-      return state
+      return state;
   }
 }
 
