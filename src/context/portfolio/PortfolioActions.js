@@ -9,7 +9,7 @@ export const client = createClient({
 export const getProjects = async () => {
   try {
     const entries = await client.getEntries({
-      content_type: "project", // use your actual Project content type ID
+      content_type: "project",
     });
     return { projects: entries.items };
   } catch (error) {
@@ -23,6 +23,28 @@ export const getBlogPosts = async () => {
       content_type: "blogPost",
     });
     return { blogPosts: entries.items };
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+export const getEvents = async () => {
+  try {
+    const entries = await client.getEntries({
+      content_type: "talks",
+    });
+    return { events: entries.items };
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+export const getAwards = async () => {
+  try {
+    const entries = await client.getEntries({
+      content_type: "awards",
+    });
+    return { awards: entries.items };
   } catch (error) {
     console.log(error.message);
   }

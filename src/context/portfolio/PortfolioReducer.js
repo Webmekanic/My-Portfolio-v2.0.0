@@ -23,6 +23,18 @@ const portfolioReducer = (state, action) => {
         blogPosts: action.payload,
         loading: false,
       };
+    case "GET_EVENTS":
+      return {
+        ...state,
+        events: action.payload,
+        loading: false,
+      };
+    case "GET_AWARDS":
+      return {
+        ...state,
+        awards: action.payload,
+        loading: false,
+      };
     default:
       return state;
   }

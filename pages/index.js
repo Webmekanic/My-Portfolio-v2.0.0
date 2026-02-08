@@ -18,23 +18,26 @@ import Socials from "../src/components/shared/Socials"
 import Carousel from "../src/components/carousel/Carousel"
 import emailjs from "@emailjs/browser"
 import PortfolioContext from "../src/context/portfolio/PortfolioContext"
-import { getProjects, getBlogPosts } from "../src/context/portfolio/PortfolioActions"
+import { getProjects, getBlogPosts, getEvents, getAwards } from "../src/context/portfolio/PortfolioActions"
 import MobileMenu from "../src/components/layouts/MobileMenu"
 import Loading from "../src/components/layouts/Loading"
 import TypingEffect from "../src/components/shared/TypingEffect"
 import { FiArrowUpRight, FiArrowRight } from "react-icons/fi";
 import BlogItem from "../src/components/shared/BlogItem";
+import EventCard from "../src/components/shared/EventCard";
+import AwardItem from "../src/components/shared/AwardItem";
 import CardSkeleton from "../src/components/shared/CardSkeleton";
 import { BlogItemStyle } from "../src/styles/BlogtemStyle";
+
 
  gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
   const router = useRouter();
   const form = useRef();
   const { menu, loading, dispatch } = useContext(PortfolioContext);
+  const { events, awards, blogPosts } = useContext(PortfolioContext);
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
-  const { blogPosts } = useContext(PortfolioContext);
 
 useEffect(() => {
   if (loading) return;
@@ -82,9 +85,13 @@ useEffect(() => {
     const getprod = async () => {
       const { projects } = await getProjects()
       const { blogPosts } = await getBlogPosts()
-      console.log({ projects, "blogPosts": blogPosts })
+      const { events } = await getEvents()
+      const { awards } = await getAwards()
+      console.log({ projects, "blogPosts": blogPosts, "events": events, "awards": awards })
       dispatch({ type: "GET_PROJECTS", payload: projects })
       dispatch({ type: "GET_BLOG_POSTS", payload: blogPosts })
+      dispatch({ type: "GET_EVENTS", payload: events })
+      dispatch({ type: "GET_AWARDS", payload: awards })
     }
 
     getprod()
@@ -291,88 +298,23 @@ useEffect(() => {
               <div ref={triggerRef} className="scroll-trigger-wrapper">
                 <div ref={sectionRef} className="scroll-section-inner">
                   <div className="scroll-section">
-                    <div className="card">
-                      <div className="scroll-section-image-container">
-                        <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
-                      </div>
-                      <div className="eventDetails">
-                        <h4 className="eventName">GDG DevFest Uyo 2024</h4>
-                        <h3 className="sessionTopic">Future of AI in Africa</h3>
-                        <a href="#" className="eventLink">
-                          See events
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="scroll-section">
-                    <div className="card">
-                      <div className="scroll-section-image-container">
-                        <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
-                      </div>
-                      <div className="eventDetails">
-                        <h4 className="eventName">GDG DevFest Uyo 2024</h4>
-                        <h3 className="sessionTopic">Future of AI in Africa</h3>
-                        <a href="#" className="eventLink">
-                          See events
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="scroll-section">
-                    <div className="card">
-                      <div className="scroll-section-image-container">
-                        <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
-                      </div>
-                      <div className="eventDetails">
-                        <h4 className="eventName">GDG DevFest Uyo 2024</h4>
-                        <h3 className="sessionTopic">Future of AI in Africa</h3>
-                        <a href="#" className="eventLink">
-                          See events
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="scroll-section">
-                    <div className="card">
-                      <div className="scroll-section-image-container">
-                        <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
-                      </div>
-                      <div className="eventDetails">
-                        <h4 className="eventName">GDG DevFest Uyo 2024</h4>
-                        <h3 className="sessionTopic">Future of AI in Africa</h3>
-                        <a href="#" className="eventLink">
-                          See events
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="scroll-section">
-                    <div className="card">
-                      <div className="scroll-section-image-container">
-                        <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
-                      </div>
-                      <div className="eventDetails">
-                        <h4 className="eventName">GDG DevFest Uyo 2024</h4>
-                        <h3 className="sessionTopic">Future of AI in Africa</h3>
-                        <a href="#" className="eventLink">
-                          See events
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="scroll-section">
-                    <div className="card">
-                      <div className="scroll-section-image-container">
-                        <img srcSet="/assets/tvcNews.jpeg" alt="Talk Image" />
-                      </div>
-                      <div className="eventDetails">
-                        <h4 className="eventName">GDG DevFest Uyo 2024</h4>
-                        <h3 className="sessionTopic">Future of AI in Africa</h3>
-                        <a href="#" className="eventLink">
-                          See events
-                        </a>
-                      </div>
+                    <div ref={sectionRef} className="scroll-section-inner">
+                      {events?.length === undefined ? (
+                        <CardSkeleton cards={4} cardWidth="400px" />
+                      ) : (
+                        events.map((event) => (
+                          <div className="scroll-section" key={event.sys.id}>
+                            <EventCard
+                              eventImg={
+                                event.fields.eventflyer?.fields?.file?.url
+                              }
+                              eventName={event.fields.eventName}
+                              sessionTopic={event.fields.talkTitle}
+                              eventLink={event.fields.eventLink}
+                            />
+                          </div>
+                        ))
+                      )}
                     </div>
                   </div>
                 </div>
@@ -385,62 +327,20 @@ useEffect(() => {
               Here are some cool stuff I have worked on
             </p>
             <div className="awardWrapper">
-              <div className="awardList">
-                <div className="awardItem">
-                  <div className="awardInfo">
-                    <p className="awardDate">28th March, 2025</p>{" "}
-                  </div>
-                  <h3 className="awardTitle">GitLab Notable Contributor</h3>
-                  <p className="awardDescription">
-                    Recognized as GitLab 18.7 notable contributor.
-                  </p>
-                </div>
-                <a
-                  href="https://docs.gitlab.com/releases/18/gitlab-18-7-released/"
-                  className="awardLinkIcon"
-                >
-                  <div className="awardLink">
-                    <FiArrowUpRight size={36} />
-                  </div>
-                </a>
-              </div>
-              <div className="awardList">
-                <div className="awardItem">
-                  <div className="awardInfo">
-                    <p className="awardDate">28th March, 2025</p>{" "}
-                  </div>
-                  <h3 className="awardTitle">GitLab Notable Contributor</h3>
-                  <p className="awardDescription">
-                    Recognized as GitLab 18.7 notable contributor.
-                  </p>
-                </div>
-                <a
-                  href="https://docs.gitlab.com/releases/18/gitlab-18-7-released/"
-                  className="awardLinkIcon"
-                >
-                  <div className="awardLink">
-                    <FiArrowUpRight size={36} />
-                  </div>
-                </a>
-              </div>
-              <div className="awardList">
-                <div className="awardItem">
-                  <div className="awardInfo">
-                    <p className="awardDate">28th March, 2025</p>{" "}
-                  </div>
-                  <h3 className="awardTitle">GitLab Notable Contributor</h3>
-                  <p className="awardDescription">
-                    Recognized as GitLab 18.7 notable contributor.
-                  </p>
-                </div>
-                <a
-                  href="https://docs.gitlab.com/releases/18/gitlab-18-7-released/"
-                  className="awardLinkIcon"
-                >
-                  <div className="awardLink">
-                    <FiArrowUpRight size={36} />
-                  </div>
-                </a>
+              <div className="awardWrapper">
+                {awards?.length === undefined ? (
+                  <CardSkeleton cards={3} cardWidth="100%" />
+                ) : (
+                  awards.map((award) => (
+                    <AwardItem
+                      key={award.sys.id}
+                      date={award.fields.dateRecieved}
+                      title={award.fields.awardName}
+                      description={award.fields.awardDescription}
+                      link={award.fields.awardLink}
+                    />
+                  ))
+                )}
               </div>
             </div>
           </section>

@@ -10,6 +10,8 @@ export const PortfolioProvider = ({ children }) => {
     menu: false,
     projects: {},
     blogPosts: {},
+    events: {},
+    awards: {},
     error: null,
     pageLoad: false,
   }

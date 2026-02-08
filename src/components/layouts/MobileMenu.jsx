@@ -29,7 +29,7 @@ const MobileMenu = () => {
 
   return (
     <Hamburger>
-      <ul className="MobileNavLink">
+      {/* <ul className="MobileNavLink">
         <li className="MobileNavLinkItem" onClick={closeMenu}>
           <MenuLink href="/about">About</MenuLink>
         </li>
@@ -39,7 +39,7 @@ const MobileMenu = () => {
         <li className="MobileNavLinkItem" onClick={closeMenu}>
           <MenuLink href="/contact">Contact</MenuLink>
         </li>
-      </ul>
+      </ul> */}
       {/* <button></button> */}
       <AiOutlineClose
         className="closeMenu"

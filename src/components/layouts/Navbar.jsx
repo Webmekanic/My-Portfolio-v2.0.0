@@ -31,7 +31,7 @@ const Navbar = () => {
           </header>
         </Link>
       </h1>
-      <ul className="navLinkList">
+      {/* <ul className="navLinkList">
         <li className="navLinkItem">
           <MyLink href="/about" className={router.pathname === "/about" ? "is-active" : ""}>
             About
@@ -47,7 +47,7 @@ const Navbar = () => {
             Contact
           </MyLink>
         </li>
-      </ul>
+      </ul> */}
       {/* nabvar icons */}
       <div className="socialIcons">
         <a
