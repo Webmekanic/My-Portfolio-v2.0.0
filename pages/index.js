@@ -183,10 +183,11 @@ useEffect(() => {
                   <div className="aboutTextDescription">
                     <div className="aboutText">
                       <p>
-                        I am a Software Engineer with skills in MongoDB,
-                        ExpressJS, ReactJS, and NodeJS (MERN Stack), passionate
-                        about developing clean, intuitive interfaces and adding
-                        my bit to the world of web development.
+                        I am a Software Engineer passionate about building
+                        elegant, user-centered products with clean, maintainable
+                        code, combining strong frontend engineering skills with
+                        a keen eye for intuitive interfaces and exceptional user
+                        experiences.
                       </p>
                       <p className="aboutText2">
                         When I am not knee-deep into programming, I can be found
@@ -289,12 +290,14 @@ useEffect(() => {
             </TalksSection>
           </section>
           <section className="scroll-section-outer">
-            <h1>Talks and Engagements</h1>
-            <p>
-              Here are some talks, workshops, and events where I've shared
-              ideas.
-            </p>
-            <div div className="scroll-clip">
+            <div className="section-heading-wrapper">
+              <h1 className="talk-and-engagements">Talks and Engagements</h1>
+              <p className="talk-and-engagements-subheading">
+                Here are some talks, workshops, and events where I've shared
+                ideas.
+              </p>
+            </div>
+            <div className="scroll-clip">
               <div ref={triggerRef} className="scroll-trigger-wrapper">
                 <div ref={sectionRef} className="scroll-section-inner">
                   <div className="scroll-section">

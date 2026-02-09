@@ -455,8 +455,13 @@ export const MyHome = styled.div`
   // .scroll-section-outer {
   //   border: 2px solid red;
   // }
-  
-  
+
+  .section-heading-wrapper {
+    width: 89%;
+    margin: auto;
+    margin-top: 3rem;
+  }
+
   .scroll-trigger-wrapper {
     width: 100%;
   }
