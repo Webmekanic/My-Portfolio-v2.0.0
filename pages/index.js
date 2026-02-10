@@ -136,8 +136,10 @@ useEffect(() => {
     "https://drive.google.com/file/d/1DSBBj4rwJqRkyRokKVfH29DTWd3QRsYd/view?usp=sharing"
 
   const handleClick = () => {
-    router.push("/about")
-  }
+    document
+      .getElementById("projects")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const downloadResume = () => {
     window.open(url, "_blank")
@@ -244,7 +246,7 @@ useEffect(() => {
               </div>
             </div>
           </ProjectStats>
-          <section className="projectSection">
+          <section className="projectSection" id="projects">
             <ProjectSection>
               <div className="projectSectionContainer">
                 <h1 className="aboutTitle">Featured Work</h1>
@@ -348,7 +350,7 @@ useEffect(() => {
             </div>
           </section>
         </section>
-        <Footer classname="contact-footer" />
+        <Footer classname="contact-footer" id="contact" />
       </MyHome>
     </>
   );
