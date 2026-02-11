@@ -1,31 +1,19 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useContext } from "react"
 import ProjectItem from "../shared/ProjectItem"
-import Flickity from "react-flickity-component"
 import PortfolioContext from "../../context/portfolio/PortfolioContext"
 import CardSkeleton from "../shared/CardSkeleton"
 import { MySlider } from "./CarouselStyle"
 
 const Carousel = (props) => {
-  let flkty
   let [carouselIndex, setCarouselIndex] = useState(null)
 
   const { projects } = useContext(PortfolioContext)
   console.log(projects)
 
   const handleChange = (index) => {
-    setCarouselIndex(index) // Not working
+    setCarouselIndex(index)
   }
-
-  useEffect(() => {
-    if (flkty) {
-      flkty.on("settle", () => {})
-
-      flkty.on("change", (index) => {
-        handleChange(index)
-      })
-    }
-  }, [carouselIndex])
 
   return (
     <MySlider>
