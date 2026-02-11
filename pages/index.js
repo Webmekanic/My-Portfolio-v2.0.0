@@ -132,9 +132,6 @@ useEffect(() => {
     e.target.reset()
   }
 
-  const url =
-    "https://drive.google.com/file/d/1DSBBj4rwJqRkyRokKVfH29DTWd3QRsYd/view?usp=sharing"
-
   const handleClick = () => {
     document
       .getElementById("projects")
