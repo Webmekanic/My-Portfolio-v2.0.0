@@ -1,18 +1,20 @@
 import React from "react"
-import { NavLink as NavLinkReactRouterDom } from "react-router-dom"
+import Link from "next/link"
+import { useRouter } from "next/router"
 
-const Link = function ({ to, children, className, ...props }) {
+const NavLink = function ({ href, children, className, ...props }) {
+  const router = useRouter()
+  const isActive = router.pathname === href
+
   return (
-    <NavLinkReactRouterDom
+    <Link
       {...props}
-      className={({ isActive }) =>
-        [className, isActive ? "is-active" : null].filter(Boolean).join(" ")
-      }
-      to={to}
+      href={href}
+      className={[className, isActive ? "is-active" : null].filter(Boolean).join(" ")}
     >
       {children}
-    </NavLinkReactRouterDom>
+    </Link>
   )
 }
 
-export default Link
+export default NavLink

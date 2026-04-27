@@ -1,18 +1,19 @@
 import React, { useContext } from "react"
+import Link from "next/link"
+import { useRouter } from "next/router"
 import { MyLink, Nav } from "../../styles/NavStyle"
 import { FiGithub, FiLinkedin } from "react-icons/fi"
 import { CgSortAz } from "react-icons/cg"
 import PortfolioContext from "../../context/portfolio/PortfolioContext"
-import Kkkkkk from "./assets/myLogo.svg"
-import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
   const { dispatch } = useContext(PortfolioContext)
+  const router = useRouter()
 
   return (
     <Nav>
       <h1 className="myIntials">
-        <NavLink to="/">
+        <Link href="/">
           <header
             className="myIntials"
             style={{
@@ -23,24 +24,28 @@ const Navbar = () => {
             }}
           >
             <img
-              src={Kkkkkk}
+              src="/assets/myLogo.svg"
               alt="Logo"
-              srcset=""
               style={{ width: "100%", height: "100%" }}
             />
-            {/* DA */}
           </header>
-        </NavLink>
+        </Link>
       </h1>
       <ul className="navLinkList">
         <li className="navLinkItem">
-          <MyLink to="/about">About</MyLink>
+          <MyLink href="/about" className={router.pathname === "/about" ? "is-active" : ""}>
+            About
+          </MyLink>
         </li>
         <li className="navLinkItem">
-          <MyLink to="/works">Works</MyLink>
+          <MyLink href="/works" className={router.pathname === "/works" ? "is-active" : ""}>
+            Works
+          </MyLink>
         </li>
         <li className="navLinkItem">
-          <MyLink to="/contact">Contact</MyLink>
+          <MyLink href="/contact" className={router.pathname === "/contact" ? "is-active" : ""}>
+            Contact
+          </MyLink>
         </li>
       </ul>
       {/* nabvar icons */}

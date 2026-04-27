@@ -1,9 +1,4 @@
 import React from "react"
-import Aniebo from "./assets/Aniebo.svg"
-import JsLogo from "./assets/jsLogo.svg"
-import ReactJs from "./assets/reactjs.svg"
-import HtmlIcon from "./assets/htmlIcon.svg"
-import CssLogo from "./assets/cssLogo.svg"
 import { MySkills } from "../../styles/SkillStyle"
 
 const Skills = ({ classNames }) => {
@@ -14,16 +9,16 @@ const Skills = ({ classNames }) => {
           <div className="skillsBorder2">
             <div className="skillsBorder3">
               <div className="aniIcon">
-                <img className="imgIcon" src={Aniebo} alt="" />
+                <img className="imgIcon" src="/assets/Aniebo.svg" alt="" />
               </div>
             </div>
           </div>
         </div>
         {/* skills Icon */}
-        <img className="jsLogo" src={JsLogo} alt="JS" />
-        <img className="cssLogo" src={CssLogo} alt="CSS" />
-        <img className="HtmlIcon" src={HtmlIcon} alt="HTML" />
-        <img className="ReactJs" src={ReactJs} alt="React" />
+        <img className="jsLogo" src="/assets/jsLogo.svg" alt="JS" />
+        <img className="cssLogo" src="/assets/cssLogo.svg" alt="CSS" />
+        <img className="HtmlIcon" src="/assets/htmlIcon.svg" alt="HTML" />
+        <img className="ReactJs" src="/assets/reactjs.svg" alt="React" />
       </MySkills>
     </>
   )
