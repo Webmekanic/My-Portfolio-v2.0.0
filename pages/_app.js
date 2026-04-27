@@ -4,8 +4,6 @@ import { SkeletonTheme } from "react-loading-skeleton"
 import GlobalStyle from "../src/themes/GlobalStyles"
 import theme from "../src/themes/Theme"
 import "react-loading-skeleton/dist/skeleton.css"
-import "../src/App.css"
-import "../src/index.css"
 
 function MyApp({ Component, pageProps }) {
   return (
