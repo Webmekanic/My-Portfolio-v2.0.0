@@ -1,17 +1,26 @@
-import React from "react"
-import BgText from "../components/shared/BgText"
-import Footer from "../components/layouts/Footer"
-import Button from "../components/shared/Button"
-import CssLogo from "../components/layouts/assets/cssLogo.svg"
-import JsLogo from "../components/layouts/assets/jsLogo.svg"
-import ReactJs from "../components/layouts/assets/reactjs.svg"
-import HtmlIcon from "../components/layouts/assets/htmlIcon.svg"
-import { AboutMe } from "../styles/AboutStyle"
-import { AboutAniebo } from "../styles/HomeStyle"
+import React, { useContext, useEffect } from "react"
+import BgText from "../src/components/shared/BgText"
+import Footer from "../src/components/layouts/Footer"
+import Button from "../src/components/shared/Button"
+import { AboutMe } from "../src/styles/AboutStyle"
+import { AboutAniebo } from "../src/styles/HomeStyle"
 import styled from "styled-components"
-
+import Navbar from "../src/components/layouts/Navbar"
+import MobileMenu from "../src/components/layouts/MobileMenu"
+import Loading from "../src/components/layouts/Loading"
+import PortfolioContext from "../src/context/portfolio/PortfolioContext"
 const About = () => {
-  // Link to resume on google drive
+  const { menu, loading, dispatch } = useContext(PortfolioContext)
+
+  useEffect(() => {
+    dispatch({ type: "SET_LOADING", payload: true })
+    dispatch({ type: "SET_MENU", payload: false })
+
+    setTimeout(() => {
+      dispatch({ type: "SET_LOADING", payload: false })
+    }, 3000)
+  }, [dispatch])
+
   const url =
     "https://drive.google.com/file/d/1DSBBj4rwJqRkyRokKVfH29DTWd3QRsYd/view?usp=sharing"
 
@@ -27,8 +36,12 @@ const About = () => {
     }
   `
 
+  if (loading) return <Loading />
+
   return (
     <>
+      <Navbar />
+      {menu && <MobileMenu />}
       <AboutMe>
         <div className="pattern1"></div>
         <div className="pattern2"></div>
@@ -62,28 +75,28 @@ const About = () => {
               </div>
               <div className="skillsCard">
                 <div className="skillSet">
-                  <img className="cssLogo" src={CssLogo} alt="CSS" />
+                  <img className="cssLogo" src="/assets/cssLogo.svg" alt="CSS" />
                   <div className="skillSetRating">
                     <div className="skillRatingBar"></div>
                     <div className="skillRatingBar"></div>
                   </div>
                 </div>
                 <div className="skillSet">
-                  <img className="cssLogo" src={HtmlIcon} alt="CSS" />
+                  <img className="cssLogo" src="/assets/htmlIcon.svg" alt="HTML" />
                   <div className="skillSetRating">
                     <div className="skillRatingBar"></div>
                     <div className="skillRatingBar"></div>
                   </div>
                 </div>
                 <div className="skillSet">
-                  <img className="cssLogo" src={ReactJs} alt="CSS" />
+                  <img className="cssLogo" src="/assets/reactjs.svg" alt="React" />
                   <div className="skillSetRating">
                     <div className="skillRatingBar"></div>
                     <div className="skillRatingBar"></div>
                   </div>
                 </div>
                 <div className="skillSet">
-                  <img className="cssLogo" src={JsLogo} alt="CSS" />
+                  <img className="cssLogo" src="/assets/jsLogo.svg" alt="JavaScript" />
                   <div className="skillSetRating">
                     <div className="skillRatingBar"></div>
                     <div className="skillRatingBar"></div>

@@ -7,17 +7,17 @@ export const MyHome = styled.div`
   width: 100%;
   z-index: 20;
 
-  .pattern1 {
-    background: ${({ theme }) => theme.colors.barColor};
-    position: absolute;
-    z-index: 10;
-    height: 13rem;
-    width: 100%;
-    transform: skewY(-35deg);
-    left: 0;
-    right: 0;
-    top: 12.4rem;
-  }
+  // .pattern1 {
+  //   background: ${({ theme }) => theme.colors.barColor};
+  //   position: absolute;
+  //   z-index: 10;
+  //   height: 13rem;
+  //   width: 100%;
+  //   transform: skewY(-35deg);
+  //   left: 0;
+  //   right: 0;
+  //   top: 12.4rem;
+  // }
 
   .pattern2 {
     background: ${({ theme }) => theme.colors.barColor};
@@ -110,26 +110,42 @@ export const MyHome = styled.div`
   }
 
   .myNameContainer {
-    width: 89%;
     margin: auto;
     z-index: 99;
-    padding-top: 3.4rem;
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    overflow: hidden;
+    background-color: #0c1114;
+    padding-right: 7.5%;
+    padding-left: 7.5%;
   }
+
+  // .myBio1 {
+  //   width: 85%;
+  //   margin: auto;
+  // }
 
   .aboutAniebo {
     display: flex;
     flex-direction: column-reverse;
   }
 
+  .myBio {
+    border: 2px solid ${({ theme }) => theme.colors.purple};
+    margin-top: 1rem;
+    height: 100px;
+    width: 100%;
+    padding: 1rem;
+  }
+
   .xbox {
-    font-size: 3.5rem;
     position: relative;
     text-shadow: 0px 0px 3px ${({ theme }) => theme.colors.purple};
     color: ${({ theme }) => theme.colors.barColor};
-    font-family: Chivo;
+    font-family: "Bungee", cursive;
     font-style: normal;
-    font-weight: 900;
-    z-index: 99;
+    font-weight: 400;
     top: 0;
   }
 
@@ -406,13 +422,14 @@ export const MyHome = styled.div`
     position: relative;
     z-index: 99;
     color: ${({ theme }) => theme.colors.textColor};
-    font-family: Work Sans;
+    font-family: "Chivo Mono", monospace;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
   }
+
   .letsCodeBtn {
-    margin-top: 3rem;
+    margin-top: 2rem;
     position: relative;
     z-index: 20;
     display: inline-block;
@@ -434,6 +451,183 @@ export const MyHome = styled.div`
     z-index: 20;
     width: 100%;
   }
+
+  // .scroll-section-outer {
+  //   border: 2px solid red;
+  // }
+
+  .section-heading-wrapper {
+    width: 89%;
+    margin: auto;
+    margin-top: 3rem;
+  }
+
+  .scroll-trigger-wrapper {
+    width: 100%;
+  }
+
+  .scroll-section-inner {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: 4.1rem;
+    height: 100vh;
+    will-change: transform;
+  }
+
+  .scroll-section {
+    height: 100vh;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  .card {
+    width: min(400px, 85vw);
+    height: min(500px, 75vh);
+    // border: 1px solid ${({ theme }) => theme.colors.cardBorderColor};
+    border-radius: 12px;
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
+    // background-color: ${({ theme }) => theme.colors.cardColor};
+  }
+
+  .scroll-section-image-container {
+    // border: 2px solid red;
+    width: 400px;
+    height: 370px;
+    border-radius: 10px;
+    // padding: 1px;
+    // margin: 2.2rem 0;
+  }
+
+  .scroll-clip {
+    clip-path: inset(0);
+    overflow: hidden;
+    width: 89%;
+    margin: auto;
+  }
+
+  .scroll-section-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // border-radius: 10px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    margin: auto;
+  }
+
+  .eventDetails {
+    // border: 2px solid red;
+    padding-top: 1.5rem;
+  }
+
+  .eventName {
+    font-size: 20px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.colors.white};
+    font-style: regular;
+    font-family: "Chivo Mono", monospace;
+    margin-bottom: 0.4rem;
+  }
+
+  .sessionTopic {
+    font-size: 16px;
+    font-weight: 300;
+    color: ${({ theme }) => theme.colors.textColor};
+    font-style: regular;
+    font-family: "Chivo Mono", monospace;
+    margin-bottom: 1rem;
+  }
+
+  .eventLink {
+    font-family: "Chivo Mono", monospace;
+    font-style: Regular;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: ${({ theme }) => theme.colors.lightColor};
+    text-decoration: none;
+  }
+
+  .awardSection {
+    width: 89%;
+    margin: auto;
+  }
+
+  .awardList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.secondaryBorder};
+    padding: 1.2rem 0;
+    grid-gap: 2rem;
+  }
+
+  .awardList:last-child {
+    border-bottom: none;
+  }
+
+  .awardWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .awardLink {
+    height: 72px;
+    width: 72px;
+    border-radius: 24px;
+    padding: 12px;
+    font-size: 24px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: ${({ theme }) => theme.colors.cardColor};
+    cursor: pointer;
+    border: 1px solid ${({ theme }) => theme.colors.cardBorderColor};
+  }
+
+  .awardLink:hover {
+    background-color: ${({ theme }) => theme.colors.lightColor};
+    color: ${({ theme }) => theme.colors.barColor};
+  }
+
+  .awardLinkIcon {
+    color: ${({ theme }) => theme.colors.white};
+  }
+
+  .awardDate {
+    font-size: 14px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.colors.secondaryColor};
+    font-style: regular;
+    font-family: "Chivo Mono", monospace;
+    margin-bottom: 0.75rem;
+  }
+
+  .awardTitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.colors.white};
+    font-style: regular;
+    font-family: "Chivo Mono", monospace;
+    margin-bottom: 0.5rem;
+  }
+
+  .awardDescription {
+    font-size: 16px;
+    font-weight: 300;
+    color: ${({ theme }) => theme.colors.textColor};
+    font-style: regular;
+    font-family: "Chivo Mono", monospace;
+  }
+
   .homeAboutBgText {
     position: absolute;
     top: 25px;
@@ -445,7 +639,7 @@ export const MyHome = styled.div`
   }
 
   .projectSection,
-  .contactSection {
+  .talksSection {
     margin-top: 6rem;
     z-index: 20;
     position: relative;
@@ -453,22 +647,34 @@ export const MyHome = styled.div`
   }
 
   .contact-footer {
-    width: 89%;
-    margin: auto;
-    margin-bottom: 1rem;
+    // width: 89%;
+    // padding: 5rem;
     margin-top: 3.8rem;
+    background: ${({ theme }) => theme.colors.dark};
   }
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
-    .contact-footer {
-      width: 95%;
-      margin: auto;
-      margin-bottom: 2rem;
-      position: absolute;
-      padding-left: 30px;
-      margin-top: 100px;
-      padding-bottom: 2rem;
+    .fullName {
+      flex-wrap: nowrap;
+      overflow: hidden;
     }
+
+    .xbox,
+    .xbox .inside,
+    .xbox:before,
+    .xbox:after {
+      font-size: 3rem;
+    }
+
+    // .contact-footer {
+    //   width: 95%;
+    //   margin: auto;
+    //   margin-bottom: 2rem;
+    //   position: absolute;
+    //   padding-left: 30px;
+    //   margin-top: 100px;
+    //   padding-bottom: 2rem;
+    // }
   }
 
   @media ${({ theme }) => theme.mediaQueries.above768} {
@@ -477,8 +683,8 @@ export const MyHome = styled.div`
     }
     .fullName {
       display: flex;
-      flex-direction: column;
-      grid-gap: unset;
+      flex-direction: row;
+      grid-gap: 0.9rem;
       margin-top: unset;
     }
 
@@ -498,16 +704,18 @@ export const MyHome = styled.div`
   }
 
   @media ${({ theme }) => theme.mediaQueries.medium} {
-    .pattern1 {
-      top: 14.5rem;
-      transform: skewY(-15.5deg);
-      height: 13rem;
-    }
+    // .pattern1 {
+    //   top: 14.5rem;
+    //   transform: skewY(-15.5deg);
+    //   height: 13rem;
+    // }
+
     .pattern2 {
       top: 36.5rem;
       transform: skewY(-15.5deg);
       height: 13rem;
     }
+
     .pattern3 {
       top: 36.5rem;
       transform: skewY(15.5deg);
@@ -538,65 +746,67 @@ export const MyHome = styled.div`
     .pattern9 {
       top: 164.5rem;
       transform: skewY(-15.5deg);
-      display: none;
+      // display: none;
     }
-    .xbox1 {
-      margin-top: -1.9rem;
-    }
+    // .xbox1 {
+    //   margin-top: -1.9rem;
+    // }
     .fullName {
       display: flex;
-      flex-direction: column;
-      grid-gap: unset;
+      flex-direction: row;
+      grid-gap: 0.9rem;
     }
     .xbox,
     .xbox .inside,
     .xbox:before,
     .xbox:after {
-      font-size: 8.5rem;
+      font-size: 6.5rem;
     }
   }
   @media ${({ theme }) => theme.mediaQueries.large} {
-    .pattern1 {
-      top: 14.3rem;
-      transform: skewY(-14deg);
-    }
+    // .pattern1 {
+    //   top: 14.3rem;
+    //   transform: skewY(-14deg);
+    // }
     .pattern2 {
-      top: 36rem;
+      top: 42.9rem;
       transform: skewY(-14deg);
     }
     .pattern3 {
-      top: 36.5rem;
+      top: 42.9rem;
       transform: skewY(14deg);
     }
     .pattern4 {
       transform: skewY(14deg);
-      top: 89rem;
+      top: 105rem;
     }
+
     .pattern5 {
       transform: skewY(14deg);
-      top: 110rem;
+      top: 128rem;
     }
     .pattern6 {
       transform: skewY(-14deg);
-      top: 110rem;
+      top: 130rem;
     }
     .pattern7 {
-      top: 150rem;
+      top: 185rem;
       transform: skewY(14deg);
     }
     .pattern8 {
-      top: 150rem;
+      top: 185rem;
       transform: skewY(-14deg);
     }
     .pattern9 {
-      display: none;
+      top: 208rem;
+      transform: skewY(-14deg);
     }
   }
   @media (min-width: 481px) and (max-width: 1023px) {
-    .pattern1 {
-      height: 12rem;
-      transform: skewY(-17deg);
-    }
+    // .pattern1 {
+    //   height: 12rem;
+    //   transform: skewY(-17deg);
+    // }
     .pattern2 {
       height: 12rem;
       transform: skewY(-17deg);
@@ -647,57 +857,55 @@ export const MyHome = styled.div`
   }
 
   .homeAboutSection {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
-`
+`;
 export const AboutAniebo = styled.section`
-  width: 89%;
   margin: auto;
-  padding-top: 5.8rem;
 
-  .aboutText {
-    padding-top: clamp(0.1rem, 0.5rem, 2rem);
-  }
   .aboutText > * {
-    padding-top: 1rem;
-    font-family: Work Sans;
-    font-style: normal;
-    font-weight: 400;
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-family: "Chivo Mono";
+    font-weight: 300;
+    font-size: 16px;
     line-height: 1.3125rem;
+    color: ${({ theme }) => theme.colors.textColor};
   }
+
   .aboutText2 {
     padding-top: 0;
   }
+
+  .aboutText3 {
+    padding-top: 1rem;
+  }
+
   .aboutAniebo1 {
     position: relative;
     z-index: 20;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-gap: 5rem;
-    margin-top: 1.5rem;
   }
 
   .downloadResumeButton {
-    margin-top: 2rem;
-  }
-  .skillsCard {
-    border-top: 3px solid ${({ theme }) => theme.colors.purple};
-    background: #11171b;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-    height: 270px;
-    padding: 25px 40px 0 40px;
+    margin-top: 3rem;
   }
 
-  .skillSet {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-    grid-gap: 1.5rem;
-    margin-top: 0.4rem;
+  .skillsCard {
+    display: grid;
+    grid-template-columns: repeat(3, 104px);
+    grid-template-rows: repeat(2, 104px);
+    gap: 1rem;
   }
+
+  .skillItem {
+    width: 104px;
+    height: 104px;
+    border-radius: 13px;
+    border: 1px solid #262c2f;
+    background: #191e21;
+  }
+
   .cssLogo {
     width: 42.2px;
     height: 40px;
@@ -723,71 +931,90 @@ export const AboutAniebo = styled.section`
     .aboutAniebo1 {
       display: unset;
     }
-    .skillsCard {
+    .aboutTextDescription {
       margin-top: 2rem;
     }
+
+    .skillsCard {
+      margin-top: 2rem;
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-rows: 104px;
+      gap: 1rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .skillsCard::-webkit-scrollbar {
+      display: none;
+    }
+
     .fullName {
       margin-top: 2.2rem;
-      border: 2px solid yellow;
     }
     .skillSection {
       margin-top: unset;
     }
   }
-`
+`;
 
 export const ProjectStats = styled.section`
-  border-top: 1px solid ${({ theme }) => theme.colors.lineColor};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.lineColor};
-  margin-top: 5.5rem;
+  .certifications {
+    font-family: "Chivo Mono", monospace;
+    font-style: light;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 32px;
+    color: ${({ theme }) => theme.colors.secondaryColor};
+    text-align: center;
+    padding: 1rem;
+  }
 
-  .projectStatsContainer {
+  .certificationItem {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
+    gap: 2rem;
+    flex-direction: row;
     align-items: center;
-    padding: 2rem 0;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
   }
-  .myStats {
-    color: black;
-    -webkit-text-fill-color: ${({ theme }) => theme.colors.dark};
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #8afaec;
-    font-family: Chivo;
-    font-style: black;
-    font-weight: 500;
-    font-size: 60px;
-    animation: effect 6s infinite alternate;
+
+  .certificationLogo {
+    width: 100px;
+    height: 100px;
   }
+
   @media ${({ theme }) => theme.mediaQueries.below768} {
     display: none;
   }
-`
+`;
 
 export const ProjectSection = styled.section`
   border-top: 1px solid transparent;
   .projectSectionContainer {
-    width: 89%;
+    width: 85%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 85px;
   }
   .projectParagraph {
-    padding-top: 2rem;
+    padding-top: 0.5rem;
   }
   .homeProjectBgText {
     position: absolute;
     top: 20px;
   }
   .myProject {
-    display: flex;
+    display: row;
     grid-gap: 0.8rem;
     justify-content: space-between;
     position: relative;
     z-index: 30;
     width: 89%;
     margin: auto;
-    margin-top: 3.4rem;
   }
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
@@ -804,28 +1031,12 @@ export const ProjectSection = styled.section`
     }
   }
 `
-export const ContactSection = styled.section`
-  
-  .contactContainer {
-    width: 89%;
-    margin: auto;
-    margin-top: 40px;
-  }
+export const TalksSection = styled.section`
   .contactText {
     width: 45%;
     color: ${({ theme }) => theme.colors.textColor};
-    margin-top: 32px;
     position: relative;
     z-index: 20;
-  }
-
-  .contactMe {
-    position: relative;
-    z-index: 20;
-    margin-top: 32px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 3rem;
   }
 
   #NameInput,
@@ -876,9 +1087,6 @@ export const ContactSection = styled.section`
   }
 
   @media ${({ theme }) => theme.mediaQueries.below768} {
-    .contactMe {
-      display: unset;
-    }
 
     .contactText {
       width: 100%;
@@ -939,8 +1147,5 @@ export const ContactSection = styled.section`
     right: 55px;
     bottom: 45px;
   }
-  .contactMe {
-    grid-gap: 6rem;
   }
-  }
-`
+`;

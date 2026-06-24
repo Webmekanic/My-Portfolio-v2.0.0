@@ -23,23 +23,27 @@ const MenuLink = styled(MyLink)`
 const MobileMenu = () => {
   const { dispatch } = useContext(PortfolioContext)
 
+  const closeMenu = () => {
+    dispatch({ type: "SET_MENU", payload: false })
+  }
+
   return (
     <Hamburger>
-      <ul className="MobileNavLink">
-        <li className="MobileNavLinkItem">
-          <MenuLink to="/about">About</MenuLink>
+      {/* <ul className="MobileNavLink">
+        <li className="MobileNavLinkItem" onClick={closeMenu}>
+          <MenuLink href="/about">About</MenuLink>
         </li>
-        <li className="MobileNavLinkItem">
-          <MenuLink to="/works">Works</MenuLink>
+        <li className="MobileNavLinkItem" onClick={closeMenu}>
+          <MenuLink href="/works">Works</MenuLink>
         </li>
-        <li className="MobileNavLinkItem">
-          <MenuLink to="/contact">Contact</MenuLink>
+        <li className="MobileNavLinkItem" onClick={closeMenu}>
+          <MenuLink href="/contact">Contact</MenuLink>
         </li>
-      </ul>
+      </ul> */}
       {/* <button></button> */}
       <AiOutlineClose
         className="closeMenu"
-        onClick={() => dispatch({ type: "SET_MENU", payload: false })}
+        onClick={closeMenu}
       />
       <div className="socialIcons">
         <a

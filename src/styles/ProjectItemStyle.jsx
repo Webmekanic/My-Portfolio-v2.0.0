@@ -1,26 +1,45 @@
 import styled from "styled-components"
 
 export const ProjectItemStyle = styled.div`
-  border: 1px solid #414141;
-  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 15px;
+  position: sticky;
   border-radius: 5px;
   background-image: linear-gradient(
     145deg,
     hsl(203deg 25% 6%) 1%,
     hsl(202deg 25% 6%) 49%,
-    hsl(201deg 25% 6%) 51%3 hsl(201deg 25% 5%) 49%,
+    hsl(201deg 25% 6%) 51%,
+    hsl(201deg 25% 5%) 49%,
     hsl(200deg 25% 5%) 51%,
     hsl(200deg 25% 5%) 99%
   );
   cursor: pointer;
 
-  .projectBg {
-    min-height: 180px;
+  .projectContainer {
+    position: relative;
+    background-color: ${({ theme }) => theme.colors.cardColor};
+    border-radius: 20px;
+    border: 1px solid ${({ theme }) => theme.colors.cardBorderColor};
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    padding: 12px;
+    height: 380px;
+    min-height: 380px;
     width: 100%;
-    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .projectBg {
+    width: 50%;
+    height: 100%;
+    flex-shrink: 0;
+    border-radius: 12px;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: 50% 50%;
     overflow: hidden;
 
@@ -31,15 +50,17 @@ export const ProjectItemStyle = styled.div`
   }
 
   .projectSummary {
+    width: 50%;
     margin-top: 10px;
+    padding: 0 0.5rem 0.5rem;
   }
   .projectTitle {
-    color: ${({ theme }) => theme.colors.neutral};
-    font-size: 20px;
-    font-family: Chivo;
-    font-style: black;
-    font-weight: 600;
-    letter-spacing: 1px;
+    color: ${({ theme }) => theme.colors.footerWhite};
+    font-size: 28px;
+    font-family: "Chivo mono";
+    font-weight: 300;
+    font-style: light;
+    padding-top: 0.5rem;
   }
 
   .skillsTag {
@@ -49,18 +70,22 @@ export const ProjectItemStyle = styled.div`
   }
 
   .projectDescription {
+    color: ${({ theme }) => theme.colors.textColor};
     margin-top: 5px;
-    font-family: Chivo;
-    font-style: black;
+    font-family: "Chivo mono";
+    font-style: light;
     line-height: 1.5;
-    height: 120px;
-    font-size: 13.8px;
+    font-size: 16px;
+    // display: flex;
+    // align-items: center;
+    margin-top: 2rem;
   }
   .projectLinks {
     display: flex;
     text-align: center;
     align-items: center;
     grid-gap: 1rem;
+    margin-top: 2rem;
 
     .socialLink {
       text-decoration: none;
@@ -114,4 +139,48 @@ export const ProjectItemStyle = styled.div`
       border-bottom: 7.5px solid transparent;
     }
   }
-`
+
+  @media ${({ theme }) => theme.mediaQueries.below768} {
+  .projectContainer {
+      flex-direction: column !important;
+      height: auto;
+      min-height: unset;
+      overflow: visible;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .projectBg {
+      width: 100%;
+      height: 220px;
+    }
+
+    .projectSummary {
+      width: 100%;
+      margin-top: 0;
+      padding: 0 0.25rem 0.75rem;
+    }
+
+    .projectTitle {
+      font-size: 22px;
+      padding-top: 0;
+    }
+
+    .projectDescription {
+      margin-top: 1rem;
+      font-size: 14px;
+    }
+
+    .projectLinks {
+      margin-top: 1.25rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media ${({ theme }) => theme.mediaQueries.above768} {
+
+  }
+  @media ${({ theme }) => theme.mediaQueries.medium} {
+
+  }
+`;

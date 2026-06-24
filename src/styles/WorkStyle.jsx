@@ -59,10 +59,10 @@ export const MyWorks = styled.div`
   }
 
   .myProject {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     // border: 1px solid green;
-    // grid-gap: 1.5rem;
 
     &.myproject-works {
       .jrmCnS {
@@ -71,9 +71,6 @@ export const MyWorks = styled.div`
     }
   }
 
-  .btnPro {
-    border: 2px solid red;
-  }
   @media ${({ theme }) => theme.mediaQueries.medium} {
     .pattern1 {
       top: 12rem;

@@ -1,15 +1,24 @@
 import React, { useState } from "react"
+import { useRouter } from "next/router"
 import { FaTimes } from "react-icons/fa"
-import { SuccessPage } from "../styles/SuccessStyle"
+import { SuccessPage } from "../src/styles/SuccessStyle"
 
 const Success = () => {
-  const [CloseModal, setCloseModal] = useState(true)
+  const router = useRouter()
+  const [closeModal, setCloseModal] = useState(true)
+
+  const handleClose = () => {
+    setCloseModal(false)
+    router.push("/")
+  }
+
+  if (!closeModal) return null
 
   return (
     <SuccessPage>
       <div className="successContainer">
         <div className="closeIcon">
-          <FaTimes onClick={() => setCloseModal(false)} />
+          <FaTimes onClick={handleClose} />
         </div>
         <div className="success-checkmark">
           <div className="check-icon">
@@ -25,4 +34,5 @@ const Success = () => {
     </SuccessPage>
   )
 }
+
 export default Success

@@ -41,7 +41,8 @@ export const AboutMe = styled.div`
     right: 0;
     top: 30rem;
   }
-
+  
+  
   .aboutText {
     position: relative;
     z-index: 20;
@@ -141,4 +142,4 @@ export const AboutMe = styled.div`
     overflow: hidden;
     padding-bottom: 0;
   }
-`
+`;

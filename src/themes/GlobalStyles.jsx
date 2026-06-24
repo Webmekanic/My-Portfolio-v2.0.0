@@ -35,21 +35,22 @@ body{
 .aboutTitle {
     position: relative;
     z-index: 30;
-    font-family: "Chivo";
-    font-style: black;
-    font-weight: 900;
-    font-size: clamp(2.1rem, 3vw, 2.8125rem);
+    font-family: "Chivo Mono";
+    font-style: light;
+    font-weight: 300;
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
     text-transform: capitalize;
-    color: ${({ theme }) => theme.colors.neutral};
+    color: ${({ theme }) => theme.colors.textColor};
     white-space: nowrap;
   }
   .sectionDescription{
-    font-family: Work Sans;
-    font-style: normal;
-    font-weight: 400;
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-family: "Chivo Mono";
+    font-style: light;
+    font-weight: 300;
+    font-size: clamp(1rem, 2vw, 1.125rem);
     line-height: 1.3125rem;
+    color: ${({ theme }) => theme.colors.tertiaryColor};
   }
-`
+`;
 
 export default GlobalStyle

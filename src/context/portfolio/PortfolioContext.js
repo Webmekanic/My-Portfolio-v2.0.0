@@ -9,6 +9,9 @@ export const PortfolioProvider = ({ children }) => {
     loading: true,
     menu: false,
     projects: {},
+    blogPosts: {},
+    events: {},
+    awards: {},
     error: null,
     pageLoad: false,
   }
