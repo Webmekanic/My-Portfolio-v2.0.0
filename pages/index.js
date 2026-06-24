@@ -180,7 +180,7 @@ useEffect(() => {
                     </div>
                     <div className="skillItem">
                       <img
-                        srcSet="/assets/javascript-logo.png"
+                        srcSet="/assets/Javascript-logo.png"
                         alt="JavaScript Logo"
                       />
                     </div>
