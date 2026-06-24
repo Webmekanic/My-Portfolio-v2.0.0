@@ -904,6 +904,22 @@ export const AboutAniebo = styled.section`
     border-radius: 13px;
     border: 1px solid #262c2f;
     background: #191e21;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skillItem:first-child {
+    border: 0.81px solid transparent;
+    background:
+      linear-gradient(#191e21, #191e21) padding-box,
+      linear-gradient(315.88deg, #262c2f -1.83%, #a0a5ad 60.68%) border-box;
+  }
+
+  .skillItem img {
+    // width: 42px;
+    // height: 42px;
+    object-fit: contain;
   }
 
   .cssLogo {
