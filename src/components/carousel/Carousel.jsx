@@ -26,7 +26,7 @@ const Carousel = (props) => {
                 key={index}
                 i={index}
                 project={project.fields}
-                projectImg={project.fields.avatar.fields.file.url}
+                projectImg={project.fields.avatar?.fields?.file?.url}
                 title={project.fields.title}
                 description={project.fields.description}
                 projectRepo={project.fields.repoLink}
