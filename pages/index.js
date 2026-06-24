@@ -172,12 +172,36 @@ useEffect(() => {
               <AboutAniebo>
                 <section className="aboutAniebo1">
                   <div className="skillsCard">
-                    <div className="skillItem"></div>
-                    <div className="skillItem"></div>
-                    <div className="skillItem"></div>
-                    <div className="skillItem"></div>
-                    <div className="skillItem"></div>
-                    <div className="skillItem"></div>
+                    <div className="skillItem">
+                      <img
+                        srcSet="/assets/mongodb-icon.png"
+                        alt="MongoDB Logo"
+                      />
+                    </div>
+                    <div className="skillItem">
+                      <img
+                        srcSet="/assets/javascript-logo.png"
+                        alt="JavaScript Logo"
+                      />
+                    </div>
+                    <div className="skillItem">
+                      <img
+                        srcSet="/assets/Laravel-logo.png"
+                        alt="Laravel Logo"
+                      />
+                    </div>
+                    <div className="skillItem">
+                      <img
+                        srcSet="/assets/reactjs-logo.png"
+                        alt="React.js Logo"
+                      />
+                    </div>
+                    <div className="skillItem">
+                      <img srcSet="/assets/avatar.png" alt="HTML Logo" />
+                    </div>
+                    <div className="skillItem">
+                      <img srcSet="/assets/vuejs-logo.png" alt="Vue.js Logo" />
+                    </div>
                   </div>
                   <div className="aboutTextDescription">
                     <div className="aboutText">
