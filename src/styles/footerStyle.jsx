@@ -8,7 +8,7 @@ export const FooterSection = styled.footer`
   padding-bottom: 0.5rem;
 
   .horizontalLine {
-    border-top: 2px solid ${({ theme }) => theme.colors.lineColor};
+    border-top: 1px solid ${({ theme }) => theme.colors.cardBorderColor};
     margin: 1.875rem auto;
     margin-top: 2.5rem;
   }
@@ -70,6 +70,23 @@ export const FooterSection = styled.footer`
     color: ${({ theme }) => theme.colors.footerWhite};
     font-family: "Bungee";
     font-weight: 400;
+    font-style: regular;
+    text-decoration: uppercase;
+  }
+
+  .contactText {
+    color: ${({ theme }) => theme.colors.tertiaryColor};
+    font-size: 16px;
+    font-weight: 300;
+    font-style: light;
+    font-family: "Chivo Mono";
+    line-height: 20px;
+  }
+
+  .contactButton{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
   }
 
   // Media Query

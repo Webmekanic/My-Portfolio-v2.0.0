@@ -14,13 +14,15 @@ const Footer = ({ classname }) => {
     <FooterSection className={classname}>
       <div className="contactSection">
         <div className="contactTitle">
-          <h2 className="contactTitleText">Ready to build?</h2>
-          <h2 className="contactTitleText">let’s grab a coffee</h2>
-        </div>
+          <h2 className="contactTitleText">
+            Ready to build? <br />
+            let’s grab a coffee
+          </h2>
+          </div>
         <div>
-          <p>
-            Let’s discuss your next project over a digital coffee. Got an idea?
-            Need suggestions? Reach out!
+          <p className="contactText">
+            Let’s discuss your next project over a digital coffee. <br />
+            Got an idea? Need suggestions? Reach out!
           </p>
           <div className="contactButton">
             <Button text={"Send Message"} handleClick={handleClick} />
